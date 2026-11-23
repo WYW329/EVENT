@@ -1,0 +1,25 @@
+name = "event-radar"
+main = "src/worker.js"
+compatibility_date = "2026-11-01"
+
+# 網頁本體；/api/* 交給 Worker 處理
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+# 每分鐘檢查新活動和提醒
+[triggers]
+crons = ["* * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "event-radar"
+database_id = "local-dev-placeholder"
+
+[vars]
+EVENTS_URL = "https://raw.githubusercontent.com/WYW329/EVENT/main/data/events.json"
+VAPID_PUBLIC_KEY = "BJpH9g1lzJdZR18lWNlWV07uUu828Vj5qGMU2JsPQUfF-5oTsnIbmWkQpxoZZwq1uBaRvochgB9A_yx2O44SZho"
+VAPID_SUBJECT = "mailto:admin@example.com"
+# VAPID_PRIVATE_KEY 用 `npx wrangler secret put VAPID_PRIVATE_KEY` 設定，不寫在這裡

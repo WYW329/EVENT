@@ -109,15 +109,20 @@ const isStandalone = () => window.matchMedia('(display-mode: standalone)').match
 const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 const catsOf = (e) => (e.categories?.length ? e.categories : [e.category, ...(e.free ? ['免費'] : [])]);
 const cityOf = (e) => e.city ?? '桃園市';
+// 收藏時把提醒需要的欄位一起送到伺服器（伺服器不用每分鐘讀整份活動資料）
+const snapshotOf = (e) => ({ id: e.id, title: e.title, start: e.start, end: e.end, regStart: e.regStart, regEnd: e.regEnd, url: e.url, venue: e.venue, district: e.district });
+const starredSnapshots = () => [...S.starred].map((id) => S.byId.get(id)).filter(Boolean).map(snapshotOf);
 const isFull = (e) => /額滿/.test(e.extra?.status ?? '') || e.extra?.seatsLeft === 0;
 
 // ---------- 資料 ----------
 async function loadEvents() {
   try {
     const data = await api('/api/events');
-    S.events = data.events ?? [];
+    // Cloudflare 版回傳 { status, data: { updatedAt, events } }；舊版是 { updatedAt, events, status }
+    const body = data.data ?? data;
+    S.events = body.events ?? [];
     S.status = data.status;
-    S.updatedAt = data.updatedAt;
+    S.updatedAt = body.updatedAt;
     store.set('cache', { events: S.events, status: S.status, updatedAt: S.updatedAt });
   } catch (err) {
     const cached = store.get('cache', null);
@@ -390,7 +395,7 @@ async function toggleStar(id) {
   const e = S.byId.get(id);
   if (S.subId) {
     try {
-      await api('/api/star', { method: 'POST', body: { id: S.subId, eventId: id, on } });
+      await api('/api/star', { method: 'POST', body: { id: S.subId, eventId: id, on, ev: e ? snapshotOf(e) : undefined } });
     } catch (err) {
       if (err.status === 404) await resubscribe();
     }
@@ -454,7 +459,7 @@ async function enablePush() {
     if (perm !== 'granted') throw new Error('沒有允許通知');
     let sub = await swReg.pushManager.getSubscription();
     if (!sub) sub = await swReg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: urlB64ToUint8(publicKey) });
-    const r = await api('/api/subscribe', { method: 'POST', body: { subscription: sub.toJSON(), prefs: currentPrefs(), starred: [...S.starred] } });
+    const r = await api('/api/subscribe', { method: 'POST', body: { subscription: sub.toJSON(), prefs: currentPrefs(), starred: starredSnapshots() } });
     S.subId = r.id;
     S.prefs = r.prefs;
     r.starred.forEach((id) => S.starred.add(id));
@@ -474,7 +479,7 @@ async function resubscribe() {
   if (!swReg) return;
   const sub = await swReg.pushManager.getSubscription().catch(() => null);
   if (!sub) { S.subId = null; store.set('subId', null); return; }
-  const r = await api('/api/subscribe', { method: 'POST', body: { subscription: sub.toJSON(), prefs: currentPrefs(), starred: [...S.starred] } });
+  const r = await api('/api/subscribe', { method: 'POST', body: { subscription: sub.toJSON(), prefs: currentPrefs(), starred: starredSnapshots() } });
   S.subId = r.id;
   store.set('subId', S.subId);
 }

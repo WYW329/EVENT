@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      - run: npm ci --omit=dev
       - run: npm test
       - name: 抓取
         run: node scraper/run.js
