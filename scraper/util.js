@@ -117,11 +117,17 @@ export function isTaoyuan(...texts) {
 
 // ---------- 文字 ----------
 
+const ENTITIES = { nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", middot: '·', hellip: '…', ndash: '–', mdash: '—', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”', bull: '•', times: '×' };
+export function decodeEntities(s) {
+  return String(s ?? '')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&([a-z]+);/gi, (m, name) => ENTITIES[name.toLowerCase()] ?? m);
+}
+
 export function cleanText(s, max = 400) {
   if (!s) return '';
-  const t = String(s)
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
+  const t = decodeEntities(String(s).replace(/<br\s*\/?>/gi, '\n').replace(/<\/p>/gi, '\n').replace(/<[^>]+>/g, ' '))
     .replace(/[ \t　]+/g, ' ')
     .replace(/\s*\n\s*/g, '\n')
     .replace(/\n{2,}/g, '\n')
@@ -137,20 +143,60 @@ export function normTitle(s) {
     .replace(/[\s\p{P}\p{S}]/gu, '');
 }
 
-export const CATEGORIES = ['表演', '展覽', '講座課程', '親子', '親子館', '節慶市集', '體驗', '運動', '電影', '報名', '其他'];
+export const CATEGORIES = ['免費', '表演', '展覽', '講座課程', '親子', '親子館', '節慶市集', '體驗', '運動', '電影', '其他'];
 
-/** 依標題猜類別（來源沒給類別時使用）。 */
+// 依標題關鍵字判斷類別，由上往下，一個活動可以符合好幾個
+const CATEGORY_RULES = [
+  ['節慶市集', /市集|嘉年華|燈會|跨年|祭(?!祀)|(?<!季)節(?!目|錄|省)|花季|藝術季/],
+  ['展覽', /(?<!舞)展(?!演|開|現|望)|展覽|特展|個展/],
+  ['講座課程', /講座|課程|研習|工作坊|學堂|開班|讀書會|分享會|培訓/],
+  ['親子', /親子|兒童|孩子|小朋友|寶寶|幼兒|故事屋|說故事|繪本/],
+  ['表演', /音樂會|演唱|演出|戲劇|劇場|舞蹈|舞展|舞劇|表演|公演|音樂節|樂團|合唱|馬戲/],
+  ['電影', /影展|電影|放映/],
+  ['運動', /馬拉松|路跑|球隊|籃球|棒球|運動|健走|自行車/],
+  ['體驗', /體驗|DIY|手作|導覽|走讀|小旅行|參訪|採果/],
+];
+
+/** 標題（和說明）符合的所有類別。 */
+export function guessCategories(text) {
+  const t = text ?? '';
+  return CATEGORY_RULES.filter(([, re]) => re.test(t)).map(([c]) => c);
+}
+
+/** 依標題猜主要類別（來源沒給類別時使用）。 */
 export function guessCategory(title, fallback = '其他') {
-  const t = title ?? '';
-  if (/市集|節|祭|嘉年華|燈會|跨年|季/.test(t)) return '節慶市集';
-  if (/展(?!演)|展覽|特展|個展/.test(t)) return '展覽';
-  if (/講座|課程|研習|工作坊|學堂|班|讀書會/.test(t)) return '講座課程';
-  if (/親子|兒童|孩|寶寶|故事/.test(t)) return '親子';
-  if (/音樂會|演唱|演出|劇|舞|表演|公演|音樂/.test(t)) return '表演';
-  if (/影展|電影|放映/.test(t)) return '電影';
-  if (/馬拉松|路跑|球|運動|賽/.test(t)) return '運動';
-  if (/體驗|DIY|手作|導覽|走讀|小旅行/.test(t)) return '體驗';
-  return fallback;
+  return guessCategories(title)[0] ?? fallback;
+}
+
+const FREE_RE = /免費|免門票|免票|自由入場|自由參觀|免費入場|不收費|免報名費|索票入場|免費索票|免費參加|免費參觀/;
+const PAID_RE = /票價|全票|優待票|\$\s?\d|NT\$?\s?\d|TWD\s?\$?\s?\d|\d+\s*元|費用\s*\+?\s*\d/;
+
+/** 從文字判斷是否免費：true 免費、false 要付費、null 不確定。 */
+export function detectFree(...texts) {
+  // 「免費停車」「免費接駁」這類不代表活動免費
+  const s = texts.filter(Boolean).join(' ').replace(/免費\s*(停車|接駁|wi-?fi|寄物|提供|贈送|試吃|抽獎|拍照)/gi, '');
+  if (!s) return null;
+  if (FREE_RE.test(s) && !/(非|不是)免費/.test(s)) return true;
+  if (PAID_RE.test(s)) return false;
+  return null;
+}
+
+const CITIES = ['臺北市', '新北市', '桃園市', '臺中市', '臺南市', '高雄市', '基隆市', '新竹市', '嘉義市', '新竹縣', '苗栗縣', '彰化縣', '南投縣', '雲林縣', '嘉義縣', '屏東縣', '宜蘭縣', '花蓮縣', '臺東縣', '澎湖縣', '金門縣', '連江縣'];
+export const CITY_LIST = CITIES;
+
+/** 從地址找縣市（台/臺都可以），找不到回傳 null。 */
+export function findCity(...texts) {
+  const s = texts.filter(Boolean).join(' ').replace(/台/g, '臺');
+  return CITIES.find((c) => s.includes(c)) ?? (s.includes('桃園縣') ? '桃園市' : null);
+}
+
+/** 整理出活動的所有類別（主要類別在最前面，免費的加上「免費」）。 */
+export function finalizeCategories(e) {
+  const list = [e.category, ...guessCategories(e.title)].filter((c) => c && c !== '其他');
+  if (e.category === '親子館') list.push('親子');
+  if (e.free === true) list.unshift('免費');
+  const uniq = [...new Set(list)];
+  return uniq.length ? uniq : ['其他'];
 }
 
 /** 每個來源都用這個整理成同一種格式。 */
@@ -167,13 +213,16 @@ export function makeEvent(source, key, fields) {
     venue: cleanText(fields.venue, 80) || null,
     address: cleanText(fields.address, 120) || null,
     district: fields.district ?? findDistrict(fields.address, fields.venue),
+    // 目前所有來源都是桃園的；之後加其他縣市時，來源要給 city 或地址
+    city: fields.city ?? findCity(fields.address, fields.venue) ?? source.city ?? '桃園市',
     category: fields.category ?? guessCategory(fields.title),
-    free: fields.free ?? null,
+    free: fields.free ?? detectFree(fields.title, fields.summary),
     url: fields.url ?? null,
     image: fields.image ?? null,
-    summary: cleanText(fields.summary, 300) || null,
+    summary: cleanText(fields.summary, 2000) || null,
     extra: fields.extra ?? null,
   };
   if (!e.end) e.end = e.start;
+  e.categories = finalizeCategories(e);
   return e;
 }

@@ -36,7 +36,9 @@ test('一次超過 3 個新活動合併成一則', async () => {
 
 test('篩選：類別、行政區、關鍵字、親子館預設不通知', () => {
   assert.equal(matchesPrefs(ev('1'), { ...DEFAULT_PREFS, categories: ['展覽'] }), false);
-  assert.equal(matchesPrefs(ev('1'), { ...DEFAULT_PREFS, districts: ['大溪區'] }), false);
+  assert.equal(matchesPrefs(ev('1', { city: '桃園市' }), { ...DEFAULT_PREFS, cities: ['臺北市'] }), false);
+  assert.equal(matchesPrefs(ev('1', { city: '桃園市' }), { ...DEFAULT_PREFS, cities: ['桃園市'] }), true);
+  assert.equal(matchesPrefs(ev('1', { categories: ['免費', '表演'] }), { ...DEFAULT_PREFS, categories: ['免費'] }), true, '多類別任一符合');
   assert.equal(matchesPrefs(ev('1', { title: '大溪市集' }), { ...DEFAULT_PREFS, categories: ['展覽'], keywords: ['市集'] }), true);
   assert.equal(matchesPrefs(ev('1', { category: '親子館' }), DEFAULT_PREFS), false);
   assert.equal(matchesPrefs(ev('1', { category: '親子館' }), { ...DEFAULT_PREFS, includeBabycare: true }), true);

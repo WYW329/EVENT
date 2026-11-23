@@ -27,14 +27,32 @@ export function parseKktixAtom(xml) {
   return items;
 }
 
+/** KKTIX 活動頁的票種表：每種票的販售期間和價格（免費／TWD$）。 */
+export function parseKktixTickets(html) {
+  const text = cheerio.load(html)('body').text().replace(/\s+/g, ' ');
+  const re = /(\d{4}\/\d{2}\/\d{2} \d{2}:\d{2})\(\+0800\)\s*~\s*(\d{4}\/\d{2}\/\d{2} \d{2}:\d{2})\(\+0800\)\s*([^\d$]{0,12}?)\s*(免費|TWD\$?\s?[\d,]+)/g;
+  const tickets = [...text.matchAll(re)].map((m) => ({ saleStart: parseDateTime(m[1]), saleEnd: parseDateTime(m[2]), status: m[3].trim(), price: m[4] }));
+  if (!tickets.length) return null;
+  const starts = tickets.map((t) => t.saleStart).sort();
+  const ends = tickets.map((t) => t.saleEnd).sort();
+  return {
+    regStart: starts[0],
+    regEnd: ends.at(-1),
+    free: tickets.every((t) => t.price === '免費') ? true : tickets.some((t) => t.price !== '免費') ? false : null,
+    prices: [...new Set(tickets.map((t) => t.price))].slice(0, 4),
+  };
+}
+
 export const kktix = {
   id: 'kktix',
   name: 'KKTIX',
   async fetch() {
     const xml = await fetchText('https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92');
-    return parseKktixAtom(xml)
-      .filter((it) => isTaoyuan(it.venue, it.address, it.title))
-      .map((it) =>
+    const out = [];
+    for (const it of parseKktixAtom(xml).filter((x) => isTaoyuan(x.venue, x.address, x.title))) {
+      // 活動頁有開賣時間和票價；被擋就只用 Atom 的資料
+      const t = await fetchText(it.url).then(parseKktixTickets).catch(() => null);
+      out.push(
         makeEvent(this, it.id, {
           title: it.title,
           start: it.start,
@@ -43,9 +61,14 @@ export const kktix = {
           address: it.address,
           url: it.url,
           summary: it.summary,
-          extra: { organizer: it.organizer },
+          regStart: t?.regStart ?? null,
+          regEnd: t?.regEnd ?? null,
+          free: t?.free ?? null,
+          extra: { organizer: it.organizer, prices: t?.prices ?? null },
         }),
       );
+    }
+    return out;
   },
 };
 

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { culture, tourism } from './sources/national.js';
 import { travel, ccms, afmc, babycare, water } from './sources/taoyuan.js';
 import { kktix, accupass, cycc } from './sources/platforms.js';
-import { normTitle, dateOf, toMs, todayTaipei } from './util.js';
+import { normTitle, dateOf, toMs, todayTaipei, finalizeCategories } from './util.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
@@ -87,7 +87,7 @@ export async function runAll({ only } = {}) {
   }
 
   const nowIso = new Date().toISOString();
-  const events = keepCurrent(dedupe(all)).map((e) => ({ ...e, firstSeen: prevById.get(e.id)?.firstSeen ?? nowIso }));
+  const events = keepCurrent(dedupe(all)).map((e) => ({ ...e, categories: finalizeCategories(e), firstSeen: prevById.get(e.id)?.firstSeen ?? nowIso }));
   events.sort((a, b) => (toMs(a.start) || 0) - (toMs(b.start) || 0));
 
   const status = {

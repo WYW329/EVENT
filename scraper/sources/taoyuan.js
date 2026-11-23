@@ -200,20 +200,56 @@ export const afmc = {
         for (const it of parseAfmcList(html)) seen.set(it.id, it);
       }
     }
-    return [...seen.values()].map((it) =>
-      makeEvent(this, it.id, {
-        title: it.title,
-        start: it.start,
-        end: it.end,
-        venue: it.venue,
-        address: AFMC_ADDR[it.venue] ?? null,
-        category: AFMC_TYPE[it.type],
-        url: `https://www.afmc.gov.tw/Activity_detail/${it.id}`,
-        image: it.image,
-      }),
-    );
+    const out = [];
+    for (const it of seen.values()) {
+      // 內頁有入場方式（索票／售票）、開放索票日、介紹
+      const url = `https://www.afmc.gov.tw/Activity_detail/${it.id}`;
+      const d = await fetchText(url).then((h) => parseAfmcDetail(h, it.start)).catch(() => ({}));
+      out.push(
+        makeEvent(this, it.id, {
+          title: it.title,
+          start: it.start,
+          end: it.end,
+          venue: it.venue,
+          address: AFMC_ADDR[it.venue] ?? null,
+          category: AFMC_TYPE[it.type],
+          free: d.free ?? null,
+          regStart: d.regStart ?? null,
+          url: d.ticketUrl && d.free === false ? d.ticketUrl : url,
+          image: it.image,
+          summary: d.summary,
+          extra: d.entry ? { entry: d.entry, detailUrl: url } : null,
+        }),
+      );
+    }
+    return out;
   },
 };
+
+/** 藝文中心活動內頁：入場方式、入場說明、開放索票時間、演出介紹。 */
+export function parseAfmcDetail(html, start) {
+  const $ = cheerio.load(html);
+  $('script,style,header,nav,footer').remove();
+  const t = $('body').text().replace(/\s+/g, ' ');
+  const way = t.match(/入場方式\s*([^\s]{1,12})/)?.[1] ?? '';
+  const note = t.match(/入場說明\s*(.*?)\s*(?:入場相關連結|演出介紹|相關連結|回列表)/)?.[1] ?? '';
+  const intro = t.match(/演出介紹\s*(?:演出時間\s*)?(.*?)\s*(?:回列表|$)/)?.[1] ?? '';
+  const ticketUrl = t.match(/入場相關連結\s*(https?:\/\/\S+)/)?.[1] ?? null;
+  const entry = [way, note].filter(Boolean).join('：');
+  let free = null;
+  if (/索票|免費|自由入場|自由參觀|免票/.test(way + note)) free = true;
+  else if (/售票/.test(way) || /\$\s?\d|NT\s?\$|元/.test(note)) free = false;
+  // 「預計10/29開放索票」「11/5(四) 12:00 開始售票」
+  let regStart = null;
+  const m = `${note} ${intro}`.match(/(\d{1,2})\s*\/\s*(\d{1,2})\s*(?:[（(][^）)]*[）)])?\s*(?:(\d{1,2}):(\d{2}))?\s*(?:起)?\s*(?:開放|開始|起)\s*(?:線上)?(?:索票|售票|報名|搶票)/);
+  if (m) {
+    const ref = start ? toMs(start) : Date.now();
+    let year = taipeiNow(new Date(ref)).y;
+    regStart = makeTime(year, m[1], m[2], m[3], m[4]);
+    if (toMs(regStart) > ref) regStart = makeTime(year - 1, m[1], m[2], m[3], m[4]);
+  }
+  return { free, regStart, ticketUrl, entry: cleanText(entry, 200) || null, summary: cleanText(intro || note, 2000) || null };
+}
 
 // ---------- 親子館課程報名（桃園育兒資源網）。資料介面直接給報名開始時間和剩餘名額 ----------
 const ZIP_DISTRICT = {

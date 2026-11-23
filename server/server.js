@@ -78,7 +78,7 @@ function cleanPrefs(p = {}) {
   if (typeof p.notifyNew === 'boolean') out.notifyNew = p.notifyNew;
   if (typeof p.includeBabycare === 'boolean') out.includeBabycare = p.includeBabycare;
   if (typeof p.remindEventDayBefore === 'boolean') out.remindEventDayBefore = p.remindEventDayBefore;
-  for (const k of ['categories', 'districts', 'keywords']) if (Array.isArray(p[k])) out[k] = p[k].map(String).map((s) => s.trim()).filter(Boolean).slice(0, 30);
+  for (const k of ['categories', 'cities', 'keywords']) if (Array.isArray(p[k])) out[k] = p[k].map(String).map((s) => s.trim()).filter(Boolean).slice(0, 30);
   if (Array.isArray(p.remindMinutes)) out.remindMinutes = [...new Set(p.remindMinutes.map(Number).filter((n) => n > 0 && n <= 10080))].slice(0, 5);
   return out;
 }

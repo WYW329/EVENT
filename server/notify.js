@@ -6,7 +6,7 @@ import { toMs } from '../scraper/util.js';
 export const DEFAULT_PREFS = {
   notifyNew: true,
   categories: [], // 空陣列 = 全部類別（親子館另外用 includeBabycare 控制，因為量很大）
-  districts: [], // 空陣列 = 全部行政區
+  cities: [], // 空陣列 = 全部縣市
   keywords: [], // 標題含任一關鍵字就通知（會覆蓋類別和行政區篩選）
   includeBabycare: false,
   remindMinutes: [1440, 30, 5], // 開放報名前多久提醒
@@ -29,8 +29,9 @@ export function matchesPrefs(event, prefs) {
   const title = event.title ?? '';
   if (p.keywords?.length && p.keywords.some((k) => k && title.includes(k))) return true;
   if (event.category === '親子館' && !p.includeBabycare) return false;
-  if (p.categories?.length && !p.categories.includes(event.category)) return false;
-  if (p.districts?.length && event.district && !p.districts.includes(event.district)) return false;
+  const cats = event.categories?.length ? event.categories : [event.category];
+  if (p.categories?.length && !cats.some((c) => p.categories.includes(c))) return false;
+  if (p.cities?.length && !p.cities.includes(event.city ?? '桃園市')) return false;
   return true;
 }
 
@@ -93,7 +94,7 @@ export class Notifier {
       if (mine.length <= 3) {
         for (const e of mine) {
           const when = e.regStart && toMs(e.regStart) > Date.now() ? `${fmt(e.regStart)} 開放報名` : fmt(e.start);
-          if (await this.push(id, { title: `新活動：${e.title}`, body: [when, e.venue || e.district].filter(Boolean).join('・'), url: `/#event=${encodeURIComponent(e.id)}`, tag: e.id })) sent++;
+          if (await this.push(id, { title: `${e.free ? '免費・' : ''}新活動：${e.title}`, body: [when, e.venue || e.district].filter(Boolean).join('・'), url: `/#event=${encodeURIComponent(e.id)}`, tag: e.id })) sent++;
         }
       } else {
         const names = mine.slice(0, 3).map((e) => e.title).join('、');

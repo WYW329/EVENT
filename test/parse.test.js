@@ -45,6 +45,33 @@ test('日期工具', () => {
   assert.equal(findDistrict('桃園市桃園區縣府路1號'), '桃園區');
 });
 
+test('類別、免費、縣市判斷', async () => {
+  const { guessCategories, detectFree, findCity } = await import('../scraper/util.js');
+  assert.deepEqual(guessCategories('畢業舞展《UNFOLD》'), ['表演']);
+  assert.deepEqual(guessCategories('親子音樂劇場《聖誕危機》'), ['親子', '表演']);
+  assert.equal(detectFree('索票入場'), true);
+  assert.equal(detectFree('全票 300 元'), false);
+  assert.equal(detectFree('現場提供免費停車'), null);
+  assert.equal(findCity('台北市中正區'), '臺北市');
+  assert.equal(findCity('桃園市中壢區'), '桃園市');
+});
+
+test('KKTIX 票種：開賣時間、免費', async () => {
+  const { parseKktixTickets } = await import('../scraper/sources/platforms.js');
+  const html = '<body>售價 11/01 放映 2026/10/25 09:00(+0800) ~ 2026/11/01 13:00(+0800) 結束販售 免費 11/07 放映 2026/10/26 09:00(+0800) ~ 2026/11/07 13:00(+0800) 販售中 免費</body>';
+  assert.deepEqual(parseKktixTickets(html), { regStart: '2026-10-25T09:00:00+08:00', regEnd: '2026-11-07T13:00:00+08:00', free: true, prices: ['免費'] });
+});
+
+test('藝文中心內頁：索票＝免費、開放索票日', async () => {
+  const { parseAfmcDetail } = await import('../scraper/sources/taoyuan.js');
+  const d = parseAfmcDetail('<body>入場說明 入場方式 報名或索票 入場說明 1.索票進場 演出介紹 好聽的音樂。預計10/29開放索票連結 回列表</body>', '2026-11-26T19:30:00+08:00');
+  assert.equal(d.free, true);
+  assert.equal(d.regStart, '2026-10-29');
+  const p = parseAfmcDetail('<body>入場方式 售票 入場說明 售票入場 OPENTIX $300、$500 入場相關連結 https://www.opentix.life/event/1 演出介紹 介紹 回列表</body>');
+  assert.equal(p.free, false);
+  assert.equal(p.ticketUrl, 'https://www.opentix.life/event/1');
+});
+
 test('親子館標題整理', () => {
   assert.equal(babycareTitle('【親職講座】擁抱情緒小怪獸- 給幼兒的情緒教育'), '擁抱情緒小怪獸- 給幼兒的情緒教育');
   assert.equal(babycareTitle('【2歲~學齡前 11月迷你劇場-阿嬤的笑咪咪餅】※請於活動前15分鐘入場※'), '2歲~學齡前 11月迷你劇場-阿嬤的笑咪咪餅');

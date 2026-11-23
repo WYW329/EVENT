@@ -29,6 +29,8 @@ export const culture = {
           address: first.location,
           district: findDistrict(first.location, first.locationName),
           category: CULTURE_CAT[it.category] ?? undefined,
+          // 有寫票價就是要付費；沒寫不一定免費，交給文字判斷
+          free: shows.some((s) => s.price) ? false : null,
           url: it.webSales || it.sourceWebPromote || `https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=${it.UID}`,
           image: it.imageUrl || null,
           summary: it.descriptionFilterHtml,

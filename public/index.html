@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>桃園活動雷達</title>
-  <meta name="description" content="收集桃園各地的活動、展覽、表演和親子課程，有新活動或快開放報名時跳通知。" />
-  <meta name="theme-color" content="#e2556f" />
+  <title>活動雷達</title>
+  <meta name="description" content="收集各地的活動、展覽、表演和親子課程，有新活動或快開放報名時跳通知。" />
+  <meta name="theme-color" content="#f6f3ef" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" href="/icons/icon-192.png" type="image/png" />
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
@@ -13,34 +14,62 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="活動雷達" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <!-- 圖示（inline SVG，用 <use> 引用） -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star-fill" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M3.5 10h17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9.5V13l2.5 1.5M4 5l3-2.5M20 5l-3-2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3.5 8a2 2 0 0 0 0 4v0a2 2 0 0 1 0 4V18h17v-2a2 2 0 0 1 0-4 2 2 0 0 0 0-4V6h-17v2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 6v12" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2.5"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7.5h14V12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Zm0 0v14m6-12v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.5 0-2.6.8-2.6 2s1.1 1.6 2.6 2 2.6.8 2.6 2-1.1 2-2.6 2c-1.1 0-2.1-.5-2.6-1.3M12 6.5V8M12 16v1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4.5h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
   <header class="top">
-    <div class="brand">
-      <img src="/icons/icon-192.png" alt="" width="28" height="28" />
-      <h1>桃園活動雷達</h1>
+    <div class="top-row">
+      <div class="brand">
+        <img src="/icons/icon-192.png" alt="" width="30" height="30" />
+        <h1>活動雷達</h1>
+        <span class="sig">made by WYC</span>
+      </div>
+      <button class="icon-btn" id="refreshBtn" title="重新整理" aria-label="重新整理"><svg><use href="#i-refresh"/></svg></button>
     </div>
-    <button class="icon-btn" id="refreshBtn" title="重新整理" aria-label="重新整理">↻</button>
+    <div class="search-wrap" id="searchWrap">
+      <svg class="search-ico"><use href="#i-search"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" placeholder="搜尋活動、地點…" autocomplete="off" />
+      <button id="qClear" class="q-clear" type="button" aria-label="清除搜尋" hidden><svg><use href="#i-x"/></svg></button>
+    </div>
   </header>
 
   <main id="main">
     <!-- 活動 -->
     <section class="view" id="view-list" data-view="list">
-      <div class="search-row">
-        <input id="q" type="search" placeholder="搜尋活動、地點…" autocomplete="off" />
-      </div>
       <div class="chips" id="whenChips" role="tablist" aria-label="時間">
         <button data-when="all" class="chip on">全部</button>
-        <button data-when="today">今天</button>
-        <button data-when="weekend">這個週末</button>
-        <button data-when="week">7 天內</button>
-        <button data-when="month">30 天內</button>
+        <button data-when="today" class="chip">今天</button>
+        <button data-when="weekend" class="chip">這個週末</button>
+        <button data-when="week" class="chip">7 天內</button>
+        <button data-when="month" class="chip">30 天內</button>
       </div>
       <div class="filters">
-        <select id="catSel" aria-label="類別"><option value="">所有類別</option></select>
-        <select id="distSel" aria-label="行政區"><option value="">所有行政區</option></select>
-        <label class="check"><input type="checkbox" id="hideBaby" checked /> 隱藏親子館課程</label>
+        <label class="sel"><select id="catSel" aria-label="類別"><option value="">所有類別</option></select></label>
+        <label class="sel"><select id="citySel" aria-label="縣市"><option value="">所有縣市</option></select></label>
+        <label class="toggle"><input type="checkbox" id="hideBaby" checked /><span>隱藏親子館</span></label>
       </div>
       <p class="meta" id="listMeta"></p>
       <div id="list" class="list"></div>
@@ -48,58 +77,24 @@
 
     <!-- 搶報名 -->
     <section class="view" id="view-reg" data-view="reg" hidden>
-      <p class="hint">快要開放報名、或正在報名中的活動。按 ☆ 收藏後，會在開放前提醒你。</p>
+      <div class="intro">
+        <h2>搶報名</h2>
+        <p>快要開放報名、開賣或開放索票的活動。按星號收藏，開放前會提醒你。</p>
+      </div>
       <div class="filters">
-        <label class="check"><input type="checkbox" id="regHideBaby" /> 隱藏親子館課程</label>
+        <label class="toggle"><input type="checkbox" id="regHideBaby" /><span>隱藏親子館</span></label>
+        <label class="toggle"><input type="checkbox" id="regFreeOnly" /><span>只看免費</span></label>
       </div>
       <div id="regList" class="list"></div>
     </section>
 
     <!-- 收藏 -->
     <section class="view" id="view-star" data-view="star" hidden>
-      <p class="hint" id="starHint"></p>
+      <div class="intro">
+        <h2>我的收藏</h2>
+        <p id="starHint"></p>
+      </div>
       <div id="starList" class="list"></div>
-    </section>
-
-    <!-- 手動加入 -->
-    <section class="view" id="view-add" data-view="add" hidden>
-      <div class="card pad">
-        <h2>手動加入活動</h2>
-        <p class="hint">把 FB 貼文、報名公告的文字貼進來，會自動找出活動時間和報名時間，確認後再存。</p>
-        <textarea id="pasteText" rows="6" placeholder="例如：「貢寮鮑食魚教育親子體驗活動」報名截止時間：10/25 晚上 23:59…"></textarea>
-        <input id="pasteUrl" type="url" placeholder="活動連結（可不填）" />
-        <button class="btn" id="parseBtn">自動讀取</button>
-      </div>
-      <form class="card pad" id="manualForm" hidden>
-        <h2>確認內容</h2>
-        <label>活動名稱<input name="title" required /></label>
-        <div class="two">
-          <label>活動開始<input name="start" type="datetime-local" /></label>
-          <label>活動結束<input name="end" type="datetime-local" /></label>
-        </div>
-        <div class="two">
-          <label>開放報名<input name="regStart" type="datetime-local" /></label>
-          <label>報名截止<input name="regEnd" type="datetime-local" /></label>
-        </div>
-        <label>地點<input name="venue" /></label>
-        <div class="two">
-          <label>類別<select name="category"></select></label>
-          <label>行政區<select name="district"><option value="">不確定</option></select></label>
-        </div>
-        <label>連結<input name="url" type="url" /></label>
-        <label>備註<textarea name="note" rows="2"></textarea></label>
-        <label id="keyRow" hidden>手動加入密碼<input name="key" type="password" autocomplete="off" /></label>
-        <label class="check"><input type="checkbox" name="star" checked /> 存好後順便收藏（開放報名前提醒我）</label>
-        <div class="row-btns">
-          <button class="btn" type="submit">儲存</button>
-          <button class="btn ghost" type="button" id="cancelManual">取消</button>
-        </div>
-        <p class="meta" id="foundDates"></p>
-      </form>
-      <div class="card pad">
-        <h2>已手動加入</h2>
-        <div id="manualList" class="list compact"></div>
-      </div>
     </section>
 
     <!-- 設定 -->
@@ -108,12 +103,12 @@
         <h2>通知</h2>
         <p id="pushStatus" class="hint"></p>
         <div id="iosHelp" class="ios-help" hidden>
-          <b>iPhone 要先加入主畫面才能收到通知：</b>
+          <b>iPhone 要先加入主畫面才能收到通知</b>
           <ol>
             <li>用 <b>Safari</b> 打開這個網站</li>
             <li>按下方的 <b>分享</b> 按鈕（方框加向上箭頭）</li>
             <li>選 <b>加入主畫面</b></li>
-            <li>從主畫面的「活動雷達」圖示打開，再回到這裡按「開啟通知」</li>
+            <li>從主畫面的「活動雷達」打開，再回到這裡按「開啟通知」</li>
           </ol>
         </div>
         <div class="row-btns">
@@ -125,23 +120,23 @@
 
       <form class="card pad" id="prefsForm">
         <h2>要通知哪些新活動</h2>
-        <label class="check"><input type="checkbox" name="notifyNew" checked /> 有新活動時通知我</label>
+        <label class="switch-row"><span>有新活動時通知我</span><input type="checkbox" name="notifyNew" checked /></label>
         <fieldset>
-          <legend>類別（都不勾 = 全部）</legend>
-          <div class="checks" id="prefCats"></div>
+          <legend>類別（都不選＝全部）</legend>
+          <div class="pick" id="prefCats"></div>
         </fieldset>
-        <label class="check"><input type="checkbox" name="includeBabycare" /> 也通知親子館課程（每天很多筆）</label>
+        <label class="switch-row"><span>也通知親子館課程<small>每天很多筆</small></span><input type="checkbox" name="includeBabycare" /></label>
         <fieldset>
-          <legend>行政區（都不勾 = 全部）</legend>
-          <div class="checks" id="prefDists"></div>
+          <legend>縣市（都不選＝全部）</legend>
+          <div class="pick" id="prefCities"></div>
         </fieldset>
-        <label>關鍵字（用逗號分開，標題有這些字一定通知）<input name="keywords" placeholder="例如：市集, 免費, 恐龍" /></label>
-        <h2>收藏活動的提醒</h2>
+        <label class="field">關鍵字<small>用逗號分開，標題有這些字一定通知</small><input name="keywords" placeholder="例如：市集, 恐龍, 草地音樂" /></label>
+        <h2 class="mt">收藏活動的提醒</h2>
         <fieldset>
           <legend>開放報名前多久提醒</legend>
-          <div class="checks" id="prefRemind"></div>
+          <div class="pick" id="prefRemind"></div>
         </fieldset>
-        <label class="check"><input type="checkbox" name="remindEventDayBefore" checked /> 活動前一天早上 9 點提醒</label>
+        <label class="switch-row"><span>活動前一天早上 9 點提醒</span><input type="checkbox" name="remindEventDayBefore" checked /></label>
         <div class="row-btns"><button class="btn" type="submit">儲存設定</button></div>
         <p class="meta" id="prefsMsg"></p>
       </form>
@@ -151,19 +146,19 @@
         <p class="meta" id="srcUpdated"></p>
         <ul id="srcList" class="src-list"></ul>
       </div>
+      <p class="foot">活動雷達 · <span class="sig">made by WYC</span></p>
     </section>
   </main>
 
   <nav class="tabs" aria-label="頁面">
-    <button data-go="list" class="on"><span>🗓</span>活動</button>
-    <button data-go="reg"><span>⏰</span>搶報名</button>
-    <button data-go="star"><span>☆</span>收藏</button>
-    <button data-go="add"><span>＋</span>新增</button>
-    <button data-go="set"><span>⚙</span>設定</button>
+    <button data-go="list" class="on"><svg><use href="#i-cal"/></svg>活動</button>
+    <button data-go="reg"><svg><use href="#i-alarm"/></svg>搶報名</button>
+    <button data-go="star"><svg><use href="#i-star"/></svg>收藏</button>
+    <button data-go="set"><svg><use href="#i-gear"/></svg>設定</button>
   </nav>
 
-  <dialog id="detail" class="sheet">
-    <div class="sheet-body" id="detailBody"></div>
+  <dialog id="detail" class="sheet" aria-label="活動詳情">
+    <div class="sheet-scroll" id="detailBody"></div>
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

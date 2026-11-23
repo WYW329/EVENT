@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-23T09:23:20.303Z",
-  "tookMs": 48865,
-  "total": 214,
+  "updatedAt": "2026-11-23T11:24:53.443Z",
+  "tookMs": 94676,
+  "total": 213,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 81,
       "kept": 11,
-      "ms": 3659,
+      "ms": 3634,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 84,
       "kept": 0,
-      "ms": 212,
+      "ms": 124,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 48860,
+      "ms": 94671,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 57,
       "kept": 54,
-      "ms": 548,
+      "ms": 670,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 11079,
+      "ms": 10771,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 100,
       "kept": 100,
-      "ms": 22330,
+      "ms": 22311,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 23,
+      "ms": 21,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 1416,
+      "ms": 1213,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 10,
       "kept": 10,
-      "ms": 192,
+      "ms": 10489,
       "error": null,
       "warnings": null
     },
@@ -97,9 +97,9 @@
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 6,
-      "kept": 3,
-      "ms": 535,
+      "count": 4,
+      "kept": 2,
+      "ms": 418,
       "error": null,
       "warnings": null
     }

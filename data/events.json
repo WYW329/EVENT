@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-23T09:23:20.303Z",
+ "updatedAt": "2026-11-23T11:24:53.443Z",
  "events": [
   {
    "id": "moc:6977d85026b32454e437c459",
@@ -13,15 +13,19 @@
    "venue": "桃園市原住民族文化會館",
    "address": "桃園市大溪區員林路一段29巷101號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://walkinto.in/tour/WJ5pxC97IHb1xc6lR97LB",
    "image": null,
-   "summary": "環境教育是強調人與其環境關係的一種教育過程。藉由著教育過程，使全民獲得保護及改善環境所需之倫理、知識、態度、技能及價值觀。其目的在發展、瞭解和重視介於人類文化及其生物、物理環境間合理的對待關係。桃園市原住民族文化會館為「文化保存與推廣」台灣原住民族文化，透過展覽結合傳統與現代跟在地生活及藝術，傳遞環境生態及生活知識，是認識原住民族知識重要的窗口，更是學習體驗原住民文化的重要場域。從館內專業的導覽解說員，進而從原住民知識中建立珍惜環境生態的環保觀念，都能讓參與民眾感受到原住民族人與文化及環境三者彼此間緊密的關係，並兼顧文化教育的意義，更成為學習與體驗原住民族文化的重要設施場所。\n展場規劃-\n1.…",
+   "summary": "環境教育是強調人與其環境關係的一種教育過程。藉由著教育過程，使全民獲得保護及改善環境所需之倫理、知識、態度、技能及價值觀。其目的在發展、瞭解和重視介於人類文化及其生物、物理環境間合理的對待關係。桃園市原住民族文化會館為「文化保存與推廣」台灣原住民族文化，透過展覽結合傳統與現代跟在地生活及藝術，傳遞環境生態及生活知識，是認識原住民族知識重要的窗口，更是學習體驗原住民文化的重要場域。從館內專業的導覽解說員，進而從原住民知識中建立珍惜環境生態的環保觀念，都能讓參與民眾感受到原住民族人與文化及環境三者彼此間緊密的關係，並兼顧文化教育的意義，更成為學習與體驗原住民族文化的重要設施場所。\n展場規劃-\n1.互動教學區\n2.影音休憩區\n3.可變換互動教具",
    "extra": {
     "showCount": 1,
     "organizer": "桃園市政府原住民族行政局"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -36,8 +40,9 @@
    "venue": "臺灣客家茶文化館",
    "address": "桃園市龍潭區高原路768號",
    "district": "龍潭區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69ab2e8426b3242a48a9d92b",
    "image": null,
    "summary": "臺灣客家茶文化館常設展 —「尋客茶路」。以茶之名，一趟連結世界與臺灣內山的文化之路 路上交織著臺灣茶百年歷史與茶山風貌，看見臺灣人敬天、謝地、待人的生活內涵，理解茶葉到茶湯的風味緣由，紀錄東方美人冠軍茶師的土地精算哲學。",
@@ -45,6 +50,9 @@
     "showCount": 1,
     "organizer": "臺灣客家茶文化館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -59,8 +67,9 @@
    "venue": "臺灣客家茶文化館",
    "address": "桃園市龍潭區高原路768號",
    "district": "龍潭區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69ab2e8526b3242a48a9d92d",
    "image": null,
    "summary": "花與茶的結合，是一場古老而續寫的圓舞曲。\n在這場旋律中，花的香氣與茶的味道編織出一段段難忘的故事，故事中充滿了文化、歷史和工藝的深沉。近年來，由於眾多茶品牌的持續推廣，東方窨製花茶再次贏得了大眾的喜愛，但它與西方花茶有著怎樣的區別呢？\n此次花與茶圓舞曲特展，除了介紹富含深厚文化背景以及製作工藝的東方窨花茶，還有富含豐富詩意的西方花茶聞香之樹，一起體驗一場東西方融合的嗅覺饗宴!",
@@ -68,6 +77,9 @@
     "showCount": 1,
     "organizer": "臺灣客家茶文化館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -82,6 +94,7 @@
    "venue": "桃園市立大溪木藝生態博物館-1號館",
    "address": "桃園市大溪區中正路68號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=698e24b626b32454e437c968",
@@ -91,6 +104,9 @@
     "showCount": 1,
     "organizer": "桃園市立大溪木藝生態博物館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -105,15 +121,19 @@
    "venue": "桃園市立大溪木藝生態博物館-大溪創生館",
    "address": "桃園市大溪區中山路48號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=698e24b626b32454e437c96a",
    "image": null,
-   "summary": "認識大溪人、參與大溪人、成為大溪人\n——歡迎登入「大溪知己」展！\n「知己」一詞，可以指「了解自己的好友」，也可以是「認知自己」：建立對事物、環境⋯⋯等的認同、並發展自我的過程。\n展覽名為「大溪知己」，希望透過更多元、更鮮活的方式，讓每個到來的訪客，都能看見不同樣貌與視角的大溪。透過生態博物館思維，打破傳統的展覽形式，提供訪客前所未有的觀覽體驗：在展中，你可以認識當代大溪人，也能看見大溪的前世今生、發展脈絡，甚至有機會與AI科技互動，記錄、想像與創造大溪的未來，進階為大溪的一份子。\n歡迎來到「大溪知己」展，祝福你在大溪找到知己，也變成大溪的知己！\n知己好友，如何交到大溪好朋友？\n——求認識！求帶…",
+   "summary": "認識大溪人、參與大溪人、成為大溪人\n——歡迎登入「大溪知己」展！\n「知己」一詞，可以指「了解自己的好友」，也可以是「認知自己」：建立對事物、環境⋯⋯等的認同、並發展自我的過程。\n展覽名為「大溪知己」，希望透過更多元、更鮮活的方式，讓每個到來的訪客，都能看見不同樣貌與視角的大溪。透過生態博物館思維，打破傳統的展覽形式，提供訪客前所未有的觀覽體驗：在展中，你可以認識當代大溪人，也能看見大溪的前世今生、發展脈絡，甚至有機會與AI科技互動，記錄、想像與創造大溪的未來，進階為大溪的一份子。\n歡迎來到「大溪知己」展，祝福你在大溪找到知己，也變成大溪的知己！\n知己好友，如何交到大溪好朋友？\n——求認識！求帶路！在地知己舉個手！\n造訪一座城市，沒當地朋友帶路不行的！\n不過，這座城市有9萬多位居民，要怎麼開始打聽？\n為你介紹這群「大溪好朋友」，他們是木藝生態博物館最重要的共學夥伴——他們熱愛大溪，也熱愛分享與呈現這裡的生活文化；以在地人的觀點，抱著熱情持續深入挖掘，呈現出各種大溪特色的生活片段，十足熱血，充滿魅力！\n以下將現場交給他們，聽聽他們在大溪生活的各種故事！\n知己履歷，是什麼讓大溪變成大溪？\n——每一個決定的當下，都是促成大溪改變的轉折點。\n一百年、十年、一個月、一分鐘⋯⋯你我認識的「大溪」，源於許多關鍵人事物的塑造與累積。這些事件在大溪演進的時空裡，各自展現了它們的影響力。\n本區帶你一探大溪的「景物改變大事紀」：說明形塑大溪的關鍵要素與時刻，並以景物今昔對照的紀錄，一起見證百餘年來的大溪改變。\n成為知己，有沒有跟大溪更熟悉的方法？\n——成為「大溪好朋友」三部曲！\n無論是讓訪客更認識大溪，或是讓在地人更了解家鄉⋯⋯對於大溪一切的採集、整理、記錄、詮釋與學習，都是必經的過程。\n想要和這座老城更加熟悉，可以試試本區的三個步驟方法學：記錄、連結與觸發、創造。\n依序體驗，不只你將會有意想不到的收穫，大溪也會！\n知己PLUS\n番外篇：目睹他們正在創造的大溪！\n現今的大溪，「創造」依舊是進行式！\n這些大溪知己，是「街角館」的館長、也是與木藝博物館共學的夥伴。是友善的大溪好朋友，也是採取行動讓大溪發生改變的實踐家。\n本區展示他們的部分作品，藉由這些創作，你將更能體會大溪生生不息的文化行動，與永續的創造力，始終正在進行中！\n讓我們隨著展覽，一起走進大溪的製材廠，探索從原木到木材的轉變過程。透過展覽五個主題：「山林原木」、「選木取材」、「乾燥成材」、「匠心成器」及「製材產業的嶄新可能」，看見製材師傅們挑選剖切原木、打磨鋸帶、乾燥成材的職人精神，重新認識生活中無所不在的木材。",
    "extra": {
     "showCount": 1,
     "organizer": "桃園市立大溪木藝生態博物館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -128,15 +148,19 @@
    "venue": "桃園市立大溪木藝生態博物館-大溪歷史館",
    "address": "桃園市大溪區普濟路17、19、21、23號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=698e24b626b32454e437c96c",
    "image": null,
-   "summary": "「開箱大溪」，看見大溪如何發展、大溪人如何經營地方的故事，從個人、家族或不同組織百年來發展及經營地方的角度切入，帶領大家逐步認識大溪土地與人的故事。大溪是在現地環境中展演生活的博物館，走進大溪就是走進博物館。\n大溪自清代起，基於大漢溪河運重要內陸河港的地理優勢，成為重要貨物集散地，成為國際貿易網絡的一環，並造就了桃園地區最早的熱鬧市街。百餘年來，市街文化累積豐厚的有形與無形文化內涵。「大溪歷史館」自2016年開館，帶領觀眾綜覽大溪產業、社會民俗，敘說大溪人的生活與歷史，2023年全面更新展示，增補歷年所持續累積的研究成果，結合在地展示資源，利用新媒體的展示手法，與觀眾一同開箱大溪的多元面貌。\n…",
+   "summary": "「開箱大溪」，看見大溪如何發展、大溪人如何經營地方的故事，從個人、家族或不同組織百年來發展及經營地方的角度切入，帶領大家逐步認識大溪土地與人的故事。大溪是在現地環境中展演生活的博物館，走進大溪就是走進博物館。\n大溪自清代起，基於大漢溪河運重要內陸河港的地理優勢，成為重要貨物集散地，成為國際貿易網絡的一環，並造就了桃園地區最早的熱鬧市街。百餘年來，市街文化累積豐厚的有形與無形文化內涵。「大溪歷史館」自2016年開館，帶領觀眾綜覽大溪產業、社會民俗，敘說大溪人的生活與歷史，2023年全面更新展示，增補歷年所持續累積的研究成果，結合在地展示資源，利用新媒體的展示手法，與觀眾一同開箱大溪的多元面貌。\n「開箱大溪」展覽共分為6大主題：「源自大漢溪」、「生根與拓展」、「樂為大溪事」、「大溪木發揚」、「共創共經營」與「大溪人說故事」其中亮點包括運用「機械木裝置結合投影」、「互動式觸控牆」、「情境投影」等進行展示設計，並有6部影片紀錄、5座擬真模型、11項實體及多媒體互動裝置及6處情境展示，將大溪豐富文獻資料、舊寫真圖像等知識內容，以全齡共融的方式親近觀眾，使艱澀的文史內容，不再只是帶有距離感的教材，為觀眾留下深刻印象。展場中並有多樣提供體驗木知識的互動教具，及大溪木藝師製作的各式實木椅供民眾試坐，感受大溪木藝的多樣風貌。",
    "extra": {
     "showCount": 1,
     "organizer": "桃園市立大溪木藝生態博物館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -151,6 +175,7 @@
    "venue": "桃園市立大溪木藝生態博物館-國定古蹟李騰芳古宅",
    "address": "桃園市大溪區9鄰月眉34號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=698e24b726b32454e437c96e",
@@ -160,6 +185,9 @@
     "showCount": 1,
     "organizer": "桃園市立大溪木藝生態博物館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -174,6 +202,7 @@
    "venue": "桃園市立大溪木藝生態博物館-工藝基地",
    "address": "桃園市大溪區普濟路13巷11、13、15號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=698e24b726b32454e437c970",
@@ -183,6 +212,9 @@
     "showCount": 1,
     "organizer": "桃園市立大溪木藝生態博物館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -197,6 +229,7 @@
    "venue": "桃園市立大溪木藝生態博物館-六廿四故事館",
    "address": "桃園市大溪區普濟路48號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=698e24b726b32454e437c971",
@@ -206,6 +239,9 @@
     "showCount": 1,
     "organizer": "桃園市立大溪木藝生態博物館"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -220,6 +256,7 @@
    "venue": "八德區（桃園市）=",
    "address": "桃園市八德區",
    "district": "八德區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=6973eaea26b32454e437c3db",
@@ -229,6 +266,9 @@
     "showCount": 1,
     "organizer": "桃園市八德區戶政事務所"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -243,6 +283,7 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=698b826a26b32454e437c8b6",
@@ -252,6 +293,9 @@
     "showCount": 1,
     "organizer": "桃園市桃園地政事務所"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -266,6 +310,7 @@
    "venue": "桃園市土地公文化館",
    "address": "桃園市桃園區三民路一段100號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=6973eb0b26b32454e437c3ec",
@@ -275,6 +320,10 @@
     "showCount": 1,
     "organizer": "財團法人桃園市文化基金會、桃園市政府文化局"
    },
+   "categories": [
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -289,6 +338,7 @@
    "venue": "桃園市土地公文化館",
    "address": "桃園市桃園區三民路一段100號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=6973eb0c26b32454e437c3ed",
@@ -298,6 +348,9 @@
     "showCount": 1,
     "organizer": "財團法人桃園市文化基金會、桃園市政府文化局"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -312,6 +365,7 @@
    "venue": "桃園市土地公文化館",
    "address": "桃園市桃園區三民路一段100號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=6973eb0c26b32454e437c3ee",
@@ -321,6 +375,9 @@
     "showCount": 1,
     "organizer": "財團法人桃園市文化基金會、桃園市政府文化局"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -335,6 +392,7 @@
    "venue": "桃園市土地公文化館",
    "address": "桃園市桃園區三民路一段100號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=6973eb0c26b32454e437c3ef",
@@ -344,6 +402,10 @@
     "showCount": 1,
     "organizer": "財團法人桃園市文化基金會、桃園市政府文化局"
    },
+   "categories": [
+    "展覽",
+    "節慶市集"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -358,6 +420,7 @@
    "venue": "桃園市土地公文化館",
    "address": "桃園市桃園區三民路一段100號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=6973eb0c26b32454e437c3f0",
@@ -367,6 +430,9 @@
     "showCount": 1,
     "organizer": "財團法人桃園市文化基金會、桃園市政府文化局"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -381,8 +447,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69cec89126b3242a48a9e086",
    "image": null,
    "summary": "課程結合「音樂歌唱」與「外語文化」雙重領域，透過對日語流行樂曲及演歌的賞析，指導學員掌握呼吸發聲、情感詮釋與節奏律動等歌唱技藝。同時，藉由歌詞背後的文化意涵導讀，引領學員探索異國語文之美與文學修辭。透過常民化的歌唱形式，推廣大眾音樂教育並促進多元文化之交流與理解。",
@@ -390,6 +457,9 @@
     "showCount": 1,
     "organizer": "桃園市桃園區萬壽里日語歌唱班"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -404,8 +474,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c6e4bb26b3242a48a9df14",
    "image": null,
    "summary": "本課程以國際標準舞中的拉丁舞系為核心，涵蓋恰恰、倫巴與吉魯巴等經典舞碼，融合了南美文化與流行音樂的表演藝術。內容著重於學員對不同音樂節奏（如倫巴的柔美、恰恰的輕快）的感應力與肢體展現美學，透過專業的舞步教學與姿態訓練，提升市民的表演藝術素養。",
@@ -413,6 +484,9 @@
     "showCount": 1,
     "organizer": "同安社交舞蹈班"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -427,6 +501,7 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c6e4ba26b3242a48a9df0c",
@@ -436,6 +511,10 @@
     "showCount": 1,
     "organizer": "桃園市桃園區中興里辦公處"
    },
+   "categories": [
+    "講座課程",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -450,8 +529,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c6e4b426b3242a48a9deea",
    "image": null,
    "summary": "課程內容以現代流行舞蹈（如 K-POP Hip-hop、Jazz）為核心，研習當代 K-POP 流行曲風與編舞技巧。透過專業講師對肢體律動、節奏感知與舞台表現力的指導，帶領學員探索現代流行文化的藝術特質。旨在透過流行舞蹈之美，提升市民的藝術參與度與肢體表現力。",
@@ -459,6 +539,10 @@
     "showCount": 1,
     "organizer": "慈文舞力全開舞蹈班"
    },
+   "categories": [
+    "講座課程",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -473,8 +557,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69cec89226b3242a48a9e08a",
    "image": null,
    "summary": "本課程由劉平芳老師指導，透過系統性的流行音樂教學，提升學員之音樂素養與演唱技巧。包含 1. 發聲與共鳴訓練：指導正確的呼吸氣息運用、發聲位置及共鳴開發，建立專業演唱基礎。 2. 樂曲詮釋與賞析：針對大眾流行歌曲（含輕音樂、流行歌謠等）進行節奏感、音色與情感表達之解析，涵蓋完整之藝術脈絡理解。 3. 演唱技法實踐：包含咬字美學、轉音技巧練習及個人演唱實作。",
@@ -482,6 +567,9 @@
     "showCount": 1,
     "organizer": "平平歌唱班"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -496,8 +584,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c6e4b726b3242a48a9df08",
    "image": null,
    "summary": "和太鼓承襲了深厚的東方傳統祭典文化，進階課程涉及對樂曲背景的理解與傳統精神的體認，太鼓演奏強調「形、氣、力」的統一，演奏者的站姿、揮擊軌跡及擊球時的張力，具備強烈的舞蹈律動與舞台展演效果，屬於結合聽覺與視覺的表演藝術。",
@@ -505,6 +594,9 @@
     "showCount": 1,
     "organizer": "响太鼓"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -519,8 +611,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c6e4b226b3242a48a9dee8",
    "image": null,
    "summary": "和太鼓源自傳統祭典與民俗慶典，不僅是單純的打擊樂器演奏，更是一項結合「音樂性」、「肢體藝術」與「民俗文化」的綜合性藝文活動，太鼓演奏時非常注重「姿態」與「揮擊動作」，演奏者的肢體動作往往具有舞蹈般的節奏感與視覺美感。這種結合聽覺與視覺的呈現方式，使其具備了高度的表演藝術價值。",
@@ -528,6 +621,9 @@
     "showCount": 1,
     "organizer": "响太鼓"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -542,8 +638,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c6e4b526b3242a48a9deec",
    "image": null,
    "summary": "透過系統化的教學，幫助學員掌握基本舞步、舞姿及節奏感，培養對國際標準舞（國標舞）的興趣與自信，研習課程融合了音樂、藝術、文化、社交等多種元素，能夠豐富社會文化生活，推廣藝術與美學。",
@@ -551,6 +648,9 @@
     "showCount": 1,
     "organizer": "桃園市綺麗運動協會"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -565,8 +665,9 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c6e4ba26b3242a48a9df0f",
    "image": null,
    "summary": "國際標準舞（包含拉丁舞系）是表演藝術的重要分支，課程涉及倫巴、恰恰、桑巴等舞科，強調肢體律動、情感張力及舞台展演美學。透過專業教學，將舞蹈技藝轉化為視覺藝術呈現，透過拉丁音樂與舞蹈節奏的深度融合，提升市民對於世界舞蹈文化的學習。",
@@ -574,6 +675,10 @@
     "showCount": 1,
     "organizer": "桃園朝陽舞蹈班"
    },
+   "categories": [
+    "講座課程",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -588,6 +693,7 @@
    "venue": "龍潭區（桃園市）=",
    "address": "桃園市龍潭區",
    "district": "龍潭區",
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69de904826b3242a48a9e30f",
@@ -597,6 +703,9 @@
     "showCount": 1,
     "organizer": "桃園市龍潭區上林社區發展協會"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -611,6 +720,7 @@
    "venue": "中壢區（桃園市）=",
    "address": "桃園市中壢區",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69dfe1cf26b3242a48a9e382",
@@ -620,6 +730,9 @@
     "showCount": 1,
     "organizer": "桃園市中壢區信義社區發展協會"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -634,6 +747,7 @@
    "venue": "八德區（桃園市）=",
    "address": "桃園市八德區",
    "district": "八德區",
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69e1333e26b3242a48a9e3fe",
@@ -643,6 +757,9 @@
     "showCount": 1,
     "organizer": "桃園市八德區瑞發社區發展協會"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -657,6 +774,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://culture.tycg.gov.tw/Active_Content.aspx?n=23648&ss=2353583E4A399774",
@@ -666,6 +784,9 @@
     "status": "活動已額滿",
     "office": "文化局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -680,6 +801,7 @@
    "venue": "中壢區（桃園市）=",
    "address": "桃園市中壢區",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=6a04cce926b3243414ccc86d",
@@ -689,6 +811,9 @@
     "showCount": 1,
     "organizer": "桃園市中壢區普忠社區發展協會"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -703,6 +828,7 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69c4502326b3242a48a9de5f",
@@ -712,6 +838,9 @@
     "showCount": 1,
     "organizer": "桃園市桃園區豐林社區發展協會"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -726,6 +855,7 @@
    "venue": "中壢區（桃園市）=",
    "address": "桃園市中壢區",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69e1334126b3242a48a9e40a",
@@ -735,6 +865,9 @@
     "showCount": 1,
     "organizer": "桃園市中壢區興華社區發展協會"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -749,6 +882,7 @@
    "venue": "桃園區（桃園市）=",
    "address": "桃園市桃園區",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69efc6bf26b3242a48a9e723",
@@ -758,6 +892,9 @@
     "showCount": 1,
     "organizer": "桃園市政府地政局"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -772,8 +909,9 @@
    "venue": "龍潭區（桃園市）=",
    "address": "桃園市龍潭區",
    "district": "龍潭區",
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://cloud.culture.tw/frontsite/inquiry/eventInquiryAction.do?method=showEventDetail&uid=69f33e3126b3243414ccc452",
    "image": null,
    "summary": "草月流花形應用",
@@ -781,6 +919,9 @@
     "showCount": 1,
     "organizer": "張崇珍"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -795,6 +936,7 @@
    "venue": "桃園市大溪慈湖",
    "address": "桃園市大溪區復興路一段1097號",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://backcihu.tycg.gov.tw/index.aspx?openExternalBrowser=1",
@@ -804,6 +946,9 @@
     "showCount": 1,
     "organizer": "桃園市政府風景區管理處"
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -818,12 +963,16 @@
    "venue": "中原文創園區",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "其他",
    "free": null,
    "url": "https://cycc.org.tw/zh-hant/node/274",
    "image": "https://cycc.org.tw/sites/default/files/banner/%E9%A3%9F%E8%A1%A3%E5%9C%B0%E5%9C%96_%E5%AE%98%E7%B6%B2.jpg",
    "summary": null,
    "extra": null,
+   "categories": [
+    "其他"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -833,19 +982,29 @@
    "title": "IRTY｜IR SPORTS 桃園跑步課程",
    "start": "2026-09-30T19:30:00+08:00",
    "end": "2026-12-17T21:00:00+08:00",
-   "regStart": null,
-   "regEnd": null,
+   "regStart": "2026-09-02T12:00:00+08:00",
+   "regEnd": "2026-09-27T23:50:00+08:00",
    "venue": "桃園市立田徑場",
    "address": "桃園市立田徑場",
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
-   "free": null,
+   "free": false,
    "url": "https://irsports.kktix.cc/events/irty",
    "image": null,
    "summary": "Own Your Pace.\n桃園全新跑步課程，從掌握配速開始，跑向你的下一個目標。",
    "extra": {
-    "organizer": "IR Sports - 跑創運動行銷有限公司"
+    "organizer": "IR Sports - 跑創運動行銷有限公司",
+    "prices": [
+     "TWD$5,499",
+     "TWD$4,999",
+     "TWD$6,199",
+     "TWD$5,199"
+    ]
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -860,12 +1019,20 @@
    "venue": "A8藝文中心",
    "address": "桃園市龜山區復興一路8號",
    "district": "龜山區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/f28807836b47487d91a2150fb6eada9a",
    "image": "https://www.afmc.gov.tw/Upload/202610050905779766600.png",
-   "summary": null,
-   "extra": null,
+   "summary": "活動內容 這是一場眾人共創的展覽，創作者同時也是觀察者，試圖捕捉人們在這裡留下的痕跡。展覽邀請民眾走進山中，拾起微光相遇、停留、歸屬，感受陶土貼近日常的角色與情感。",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/f28807836b47487d91a2150fb6eada9a"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -880,12 +1047,16 @@
    "venue": null,
    "address": "桃園市復興區",
    "district": "復興區",
+   "city": "桃園市",
    "category": "其他",
-   "free": null,
+   "free": false,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7097",
    "image": "https://travel.tycg.gov.tw/content/images/articles/116743/480x360_articles-image-zmfmn-ntqkqn0ipemcjt3w.png",
-   "summary": "假期的北橫放鬆之旅，不用自己開車受累！搭乘假日免費接駁車輕鬆遊覽山林美景，還能拿限定好禮✨ 邊搭車邊玩，只要下載《遊桃園 APP》輕鬆定位打卡，集滿指定點數就能把限定好禮帶回家😎\n━━━━━簡單 4 步驟，好禮輕鬆入手━━━━━\n1️⃣ 下載與登入 ：下載「遊桃園 APP」，加入會員並開啟 GPS 定位。\n2️⃣ 開啟任務 ：進入 APP 首頁，點選「搭乘北橫接駁趣」任務。\n3️⃣ 掃碼打卡 ：抵達指定集點位置後，點選「掃碼集點」並掃描現場 QR Code。\n4️⃣ 兌換好禮 ：集滿完成2個點位，即可兌換限定好禮！\n🚌 接駁車集點位置 ：\n📍 角板山仁愛停車場／介壽國中停車場-假日免費接…",
+   "summary": "假期的北橫放鬆之旅，不用自己開車受累！搭乘假日免費接駁車輕鬆遊覽山林美景，還能拿限定好禮✨ 邊搭車邊玩，只要下載《遊桃園 APP》輕鬆定位打卡，集滿指定點數就能把限定好禮帶回家😎\n━━━━━簡單 4 步驟，好禮輕鬆入手━━━━━\n1️⃣ 下載與登入 ：下載「遊桃園 APP」，加入會員並開啟 GPS 定位。\n2️⃣ 開啟任務 ：進入 APP 首頁，點選「搭乘北橫接駁趣」任務。\n3️⃣ 掃碼打卡 ：抵達指定集點位置後，點選「掃碼集點」並掃描現場 QR Code。\n4️⃣ 兌換好禮 ：集滿完成2個點位，即可兌換限定好禮！\n🚌 接駁車集點位置 ：\n📍 角板山仁愛停車場／介壽國中停車場-假日免費接駁車接駁站 (仁愛停車場與介壽國中停車場接駁站為同一點位)\n📍 小烏來-假日免費接駁車接駁站\n📍 羅浮-假日免費接駁車接駁站\n🚌 北橫旅遊接駁車營運資訊 ：\n🔸 班次時間 ：國定例假日彈性發車，班距約 40 分鐘。\n🔸 營運時段 ：上午 09:00 角板山首班車 ➜ 下午 17:00 羅浮末班車。\n🔸 交通轉乘方式 ：\n▪️ 自行開車 ：車輛停放於「介壽國中停車場」，步行至「仁愛停車場」或「介壽國中」站搭乘接駁車。\n▪️ 搭高鐵 ：高鐵桃園站 ➜ 轉乘台灣好行大溪快線（501）至慈湖 ➜ 轉乘往上山方向客運（502、506、5104、5106、5109）至「角板山公園站」。\n▪️ 搭臺鐵 ：臺鐵桃園站 ➜ 後火車站轉乘台灣好行小烏來線（502）➜ 至「角板山公園站」。\n🎁 超值好禮報你知 ： 集滿指定點數即可兌換「實體店家 100 元商品抵用金」（三選一）： ▪️ 蕃薯藤自然咖啡-角板山\n▪️ 蕃薯藤自然咖啡-後慈湖\n▪️ 北橫之驛雜貨鋪\n⚠️ 數量有限，換完為止！ 這個假日就搭接駁車輕鬆出遊，揪朋友一起來北橫享受山林之旅，把百元抵用金帶回家吧！",
    "extra": null,
+   "categories": [
+    "其他"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -903,12 +1074,16 @@
    "venue": null,
    "address": "桃園市復興區",
    "district": "復興區",
+   "city": "桃園市",
    "category": "其他",
    "free": null,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6675",
    "image": "https://travel.tycg.gov.tw/content/images/articles/116790/480x360_articles-image-f532sk8rak6gy5ukkidqzw.jpg",
    "summary": "￭相關細節可電洽風景管理處(03-3946061#127)\n桃園市政府觀光旅遊局攜手旅行社推出「北橫13條暗空主題性深度旅遊」，串聯沿線自然景觀、泰雅族文化及在地特色產業，將以往以白天觀光為主的行程，延伸為24至48小時的日夜深度體驗。旅客白天可探索山林美景、體驗部落文化與在地風情，夜晚則能欣賞星空、感受山林靜謐之美。透過整合觀光、文化、生態與星空資源，邀請旅客放慢腳步、留宿山區，延長旅遊停留時間，帶動在地消費，讓觀光效益回流部落，展現北橫日夜皆精彩的旅遊魅力。",
    "extra": null,
+   "categories": [
+    "其他"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -926,12 +1101,16 @@
    "venue": null,
    "address": "桃園市復興區",
    "district": "復興區",
+   "city": "桃園市",
    "category": "其他",
-   "free": null,
+   "free": true,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7099",
    "image": "https://travel.tycg.gov.tw/content/images/articles/116745/480x360_articles-image-umghpthjweultxk32lmvpw.jpg",
-   "summary": "探索北橫山林風光，還能免費享用在地美味與特色體驗！豐富遊程邊玩邊集點，好康拿不完✨ 參考探索北橫遊程小旅行，走訪沿線景點並開啟《遊桃園 App》完成任務，只要集滿 2 點就能免費兌換在地好禮，讓旅程驚喜加倍😎\n━━━━━簡單 3 步驟，好禮輕鬆入手━━━━━\n1️⃣ 走訪景點 ：漫遊北橫 8 大指定熱門景點。\n2️⃣ 掃碼集點 ：現場開啟 App +定位進入任務畫面。\n3️⃣ 兌換好康 ：集滿任意 2 點即可自由選擇兌換 1 項特色好禮！\n📍 8 大集點景點 ： 巴陵鐵塔、巴陵古道生態園區、巴陵雙橋、小烏來風景特定區、羅浮溫泉、復興橋、角板山行館、慈湖遊客中心\n🎁 精選好禮自由選 ： 集…",
+   "summary": "探索北橫山林風光，還能免費享用在地美味與特色體驗！豐富遊程邊玩邊集點，好康拿不完✨ 參考探索北橫遊程小旅行，走訪沿線景點並開啟《遊桃園 App》完成任務，只要集滿 2 點就能免費兌換在地好禮，讓旅程驚喜加倍😎\n━━━━━簡單 3 步驟，好禮輕鬆入手━━━━━\n1️⃣ 走訪景點 ：漫遊北橫 8 大指定熱門景點。\n2️⃣ 掃碼集點 ：現場開啟 App +定位進入任務畫面。\n3️⃣ 兌換好康 ：集滿任意 2 點即可自由選擇兌換 1 項特色好禮！\n📍 8 大集點景點 ： 巴陵鐵塔、巴陵古道生態園區、巴陵雙橋、小烏來風景特定區、羅浮溫泉、復興橋、角板山行館、慈湖遊客中心\n🎁 精選好禮自由選 ： 集滿任意 2 點即可任選以下一項兌換： 清涼水蜜桃冰沙、香氣濃郁馬告香腸、紀念明信片／詩印章體驗、香脆香菇蹄干等多項在地好禮！\n詳細兌換細節可詢問「大島台灣」官方 LINE https://lin.ee/Sbs2Eco\n🚌 北橫旅遊接駁車營運資訊 ：\n🔸 班次時間 ：國定例假日彈性發車，班距約 40 分鐘。\n🔸 營運時段 ：上午 09:00 角板山首班車 ➜ 下午 17:00 羅浮末班車。\n🚗 其他 交通資訊 ：\n▪️ 自行開車 ：建議可將車輛停放於角板山「介壽國中停車場」，再步行至「仁愛停車場」或「介壽國中」站搭乘接駁車順遊各景點。\n▪️ 大眾運輸 ：\n1. 高鐵桃園站 ➜ 台灣好行大溪快線（501）至慈湖 ➜ 上山方向客運（502、506、5104、5106、5109）至角板山公園站。\n2. 臺鐵桃園站 ➜ 轉乘小烏來線（502） ➜ 角板山公園站\n⚠️ 好禮數量有限，換完為止！ 快揪朋友、帶家人一起出發，邊看美景邊品嚐在地美食，開啟你的北橫驚喜之旅！",
    "extra": null,
+   "categories": [
+    "免費"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -949,12 +1128,16 @@
    "venue": null,
    "address": "桃園市大溪區",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "節慶市集",
    "free": null,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6686",
    "image": "https://travel.tycg.gov.tw/content/images/articles/116812/480x360_articles-image-wincvajzu0qg1c8lz9z__a.png",
    "summary": "￭相關細節可電洽企劃暨國際科(03)3322101#6215)\n遊程‧集章‧饗宴 一次滿足!\n【三大主題遊程】限定優惠價體驗\n漫步百年街角文史走讀、親手體驗手作樂趣,品嘗大溪獨有特色料理。\n【集章護照】好禮與店家優惠雙重享\n走訪大溪集滿3個章,兌換限量好禮,享合作店家與優質旅宿專屬折扣!線上登錄者參加抽獎!\n【大溪豆干‧尋味百旅饗宴】一席豆宴‧十道食光\n10道大溪特色創意料理大集合,期間限定!\n詳情請見活動官網:https://daxitofutravel.com/",
    "extra": null,
+   "categories": [
+    "節慶市集"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -972,12 +1155,16 @@
    "venue": "中原文創園區",
    "address": null,
    "district": "中壢區",
-   "category": "節慶市集",
+   "city": "桃園市",
+   "category": "其他",
    "free": null,
    "url": "https://cycc.org.tw/zh-hant/node/282",
    "image": "https://cycc.org.tw/sites/default/files/banner/%E4%B8%AD%E5%8E%9F%E8%B2%93%E7%8B%97%E6%A3%AE%E6%B4%BB%E5%AD%A3%20Banner_0.jpg",
    "summary": null,
    "extra": null,
+   "categories": [
+    "其他"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -992,12 +1179,17 @@
    "venue": "中壢銀河廣場（九和一街35號）",
    "address": "桃園市中壢區中壢銀河廣場（九和一街35號）",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "節慶市集",
-   "free": null,
+   "free": true,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7114",
    "image": "https://travel.tycg.gov.tw/content/images/articles/116862/480x360_articles-image-9maeo3zzzkayd9ake5osta.jpg",
-   "summary": "￭相關細節可電洽財團法人桃園市客家文化基金會 (03-479-0322)\n🛍️ #2026天光威購節 系列活動陸續登場！\n11/7-11/8 天光大市集，共下歡度年末購物嘉年華 🎉\n桃園客家局跨局處攜手原民局、婦幼局\n串聯六和商圈、中壢 SOGO 及威尼斯影城\n打造結合市集、舞台展演與購物優惠的年末盛會！\n▌👀 #天光大市集 活動亮點一次看！\n💳 #挺好卡｜逛市集免費領取限量「#好客威購卡」\n解鎖 天光雜貨店、六和商圈合作店家專屬優惠\n還能參加跨店集章抽獎！\n🛍️ #挺好逛｜40+特色攤位一次逛\n客庄美食、職人手作、質感選物與特色好禮\n一次蒐集桃園在地好物！\n🎤 #挺好看｜後生舞台…",
+   "summary": "￭相關細節可電洽財團法人桃園市客家文化基金會 (03-479-0322)\n🛍️ #2026天光威購節 系列活動陸續登場！\n11/7-11/8 天光大市集，共下歡度年末購物嘉年華 🎉\n桃園客家局跨局處攜手原民局、婦幼局\n串聯六和商圈、中壢 SOGO 及威尼斯影城\n打造結合市集、舞台展演與購物優惠的年末盛會！\n▌👀 #天光大市集 活動亮點一次看！\n💳 #挺好卡｜逛市集免費領取限量「#好客威購卡」\n解鎖 天光雜貨店、六和商圈合作店家專屬優惠\n還能參加跨店集章抽獎！\n🛍️ #挺好逛｜40+特色攤位一次逛\n客庄美食、職人手作、質感選物與特色好禮\n一次蒐集桃園在地好物！\n🎤 #挺好看｜後生舞台精彩演出\n兩天精彩演出、歡樂互動輪番登場\n逛市集、看表演，享受熱鬧週末！\n🎁 #挺好拿｜購物好康拿不完\n闖關拿消費券、抽 3000 元購物金、滿額好禮\n還有公益福袋等更多好康，請持續關注桃園客家局 FB 粉專！\n📅 活動時間｜11/7 ㊅ - 11/8 ㊐ 13：00 - 19：00\n📍 活動地點｜中壢銀河廣場（桃園市中壢區九和一街35號）\n🔗 更多天光威購節資訊，請上活動官網查詢\nhttps://hakkadata.tycg.gov.tw/29888/",
    "extra": null,
+   "categories": [
+    "免費",
+    "節慶市集"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -1015,12 +1207,16 @@
    "venue": "中原文創園區",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "其他",
    "free": null,
    "url": "https://cycc.org.tw/zh-hant/node/280",
    "image": "https://cycc.org.tw/sites/default/files/banner/11%E6%9C%88%E6%B4%BB%E5%8B%95_2026.jpg",
    "summary": null,
    "extra": null,
+   "categories": [
+    "其他"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1030,19 +1226,26 @@
    "title": "【愛，不用翻譯】11月份",
    "start": "2026-11-01T14:00:00+08:00",
    "end": "2026-11-29T17:00:00+08:00",
-   "regStart": null,
-   "regEnd": null,
+   "regStart": "2026-10-25T09:00:00+08:00",
+   "regEnd": "2026-11-29T13:00:00+08:00",
    "venue": "桃園光影文化館三樓放映廳",
    "address": "桃園市桃園區埔新路12號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "其他",
-   "free": null,
+   "free": true,
    "url": "https://taoyuanartscinema2.kktix.cc/events/sar-10-copy-1",
    "image": null,
    "summary": "桃園光影文化館｜主題影展【愛，不用翻譯】\n11/01 — 11/29",
    "extra": {
-    "organizer": "桃園光影文化館"
+    "organizer": "桃園光影文化館",
+    "prices": [
+     "免費"
+    ]
    },
+   "categories": [
+    "免費"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1057,6 +1260,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/Active_Content.aspx?n=26658&ss=2E16E3CBC39571B6",
@@ -1066,6 +1270,9 @@
     "status": "活動已額滿",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1080,14 +1287,19 @@
    "venue": "桃園巨蛋",
    "address": "桃園市桃園區三民路一段1號",
    "district": "桃園區",
-   "category": "節慶市集",
+   "city": "桃園市",
+   "category": "運動",
    "free": null,
    "url": "https://leopards.kktix.cc/events/c36966ee",
    "image": null,
    "summary": "不用廢話，直接用球技說話！  2026-27賽季主場座落於📍桃園巨蛋體育館想念超燃主場的氣勢了嗎？想念只有坐進球場，才能感受到的熱血嗎？ 多元票區季票優惠全面登場！ 近距離看球、沉浸應援、輕鬆觀戰，還",
    "extra": {
-    "organizer": "雲諾運動文教(股)公司"
+    "organizer": "雲諾運動文教(股)公司",
+    "prices": null
    },
+   "categories": [
+    "運動"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1102,14 +1314,19 @@
    "venue": "桃園巨蛋",
    "address": "桃園市桃園區三民路一段1號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "運動",
    "free": null,
    "url": "https://leopards.kktix.cc/events/ce41b16e",
    "image": null,
    "summary": "◤▔▔▔▔◥26-27賽季 雲豹主場門票熱賣中🔥◣▁▁▁▁◢ ➠展現豹軍最極致的自信，不用多餘廢話，上場直接用球技說話！∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞ 2026-27 賽",
    "extra": {
-    "organizer": "雲諾運動文教(股)公司"
+    "organizer": "雲諾運動文教(股)公司",
+    "prices": null
    },
+   "categories": [
+    "運動"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1124,12 +1341,20 @@
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/090e46df06b14f548c1125bd1ca703df",
    "image": "https://www.afmc.gov.tw/Upload/202610141726640cb7790.png",
-   "summary": null,
-   "extra": null,
+   "summary": "相關連結 https://forms.gle/tc4uMjKELVJYgxpL8 演出時間 11/18(三)-12/6(日)09:00-17:00逢週一及國定假日休館 活動內容 繪畫不只是描繪眼前所見，更是一種與生命記憶對話的方式。藝術家楊美英以感性和直覺補捉生活記憶，透過油彩富有層次的筆觸，繪出生命旅圖中的點滴記憶，。她運用「解構與重組」，將現實物件抽離原有脈絡，讓不同時空的景物與記憶，在畫布上重新相遇。玫瑰花是經常描繪的題材，這份對植物的熱愛，深深根植於記憶中父親在庭園裡細心種植、整理花草的身影，她將這份深切的思念與情感，轉化為充滿生機的植物語彙；她從喜愛縫紉與手作的經驗出發，巧妙地將縫紉元件重組，讓原本屬於日常生活的物件，在畫布上有了新的詮釋。近幾年的創作中楊美英將旅行異國元素帶入畫中：如土耳奇熱氣球、澳洲毛線娃娃、法國藝術表演者贈送的紙鶴、西班牙佛明歌舞者雕像等。2018年法國旅行時，藝術表演者贈予她的紙鶴，成為日後創作的重要靈感來源。原本是靜止、無生命的摺紙，經由藝術家的轉化，紙鶴飛入畫布也從現實世界飛進藝術家的記憶天空。展覽期間，藝術家辦理活動： 11月22日（日）14:00~16:00 作品導覽 藝術家親臨展場，為觀眾進行作品導覽，分享創作理念與生命記憶。 11月29日（日）14:00~16:00 油畫示範與體驗 (須先報名，材料費︰300元/位 洽楊老師 0917-175913)帶領有興趣的民眾接觸油畫感受油畫創作樂趣，報名電話:0917175913連結為https://forms.gle/tc4uMjKELVJYgxpL8，誠摯邀請您走進楊美英的「旅圖記憶」中，感受女性藝術家細膩而溫柔的生命旅程。",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/090e46df06b14f548c1125bd1ca703df"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -1144,12 +1369,20 @@
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/66db2965e75845c9a4dd521fc0096c13",
    "image": "https://www.afmc.gov.tw/Upload/2026101417174355e8730.png",
-   "summary": null,
-   "extra": null,
+   "summary": "11/18(三)-12/06(日) 09:00-17:00逢週一及國定假日休館 活動內容 近兩年「510藝術群」第三次聯展,期以最新創作多元的藝術造型思考,展現看不見的風景,以揭露看得見的生命,這不僅是一場視覺饗宴更是一場感官與心靈的跨時空旅行,邀請暫時放慢腳步細細體會生活中的細節與美感,感受藝術所帶來的溫度與力量 創作中，藝術家以細膩筆觸與層層疊色的技法，呈現心理狀態的複雜性，試圖捕捉人們在生活中不斷移動的身份位置。作品不僅是形象的描繪，更是一種情緒與存在的記錄，引導觀者重新思考自我、他者與觀看之間的關係。",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/66db2965e75845c9a4dd521fc0096c13"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -1164,12 +1397,20 @@
    "venue": "桃園展演中心",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/75a0368e349240bfa6ea8037b2bf21b3",
    "image": "https://www.afmc.gov.tw/Upload/2026101409382938e2fc0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "每週二至日9:00-17:00，週一休館。 活動內容 中華民國油畫學會在1974年3月由多位前輩畫家楊三郎、李梅樹、廖繼春、顏水龍、李石樵、林克恭、袁樞真、張萬傳、洪瑞麟、呂基正、何肇衢、吳隆榮、劉文煒、陳瑞福、陳銀輝等發起成立，藉由每年舉辦會員作品發表展覽及辦理徵件比賽，提升國內油畫藝術創作水準與發掘新一代油畫創作菁英，都有具體明顯的效果；早年獲獎的青年創作者，當今都在國內油畫創作的領域有了關鍵的角色。50年來，隨著時代不斷在進步，油畫創作的表現也更加多元，各種形式的表現手法不斷翻新，加上資訊產業發達的影響，台灣油畫藝術表現活潑多樣充滿積極的嘗試體驗，更加活躍了油畫學會的展出能量，每年的全國油畫展也成為國內油畫發展的指標。油畫學會積極扮演提升油畫藝術的平台，讓許多油畫創作者，能從油畫學會搭建的平台，提高自身的聲望與成就，吸引更多的民眾朋友走入油畫世界，共享油畫的美好。",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/75a0368e349240bfa6ea8037b2bf21b3"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -1184,6 +1425,7 @@
    "venue": "觀音新坡育兒資源站",
    "address": null,
    "district": "觀音區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1195,6 +1437,11 @@
     "ages": "12～24 個月",
     "zip": "328"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1209,6 +1456,7 @@
    "venue": "觀音親子館",
    "address": null,
    "district": "觀音區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1220,6 +1468,11 @@
     "ages": "不限年齡",
     "zip": "328"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1234,6 +1487,7 @@
    "venue": "楊梅親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1245,6 +1499,12 @@
     "ages": "18～23 個月",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "節慶市集",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1259,6 +1519,7 @@
    "venue": "觀音新坡育兒資源站",
    "address": null,
    "district": "觀音區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1270,6 +1531,11 @@
     "ages": "不限年齡",
     "zip": "328"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1284,6 +1550,7 @@
    "venue": "大園親子館",
    "address": null,
    "district": "大園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1295,6 +1562,11 @@
     "ages": "24～47 個月",
     "zip": "337"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1309,6 +1581,7 @@
    "venue": "中壢龍福親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1320,6 +1593,11 @@
     "ages": "24～47 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1334,6 +1612,7 @@
    "venue": "中壢五權親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1345,6 +1624,11 @@
     "ages": "4～71 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1359,6 +1643,7 @@
    "venue": "楊梅親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1370,6 +1655,12 @@
     "ages": "24～47 個月",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "節慶市集",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1384,6 +1675,7 @@
    "venue": "中壢龍福親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1395,6 +1687,11 @@
     "ages": "24～47 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1409,6 +1706,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1420,6 +1718,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1434,6 +1738,7 @@
    "venue": "八德親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1445,6 +1750,11 @@
     "ages": "12～35 個月",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1459,6 +1769,7 @@
    "venue": "中壢過嶺親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1470,6 +1781,11 @@
     "ages": "12～35 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1484,6 +1800,7 @@
    "venue": "中壢內壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1495,6 +1812,11 @@
     "ages": "24～48 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1509,6 +1831,7 @@
    "venue": "觀音草漯親子館",
    "address": null,
    "district": "觀音區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1520,6 +1843,11 @@
     "ages": "不限年齡",
     "zip": "328"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1534,6 +1862,7 @@
    "venue": "楊梅四維親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1545,6 +1874,11 @@
     "ages": "不限年齡",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1559,6 +1893,7 @@
    "venue": "中壢龍福親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1570,6 +1905,11 @@
     "ages": "12～24 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1584,6 +1924,7 @@
    "venue": "中壢過嶺親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1595,6 +1936,11 @@
     "ages": "24～47 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1609,6 +1955,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1620,6 +1967,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -1634,6 +1987,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1645,6 +1999,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -1659,6 +2019,7 @@
    "venue": "中壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1670,6 +2031,11 @@
     "ages": "0～24 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1684,6 +2050,7 @@
    "venue": "中壢龍福親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1695,6 +2062,11 @@
     "ages": "12～24 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1703,18 +2075,26 @@
    "sourceName": "藝文設施管理中心",
    "title": "國軍聯合樂隊音樂會",
    "start": "2026-11-26T19:30:00+08:00",
-   "end": "2026-11-26T19:30:00+08:00",
-   "regStart": null,
+   "end": "2026-11-26T21:00:00+08:00",
+   "regStart": "2026-10-29",
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/4c2bafe0646f458797147a3e786de621",
    "image": "https://www.afmc.gov.tw/Upload/2026101416361926ce820.png",
-   "summary": null,
-   "extra": null,
+   "summary": "相關連結 https://www.facebook.com/mndsopage 演出時間 活動內容 國軍聯合樂隊將於11月26日在中壢藝術館盛大演出！精選管樂經典——《與鯨共航》、《歡慶序曲》及《榮耀讚美詩》，與影視動畫名曲——《不可能的任務》、《馴龍高手》與《超級瑪利歐》。用澎湃震撼的管樂聲響，帶領樂迷共度難忘的音樂饗宴。預計10/29開放索票連結線上索票後現場取票\"",
+   "extra": {
+    "entry": "報名或索票：入場方式 報名或索票 入場說明 1.索票進場/請掃QRcode2.相關資訊在臉書示範樂隊粉絲頁3.電話:02-27323110#625310",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/4c2bafe0646f458797147a3e786de621"
+   },
+   "categories": [
+    "免費",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -1729,6 +2109,7 @@
    "venue": "中壢內壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1740,6 +2121,11 @@
     "ages": "6～12 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1754,6 +2140,7 @@
    "venue": "楊梅四維親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1765,6 +2152,11 @@
     "ages": "不限年齡",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1779,6 +2171,7 @@
    "venue": "大溪親子館",
    "address": null,
    "district": "大溪區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1790,6 +2183,11 @@
     "ages": "不限年齡",
     "zip": "335"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1804,6 +2202,7 @@
    "venue": "桃園親子館",
    "address": null,
    "district": "桃園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1815,6 +2214,11 @@
     "ages": "24～47 個月",
     "zip": "330"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1829,12 +2233,20 @@
    "venue": "桃園展演中心",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
-   "url": "https://www.afmc.gov.tw/Activity_detail/634aa960fbb94b9ca411058805961aff",
+   "free": false,
+   "url": "https://www.opentix.life/event/2028634382323146752",
    "image": "https://www.afmc.gov.tw/Upload/202609181157446806aa0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "2026/11/28 (六) 14:30◎入場時間：演出前30分鐘開放觀眾入場◎演出長度約100分鐘，含中場休息15分鐘 活動內容 ✨2026最適合全家人一起參與的互動式音樂會✨爸爸媽媽、阿公阿嬤和孩子們三代同堂一起來響樂！這是一場可以吹奏、可以唱歌、可以跳舞、可以變把戲的互動式音樂會觀眾化身村民，一同參與一年一度嘉年華盛事🎉跟著村長一起學習新技能，開啟雜耍魔術等橋段！！ 從生動有趣的樂器介紹，到雜耍、魔術與現場互動橋段跟著村長認識什麼是銅管樂器？沒學過音樂也沒關係，只要走進展演廳就能一起感受銅管樂器的魅力！",
+   "extra": {
+    "entry": "售票：入場方式 售票 入場說明 OPENTIX售票系統，票價： 300 、400 、600 、800 、1,000 、1,200",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/634aa960fbb94b9ca411058805961aff"
+   },
+   "categories": [
+    "表演",
+    "節慶市集"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1843,18 +2255,26 @@
    "sourceName": "藝文設施管理中心",
    "title": "說故事-窯裡的秘密",
    "start": "2026-11-28T14:30:00+08:00",
-   "end": "2026-11-28T14:30:00+08:00",
+   "end": "2026-11-28T15:30:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "A8藝文中心",
    "address": "桃園市龜山區復興一路8號",
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/ab95922715e14231a44c1651dcd22c43",
    "image": "https://www.afmc.gov.tw/Upload/202611190823396a4f4c0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "活動內容 噓～你有聽見嗎？窯裡好像藏著什麼小秘密！一團不起眼的泥土，經過揉一揉、捏一捏，再送進熱呼呼的窯裡，竟然就能變成各種有趣的模樣。這次就讓我們跟著繪本故事，一起走進陶土的奇妙世界，認識泥土、陶器和創作的樂趣。故事說完，也別忘了看看展場裡的陶藝作品，說不定你會發現，每一件作品裡，都藏著屬於自己的小故事！",
+   "extra": {
+    "entry": "報名或索票：入場方式 報名或索票",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/ab95922715e14231a44c1651dcd22c43"
+   },
+   "categories": [
+    "免費",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -1869,6 +2289,7 @@
    "venue": "中原大學瑞麗堂",
    "address": "桃園市中壢區中北路200號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2117528472935182337",
@@ -1878,6 +2299,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1892,6 +2316,7 @@
    "venue": "桃園展演中心展演廳",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "親子",
    "free": null,
    "url": "https://www.opentix.life/program/2028634382323146752",
@@ -1901,6 +2326,10 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "親子",
+    "節慶市集"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1915,6 +2344,7 @@
    "venue": "楊梅親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1926,6 +2356,11 @@
     "ages": "0～0 個月",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1940,6 +2375,7 @@
    "venue": "八德親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1951,6 +2387,12 @@
     "ages": "不限年齡",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1965,6 +2407,7 @@
    "venue": "平鎮一號親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -1976,6 +2419,11 @@
     "ages": "18～35 個月",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -1990,6 +2438,7 @@
    "venue": "平鎮一號親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2001,6 +2450,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2009,18 +2463,25 @@
    "sourceName": "藝文設施管理中心",
    "title": "2026敦煌舞蹈團年度公演《時光相機》創作舞劇",
    "start": "2026-11-29T14:00:00+08:00",
-   "end": "2026-11-29T14:00:00+08:00",
+   "end": "2026-11-29T16:00:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
-   "url": "https://www.afmc.gov.tw/Activity_detail/a780f86cd4fe423b9e14854c5c1f3ef5",
+   "free": false,
+   "url": "https://www.opentix.life/event/2115290479004147712",
    "image": "https://www.afmc.gov.tw/Upload/202609301617879c318f0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "11月29日(日)14:00開演（13:30入場)★★開演後遲到或中途離席的觀眾，須配合工作人員安排入場★★ 活動內容 數位時代長大的強強與新朋友花輪，在整理舊物時，意外發現一台塵封的老相機與幾卷受損的膠捲。當模糊的照片重新顯影，神奇的事情發生了！照片裡的人物竟動了起來，帶著兩人穿越不同年代，在音樂與舞蹈中重返童年、青春與家庭的珍貴時光。一場修復照片的冒險，也讓他們發現，鏡頭留下的不只是影像，更是家人一路陪伴成長的愛與回憶。",
+   "extra": {
+    "entry": "售票：入場方式 售票 入場說明 售票入場（opentix兩廳院文化售票) $200 、400 、600 、800",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/a780f86cd4fe423b9e14854c5c1f3ef5"
+   },
+   "categories": [
+    "表演"
+   ],
    "alsoIn": [
     "文化部藝文活動"
    ],
@@ -2038,6 +2499,7 @@
    "venue": "桃園龍寶貝親子館",
    "address": null,
    "district": "桃園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2049,6 +2511,11 @@
     "ages": "不限年齡",
     "zip": "330"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2063,6 +2530,7 @@
    "venue": "中壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2074,6 +2542,12 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2082,18 +2556,25 @@
    "sourceName": "藝文設施管理中心",
    "title": "2026 KC STUDIO 年度公演《INCEPTION》",
    "start": "2026-11-29T16:00:00+08:00",
-   "end": "2026-11-29T16:00:00+08:00",
+   "end": "2026-11-29T20:00:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "桃園展演中心",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": false,
    "url": "https://www.afmc.gov.tw/Activity_detail/a5ced1b034d74054b6ce60e5459a88a3",
    "image": "https://www.afmc.gov.tw/Upload/202610081035078e134b0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "15:00進場，並於16:00開演，約20:00演出結束(中場休息15分鐘) 活動內容 「讓每個孩子都能站上舞台」是創團的宗旨。舞蹈不分齡觀眾族群,以專業、親切活潑的教學,讓舞蹈走進大眾的生活。我們更希望帶學員參與弱勢團體關懷表演,培養愛的力量。透過舞台表演,培養學員自信、大方、勇於表現的態度!進而成為一顆如鑽石般閃耀的星星,讓我們可以成為創造夢想的舞者。「我們透過舞蹈,培養對生活的態度：——\"自信、樂觀、積極、堅韌\"」",
+   "extra": {
+    "entry": "售票：入場方式 售票 入場說明 售票入場，請洽官方LINE (@k.dance2012)",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/a5ced1b034d74054b6ce60e5459a88a3"
+   },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2108,6 +2589,7 @@
    "venue": "觀音親子館",
    "address": null,
    "district": "觀音區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2119,6 +2601,11 @@
     "ages": "18～47 個月",
     "zip": "328"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2133,6 +2620,7 @@
    "venue": "大園親子館",
    "address": null,
    "district": "大園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2144,6 +2632,11 @@
     "ages": "24～47 個月",
     "zip": "337"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2158,6 +2651,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2169,6 +2663,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2183,6 +2683,7 @@
    "venue": "中壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2194,6 +2695,11 @@
     "ages": "8～24 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2208,6 +2714,7 @@
    "venue": "龜山親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2219,6 +2726,12 @@
     "ages": "13～24 個月",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "講座課程",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2233,6 +2746,7 @@
    "venue": "中壢內壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2244,6 +2758,11 @@
     "ages": "24～48 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2258,6 +2777,7 @@
    "venue": "中壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2269,6 +2789,11 @@
     "ages": "24～48 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2283,6 +2808,7 @@
    "venue": "大園親子館",
    "address": null,
    "district": "大園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2294,6 +2820,11 @@
     "ages": "8～14 個月",
     "zip": "337"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2308,6 +2839,7 @@
    "venue": "平鎮一號親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2319,6 +2851,11 @@
     "ages": "4～11 個月",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2333,6 +2870,7 @@
    "venue": "大溪埔頂親子館",
    "address": null,
    "district": "大溪區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2344,6 +2882,11 @@
     "ages": "12～36 個月",
     "zip": "335"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2358,6 +2901,7 @@
    "venue": "平鎮一號親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2369,6 +2913,11 @@
     "ages": "12～35 個月",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2383,6 +2932,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2394,6 +2944,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2408,6 +2964,7 @@
    "venue": "觀音親子館",
    "address": null,
    "district": "觀音區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2419,6 +2976,12 @@
     "ages": "18～47 個月",
     "zip": "328"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "節慶市集",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2433,6 +2996,7 @@
    "venue": "楊梅親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2444,6 +3008,12 @@
     "ages": "不限年齡",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2458,6 +3028,7 @@
    "venue": "中壢過嶺親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2469,6 +3040,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2483,6 +3059,7 @@
    "venue": "龜山親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2494,6 +3071,12 @@
     "ages": "13～24 個月",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "講座課程",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2508,6 +3091,7 @@
    "venue": "八德北青親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2519,6 +3103,11 @@
     "ages": "12～23 個月",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2533,6 +3122,7 @@
    "venue": "中壢龍福親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2544,6 +3134,11 @@
     "ages": "12～24 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2558,6 +3153,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2569,6 +3165,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -2583,6 +3185,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2594,6 +3197,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -2608,6 +3217,7 @@
    "venue": "龜山親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2619,6 +3229,12 @@
     "ages": "25～48 個月",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "講座課程",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2633,6 +3249,7 @@
    "venue": "中壢龍福親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2644,6 +3261,11 @@
     "ages": "12～24 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2658,6 +3280,7 @@
    "venue": "大溪埔頂親子館",
    "address": null,
    "district": "大溪區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2669,6 +3292,11 @@
     "ages": "不限年齡",
     "zip": "335"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2683,6 +3311,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/Active_Content.aspx?n=26658&ss=4FC7D5F0D1549324",
@@ -2692,6 +3321,9 @@
     "status": "我要報名",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2706,12 +3338,16 @@
    "venue": "中原文創園區",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://cycc.org.tw/zh-hant/2026sustainable-light",
    "image": "https://cycc.org.tw/sites/default/files/banner/%E3%80%8A2026%20%E6%B0%B8%E7%BA%8C%E5%85%89%E7%92%B0%E5%A2%83%E5%89%B5%E6%84%8F%E5%B1%95%E3%80%8B%E5%AE%98%E7%B6%B2_1920%C3%97960.jpg",
    "summary": null,
    "extra": null,
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2726,6 +3362,7 @@
    "venue": "中壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2737,6 +3374,12 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2751,6 +3394,7 @@
    "venue": "大園親子館",
    "address": null,
    "district": "大園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2762,6 +3406,11 @@
     "ages": "24～47 個月",
     "zip": "337"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2776,6 +3425,7 @@
    "venue": "新屋親子館",
    "address": null,
    "district": "新屋區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2787,6 +3437,11 @@
     "ages": "不限年齡",
     "zip": "327"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2801,6 +3456,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2812,6 +3468,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2826,6 +3487,7 @@
    "venue": "中壢過嶺親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2837,6 +3499,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2851,6 +3518,7 @@
    "venue": "龜山親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2862,6 +3530,13 @@
     "ages": "13～24 個月",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "節慶市集",
+    "講座課程",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2876,6 +3551,7 @@
    "venue": "平鎮一號親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2887,6 +3563,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2901,6 +3582,7 @@
    "venue": "八德親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2912,6 +3594,12 @@
     "ages": "6～23 個月",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2926,6 +3614,7 @@
    "venue": "中壢五權親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2937,6 +3626,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2951,6 +3645,7 @@
    "venue": "中壢五權親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2962,6 +3657,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -2976,6 +3676,7 @@
    "venue": "平鎮新勢親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -2987,6 +3688,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3001,6 +3707,7 @@
    "venue": "龜山大華親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3012,6 +3719,11 @@
     "ages": "18～35 個月",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3026,6 +3738,7 @@
    "venue": "平鎮一號親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3037,6 +3750,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3051,6 +3769,7 @@
    "venue": "新屋親子館",
    "address": null,
    "district": "新屋區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3062,6 +3781,11 @@
     "ages": "不限年齡",
     "zip": "327"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3076,6 +3800,7 @@
    "venue": "平鎮新勢親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3087,6 +3812,12 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3101,6 +3832,7 @@
    "venue": "八德興豐親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3112,6 +3844,11 @@
     "ages": "不限年齡",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3126,6 +3863,7 @@
    "venue": "龜山親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3137,6 +3875,13 @@
     "ages": "25～48 個月",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "節慶市集",
+    "講座課程",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3151,6 +3896,7 @@
    "venue": "中壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3162,6 +3908,11 @@
     "ages": "24～48 個月",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3170,18 +3921,26 @@
    "sourceName": "藝文設施管理中心",
    "title": "桃園市立桃園高級中等學校第32屆畢業舞展《UNFOLD•盛放》",
    "start": "2026-12-04T19:30:00+08:00",
-   "end": "2026-12-04T19:30:00+08:00",
+   "end": "2026-12-04T21:10:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "桃園展演中心",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/2077e2093077437c947e8d4bed62667a",
    "image": "https://www.afmc.gov.tw/Upload/2026110916316364f2e80.png",
-   "summary": null,
-   "extra": null,
+   "summary": "115/12/04(五)19:3019:30開演/中場休息15分鐘/21:10結束 活動內容 桃園高中舞蹈班第32屆畢業舞展《UNFOLD・盛放》，攜手文華高中舞蹈班聯合呈現9首多元舞作，展現扎實的專業訓練與青春創作能量。亮點舞作《快樂頌—生命的希望》獲原創者朱美玲教授授權、黃琤圈主任指導，透過經典重現，傳遞藝術傳承的美感內涵與生命力量。",
+   "extra": {
+    "entry": "報名或索票：入場方式 報名或索票 入場說明 索票進場(每人限4張)，索票資訊請洽桃園市立桃園高級中等學校教務處特教組:03-3946001#6135、6216",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/2077e2093077437c947e8d4bed62667a"
+   },
+   "categories": [
+    "免費",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3196,12 +3955,18 @@
    "venue": "富岡火車站前(富岡里成功路37 號)",
    "address": "桃園市楊梅區富岡火車站前(富岡里成功路37 號)",
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "節慶市集",
-   "free": null,
+   "free": true,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7134",
    "image": "https://travel.tycg.gov.tw/content/images/articles/117322/480x360_articles-image-hleo8myvreywgfwtr6tsig.jpg",
-   "summary": "￭相關細節可電洽桃園市政府文化局(03-3322592 #8313)\n2026桃園藝術巡演楊梅場-FOCASA馬戲團《馬戲探險家》馬戲表演(配合富岡鐵道藝術\n生活節)\n活動時間:\n第一場:115年12月5日(六)15:30\n第二場:115年12月20日(日)14:00\n一、團隊介紹:FOCASA馬戲團成立於2011年,為臺灣首創專業當代馬戲團隊。團隊以快樂與夢想的馬戲之家為定位,發表過二十個跨界實驗與親子劇場作品,年均演出達百場。深耕十餘年來,足跡遍及全球25國、101座城市,包含愛丁堡藝穗節等國際指標舞台。我們持續整合創作、策展與培育,健全並永續臺灣當代馬戲生態。\n二、劇目簡介:《馬戲探險家…",
+   "summary": "￭相關細節可電洽桃園市政府文化局(03-3322592 #8313)\n2026桃園藝術巡演楊梅場-FOCASA馬戲團《馬戲探險家》馬戲表演(配合富岡鐵道藝術\n生活節)\n活動時間:\n第一場:115年12月5日(六)15:30\n第二場:115年12月20日(日)14:00\n一、團隊介紹:FOCASA馬戲團成立於2011年,為臺灣首創專業當代馬戲團隊。團隊以快樂與夢想的馬戲之家為定位,發表過二十個跨界實驗與親子劇場作品,年均演出達百場。深耕十餘年來,足跡遍及全球25國、101座城市,包含愛丁堡藝穗節等國際指標舞台。我們持續整合創作、策展與培育,健全並永續臺灣當代馬戲生態。\n二、劇目簡介:《馬戲探險家》以尋找神秘寶藏箱為故事意象,全劇以探險家為主軸,融合雜耍、平衡與堆疊特技。節目透過「輕鬆、驚喜、緊張、釋放」的節奏推進與幽默互動,引領觀眾化身探險夥伴。探險家在富岡車站展開未知行動,開啟充滿驚喜的馬戲旅程。本劇期盼創造能被記住的親子時空,讓不同世代在歡笑與驚呼中留下共同記憶。\n三、入場方式:戶外演出,自由入場",
    "extra": null,
+   "categories": [
+    "免費",
+    "節慶市集",
+    "表演"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -3219,12 +3984,16 @@
    "venue": "富岡火車站前廣場及周邊街區",
    "address": "桃園市楊梅區富岡火車站前廣場及周邊街區",
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "節慶市集",
    "free": null,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7127",
    "image": "https://travel.tycg.gov.tw/content/images/articles/117271/480x360_articles-image-w942rgyr_ughfrrbjmz02a.jpg",
-   "summary": "￭相關細節可電洽本 府文化局(03-3322592#8329)\n「2026桃園富岡鐵道藝術生活節」今年正式邁入第5屆，訂於115年12月5日（六）至12月20日（日）舉辦。今年以「區間月台」為核心主軸，藉由「即將抵達－富岡」概念，以鐵道旅途中熟悉的列車廣播為靈感，邀請旅人放慢腳步，讓富岡從旅程中的一處站點，轉化為值得停留、探索與再次造訪的旅途月台。\n開幕日由人氣觀光列車「海風號」行駛開幕專列，首次於桃園及富岡車站亮相；12月5日、12日及20日於臺鐵富岡焊軌隊接力展出R200型柴電機車、鐵路吊桿車（RC11）及大型匝道車3款特色車輛；12月18日至20日由何日君再來劇團於桃園至富岡區間列車上推…",
+   "summary": "￭相關細節可電洽本 府文化局(03-3322592#8329)\n「2026桃園富岡鐵道藝術生活節」今年正式邁入第5屆，訂於115年12月5日（六）至12月20日（日）舉辦。今年以「區間月台」為核心主軸，藉由「即將抵達－富岡」概念，以鐵道旅途中熟悉的列車廣播為靈感，邀請旅人放慢腳步，讓富岡從旅程中的一處站點，轉化為值得停留、探索與再次造訪的旅途月台。\n開幕日由人氣觀光列車「海風號」行駛開幕專列，首次於桃園及富岡車站亮相；12月5日、12日及20日於臺鐵富岡焊軌隊接力展出R200型柴電機車、鐵路吊桿車（RC11）及大型匝道車3款特色車輛；12月18日至20日由何日君再來劇團於桃園至富岡區間列車上推出《未來·火車·歌廳秀》列車移動劇場。\n活動期間於富岡老人文康活動中心辦理鐵道主題展覽，展出徐志綱老師鐵道模型並開放N軌鐵道模型運轉體驗；FOCASA馬戲團、阮劇團接力街區演出；每週六、日於富岡火車站前推出「區間月台市集」及舞台活動，並結合數位集章活動，與本府農業局「桃園仙草嘉年華」共同宣傳，串聯楊梅在地觀光。",
    "extra": null,
+   "categories": [
+    "節慶市集"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -3242,12 +4011,16 @@
    "venue": "楊梅休閒農業區",
    "address": "桃園市楊梅區楊梅休閒農業區",
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "節慶市集",
    "free": null,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6854",
    "image": "https://travel.tycg.gov.tw/content/images/articles/117329/480x360_articles-image-f-q88lm2w0g0ommhlmizya.png",
-   "summary": "■ 相關內容請洽本府農業局03-3322101#5415、5416\n【2026 桃園仙草嘉年華－佩佩的紫花園探險】浪漫登場！💜\n今年冬天，楊梅最夢幻的 2.5 公頃紫色仙草花海即將盛開！本次更首度與超人氣的「粉紅豬小妹（佩佩豬）」聯名，把花田打造成充滿童趣的紫花園探險樂園。\n現場除了能與佩佩豬一家主題裝置合影、搭乘穿梭花田的「童趣小火車」，週末還有 YOYO 親子家族唱跳、泡泡秀與限量佩佩豬見面會！只要使用「桃園市民卡 App」完成數位集章，還能兌換限量好禮。\n推薦大家搭乘臺鐵至「富岡火車站」或「楊梅火車站」，轉乘免費接駁專車即可輕鬆抵達；還能順道逛逛同步舉辦的「2026 富岡鐵道藝術生活節…",
+   "summary": "■ 相關內容請洽本府農業局03-3322101#5415、5416\n【2026 桃園仙草嘉年華－佩佩的紫花園探險】浪漫登場！💜\n今年冬天，楊梅最夢幻的 2.5 公頃紫色仙草花海即將盛開！本次更首度與超人氣的「粉紅豬小妹（佩佩豬）」聯名，把花田打造成充滿童趣的紫花園探險樂園。\n現場除了能與佩佩豬一家主題裝置合影、搭乘穿梭花田的「童趣小火車」，週末還有 YOYO 親子家族唱跳、泡泡秀與限量佩佩豬見面會！只要使用「桃園市民卡 App」完成數位集章，還能兌換限量好禮。\n推薦大家搭乘臺鐵至「富岡火車站」或「楊梅火車站」，轉乘免費接駁專車即可輕鬆抵達；還能順道逛逛同步舉辦的「2026 富岡鐵道藝術生活節」，一趟旅程收藏鐵道小鎮與紫色花海兩種冬日風景！\n活動時間：2026/12/05（六）－ 12/20（日）\n活動地點：桃園市楊梅休閒農業區（楊湖路三段239號／上湖派出所對面花田）\n交通建議：臺鐵富岡站（每日接駁）、楊梅後站（假日接駁）皆有免費接駁專車\n更多資訊：請搜尋「楊梅休閒農業區」Facebook 粉絲專頁",
    "extra": null,
+   "categories": [
+    "節慶市集"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -3265,6 +4038,7 @@
    "venue": "桃園龍寶貝親子館",
    "address": null,
    "district": "桃園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3276,6 +4050,11 @@
     "ages": "0～0 個月",
     "zip": "330"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3290,6 +4069,7 @@
    "venue": "大園親子館",
    "address": null,
    "district": "大園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3301,6 +4081,11 @@
     "ages": "不限年齡",
     "zip": "337"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3315,6 +4100,7 @@
    "venue": "新屋親子館",
    "address": null,
    "district": "新屋區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3326,6 +4112,11 @@
     "ages": "不限年齡",
     "zip": "327"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3340,6 +4131,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3351,6 +4143,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3365,6 +4162,7 @@
    "venue": "龜山親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3376,6 +4174,12 @@
     "ages": "8～12 個月",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "講座課程",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3390,6 +4194,7 @@
    "venue": "八德北青親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3401,6 +4206,12 @@
     "ages": "不限年齡",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3415,6 +4226,7 @@
    "venue": "觀音草漯親子館",
    "address": null,
    "district": "觀音區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3426,6 +4238,11 @@
     "ages": "0～0 個月",
     "zip": "328"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3440,6 +4257,7 @@
    "venue": "楊梅四維親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3451,6 +4269,12 @@
     "ages": "不限年齡",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3465,6 +4289,7 @@
    "venue": "桃園親子館",
    "address": null,
    "district": "桃園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3476,6 +4301,11 @@
     "ages": "11～12 個月",
     "zip": "330"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3490,6 +4320,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3501,6 +4332,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3510,19 +4346,26 @@
    "title": "【愛，不用翻譯】12月份",
    "start": "2026-12-05T14:00:00+08:00",
    "end": "2026-12-27T17:00:00+08:00",
-   "regStart": null,
-   "regEnd": null,
+   "regStart": "2026-11-25T09:00:00+08:00",
+   "regEnd": "2026-12-27T13:00:00+08:00",
    "venue": "桃園光影文化館三樓放映廳",
    "address": "桃園市桃園區埔新路12號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "其他",
-   "free": null,
+   "free": true,
    "url": "https://taoyuanartscinema2.kktix.cc/events/sar-10-copy-2",
    "image": null,
    "summary": "桃園光影文化館｜主題影展【愛，不用翻譯】\n12/05 — 12/27",
    "extra": {
-    "organizer": "桃園光影文化館"
+    "organizer": "桃園光影文化館",
+    "prices": [
+     "免費"
+    ]
    },
+   "categories": [
+    "免費"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3531,18 +4374,26 @@
    "sourceName": "藝文設施管理中心",
    "title": "狂美親子音樂劇場《聖誕危機》",
    "start": "2026-12-05T14:30:00+08:00",
-   "end": "2026-12-05T14:30:00+08:00",
+   "end": "2026-12-05T17:00:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
-   "url": "https://www.afmc.gov.tw/Activity_detail/285ae8ddd42a4fa9b3771bbdcfdcbd18",
+   "free": false,
+   "url": "https://www.opentix.life/event/2088199390794928129?srsltid=AU7gw4W2t40ib9jMU3LTVSdqi3Zznsn9OSCb-i6jDeISFSqGkBG5qXlj",
    "image": "https://www.afmc.gov.tw/Upload/20261008180585432de20.png",
-   "summary": null,
-   "extra": null,
+   "summary": "活動內容 狂美親子音樂劇場《聖誕危機》佳節限定回歸！夜幕低垂，麋鹿將禮物分送到家門口，小格列佛的禮物又大又沉，上頭還蓋著一個巨大的掌印！熟悉的印記，好似來自動物王國的求救信號，該如何化解這場危機？現場樂團與繽紛奇幻的戲劇呈現，給你一場驚奇動人的體驗！",
+   "extra": {
+    "entry": "售票：入場方式 售票 入場說明 OPENTIX票價：500、650、800、1,000、1,250、1,600、2,000",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/285ae8ddd42a4fa9b3771bbdcfdcbd18"
+   },
+   "categories": [
+    "表演",
+    "親子"
+   ],
    "alsoIn": [
     "文化部藝文活動"
    ],
@@ -3560,6 +4411,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3571,6 +4423,11 @@
     "ages": "0～0 個月",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3585,6 +4442,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3596,6 +4454,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -3610,6 +4473,7 @@
    "venue": "楊梅四維親子館",
    "address": null,
    "district": "楊梅區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3621,6 +4485,11 @@
     "ages": "0～0 個月",
     "zip": "326"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3635,6 +4504,7 @@
    "venue": "新屋親子館",
    "address": null,
    "district": "新屋區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3646,6 +4516,11 @@
     "ages": "7～12 個月",
     "zip": "327"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3660,6 +4535,7 @@
    "venue": "中壢五權親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3671,6 +4547,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3685,6 +4566,7 @@
    "venue": "中壢五權親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3696,6 +4578,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3710,6 +4597,7 @@
    "venue": "桃園龍寶貝親子館",
    "address": null,
    "district": "桃園區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3721,6 +4609,11 @@
     "ages": "不限年齡",
     "zip": "330"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3735,6 +4628,7 @@
    "venue": "大溪親子館",
    "address": null,
    "district": "大溪區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3746,6 +4640,12 @@
     "ages": "不限年齡",
     "zip": "335"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "節慶市集",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3760,6 +4660,7 @@
    "venue": "龜山親子館",
    "address": null,
    "district": "龜山區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3771,6 +4672,12 @@
     "ages": "不限年齡",
     "zip": "333"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "講座課程",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3785,6 +4692,7 @@
    "venue": "八德北青親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3796,6 +4704,12 @@
     "ages": "不限年齡",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子",
+    "體驗"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3810,6 +4724,7 @@
    "venue": "平鎮親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3821,6 +4736,11 @@
     "ages": "4～17 個月",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -3835,6 +4755,7 @@
    "venue": "中壢五權親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3846,6 +4767,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3860,6 +4786,7 @@
    "venue": "中壢五權親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3871,6 +4798,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3885,12 +4817,16 @@
    "venue": "石門水庫南苑停車場",
    "address": "桃園市大溪區石門水庫南苑停車場",
    "district": "大溪區",
+   "city": "桃園市",
    "category": "運動",
    "free": null,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6847",
    "image": "https://travel.tycg.gov.tw/content/images/articles/115596/480x360_articles-image-snnqlmoatk-jlir2froifw.jpg",
-   "summary": "￭相關細節可電洽 桃園市政府體育局-全民運動科 (03)319-4510#5007\n🍁2026桃園半程馬拉松 石門水庫楓半馬 🍁\n📣熱列開放報名中 https://haloplus.pse.is/998s8p\n體驗奔馳在石門水庫最美湖畔楓景🍁🍁\n🏃🏃🏻&zwj;♀️🏃🏻&zwj;♂️快揪親朋好友一起報名，用跑的 用走的 就是要一起！\n🗓️ 賽事日期｜2026年12月6日\n📍 賽事地點｜石門水庫南苑停車場\n🏃&zwj;♂️ 賽事組別｜21.0975K 半程馬拉松組、10K路跑組、5K休閒組、視障組、身心障礙組\n⏰ 即日起開放報名至9月25日止（額滿提前截止）\n📍跑者物…",
+   "summary": "￭相關細節可電洽 桃園市政府體育局-全民運動科 (03)319-4510#5007\n🍁2026桃園半程馬拉松 石門水庫楓半馬 🍁\n📣熱列開放報名中 https://haloplus.pse.is/998s8p\n體驗奔馳在石門水庫最美湖畔楓景🍁🍁\n🏃🏃🏻&zwj;♀️🏃🏻&zwj;♂️快揪親朋好友一起報名，用跑的 用走的 就是要一起！\n🗓️ 賽事日期｜2026年12月6日\n📍 賽事地點｜石門水庫南苑停車場\n🏃&zwj;♂️ 賽事組別｜21.0975K 半程馬拉松組、10K路跑組、5K休閒組、視障組、身心障礙組\n⏰ 即日起開放報名至9月25日止（額滿提前截止）\n📍跑者物資：\n🎽 4款專屬賽事跑衣自由選\n（男/女版競賽排汗背心、主視覺款運動T恤、設計師款運動T恤）\n💪醫療級彈力帶\n✨各組別限定參賽禮✨\n📌21.0975K 半程馬拉松組：🧦運動長襪📱防水手機套🍁楓葉木漿海綿🛍️Hahababy 品牌手提袋\n📌10K路跑組：🧦運動短襪📱防水手機套\n📌5K休閒組：🧦運動短襪🍁楓葉木漿海綿\n完賽還能將楓半馬限定獎牌🏅及各組毛巾🙌帶回家\n🤩賽道上提供大龍門特色美食補給大溪滷味豆乾、蘿蔔糕、燒餅及咔哩咔哩…等，挑戰半程馬拉松還有烤山豬🐗等著你!\n🍽️完賽後還有桃園經典小吃米苔目，讓你跑得開心、吃得滿足！\n📍更多資訊持續更新中：\nhttps://www.facebook.com/taoyuan.half.marathon",
    "extra": null,
+   "categories": [
+    "運動"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -3908,6 +4844,7 @@
    "venue": "中壢過嶺親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3919,6 +4856,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3933,6 +4875,7 @@
    "venue": "八德北青親子館",
    "address": null,
    "district": "八德區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3944,6 +4887,12 @@
     "ages": "不限年齡",
     "zip": "334"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子",
+    "體驗"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3958,6 +4907,7 @@
    "venue": "平鎮一號親子館",
    "address": null,
    "district": "平鎮區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3969,6 +4919,11 @@
     "ages": "不限年齡",
     "zip": "324"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -3983,6 +4938,7 @@
    "venue": "中壢親子館",
    "address": null,
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -3994,6 +4950,11 @@
     "ages": "不限年齡",
     "zip": "320"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4008,6 +4969,7 @@
    "venue": "復興行動親子車",
    "address": null,
    "district": "復興區",
+   "city": "桃園市",
    "category": "親子館",
    "free": true,
    "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
@@ -4019,6 +4981,11 @@
     "ages": "不限年齡",
     "zip": "336"
    },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4027,18 +4994,26 @@
    "sourceName": "藝文設施管理中心",
    "title": "2026 桃園市民管樂團暨桃園市民薩克合奏團 冬季公演《映画巨獻》",
    "start": "2026-12-06T14:30:00+08:00",
-   "end": "2026-12-06T14:30:00+08:00",
-   "regStart": null,
+   "end": "2026-12-06T17:00:00+08:00",
+   "regStart": "2026-11-27T12:00:00+08:00",
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/2de7e786f99a43868a98c6860132732b",
    "image": "https://www.afmc.gov.tw/Upload/2026110914346090c7ed0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "活動內容 桃園市民管樂團與桃園市民薩克合奏團攜手展開樂音的奇幻旅程。從《與白鯨同行》、《智慧之海》的壯闊景致，到《魔女宅急便》、《千與千尋》的動人旋律，再以《神鬼戰士》、YOASOBI組曲與《情熱大陸》點燃熱情，讓觀眾在熟悉的旋律中，感受管樂的魅力與無限想像。",
+   "extra": {
+    "entry": "報名或索票：入場方式 報名或索票 入場說明 索票入場索票日期：11/27(五)12:00起索票地點：中壢藝術館(03)4258804桃園市政府文化局(03)3322592桃園展演中心(03)3170511小森林幼兒園(03)3179977演出設有遲進點，遲到或中途離席的觀眾，請配合館方工作人員的指示再行入座，若無法接受本項安排，請洽演出單位。",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/2de7e786f99a43868a98c6860132732b"
+   },
+   "categories": [
+    "免費",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4053,6 +5028,7 @@
    "venue": "桃園展演中心展演廳",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2097267213329641473",
@@ -4062,6 +5038,10 @@
     "showCount": 2,
     "organizer": null
    },
+   "categories": [
+    "表演",
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4076,12 +5056,20 @@
    "venue": "桃園展演中心",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/d5da64bf79b648d6906fca907acba96f",
    "image": "https://www.afmc.gov.tw/Upload/202611201305787df79f0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "每週二至日週一及國定假日休館 活動內容 傅狷夫書畫學會主辦的「鋒發韻流2026傅狷夫書畫學會會員聯展」即日起至12月27日於桃園展演中心展出。本次展覽集結100餘件各具特色作品，展現水墨藝術深厚底蘊與豐富多元的創作面貌。「傅狷夫書畫學會」成立於2016年，旨在表彰傅狷夫教授(1910~2007)在書畫創作與教育上的傑出成就，並以緬懷師恩、傳承藝術精神為宗旨。弟子們為弘揚其創意精神與誨人不倦的教育精神，致力發揚傳統文化特色，持續精進書畫創作，提升藝術表現與創作水準。",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場 入場說明 每週二至日週一及國定假日休館",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/d5da64bf79b648d6906fca907acba96f"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4096,12 +5084,20 @@
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/110f88ef1cb149fdbcf767e8457a0fcd",
    "image": "https://www.afmc.gov.tw/Upload/202611061634036f83cc0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "逢週一及國定假日休館 活動內容 中壢國中美術班每年均舉辦成果展，盡情用藝術揮灑青春，不斷成長。每幅作品都有想訴說的故事、想法和情感，在追尋藝術的夢想中，不斷探索、嘗試、學習，慢慢蛻變為繽紛豐富、有內涵有想法的新個體，也創作出燦爛未來。藉此展覽與您分享我們創作的用心與成果！",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/110f88ef1cb149fdbcf767e8457a0fcd"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4116,44 +5112,27 @@
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/d7c0f23b2aae4e90a6cdd757ed918d3b",
    "image": "https://www.afmc.gov.tw/Upload/20261118095786863f650.png",
-   "summary": null,
-   "extra": null,
-   "firstSeen": "2026-11-23T09:12:58.616Z"
-  },
-  {
-   "id": "accupass:2611181030251489250934",
-   "source": "accupass",
-   "sourceName": "Accupass 活動通",
-   "title": "iPhone手機走到哪，拍到哪 ｜大溪｜捕捉落羽松、楓葉的浪漫色彩",
-   "start": "2026-12-12T09:00:00+08:00",
-   "end": "2026-12-12T11:15:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "桃園市",
-   "address": null,
-   "district": null,
-   "category": "其他",
-   "free": null,
-   "url": "https://www.accupass.com/event/2611181030251489250934",
-   "image": "https://static.accupass.com/eventbanner/2611181027363498913400_P520x260.jpg",
-   "summary": null,
+   "summary": "115/12/9(三)-115/12/20(日) 9:00-17:00逢週一及國定假日休館 活動內容 我們是一顆顆藝術的種子，經過三年來的滋養而萌芽，我們對藝術一見傾心，每一件作品都是努力耕耘的軌跡，細細訴說著成長的故事！ 我們透過藝術，開發無限的潛能，透過創意，開創精彩的未來，揮灑彩筆，盡情在生活風景中描繪那浮光掠影、驚鴻一瞥的美，收藏那難以言說的感動！ 誠摯的邀請您與我們共享藝術的果實，您的鼓勵與指導，將是我們在藝術藍海遨遊的最佳動力。",
    "extra": {
-    "tags": [
-     "實拍教學1332",
-     "實拍教學"
-    ]
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/d7c0f23b2aae4e90a6cdd757ed918d3b"
    },
-   "firstSeen": "2026-11-23T09:09:40.418Z"
+   "categories": [
+    "免費",
+    "展覽"
+   ],
+   "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
    "id": "accupass:2610271157503350444500",
    "source": "accupass",
    "sourceName": "Accupass 活動通",
-   "title": "✦中壢OPEN小力玩✦【ㄅㄧㄤˋ老闆！中壢老店小學徒】",
+   "title": "✦中壢OPEN小力玩✦【ㄅㄧㄤˋ老闆】中壢老店小學徒",
    "start": "2026-12-12T10:00:00+08:00",
    "end": "2026-12-12",
    "regStart": null,
@@ -4161,6 +5140,7 @@
    "venue": "桃園市",
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "其他",
    "free": null,
    "url": "https://www.accupass.com/event/2610271157503350444500",
@@ -4168,10 +5148,13 @@
    "summary": null,
    "extra": {
     "tags": [
-     "文化體驗91732",
+     "文化體驗94432",
      "文化體驗"
     ]
    },
+   "categories": [
+    "其他"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4186,6 +5169,7 @@
    "venue": "米倉劇場",
    "address": "桃園市桃園區新生路169號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2041775304994054145",
@@ -4195,6 +5179,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4209,6 +5196,7 @@
    "venue": "桃園展演中心展演廳",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2067174521020350465",
@@ -4218,6 +5206,9 @@
     "showCount": 2,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4226,18 +5217,26 @@
    "sourceName": "藝文設施管理中心",
    "title": "2026桃園市民合唱團 冬季公演《在彼此之間》",
    "start": "2026-12-13T14:30:00+08:00",
-   "end": "2026-12-13T14:30:00+08:00",
-   "regStart": null,
+   "end": "2026-12-13T17:00:00+08:00",
+   "regStart": "2026-12-04T12:00:00+08:00",
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/c988d4b4b8ae4239bc1ea1a0c211af92",
    "image": "https://www.afmc.gov.tw/Upload/2026110914440014c2860.png",
-   "summary": null,
-   "extra": null,
+   "summary": "活動內容 桃園市民合唱團以溫暖和聲，唱出親情、思念與生命的美好。混聲團從《伊是咱的寶貝》、《阿爹的飯包》到《在生命轉彎處》，細訴珍貴記憶；女聲團則以《飛呀～夢想》、《走出煩惱》與《祝福》，傳遞勇氣與希望，邀請觀眾在悠揚歌聲中尋回心底最真摯的感動。",
+   "extra": {
+    "entry": "報名或索票：入場方式 報名或索票 入場說明 索票入場索票日期：12/04(五)12:00起索票地點：中壢藝術館(03)4258804桃園市政府文化局(03)3322592桃園展演中心(03)3170511小森林幼兒園(03)3179977演出設有遲進點，遲到或中途離席的觀眾，請配合館方工作人員的指示再行入座，若無法接受本項安排，請洽演出單位。",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/c988d4b4b8ae4239bc1ea1a0c211af92"
+   },
+   "categories": [
+    "免費",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4252,6 +5251,7 @@
    "venue": "米倉劇場",
    "address": "桃園市桃園區新生路169號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2110369335028596737",
@@ -4261,6 +5261,9 @@
     "showCount": 3,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4275,6 +5278,7 @@
    "venue": "桃園火車站",
    "address": "桃園市桃園區中正路1號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2082753505317773312",
@@ -4284,6 +5288,9 @@
     "showCount": 12,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4298,12 +5305,17 @@
    "venue": "航空城博物館園區-05警戒區(桃航三路456巷60號)",
    "address": "桃園市大園區航空城博物館園區-05警戒區(桃航三路456巷60號)",
    "district": "大園區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": true,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7133",
    "image": "https://travel.tycg.gov.tw/content/images/articles/117320/480x360_articles-image-nbpno6frf0g8pcigj99vmq.jpg",
-   "summary": "￭相關細節可電洽桃園市政府文化局(03-3322592 #8313)\n2026桃園藝術巡演大園場-宋坤傳藝《酬神》擊樂表演\n活動時間:115年12月19日(六)14時至15時50分\n一、團隊介紹:宋坤傳藝創立於2003年,表演融合臺灣特色文化,呈現多元創新的演出風格,在不失傳統精神主軸下,同步現代美學多次受邀參與以及兩岸三地與國際交流演出,遍及歐、亞、美、澳,更遠赴「南非」進行文化傳承之行,持續將臺灣傳統表演藝術文化推廣到世界各角落。\n二、劇目簡介:宋坤傳藝20週年大戲「酬神」,代表子民敬天敬地感謝之意,是台灣民間傳統信仰觀念的回饋。人們祈求上天的精神支柱,抱著希望目標堅持地努力奮鬥!在歡欣豐…",
+   "summary": "￭相關細節可電洽桃園市政府文化局(03-3322592 #8313)\n2026桃園藝術巡演大園場-宋坤傳藝《酬神》擊樂表演\n活動時間:115年12月19日(六)14時至15時50分\n一、團隊介紹:宋坤傳藝創立於2003年,表演融合臺灣特色文化,呈現多元創新的演出風格,在不失傳統精神主軸下,同步現代美學多次受邀參與以及兩岸三地與國際交流演出,遍及歐、亞、美、澳,更遠赴「南非」進行文化傳承之行,持續將臺灣傳統表演藝術文化推廣到世界各角落。\n二、劇目簡介:宋坤傳藝20週年大戲「酬神」,代表子民敬天敬地感謝之意,是台灣民間傳統信仰觀念的回饋。人們祈求上天的精神支柱,抱著希望目標堅持地努力奮鬥!在歡欣豐收之際不忘感恩的心,以「酬神」來回饋謝天。「宋坤傳藝」同樣抱持著感恩,將傳統技藝推陳出新精緻化演出,以台灣傳統鼓藝、龍獅技藝為主軸,跨界合作武術、舞蹈、特技以及音樂領域藝術家,並透過投影、聲、光技術來加乘演出效果,打造虛實整合的視覺響宴。\n三、入場方式:戶外演出,自由入場",
    "extra": null,
+   "categories": [
+    "免費",
+    "表演"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -4315,18 +5327,25 @@
    "sourceName": "藝文設施管理中心",
    "title": "小王子歷險記",
    "start": "2026-12-19T14:30:00+08:00",
-   "end": "2026-12-19T14:30:00+08:00",
+   "end": "2026-12-19T16:00:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
-   "url": "https://www.afmc.gov.tw/Activity_detail/dd51a4c3f83d48a18c8797dba2f92eaf",
+   "free": false,
+   "url": "https://www.opentix.life/event/2082732279325532161",
    "image": "https://www.afmc.gov.tw/Upload/2026110616214770dda30.png",
-   "summary": null,
-   "extra": null,
+   "summary": "https://www.opentix.life/event/2082732279325532161 活動內容 來自一個星球的小王子，渴望認識新朋友而展開一段冒險旅程，在遊歷不同星球時遇到形形色色的人，他們說的話讓小王子有了不同的體悟，為了找到心中的答案而繼續旅行，途中遇到的朋友是誰讓他變得勇敢又堅定，誰又是他心中認可的好朋友呢？快來聽故事找答案吧!",
+   "extra": {
+    "entry": "售票：入場方式 售票 入場說明 售票入場 OPENTIX $300、$500、$800、$1000",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/dd51a4c3f83d48a18c8797dba2f92eaf"
+   },
+   "categories": [
+    "表演"
+   ],
    "alsoIn": [
     "文化部藝文活動"
    ],
@@ -4344,14 +5363,19 @@
    "venue": "桃園巨蛋",
    "address": "桃園市桃園區三民路一段1號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "運動",
    "free": null,
    "url": "https://leopards.kktix.cc/events/c343a71c",
    "image": null,
    "summary": "◤▔▔▔▔◥26-27賽季 雲豹主場門票熱賣中🔥◣▁▁▁▁◢ ➠展現豹軍最極致的自信，不用多餘廢話，上場直接用球技說話！∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞ 2026-27 賽",
    "extra": {
-    "organizer": "雲諾運動文教(股)公司"
+    "organizer": "雲諾運動文教(股)公司",
+    "prices": null
    },
+   "categories": [
+    "運動"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4360,18 +5384,25 @@
    "sourceName": "藝文設施管理中心",
    "title": "桃園交響管樂團《趣玩樂囉》",
    "start": "2026-12-20T14:00:00+08:00",
-   "end": "2026-12-20T14:00:00+08:00",
+   "end": "2026-12-20T15:30:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": false,
    "url": "https://www.afmc.gov.tw/Activity_detail/96c0f90c83b941159ce11b3a2cd23621",
    "image": "https://www.afmc.gov.tw/Upload/20261029163108661a5a0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "相關連結 https://www.opentix.life/event/2109530438754242561?srsltid=AYCX9vLh96CqavqQeRn6VRjtuH3T0CfLQ6W-Byqbf1s4s7ygO7VUniiO 演出時間 活動內容 本場音樂會以本團團員的旅遊生活與音樂興趣相結合，團員旅遊時的影像，呼應精心設計的曲目，呈現音樂與生活共創的精采人生，嶄新且觸動心懸的影像設計，搭配團員的現場演奏，讓聽眾在音樂廳的座位上，即可開啟一場異國的靈魂遠征。",
+   "extra": {
+    "entry": "售票：入場方式 售票 入場說明 OPENTIX售票:250元本場次設有遲進點，若不慎遲到（如遇塞車、尋找車位）或中途需離場（如使用洗手間、大廳飲水），請務必配合現場前台夥伴，於「指定樂章段落」再行進出場。若無法配合此觀演安排，還請洽主辦單位。",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/96c0f90c83b941159ce11b3a2cd23621"
+   },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4386,6 +5417,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2109530438754242561",
@@ -4395,6 +5427,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4409,14 +5444,19 @@
    "venue": "桃園巨蛋",
    "address": "桃園市桃園區三民路一段1號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "運動",
    "free": null,
    "url": "https://leopards.kktix.cc/events/de99019d",
    "image": null,
    "summary": "◤▔▔▔▔◥26-27賽季 雲豹主場門票熱賣中🔥◣▁▁▁▁◢ ➠展現豹軍最極致的自信，不用多餘廢話，上場直接用球技說話！∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞ 2026-27 賽",
    "extra": {
-    "organizer": "雲諾運動文教(股)公司"
+    "organizer": "雲諾運動文教(股)公司",
+    "prices": null
    },
+   "categories": [
+    "運動"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4431,12 +5471,20 @@
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/7dab206fdfee4c0b91eec5c937d50dae",
    "image": "https://www.afmc.gov.tw/Upload/20261106163612192a240.png",
-   "summary": null,
-   "extra": null,
+   "summary": "逢週一及國定假日休館 活動內容 八德國中美術班以「藝術教育深耕地方」為宗旨，致力於培養學生的創造力與美感素養。本屆第27屆畢業生以「START」為題，象徵藝術學習的延展與生命能量的無限，畢業不是創作的句點，而是夢想的 START。從基礎素描到多媒材創作，學生在三年間不斷探索自我、表現情感，並以作品記錄青春與成長的軌跡，展現八德美術班扎實訓練與自由創意並行的教育精神。",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/7dab206fdfee4c0b91eec5c937d50dae"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4451,14 +5499,19 @@
    "venue": "桃園巨蛋",
    "address": "桃園市桃園區三民路一段1號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "運動",
    "free": null,
    "url": "https://leopards.kktix.cc/events/eb718eaa",
    "image": null,
    "summary": "◤▔▔▔▔◥26-27賽季 雲豹主場門票熱賣中🔥◣▁▁▁▁◢ ➠展現豹軍最極致的自信，不用多餘廢話，上場直接用球技說話！∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞ 2026-27 賽",
    "extra": {
-    "organizer": "雲諾運動文教(股)公司"
+    "organizer": "雲諾運動文教(股)公司",
+    "prices": null
    },
+   "categories": [
+    "運動"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4473,6 +5526,7 @@
    "venue": "桃園市",
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "其他",
    "free": null,
    "url": "https://www.accupass.com/event/2610080612291333521472",
@@ -4484,6 +5538,9 @@
      "聖誕身心靈市集"
     ]
    },
+   "categories": [
+    "其他"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4498,14 +5555,19 @@
    "venue": "桃園巨蛋",
    "address": "桃園市桃園區三民路一段1號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "運動",
    "free": null,
    "url": "https://leopards.kktix.cc/events/f1ff9924",
    "image": null,
    "summary": "◤▔▔▔▔◥26-27賽季 雲豹主場門票熱賣中🔥◣▁▁▁▁◢ ➠展現豹軍最極致的自信，不用多餘廢話，上場直接用球技說話！∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞ 2026-27 賽",
    "extra": {
-    "organizer": "雲諾運動文教(股)公司"
+    "organizer": "雲諾運動文教(股)公司",
+    "prices": null
    },
+   "categories": [
+    "運動"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4514,18 +5576,25 @@
    "sourceName": "藝文設施管理中心",
    "title": "中壢青少年管弦樂團第30次定期音樂會",
    "start": "2026-12-27T14:30:00+08:00",
-   "end": "2026-12-27T14:30:00+08:00",
+   "end": "2026-12-27T16:00:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "中壢藝術館",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
-   "free": null,
+   "free": false,
    "url": "https://www.afmc.gov.tw/Activity_detail/9ccbd161b6de43fa86219dc10b01f868",
    "image": "https://www.afmc.gov.tw/Upload/2026110616289078d2190.png",
-   "summary": null,
-   "extra": null,
+   "summary": "日期：12 / 27 (星期日)時間：14:30 活動內容 中壢青少年管弦樂團將於 2026年12月27日（日）在中壢藝術館 盛大舉辦第30次定期音樂會！本次音樂會特別邀請前東京愛樂交響樂團長笛演奏家坂橋矢波擔任客席獨奏，與樂團攜手呈現精彩的音樂饗宴。演出曲目豐富多元，透過不同風格的經典作品，展現管弦樂的磅礡氣勢與細膩情感，也讓觀眾感受青年音樂家們的熱情與成長。誠摯邀請所有喜愛音樂的朋友蒞臨欣賞，一同見證樂團第30次定期音樂會的重要里程碑，在悠揚樂聲中共享美好的音樂時光！",
+   "extra": {
+    "entry": "售票：入場方式 售票 入場說明 售票tixfun 250/350",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/9ccbd161b6de43fa86219dc10b01f868"
+   },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4540,6 +5609,7 @@
    "venue": null,
    "address": "桃園市中壢區",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "節慶市集",
    "free": null,
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6685",
@@ -4548,6 +5618,9 @@
    "extra": {
     "note": "日期暫定"
    },
+   "categories": [
+    "節慶市集"
+   ],
    "alsoIn": [
     "觀光署活動"
    ],
@@ -4565,12 +5638,17 @@
    "venue": "大樹林滯洪池「水の秘密基地」",
    "address": "桃園市桃園區延平路368號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "體驗",
    "free": true,
    "url": "https://www.wrbtycg.tw/tysafe/WebPage/VisitReservation_Query.html?Location=30",
    "image": null,
    "summary": "每週二到週六上午 10:00–12:00 導覽，每場上限 40 人，每人最多報 4 位。每月 15 日早上 10:00 開放預約下個月場次（遇假日順延），國定假日順延請以官網公告為準。",
    "extra": null,
+   "categories": [
+    "免費",
+    "體驗"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4585,12 +5663,20 @@
    "venue": "桃園展演中心",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "展覽",
-   "free": null,
+   "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/a8e3f13035ce428894016a26a4470d81",
    "image": "https://www.afmc.gov.tw/Upload/202611231504844a044b0.png",
-   "summary": null,
-   "extra": null,
+   "summary": "116/1/2(六)-1/17(日) 09：00-17：00逢週一及國定假日休館 活動內容 本次展覽與國家藝術聯盟聯合主辦，匯聚歐美亞20餘國名家與學者齊聚桃園，展出逾三百件水墨、油畫及雕塑等精品，並舉辦創作論述發表會，開啟跨年國際藝術盛會。",
+   "extra": {
+    "entry": "自由入場：入場方式 自由入場",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/a8e3f13035ce428894016a26a4470d81"
+   },
+   "categories": [
+    "免費",
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
@@ -4605,6 +5691,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/ActiveList.aspx?n=26658&sms=20998",
@@ -4614,6 +5701,9 @@
     "status": "尚未開放報名",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4628,6 +5718,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/ActiveList.aspx?n=26658&sms=20998",
@@ -4637,6 +5728,9 @@
     "status": "尚未開放報名",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4651,6 +5745,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/ActiveList.aspx?n=26658&sms=20998",
@@ -4660,6 +5755,9 @@
     "status": "尚未開放報名",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4674,6 +5772,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/ActiveList.aspx?n=26658&sms=20998",
@@ -4683,6 +5782,9 @@
     "status": "尚未開放報名",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4697,6 +5799,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2108010089152028673",
@@ -4706,6 +5809,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4720,6 +5826,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/ActiveList.aspx?n=26658&sms=20998",
@@ -4729,6 +5836,9 @@
     "status": "尚未開放報名",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4743,6 +5853,7 @@
    "venue": null,
    "address": null,
    "district": null,
+   "city": "桃園市",
    "category": "講座課程",
    "free": null,
    "url": "https://www.hakka.tycg.gov.tw/ActiveList.aspx?n=26658&sms=20998",
@@ -4752,6 +5863,9 @@
     "status": "尚未開放報名",
     "office": "客家事務局"
    },
+   "categories": [
+    "講座課程"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4766,6 +5880,7 @@
    "venue": "桃園展演中心展演廳",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2107041309473828865",
@@ -4775,6 +5890,9 @@
     "showCount": 4,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4789,14 +5907,19 @@
    "venue": "中壢區",
    "address": "中壢區",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "展覽",
    "free": null,
    "url": "https://weiran54728416.kktix.cc/events/ebd5fa1e",
    "image": null,
    "summary": "如果由你來策劃一場展覽，你最想讓大家看見什麼樣的桃園？\n一座城市，有無數值得被發現的故事。一場展覽，可以從一份好奇、一個問題，或是一段對地方的觀察開始。",
    "extra": {
-    "organizer": "桃園市政府文化局"
+    "organizer": "桃園市政府文化局",
+    "prices": null
    },
+   "categories": [
+    "展覽"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4811,6 +5934,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2119370738373636096",
@@ -4820,6 +5944,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4834,6 +5961,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2120153352416075777",
@@ -4843,6 +5971,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4857,12 +5988,19 @@
    "venue": "桃園展演中心",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.afmc.gov.tw/Activity_detail/d3918f3acccb4a519c1c74aa183f6d3e",
    "image": "https://www.afmc.gov.tw/Upload/202611031326562ab7c90.png",
-   "summary": null,
-   "extra": null,
+   "summary": "活動內容 🚨 緊急通報！演員竟然在舞台上憑空消失了？！原本精彩的演出，卻在燈光閃爍的瞬間發生離奇事件！演員突然消失，只留下滿場疑問……究竟是魔術、意外，還是有人偷偷動了手腳？116年度鐵玫瑰劇場冒險計畫《在鐵玫瑰尋找玫瑰》讓你化身劇場偵探🔍與舞台上的演員互動、蒐集線索，還能深入平常不對外開放的神祕後台空間！從燈光、音效到舞台，一步步揭開劇場幕後的技術祕密看看那些令人驚呼的舞台效果究竟是如何誕生的！🎭 這不只是一場演出，也不是普通的劇場導覽，而是一場需要你親自參與的沉浸式解謎體驗！準備好發揮你的偵探魂，一起來破解這場不可思議的劇場失蹤案！",
+   "extra": {
+    "entry": "入場說明：入場方式 入場說明 ★部分場次由學校班級報名，以班級為單位，由班級教師代表報名；部分場次開放一般民眾購票參與★預計於12月初至中旬開放報名與購票",
+    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/d3918f3acccb4a519c1c74aa183f6d3e"
+   },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4877,6 +6015,7 @@
    "venue": "桃園展演中心展演廳",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2112827249197789184",
@@ -4886,6 +6025,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4900,6 +6042,7 @@
    "venue": "桃園展演中心展演廳",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "親子",
    "free": null,
    "url": "https://www.opentix.life/program/2092433205804978177",
@@ -4909,6 +6052,10 @@
     "showCount": 2,
     "organizer": null
    },
+   "categories": [
+    "親子",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4923,6 +6070,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2120161491588341761",
@@ -4932,6 +6080,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4946,6 +6097,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子",
    "free": null,
    "url": "https://www.opentix.life/program/2070323539426664449",
@@ -4955,6 +6107,9 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "親子"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4969,6 +6124,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2068951869855346689",
@@ -4978,6 +6134,9 @@
     "showCount": 2,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -4992,6 +6151,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2068970591988879361",
@@ -5001,6 +6161,9 @@
     "showCount": 2,
     "organizer": null
    },
+   "categories": [
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -5015,6 +6178,7 @@
    "venue": "中壢藝術館音樂廳",
    "address": "桃園市中壢區中美路16號",
    "district": "中壢區",
+   "city": "桃園市",
    "category": "親子",
    "free": null,
    "url": "https://www.opentix.life/program/2092199503986237440",
@@ -5024,6 +6188,10 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "親子",
+    "表演"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
@@ -5038,6 +6206,7 @@
    "venue": "桃園展演中心展演廳",
    "address": "桃園市桃園區中正路1188號",
    "district": "桃園區",
+   "city": "桃園市",
    "category": "表演",
    "free": null,
    "url": "https://www.opentix.life/program/2069253113025007617",
@@ -5047,6 +6216,10 @@
     "showCount": 1,
     "organizer": null
    },
+   "categories": [
+    "表演",
+    "電影"
+   ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   }
  ]
