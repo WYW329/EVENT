@@ -16,7 +16,7 @@ services:
       - key: NODE_VERSION
         value: 22
       - key: EVENTS_URL
-        sync: false # https://raw.githubusercontent.com/<帳號>/<repo>/main/data/events.json
+        sync: false # https://raw.githubusercontent.com/WYW329/EVENT/main/data/events.json
       - key: VAPID_PUBLIC_KEY
         sync: false
       - key: VAPID_PRIVATE_KEY

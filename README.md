@@ -50,7 +50,7 @@ npm run dev               # http://localhost:8787
 2. **Gist**：到 https://gist.github.com 建一個 **Secret gist**，檔名 `state.json`、內容 `{}`。網址最後那串就是 `GIST_ID`。
 3. **Token**：GitHub → Settings → Developer settings → Fine-grained tokens（或 classic token）只勾 **gist** 權限，得到 `GIST_TOKEN`。
 4. **Render**：New → Blueprint，選這個 repo（會讀 `render.yaml`），填環境變數：
-   - `EVENTS_URL` = `https://raw.githubusercontent.com/<帳號>/<repo>/main/data/events.json`
+   - `EVENTS_URL` = `https://raw.githubusercontent.com/WYW329/EVENT/main/data/events.json`
    - `VAPID_PUBLIC_KEY`、`VAPID_PRIVATE_KEY`（上面產生的，換了金鑰所有人都要重新開啟通知）
    - `GIST_ID`、`GIST_TOKEN`
    - `MANUAL_KEY`（選填，手動加入的密碼）
