@@ -1,0 +1,107 @@
+{
+  "updatedAt": "2026-11-23T09:23:20.303Z",
+  "tookMs": 48865,
+  "total": 214,
+  "sources": [
+    {
+      "id": "tytravel",
+      "name": "桃園觀光導覽網",
+      "ok": true,
+      "count": 81,
+      "kept": 11,
+      "ms": 3659,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tourism",
+      "name": "觀光署活動",
+      "ok": true,
+      "count": 84,
+      "kept": 0,
+      "ms": 212,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "afmc",
+      "name": "藝文設施管理中心",
+      "ok": true,
+      "count": 27,
+      "kept": 22,
+      "ms": 48860,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "moc",
+      "name": "文化部藝文活動",
+      "ok": true,
+      "count": 57,
+      "kept": 54,
+      "ms": 548,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tycg",
+      "name": "桃園市府線上報名",
+      "ok": true,
+      "count": 9,
+      "kept": 9,
+      "ms": 11079,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "babycare",
+      "name": "親子館報名",
+      "ok": true,
+      "count": 100,
+      "kept": 100,
+      "ms": 22330,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "water",
+      "name": "水務局參訪預約",
+      "ok": true,
+      "count": 1,
+      "kept": 1,
+      "ms": 23,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "cycc",
+      "name": "中原文創園區",
+      "ok": true,
+      "count": 4,
+      "kept": 4,
+      "ms": 1416,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "kktix",
+      "name": "KKTIX",
+      "ok": true,
+      "count": 10,
+      "kept": 10,
+      "ms": 192,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "accupass",
+      "name": "Accupass 活動通",
+      "ok": true,
+      "count": 6,
+      "kept": 3,
+      "ms": 535,
+      "error": null,
+      "warnings": null
+    }
+  ]
+}

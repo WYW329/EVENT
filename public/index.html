@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>桃園活動雷達</title>
+  <meta name="description" content="收集桃園各地的活動、展覽、表演和親子課程，有新活動或快開放報名時跳通知。" />
+  <meta name="theme-color" content="#e2556f" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="活動雷達" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="/icons/icon-192.png" alt="" width="28" height="28" />
+      <h1>桃園活動雷達</h1>
+    </div>
+    <button class="icon-btn" id="refreshBtn" title="重新整理" aria-label="重新整理">↻</button>
+  </header>
+
+  <main id="main">
+    <!-- 活動 -->
+    <section class="view" id="view-list" data-view="list">
+      <div class="search-row">
+        <input id="q" type="search" placeholder="搜尋活動、地點…" autocomplete="off" />
+      </div>
+      <div class="chips" id="whenChips" role="tablist" aria-label="時間">
+        <button data-when="all" class="chip on">全部</button>
+        <button data-when="today">今天</button>
+        <button data-when="weekend">這個週末</button>
+        <button data-when="week">7 天內</button>
+        <button data-when="month">30 天內</button>
+      </div>
+      <div class="filters">
+        <select id="catSel" aria-label="類別"><option value="">所有類別</option></select>
+        <select id="distSel" aria-label="行政區"><option value="">所有行政區</option></select>
+        <label class="check"><input type="checkbox" id="hideBaby" checked /> 隱藏親子館課程</label>
+      </div>
+      <p class="meta" id="listMeta"></p>
+      <div id="list" class="list"></div>
+    </section>
+
+    <!-- 搶報名 -->
+    <section class="view" id="view-reg" data-view="reg" hidden>
+      <p class="hint">快要開放報名、或正在報名中的活動。按 ☆ 收藏後，會在開放前提醒你。</p>
+      <div class="filters">
+        <label class="check"><input type="checkbox" id="regHideBaby" /> 隱藏親子館課程</label>
+      </div>
+      <div id="regList" class="list"></div>
+    </section>
+
+    <!-- 收藏 -->
+    <section class="view" id="view-star" data-view="star" hidden>
+      <p class="hint" id="starHint"></p>
+      <div id="starList" class="list"></div>
+    </section>
+
+    <!-- 手動加入 -->
+    <section class="view" id="view-add" data-view="add" hidden>
+      <div class="card pad">
+        <h2>手動加入活動</h2>
+        <p class="hint">把 FB 貼文、報名公告的文字貼進來，會自動找出活動時間和報名時間，確認後再存。</p>
+        <textarea id="pasteText" rows="6" placeholder="例如：「貢寮鮑食魚教育親子體驗活動」報名截止時間：10/25 晚上 23:59…"></textarea>
+        <input id="pasteUrl" type="url" placeholder="活動連結（可不填）" />
+        <button class="btn" id="parseBtn">自動讀取</button>
+      </div>
+      <form class="card pad" id="manualForm" hidden>
+        <h2>確認內容</h2>
+        <label>活動名稱<input name="title" required /></label>
+        <div class="two">
+          <label>活動開始<input name="start" type="datetime-local" /></label>
+          <label>活動結束<input name="end" type="datetime-local" /></label>
+        </div>
+        <div class="two">
+          <label>開放報名<input name="regStart" type="datetime-local" /></label>
+          <label>報名截止<input name="regEnd" type="datetime-local" /></label>
+        </div>
+        <label>地點<input name="venue" /></label>
+        <div class="two">
+          <label>類別<select name="category"></select></label>
+          <label>行政區<select name="district"><option value="">不確定</option></select></label>
+        </div>
+        <label>連結<input name="url" type="url" /></label>
+        <label>備註<textarea name="note" rows="2"></textarea></label>
+        <label id="keyRow" hidden>手動加入密碼<input name="key" type="password" autocomplete="off" /></label>
+        <label class="check"><input type="checkbox" name="star" checked /> 存好後順便收藏（開放報名前提醒我）</label>
+        <div class="row-btns">
+          <button class="btn" type="submit">儲存</button>
+          <button class="btn ghost" type="button" id="cancelManual">取消</button>
+        </div>
+        <p class="meta" id="foundDates"></p>
+      </form>
+      <div class="card pad">
+        <h2>已手動加入</h2>
+        <div id="manualList" class="list compact"></div>
+      </div>
+    </section>
+
+    <!-- 設定 -->
+    <section class="view" id="view-set" data-view="set" hidden>
+      <div class="card pad" id="pushCard">
+        <h2>通知</h2>
+        <p id="pushStatus" class="hint"></p>
+        <div id="iosHelp" class="ios-help" hidden>
+          <b>iPhone 要先加入主畫面才能收到通知：</b>
+          <ol>
+            <li>用 <b>Safari</b> 打開這個網站</li>
+            <li>按下方的 <b>分享</b> 按鈕（方框加向上箭頭）</li>
+            <li>選 <b>加入主畫面</b></li>
+            <li>從主畫面的「活動雷達」圖示打開，再回到這裡按「開啟通知」</li>
+          </ol>
+        </div>
+        <div class="row-btns">
+          <button class="btn" id="enablePush">開啟通知</button>
+          <button class="btn ghost" id="testPush" hidden>傳一則測試通知</button>
+          <button class="btn ghost" id="disablePush" hidden>關閉通知</button>
+        </div>
+      </div>
+
+      <form class="card pad" id="prefsForm">
+        <h2>要通知哪些新活動</h2>
+        <label class="check"><input type="checkbox" name="notifyNew" checked /> 有新活動時通知我</label>
+        <fieldset>
+          <legend>類別（都不勾 = 全部）</legend>
+          <div class="checks" id="prefCats"></div>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="includeBabycare" /> 也通知親子館課程（每天很多筆）</label>
+        <fieldset>
+          <legend>行政區（都不勾 = 全部）</legend>
+          <div class="checks" id="prefDists"></div>
+        </fieldset>
+        <label>關鍵字（用逗號分開，標題有這些字一定通知）<input name="keywords" placeholder="例如：市集, 免費, 恐龍" /></label>
+        <h2>收藏活動的提醒</h2>
+        <fieldset>
+          <legend>開放報名前多久提醒</legend>
+          <div class="checks" id="prefRemind"></div>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="remindEventDayBefore" checked /> 活動前一天早上 9 點提醒</label>
+        <div class="row-btns"><button class="btn" type="submit">儲存設定</button></div>
+        <p class="meta" id="prefsMsg"></p>
+      </form>
+
+      <div class="card pad">
+        <h2>資料來源</h2>
+        <p class="meta" id="srcUpdated"></p>
+        <ul id="srcList" class="src-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabs" aria-label="頁面">
+    <button data-go="list" class="on"><span>🗓</span>活動</button>
+    <button data-go="reg"><span>⏰</span>搶報名</button>
+    <button data-go="star"><span>☆</span>收藏</button>
+    <button data-go="add"><span>＋</span>新增</button>
+    <button data-go="set"><span>⚙</span>設定</button>
+  </nav>
+
+  <dialog id="detail" class="sheet">
+    <div class="sheet-body" id="detailBody"></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
