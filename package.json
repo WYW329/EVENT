@@ -9,8 +9,7 @@
     "scrape": "node scraper/run.js",
     "dev": "wrangler dev --test-scheduled",
     "deploy": "wrangler deploy",
-    "test": "node --test \"test/*.test.js\"",
-    "start": "node server/server.js"
+    "test": "node --test \"test/*.test.js\""
   },
   "dependencies": {
     "cheerio": "^1.0.0",

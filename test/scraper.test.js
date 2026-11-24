@@ -1,38 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseManualText } from '../server/parse.js';
 import { parseDateTime, makeTime, isTaoyuan, findDistrict } from '../scraper/util.js';
 import { babycareTitle, regFromTitle, parseCcmsRegDates } from '../scraper/sources/taoyuan.js';
 import { dedupe, keepCurrent } from '../scraper/run.js';
-
-const NOW = new Date('2026-10-25T06:36:00Z'); // 台北 14:36
-
-test('FB 貼文：截止時間、公布時間、標題', () => {
-  const r = parseManualText('📣 【重要提醒｜報名今天截止囉！】\n「貢寮鮑食魚教育親子體驗活動」報名即將截止！\n報名截止時間：今天（10/25）晚上 23:59！\n10/28（三）19:00 公布錄取及候補名單！', NOW);
-  assert.equal(r.title, '貢寮鮑食魚教育親子體驗活動');
-  assert.equal(r.regEnd, '2026-10-25T23:59:00+08:00');
-  assert.equal(r.announce, '2026-10-28T19:00:00+08:00');
-});
-
-test('活動時間、報名時間、地點、連結', () => {
-  const r = parseManualText('2026桃園閱讀節講座《當地球人遇見小王子》\n活動時間：2026年11月29日(日) 下午2點\n報名時間：11月15日上午10:00開始報名\n地點：桃園市立圖書館總館 https://example.com/x', NOW);
-  assert.equal(r.start, '2026-11-29T14:00:00+08:00');
-  assert.equal(r.regStart, '2026-11-15T10:00:00+08:00');
-  assert.equal(r.venue, '桃園市立圖書館總館');
-  assert.equal(r.url, 'https://example.com/x');
-});
-
-test('時間區間、不把「3/4位」「1-2歲」當日期', () => {
-  const r = parseManualText('親子手作 12/6（六）14:00-16:00 名額20位 1-2歲 3/4位', NOW);
-  assert.equal(r.start, '2026-12-06T14:00:00+08:00');
-  assert.equal(r.end, '2026-12-06T16:00:00+08:00');
-});
-
-test('民國年報名期間 A ~ B', () => {
-  const r = parseManualText('研習班開放報名 - 115-01-19 09:00 ~ 115-02-13 17:00', new Date('2026-01-10T00:00:00Z'));
-  assert.equal(r.regStart, '2026-01-19T09:00:00+08:00');
-  assert.equal(r.regEnd, '2026-02-13T17:00:00+08:00');
-});
 
 test('日期工具', () => {
   assert.equal(parseDateTime('115.11.28 (六) 14:30'), '2026-11-28T14:30:00+08:00');
