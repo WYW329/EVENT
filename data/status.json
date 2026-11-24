@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-24T06:20:56.256Z",
-  "tookMs": 105142,
-  "total": 197,
+  "updatedAt": "2026-11-24T18:12:34.088Z",
+  "tookMs": 103275,
+  "total": 203,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 81,
       "kept": 11,
-      "ms": 5628,
+      "ms": 4756,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 84,
       "kept": 0,
-      "ms": 2624,
+      "ms": 2453,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 105133,
+      "ms": 103266,
       "error": null,
       "warnings": null
     },
@@ -37,9 +37,9 @@
       "id": "moc",
       "name": "文化部藝文活動",
       "ok": true,
-      "count": 34,
-      "kept": 34,
-      "ms": 2718,
+      "count": 33,
+      "kept": 33,
+      "ms": 1861,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 20163,
+      "ms": 19843,
       "error": null,
       "warnings": null
     },
@@ -57,9 +57,9 @@
       "id": "babycare",
       "name": "親子館報名",
       "ok": true,
-      "count": 103,
-      "kept": 103,
-      "ms": 28949,
+      "count": 109,
+      "kept": 109,
+      "ms": 27012,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 30,
+      "ms": 34,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 1924,
+      "ms": 2743,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1256,
+      "ms": 665,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -98,8 +98,8 @@
       "name": "Accupass 活動通",
       "ok": true,
       "count": 6,
-      "kept": 3,
-      "ms": 2847,
+      "kept": 4,
+      "ms": 1601,
       "error": null,
       "warnings": null
     }
