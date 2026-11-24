@@ -16,7 +16,7 @@ crons = ["* * * * *"]
 [[d1_databases]]
 binding = "DB"
 database_name = "event-radar"
-database_id = "local-dev-placeholder"
+database_id = "9d2c8ce2-adaf-4f05-849d-f7c2708926e0"
 
 [vars]
 EVENTS_URL = "https://raw.githubusercontent.com/WYW329/EVENT/main/data/events.json"
