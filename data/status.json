@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-25T12:34:45.180Z",
-  "tookMs": 110107,
-  "total": 227,
+  "updatedAt": "2026-11-25T21:58:27.104Z",
+  "tookMs": 104993,
+  "total": 214,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 5845,
+      "ms": 5693,
       "error": null,
       "warnings": null
     },
@@ -17,9 +17,9 @@
       "id": "tourism",
       "name": "觀光署活動",
       "ok": true,
-      "count": 84,
+      "count": 85,
       "kept": 0,
-      "ms": 3334,
+      "ms": 5308,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 110099,
+      "ms": 104983,
       "error": null,
       "warnings": null
     },
@@ -37,9 +37,9 @@
       "id": "moc",
       "name": "文化部藝文活動",
       "ok": true,
-      "count": 56,
-      "kept": 53,
-      "ms": 3415,
+      "count": 33,
+      "kept": 33,
+      "ms": 2716,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 25337,
+      "ms": 20229,
       "error": null,
       "warnings": null
     },
@@ -57,9 +57,9 @@
       "id": "babycare",
       "name": "親子館報名",
       "ok": true,
-      "count": 113,
-      "kept": 113,
-      "ms": 30535,
+      "count": 120,
+      "kept": 120,
+      "ms": 26812,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 49,
+      "ms": 33,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1600,
+      "ms": 1808,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 851,
+      "ms": 1007,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 6,
       "kept": 4,
-      "ms": 2144,
+      "ms": 2401,
       "error": null,
       "warnings": null
     }
