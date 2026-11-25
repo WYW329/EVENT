@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T18:12:34.088Z",
+ "updatedAt": "2026-11-25T02:46:14.898Z",
  "events": [
   {
    "id": "moc:6977d85026b32454e437c459",
@@ -1009,33 +1009,6 @@
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
-   "id": "tytravel:6675",
-   "source": "tytravel",
-   "sourceName": "桃園觀光導覽網",
-   "title": "2026探索北橫永續遊程活動",
-   "start": "2026-10-15T00:00:00+08:00",
-   "end": "2027-03-31T23:59:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": null,
-   "address": "桃園市復興區",
-   "district": "復興區",
-   "city": "桃園市",
-   "category": "其他",
-   "free": null,
-   "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6675",
-   "image": "https://travel.tycg.gov.tw/content/images/articles/116790/480x360_articles-image-f532sk8rak6gy5ukkidqzw.jpg",
-   "summary": "￭相關細節可電洽風景管理處(03-3946061#127)\n桃園市政府觀光旅遊局攜手旅行社推出「北橫13條暗空主題性深度旅遊」，串聯沿線自然景觀、泰雅族文化及在地特色產業，將以往以白天觀光為主的行程，延伸為24至48小時的日夜深度體驗。旅客白天可探索山林美景、體驗部落文化與在地風情，夜晚則能欣賞星空、感受山林靜謐之美。透過整合觀光、文化、生態與星空資源，邀請旅客放慢腳步、留宿山區，延長旅遊停留時間，帶動在地消費，讓觀光效益回流部落，展現北橫日夜皆精彩的旅遊魅力。",
-   "extra": null,
-   "categories": [
-    "其他"
-   ],
-   "alsoIn": [
-    "觀光署活動"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
    "id": "tytravel:7097",
    "source": "tytravel",
    "sourceName": "桃園觀光導覽網",
@@ -1053,6 +1026,33 @@
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7097",
    "image": "https://travel.tycg.gov.tw/content/images/articles/116743/480x360_articles-image-zmfmn-ntqkqn0ipemcjt3w.png",
    "summary": "假期的北橫放鬆之旅，不用自己開車受累！搭乘假日免費接駁車輕鬆遊覽山林美景，還能拿限定好禮✨ 邊搭車邊玩，只要下載《遊桃園 APP》輕鬆定位打卡，集滿指定點數就能把限定好禮帶回家😎\n━━━━━簡單 4 步驟，好禮輕鬆入手━━━━━\n1️⃣ 下載與登入 ：下載「遊桃園 APP」，加入會員並開啟 GPS 定位。\n2️⃣ 開啟任務 ：進入 APP 首頁，點選「搭乘北橫接駁趣」任務。\n3️⃣ 掃碼打卡 ：抵達指定集點位置後，點選「掃碼集點」並掃描現場 QR Code。\n4️⃣ 兌換好禮 ：集滿完成2個點位，即可兌換限定好禮！\n🚌 接駁車集點位置 ：\n📍 角板山仁愛停車場／介壽國中停車場-假日免費接駁車接駁站 (仁愛停車場與介壽國中停車場接駁站為同一點位)\n📍 小烏來-假日免費接駁車接駁站\n📍 羅浮-假日免費接駁車接駁站\n🚌 北橫旅遊接駁車營運資訊 ：\n🔸 班次時間 ：國定例假日彈性發車，班距約 40 分鐘。\n🔸 營運時段 ：上午 09:00 角板山首班車 ➜ 下午 17:00 羅浮末班車。\n🔸 交通轉乘方式 ：\n▪️ 自行開車 ：車輛停放於「介壽國中停車場」，步行至「仁愛停車場」或「介壽國中」站搭乘接駁車。\n▪️ 搭高鐵 ：高鐵桃園站 ➜ 轉乘台灣好行大溪快線（501）至慈湖 ➜ 轉乘往上山方向客運（502、506、5104、5106、5109）至「角板山公園站」。\n▪️ 搭臺鐵 ：臺鐵桃園站 ➜ 後火車站轉乘台灣好行小烏來線（502）➜ 至「角板山公園站」。\n🎁 超值好禮報你知 ： 集滿指定點數即可兌換「實體店家 100 元商品抵用金」（三選一）： ▪️ 蕃薯藤自然咖啡-角板山\n▪️ 蕃薯藤自然咖啡-後慈湖\n▪️ 北橫之驛雜貨鋪\n⚠️ 數量有限，換完為止！ 這個假日就搭接駁車輕鬆出遊，揪朋友一起來北橫享受山林之旅，把百元抵用金帶回家吧！",
+   "extra": null,
+   "categories": [
+    "其他"
+   ],
+   "alsoIn": [
+    "觀光署活動"
+   ],
+   "firstSeen": "2026-11-23T09:09:40.418Z"
+  },
+  {
+   "id": "tytravel:6675",
+   "source": "tytravel",
+   "sourceName": "桃園觀光導覽網",
+   "title": "2026探索北橫永續遊程活動",
+   "start": "2026-10-15T00:00:00+08:00",
+   "end": "2027-03-31T23:59:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": null,
+   "address": "桃園市復興區",
+   "district": "復興區",
+   "city": "桃園市",
+   "category": "其他",
+   "free": null,
+   "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6675",
+   "image": "https://travel.tycg.gov.tw/content/images/articles/116790/480x360_articles-image-f532sk8rak6gy5ukkidqzw.jpg",
+   "summary": "￭相關細節可電洽風景管理處(03-3946061#127)\n桃園市政府觀光旅遊局攜手旅行社推出「北橫13條暗空主題性深度旅遊」，串聯沿線自然景觀、泰雅族文化及在地特色產業，將以往以白天觀光為主的行程，延伸為24至48小時的日夜深度體驗。旅客白天可探索山林美景、體驗部落文化與在地風情，夜晚則能欣賞星空、感受山林靜謐之美。透過整合觀光、文化、生態與星空資源，邀請旅客放慢腳步、留宿山區，延長旅遊停留時間，帶動在地消費，讓觀光效益回流部落，展現北橫日夜皆精彩的旅遊魅力。",
    "extra": null,
    "categories": [
     "其他"
@@ -1437,7 +1437,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 0,
+    "seatsLeft": 1,
     "seats": 5,
     "ages": "12～35 個月",
     "zip": "334"
@@ -1561,7 +1561,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 0,
+    "seatsLeft": 1,
     "seats": 4,
     "ages": "不限年齡",
     "zip": "326"
@@ -1623,7 +1623,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 0,
+    "seatsLeft": 1,
     "seats": 5,
     "ages": "24～47 個月",
     "zip": "320"
@@ -1839,7 +1839,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 1,
+    "seatsLeft": 0,
     "seats": 4,
     "ages": "不限年齡",
     "zip": "326"
@@ -2637,7 +2637,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 1,
+    "seatsLeft": 0,
     "seats": 3,
     "ages": "不限年齡",
     "zip": "326"
@@ -3607,33 +3607,6 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
-   "id": "tytravel:7127",
-   "source": "tytravel",
-   "sourceName": "桃園觀光導覽網",
-   "title": "2026桃園富岡鐵道藝術生活節",
-   "start": "2026-12-05T00:00:00+08:00",
-   "end": "2026-12-20T23:59:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "富岡火車站前廣場及周邊街區",
-   "address": "桃園市楊梅區富岡火車站前廣場及周邊街區",
-   "district": "楊梅區",
-   "city": "桃園市",
-   "category": "節慶市集",
-   "free": null,
-   "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7127",
-   "image": "https://travel.tycg.gov.tw/content/images/articles/117271/480x360_articles-image-w942rgyr_ughfrrbjmz02a.jpg",
-   "summary": "￭相關細節可電洽本 府文化局(03-3322592#8329)\n「2026桃園富岡鐵道藝術生活節」今年正式邁入第5屆，訂於115年12月5日（六）至12月20日（日）舉辦。今年以「區間月台」為核心主軸，藉由「即將抵達－富岡」概念，以鐵道旅途中熟悉的列車廣播為靈感，邀請旅人放慢腳步，讓富岡從旅程中的一處站點，轉化為值得停留、探索與再次造訪的旅途月台。\n開幕日由人氣觀光列車「海風號」行駛開幕專列，首次於桃園及富岡車站亮相；12月5日、12日及20日於臺鐵富岡焊軌隊接力展出R200型柴電機車、鐵路吊桿車（RC11）及大型匝道車3款特色車輛；12月18日至20日由何日君再來劇團於桃園至富岡區間列車上推出《未來·火車·歌廳秀》列車移動劇場。\n活動期間於富岡老人文康活動中心辦理鐵道主題展覽，展出徐志綱老師鐵道模型並開放N軌鐵道模型運轉體驗；FOCASA馬戲團、阮劇團接力街區演出；每週六、日於富岡火車站前推出「區間月台市集」及舞台活動，並結合數位集章活動，與本府農業局「桃園仙草嘉年華」共同宣傳，串聯楊梅在地觀光。",
-   "extra": null,
-   "categories": [
-    "節慶市集"
-   ],
-   "alsoIn": [
-    "觀光署活動"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
    "id": "tytravel:6854",
    "source": "tytravel",
    "sourceName": "桃園觀光導覽網",
@@ -3651,6 +3624,33 @@
    "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6854",
    "image": "https://travel.tycg.gov.tw/content/images/articles/117329/480x360_articles-image-f-q88lm2w0g0ommhlmizya.png",
    "summary": "■ 相關內容請洽本府農業局03-3322101#5415、5416\n【2026 桃園仙草嘉年華－佩佩的紫花園探險】浪漫登場！💜\n今年冬天，楊梅最夢幻的 2.5 公頃紫色仙草花海即將盛開！本次更首度與超人氣的「粉紅豬小妹（佩佩豬）」聯名，把花田打造成充滿童趣的紫花園探險樂園。\n現場除了能與佩佩豬一家主題裝置合影、搭乘穿梭花田的「童趣小火車」，週末還有 YOYO 親子家族唱跳、泡泡秀與限量佩佩豬見面會！只要使用「桃園市民卡 App」完成數位集章，還能兌換限量好禮。\n推薦大家搭乘臺鐵至「富岡火車站」或「楊梅火車站」，轉乘免費接駁專車即可輕鬆抵達；還能順道逛逛同步舉辦的「2026 富岡鐵道藝術生活節」，一趟旅程收藏鐵道小鎮與紫色花海兩種冬日風景！\n活動時間：2026/12/05（六）－ 12/20（日）\n活動地點：桃園市楊梅休閒農業區（楊湖路三段239號／上湖派出所對面花田）\n交通建議：臺鐵富岡站（每日接駁）、楊梅後站（假日接駁）皆有免費接駁專車\n更多資訊：請搜尋「楊梅休閒農業區」Facebook 粉絲專頁",
+   "extra": null,
+   "categories": [
+    "節慶市集"
+   ],
+   "alsoIn": [
+    "觀光署活動"
+   ],
+   "firstSeen": "2026-11-23T09:09:40.418Z"
+  },
+  {
+   "id": "tytravel:7127",
+   "source": "tytravel",
+   "sourceName": "桃園觀光導覽網",
+   "title": "2026桃園富岡鐵道藝術生活節",
+   "start": "2026-12-05T00:00:00+08:00",
+   "end": "2026-12-20T23:59:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "富岡火車站前廣場及周邊街區",
+   "address": "桃園市楊梅區富岡火車站前廣場及周邊街區",
+   "district": "楊梅區",
+   "city": "桃園市",
+   "category": "節慶市集",
+   "free": null,
+   "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7127",
+   "image": "https://travel.tycg.gov.tw/content/images/articles/117271/480x360_articles-image-w942rgyr_ughfrrbjmz02a.jpg",
+   "summary": "￭相關細節可電洽本 府文化局(03-3322592#8329)\n「2026桃園富岡鐵道藝術生活節」今年正式邁入第5屆，訂於115年12月5日（六）至12月20日（日）舉辦。今年以「區間月台」為核心主軸，藉由「即將抵達－富岡」概念，以鐵道旅途中熟悉的列車廣播為靈感，邀請旅人放慢腳步，讓富岡從旅程中的一處站點，轉化為值得停留、探索與再次造訪的旅途月台。\n開幕日由人氣觀光列車「海風號」行駛開幕專列，首次於桃園及富岡車站亮相；12月5日、12日及20日於臺鐵富岡焊軌隊接力展出R200型柴電機車、鐵路吊桿車（RC11）及大型匝道車3款特色車輛；12月18日至20日由何日君再來劇團於桃園至富岡區間列車上推出《未來·火車·歌廳秀》列車移動劇場。\n活動期間於富岡老人文康活動中心辦理鐵道主題展覽，展出徐志綱老師鐵道模型並開放N軌鐵道模型運轉體驗；FOCASA馬戲團、阮劇團接力街區演出；每週六、日於富岡火車站前推出「區間月台市集」及舞台活動，並結合數位集章活動，與本府農業局「桃園仙草嘉年華」共同宣傳，串聯楊梅在地觀光。",
    "extra": null,
    "categories": [
     "節慶市集"
@@ -4022,7 +4022,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "50836"
+     "53036"
     ]
    },
    "categories": [
@@ -4903,7 +4903,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 8,
+    "seatsLeft": 7,
     "seats": 8,
     "ages": "不限年齡",
     "zip": "324"
@@ -4935,7 +4935,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 8,
+    "seatsLeft": 0,
     "seats": 8,
     "ages": "18～47 個月",
     "zip": "328"
@@ -4966,7 +4966,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 4,
+    "seatsLeft": 1,
     "seats": 4,
     "ages": "24～47 個月",
     "zip": "326"
@@ -4977,6 +4977,37 @@
     "親子"
    ],
    "firstSeen": "2026-11-24T18:12:34.088Z"
+  },
+  {
+   "id": "babycare:7e88b076-8073-424d-b319-ceebeb259948",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "親子美食樂-甜蜜攪拌樂（請家長自行準備餐具）（桃園龍寶貝親子館）",
+   "start": "2026-12-09T10:00:00+08:00",
+   "end": "2026-12-09T10:30:00+08:00",
+   "regStart": "2026-11-25T09:00:00+08:00",
+   "regEnd": "2026-12-08T12:00:00+08:00",
+   "venue": "桃園龍寶貝親子館",
+   "address": null,
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 5,
+    "seats": 6,
+    "ages": "24～54 個月",
+    "zip": "330"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-25T02:46:14.898Z"
   },
   {
    "id": "babycare:eb8e1542-6954-4aa7-b910-f3ec498fcf4c",
@@ -4997,7 +5028,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 7,
+    "seatsLeft": 0,
     "seats": 7,
     "ages": "24～47 個月",
     "zip": "320"
@@ -5028,7 +5059,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 10,
+    "seatsLeft": 7,
     "seats": 10,
     "ages": "24～59 個月",
     "zip": "324"
@@ -5059,7 +5090,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 5,
+    "seatsLeft": 0,
     "seats": 5,
     "ages": "12～24 個月",
     "zip": "328"
@@ -5185,7 +5216,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 7,
+    "seatsLeft": 5,
     "seats": 7,
     "ages": "12～24 個月",
     "zip": "328"
@@ -5247,7 +5278,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 7,
+    "seatsLeft": 0,
     "seats": 7,
     "ages": "8～24 個月",
     "zip": "320"
@@ -5278,7 +5309,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 7,
+    "seatsLeft": 1,
     "seats": 7,
     "ages": "24～47 個月",
     "zip": "320"
@@ -5309,7 +5340,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 5,
+    "seatsLeft": 2,
     "seats": 5,
     "ages": "12～36 個月",
     "zip": "335"
@@ -5341,7 +5372,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "實拍教學1522",
+     "實拍教學1542",
      "實拍教學"
     ]
    },
@@ -5370,7 +5401,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "飲食2396",
+     "飲食2486",
      "飲食"
     ]
    },
@@ -5618,7 +5649,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "聖誕身心靈市集1651",
+     "聖誕身心靈市集1661",
      "聖誕身心靈市集"
     ]
    },

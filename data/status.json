@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-24T18:12:34.088Z",
-  "tookMs": 103275,
-  "total": 203,
+  "updatedAt": "2026-11-25T02:46:14.898Z",
+  "tookMs": 106434,
+  "total": 204,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 81,
       "kept": 11,
-      "ms": 4756,
+      "ms": 5446,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 84,
       "kept": 0,
-      "ms": 2453,
+      "ms": 5716,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 103266,
+      "ms": 106427,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 33,
       "kept": 33,
-      "ms": 1861,
+      "ms": 3171,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 19843,
+      "ms": 21783,
       "error": null,
       "warnings": null
     },
@@ -57,9 +57,9 @@
       "id": "babycare",
       "name": "親子館報名",
       "ok": true,
-      "count": 109,
-      "kept": 109,
-      "ms": 27012,
+      "count": 110,
+      "kept": 110,
+      "ms": 28845,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 34,
+      "ms": 25,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 2743,
+      "ms": 1835,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 665,
+      "ms": 1127,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -97,9 +97,9 @@
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "kept": 4,
-      "ms": 1601,
+      "ms": 2513,
       "error": null,
       "warnings": null
     }
