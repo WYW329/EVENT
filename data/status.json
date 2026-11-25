@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-11-25T02:46:14.898Z",
-  "tookMs": 106434,
-  "total": 204,
+  "updatedAt": "2026-11-25T12:34:45.180Z",
+  "tookMs": 110107,
+  "total": 227,
   "sources": [
     {
       "id": "tytravel",
       "name": "桃園觀光導覽網",
       "ok": true,
-      "count": 81,
-      "kept": 11,
-      "ms": 5446,
+      "count": 83,
+      "kept": 12,
+      "ms": 5845,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 84,
       "kept": 0,
-      "ms": 5716,
+      "ms": 3334,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 106427,
+      "ms": 110099,
       "error": null,
       "warnings": null
     },
@@ -37,9 +37,9 @@
       "id": "moc",
       "name": "文化部藝文活動",
       "ok": true,
-      "count": 33,
-      "kept": 33,
-      "ms": 3171,
+      "count": 56,
+      "kept": 53,
+      "ms": 3415,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 21783,
+      "ms": 25337,
       "error": null,
       "warnings": null
     },
@@ -57,9 +57,9 @@
       "id": "babycare",
       "name": "親子館報名",
       "ok": true,
-      "count": 110,
-      "kept": 110,
-      "ms": 28845,
+      "count": 113,
+      "kept": 113,
+      "ms": 30535,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 25,
+      "ms": 49,
       "error": null,
       "warnings": null
     },
@@ -78,8 +78,8 @@
       "name": "中原文創園區",
       "ok": true,
       "count": 4,
-      "kept": 4,
-      "ms": 1835,
+      "kept": 3,
+      "ms": 1600,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1127,
+      "ms": 851,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -97,9 +97,9 @@
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "kept": 4,
-      "ms": 2513,
+      "ms": 2144,
       "error": null,
       "warnings": null
     }

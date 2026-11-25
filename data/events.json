@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-25T02:46:14.898Z",
+ "updatedAt": "2026-11-25T12:34:45.180Z",
  "events": [
   {
    "id": "moc:6977d85026b32454e437c459",
@@ -1561,7 +1561,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 1,
+    "seatsLeft": 2,
     "seats": 4,
     "ages": "不限年齡",
     "zip": "326"
@@ -1592,7 +1592,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 0,
+    "seatsLeft": 1,
     "seats": 3,
     "ages": "12～24 個月",
     "zip": "320"
@@ -1839,7 +1839,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 0,
+    "seatsLeft": 1,
     "seats": 4,
     "ages": "不限年齡",
     "zip": "326"
@@ -1968,6 +1968,61 @@
     "親子"
    ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
+  },
+  {
+   "id": "moc:6aeb66f526b3245efc753789",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "「蒔光」系列“Sing*ing”「青銀共賞」合唱音樂會",
+   "start": "2026-11-28T14:30:00+08:00",
+   "end": "2026-11-28T16:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中原大學瑞麗堂",
+   "address": "桃園市中壢區中北路200號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2117528472935182337",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:69ab08d326b3242a48a9d8e2",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "魔幻樂章-銅管村嘉年華",
+   "start": "2026-11-28T14:30:00+08:00",
+   "end": "2026-11-28T16:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園展演中心展演廳",
+   "address": "桃園市桃園區中正路1188號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "親子",
+   "free": null,
+   "url": "https://www.opentix.life/program/2028634382323146752",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "親子",
+    "節慶市集"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
   },
   {
    "id": "babycare:c8c12abb-fdbd-47e3-b56f-91a23e4e194e",
@@ -2118,6 +2173,9 @@
    },
    "categories": [
     "表演"
+   ],
+   "alsoIn": [
+    "文化部藝文活動"
    ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
@@ -2921,7 +2979,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 0,
+    "seatsLeft": 1,
     "seats": 5,
     "ages": "不限年齡",
     "zip": "335"
@@ -2961,28 +3019,32 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
-   "id": "cycc:/zh-hant/2026sustainable-light",
-   "source": "cycc",
-   "sourceName": "中原文創園區",
-   "title": "《2026 永續光環境創意展》",
-   "start": "2026-12-04",
-   "end": "2027-03-01",
+   "id": "tytravel:7145",
+   "source": "tytravel",
+   "sourceName": "桃園觀光導覽網",
+   "title": "《2026永續光環境創意展》",
+   "start": "2026-12-04T00:00:00+08:00",
+   "end": "2027-03-01T23:59:00+08:00",
    "regStart": null,
    "regEnd": null,
    "venue": "中原文創園區",
-   "address": null,
+   "address": "桃園市中壢區中原文創園區10倉、戶外展區",
    "district": "中壢區",
    "city": "桃園市",
    "category": "展覽",
-   "free": null,
-   "url": "https://cycc.org.tw/zh-hant/2026sustainable-light",
-   "image": "https://cycc.org.tw/sites/default/files/banner/%E3%80%8A2026%20%E6%B0%B8%E7%BA%8C%E5%85%89%E7%92%B0%E5%A2%83%E5%89%B5%E6%84%8F%E5%B1%95%E3%80%8B%E5%AE%98%E7%B6%B2_1920%C3%97960.jpg",
-   "summary": null,
+   "free": true,
+   "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/7145",
+   "image": "https://travel.tycg.gov.tw/content/images/articles/117542/480x360_articles-image-c7cbvc7wx0mtoeovvextow.jpg",
+   "summary": "￭相關細節可電洽中原文創園區 ( 03-4333833#220 )\n中原文創園區以「永續‧創新‧實驗」為核心，舉辦「永續光環境創意展」，期盼藉由徵件競賽，呈現年輕創作者如何透過材料再造、燈光設計與裝置敘事，讓光與環境互動，探索兼具美感、使用功能與公共意義的創作。展覽呼應聯合國永續發展目標（SDGs），將資源循環、綠能發展與文化共融帶入作品，也為設計、建築、綠能與環境永續等領域創造交流及公私部門協力的機會。\n自2024年首度辦理徵件，展覽今年邁入第三屆。歷屆徵件均收到逾百件作品，參與者來自全臺各地，從高中職學生到研究生。不同背景的青年透過競賽發展各自的創作構想，讓觀眾在展場看見光如何運用於不同材料，又如何回應地方文化與環境。\n今年，創作的邀請也延伸到在地居民與學生。園區將舉辦「綠意新生，光影永續」手作工作坊，邀請桃園居民與學生一起動手創作，從熟悉的材料與生活經驗出發，在實作中交流與思考，重新運用身邊的物件，透過創作為生活環境帶來改變。\n「2026 永續光環境創意展」將於2026年12月4日至2027年3月1日展出。邀請大家走進展場，看見光與再生材料共譜的全新篇章。\n展覽名稱｜2026永續光環境創意展\n展覽時間｜2026.12.04（五）-2027.03.01（一） *週一休園，連假期間正常營運\n展覽地點｜中原文創園區10倉、戶外展區\n周邊活動｜「綠意新生，光影永續」手作工作坊\n活動時間｜2026.12.12（六）14:00-16:00 （共2小時，13:30開放報到）\n活動地點｜中原文創園區微型廣場A\n活動費用｜免費\n報名方式｜Accupass 線上報名、現場報名，名額有限\n指導單位｜桃園市政府、桃園市議會\n主辦單位｜桃園市政府文化局、桃園市文化基金會\n執行單位｜中原文創園區\n贊助單位｜金車大塚股份有限公司、葡萄王生技股份有限公司",
    "extra": null,
    "categories": [
+    "免費",
     "展覽"
    ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
+   "alsoIn": [
+    "中原文創園區"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
   },
   {
    "id": "babycare:30b788a6-cf07-4e11-b2b5-f8c82394127a",
@@ -3550,6 +3612,35 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
+   "id": "accupass:2611180935141223319260",
+   "source": "accupass",
+   "sourceName": "Accupass 活動通",
+   "title": "開放體驗日—草本植物花圈手作體驗",
+   "start": "2026-12-04T19:00:00+08:00",
+   "end": "2026-12-04T20:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園市",
+   "address": null,
+   "district": null,
+   "city": "桃園市",
+   "category": "體驗",
+   "free": null,
+   "url": "https://www.accupass.com/event/2611180935141223319260",
+   "image": "https://static.accupass.com/eventbanner/2611200836411326118639_P520x260.jpg",
+   "summary": null,
+   "extra": {
+    "tags": [
+     "地方創生基地67531",
+     "地方創生基地"
+    ]
+   },
+   "categories": [
+    "體驗"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
    "id": "afmc:2077e2093077437c947e8d4bed62667a",
    "source": "afmc",
    "sourceName": "藝文設施管理中心",
@@ -3607,33 +3698,6 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
-   "id": "tytravel:6854",
-   "source": "tytravel",
-   "sourceName": "桃園觀光導覽網",
-   "title": "2026仙草嘉年華",
-   "start": "2026-12-05T00:00:00+08:00",
-   "end": "2026-12-20T23:59:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "楊梅休閒農業區",
-   "address": "桃園市楊梅區楊梅休閒農業區",
-   "district": "楊梅區",
-   "city": "桃園市",
-   "category": "節慶市集",
-   "free": null,
-   "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6854",
-   "image": "https://travel.tycg.gov.tw/content/images/articles/117329/480x360_articles-image-f-q88lm2w0g0ommhlmizya.png",
-   "summary": "■ 相關內容請洽本府農業局03-3322101#5415、5416\n【2026 桃園仙草嘉年華－佩佩的紫花園探險】浪漫登場！💜\n今年冬天，楊梅最夢幻的 2.5 公頃紫色仙草花海即將盛開！本次更首度與超人氣的「粉紅豬小妹（佩佩豬）」聯名，把花田打造成充滿童趣的紫花園探險樂園。\n現場除了能與佩佩豬一家主題裝置合影、搭乘穿梭花田的「童趣小火車」，週末還有 YOYO 親子家族唱跳、泡泡秀與限量佩佩豬見面會！只要使用「桃園市民卡 App」完成數位集章，還能兌換限量好禮。\n推薦大家搭乘臺鐵至「富岡火車站」或「楊梅火車站」，轉乘免費接駁專車即可輕鬆抵達；還能順道逛逛同步舉辦的「2026 富岡鐵道藝術生活節」，一趟旅程收藏鐵道小鎮與紫色花海兩種冬日風景！\n活動時間：2026/12/05（六）－ 12/20（日）\n活動地點：桃園市楊梅休閒農業區（楊湖路三段239號／上湖派出所對面花田）\n交通建議：臺鐵富岡站（每日接駁）、楊梅後站（假日接駁）皆有免費接駁專車\n更多資訊：請搜尋「楊梅休閒農業區」Facebook 粉絲專頁",
-   "extra": null,
-   "categories": [
-    "節慶市集"
-   ],
-   "alsoIn": [
-    "觀光署活動"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
    "id": "tytravel:7127",
    "source": "tytravel",
    "sourceName": "桃園觀光導覽網",
@@ -3661,6 +3725,64 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
+   "id": "tytravel:6854",
+   "source": "tytravel",
+   "sourceName": "桃園觀光導覽網",
+   "title": "2026仙草嘉年華",
+   "start": "2026-12-05T00:00:00+08:00",
+   "end": "2026-12-20T23:59:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "楊梅休閒農業區",
+   "address": "桃園市楊梅區楊梅休閒農業區",
+   "district": "楊梅區",
+   "city": "桃園市",
+   "category": "節慶市集",
+   "free": null,
+   "url": "https://travel.tycg.gov.tw/zh-tw/event/calendardetail/6854",
+   "image": "https://travel.tycg.gov.tw/content/images/articles/117329/480x360_articles-image-f-q88lm2w0g0ommhlmizya.png",
+   "summary": "■ 相關內容請洽本府農業局03-3322101#5415、5416\n【2026 桃園仙草嘉年華－佩佩的紫花園探險】浪漫登場！💜\n今年冬天，楊梅最夢幻的 2.5 公頃紫色仙草花海即將盛開！本次更首度與超人氣的「粉紅豬小妹（佩佩豬）」聯名，把花田打造成充滿童趣的紫花園探險樂園。\n現場除了能與佩佩豬一家主題裝置合影、搭乘穿梭花田的「童趣小火車」，週末還有 YOYO 親子家族唱跳、泡泡秀與限量佩佩豬見面會！只要使用「桃園市民卡 App」完成數位集章，還能兌換限量好禮。\n推薦大家搭乘臺鐵至「富岡火車站」或「楊梅火車站」，轉乘免費接駁專車即可輕鬆抵達；還能順道逛逛同步舉辦的「2026 富岡鐵道藝術生活節」，一趟旅程收藏鐵道小鎮與紫色花海兩種冬日風景！\n活動時間：2026/12/05（六）－ 12/20（日）\n活動地點：桃園市楊梅休閒農業區（楊湖路三段239號／上湖派出所對面花田）\n交通建議：臺鐵富岡站（每日接駁）、楊梅後站（假日接駁）皆有免費接駁專車\n更多資訊：請搜尋「楊梅休閒農業區」Facebook 粉絲專頁",
+   "extra": null,
+   "categories": [
+    "節慶市集"
+   ],
+   "alsoIn": [
+    "觀光署活動"
+   ],
+   "firstSeen": "2026-11-23T09:09:40.418Z"
+  },
+  {
+   "id": "babycare:03715d4f-9d5c-4cdc-829f-8ff03b418ca9",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "南區婦女中心 × 平鎮親子館 聖誕派對（平鎮親子館）",
+   "start": "2026-12-05T09:30:00+08:00",
+   "end": "2026-12-05T11:30:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-04T12:00:00+08:00",
+   "venue": "平鎮親子館",
+   "address": null,
+   "district": "平鎮區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 10,
+    "seats": 10,
+    "ages": "不限年齡",
+    "zip": "324"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
    "id": "babycare:8a9e472e-dcba-415c-b91f-18fd6fb5b4fb",
    "source": "babycare",
    "sourceName": "親子館報名",
@@ -3679,8 +3801,8 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 15,
-    "seats": 18,
+    "seatsLeft": 7,
+    "seats": 10,
     "ages": "0～0 個月",
     "zip": "330"
    },
@@ -4022,7 +4144,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "53036"
+     "56336"
     ]
    },
    "categories": [
@@ -4056,6 +4178,9 @@
    "categories": [
     "表演",
     "親子"
+   ],
+   "alsoIn": [
+    "文化部藝文活動"
    ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
@@ -4327,7 +4452,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 0,
+    "seatsLeft": 1,
     "seats": 6,
     "ages": "不限年齡",
     "zip": "333"
@@ -4391,7 +4516,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 6,
+    "seatsLeft": 5,
     "seats": 8,
     "ages": "4～17 個月",
     "zip": "324"
@@ -4677,6 +4802,34 @@
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
+   "id": "moc:6aaacec726b324165c32e41a",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "《生氣王子》親子繪本音樂會",
+   "start": "2026-12-06T14:30:00+08:00",
+   "end": "2026-12-06T20:15:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園展演中心展演廳",
+   "address": "桃園市桃園區中正路1188號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2097267213329641473",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 2,
+    "organizer": null
+   },
+   "categories": [
+    "表演",
+    "親子"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
    "id": "babycare:a5325c7e-5de6-4f3a-9d4e-db876cb04ce6",
    "source": "babycare",
    "sourceName": "親子館報名",
@@ -4768,6 +4921,68 @@
     "親子"
    ],
    "firstSeen": "2026-11-24T06:20:56.256Z"
+  },
+  {
+   "id": "babycare:418d9e69-7e31-407f-97d0-a3309866b27d",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "五夠安全 0歲-學齡前（中壢五權親子館）",
+   "start": "2026-12-08T10:30:00+08:00",
+   "end": "2026-12-08T11:00:00+08:00",
+   "regStart": "2026-11-24T09:00:00+08:00",
+   "regEnd": "2026-12-06T12:00:00+08:00",
+   "venue": "中壢五權親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 2,
+    "seats": 3,
+    "ages": "不限年齡",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "babycare:40f7b19a-c847-42a0-938c-2aea4ce77c5f",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "五夠安全 0歲-學齡前（中壢五權親子館）",
+   "start": "2026-12-08T10:30:00+08:00",
+   "end": "2026-12-08T23:00:00+08:00",
+   "regStart": "2026-11-24T09:00:00+08:00",
+   "regEnd": "2026-12-06T12:00:00+08:00",
+   "venue": "中壢五權親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 2,
+    "seats": 2,
+    "ages": "不限年齡",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
   },
   {
    "id": "babycare:0451add0-c868-4418-a3fd-ec7a7deb54ed",
@@ -4966,7 +5181,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 1,
+    "seatsLeft": 0,
     "seats": 4,
     "ages": "24～47 個月",
     "zip": "326"
@@ -4997,7 +5212,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 5,
+    "seatsLeft": 2,
     "seats": 6,
     "ages": "24～54 個月",
     "zip": "330"
@@ -5059,7 +5274,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 7,
+    "seatsLeft": 6,
     "seats": 10,
     "ages": "24～59 個月",
     "zip": "324"
@@ -5185,8 +5400,8 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 3,
-    "seats": 3,
+    "seatsLeft": 2,
+    "seats": 2,
     "ages": "4～71 個月",
     "zip": "320"
    },
@@ -5247,7 +5462,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 3,
+    "seatsLeft": 2,
     "seats": 3,
     "ages": "11～13 個月",
     "zip": "320"
@@ -5340,7 +5555,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 2,
+    "seatsLeft": 1,
     "seats": 5,
     "ages": "12～36 個月",
     "zip": "335"
@@ -5372,7 +5587,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "實拍教學1542",
+     "實拍教學1592",
      "實拍教學"
     ]
    },
@@ -5382,33 +5597,58 @@
    "firstSeen": "2026-11-24T06:20:56.256Z"
   },
   {
-   "id": "accupass:2610280718388435212200",
-   "source": "accupass",
-   "sourceName": "Accupass 活動通",
-   "title": "再也沒有蒜苗佐烏魚子了：身體不舒服的日子，還是要好好吃飯",
-   "start": "2026-12-13T14:00:00+08:00",
-   "end": "2026-12-13T16:00:00+08:00",
+   "id": "moc:69dd21a826b3242a48a9e2ce",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "《原來你佇咧》",
+   "start": "2026-12-12T14:30:00+08:00",
+   "end": "2026-12-12T15:30:00+08:00",
    "regStart": null,
    "regEnd": null,
-   "venue": "桃園市",
-   "address": null,
-   "district": null,
+   "venue": "米倉劇場",
+   "address": "桃園市桃園區新生路169號",
+   "district": "桃園區",
    "city": "桃園市",
-   "category": "其他",
+   "category": "表演",
    "free": null,
-   "url": "https://www.accupass.com/event/2610280718388435212200",
-   "image": "https://static.accupass.com/eventbanner/2611180747364737165320_P520x260.jpg",
+   "url": "https://www.opentix.life/program/2041775304994054145",
+   "image": null,
    "summary": null,
    "extra": {
-    "tags": [
-     "飲食2486",
-     "飲食"
-    ]
+    "showCount": 1,
+    "organizer": null
    },
    "categories": [
-    "其他"
+    "表演"
    ],
-   "firstSeen": "2026-11-24T18:12:34.088Z"
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a736fdc26b32427d0604356",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "果陀劇場《Crash, Boom Boom Love!》演唱會音樂劇",
+   "start": "2026-12-12T19:30:00+08:00",
+   "end": "2026-12-13T17:00:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園展演中心展演廳",
+   "address": "桃園市桃園區中正路1188號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2067174521020350465",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 2,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
   },
   {
    "id": "afmc:c988d4b4b8ae4239bc1ea1a0c211af92",
@@ -5437,6 +5677,60 @@
     "表演"
    ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
+  },
+  {
+   "id": "moc:6adb94ba26b3245efc75371d",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "《吟遊詩人的新唸歌——桃園米倉》",
+   "start": "2026-12-18T19:30:00+08:00",
+   "end": "2026-12-20T15:40:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "米倉劇場",
+   "address": "桃園市桃園區新生路169號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2110369335028596737",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 3,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a99ab5a26b32434f43580cf",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "2026藝術綠洲創作計畫-何日君再來劇團《未來．火車．歌廳秀》",
+   "start": "2026-12-18T19:30:00+08:00",
+   "end": "2026-12-20T18:00:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園火車站",
+   "address": "桃園市桃園區中正路1號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2082753505317773312",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 12,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
   },
   {
    "id": "tytravel:7133",
@@ -5490,6 +5784,9 @@
    },
    "categories": [
     "表演"
+   ],
+   "alsoIn": [
+    "文化部藝文活動"
    ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
@@ -5546,6 +5843,33 @@
     "表演"
    ],
    "firstSeen": "2026-11-23T09:12:58.616Z"
+  },
+  {
+   "id": "moc:6adb94b826b3245efc753718",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "趣玩樂囉",
+   "start": "2026-12-20T14:00:00+08:00",
+   "end": "2026-12-20T15:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2109530438754242561",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
   },
   {
    "id": "kktix:126526",
@@ -5649,7 +5973,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "聖誕身心靈市集1661",
+     "聖誕身心靈市集1671",
      "聖誕身心靈市集"
     ]
    },
@@ -5903,6 +6227,33 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
+   "id": "moc:6ad6504b26b3245efc7536af",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "蔡珂宜Chloe Chua－2027亞洲巡迴音樂會台灣首演",
+   "start": "2027-01-10T19:30:00+08:00",
+   "end": "2027-01-10T21:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2108010089152028673",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
    "id": "tycg:hakka:116年1月中級暨中高級海陸開班 (12月5日開放報名)共18堂36小時羅紫云老師(報名第1堂即為報名18堂)",
    "source": "tycg",
    "sourceName": "客家事務局線上報名",
@@ -5957,6 +6308,33 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
+   "id": "moc:6ad7a1c426b3245efc7536c7",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "職男人生12-愛拼才會贏",
+   "start": "2027-01-15T19:30:00+08:00",
+   "end": "2027-01-17T16:40:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園展演中心展演廳",
+   "address": "桃園市桃園區中正路1188號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2107041309473828865",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 4,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
    "id": "kktix:126770",
    "source": "kktix",
    "sourceName": "KKTIX",
@@ -5984,6 +6362,60 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
+   "id": "moc:6af7444326b3245efc7537d4",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "《滿城花事》桃園市國樂團2027臺灣歌劇",
+   "start": "2027-01-16T14:30:00+08:00",
+   "end": "2027-01-16T16:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2119370738373636096",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6af7444326b3245efc7537d5",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "《和鳴・迎春》桃園市國樂團新春音樂會",
+   "start": "2027-02-20T19:30:00+08:00",
+   "end": "2027-02-20T21:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2120153352416075777",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
    "id": "afmc:d3918f3acccb4a519c1c74aa183f6d3e",
    "source": "afmc",
    "sourceName": "藝文設施管理中心",
@@ -6009,6 +6441,225 @@
     "表演"
    ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
+  },
+  {
+   "id": "moc:6af3500426b3245efc7537ba",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "狂美《宮崎駿動畫配樂II》交響音樂會-2027燦爛續作、封箱倒數",
+   "start": "2027-03-06T14:30:00+08:00",
+   "end": "2027-03-06T16:50:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園展演中心展演廳",
+   "address": "桃園市桃園區中正路1188號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2112827249197789184",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a9d9fc626b324165c32e372",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "2027風動室內樂團《公主百分百2》生日驚喜",
+   "start": "2027-03-27T13:30:00+08:00",
+   "end": "2027-03-27T20:00:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園展演中心展演廳",
+   "address": "桃園市桃園區中正路1188號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "親子",
+   "free": null,
+   "url": "https://www.opentix.life/program/2092433205804978177",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 2,
+    "organizer": null
+   },
+   "categories": [
+    "親子",
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6af7444326b3245efc7537d6",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "《青鋒初鳴》桃園之星．芽綠迎風 VIII",
+   "start": "2027-03-28T14:30:00+08:00",
+   "end": "2027-03-28T16:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2120161491588341761",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a551c6a26b32427d06041a4",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "2026小青蛙劇團《綠野仙蹤~桃樂絲的魔幻冒險》",
+   "start": "2027-04-10T15:00:00+08:00",
+   "end": "2027-04-10T16:10:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子",
+   "free": null,
+   "url": "https://www.opentix.life/program/2070323539426664449",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "親子"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a4bdfd926b32427d0604120",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "2027風動室內樂團《無限》宮崎駿動畫音樂精選",
+   "start": "2027-05-29T14:30:00+08:00",
+   "end": "2027-12-11T16:10:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2068951869855346689",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 2,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a4bdfd926b32427d0604121",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "2027風動室內樂團《無限》ACG交響音樂會",
+   "start": "2027-05-29T19:30:00+08:00",
+   "end": "2027-12-11T21:10:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2068970591988879361",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 2,
+    "organizer": null
+   },
+   "categories": [
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a9d9fc626b324165c32e371",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "2027風動室內樂團《公主百分百》魔鏡冒險",
+   "start": "2027-09-18T13:30:00+08:00",
+   "end": "2027-09-18T15:10:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢藝術館音樂廳",
+   "address": "桃園市中壢區中美路16號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子",
+   "free": null,
+   "url": "https://www.opentix.life/program/2092199503986237440",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "親子",
+    "表演"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
+  },
+  {
+   "id": "moc:6a4bdfd926b32427d0604122",
+   "source": "moc",
+   "sourceName": "文化部藝文活動",
+   "title": "2027風動室內樂團《無限》電影配樂音樂會",
+   "start": "2027-12-12T14:30:00+08:00",
+   "end": "2027-12-12T16:10:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園展演中心展演廳",
+   "address": "桃園市桃園區中正路1188號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "表演",
+   "free": null,
+   "url": "https://www.opentix.life/program/2069253113025007617",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "showCount": 1,
+    "organizer": null
+   },
+   "categories": [
+    "表演",
+    "電影"
+   ],
+   "firstSeen": "2026-11-25T12:34:45.180Z"
   }
  ]
 }
