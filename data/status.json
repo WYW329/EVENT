@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-26T20:35:50.044Z",
-  "tookMs": 103032,
+  "updatedAt": "2026-11-26T21:05:55.238Z",
+  "tookMs": 110319,
   "total": 1896,
   "sources": [
     {
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 11721,
+      "ms": 18405,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 30,
       "kept": 30,
-      "ms": 720,
+      "ms": 825,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 40,
       "kept": 40,
-      "ms": 8321,
+      "ms": 49332,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 20,
       "kept": 20,
-      "ms": 1248,
+      "ms": 2090,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 28,
       "kept": 27,
-      "ms": 10636,
+      "ms": 17336,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 10,
       "kept": 10,
-      "ms": 8181,
+      "ms": 15682,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 2,
       "kept": 2,
-      "ms": 8215,
+      "ms": 15023,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 10159,
+      "ms": 12347,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 322,
       "kept": 22,
-      "ms": 3943,
+      "ms": 5801,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 102963,
+      "ms": 106323,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 122,
       "kept": 99,
-      "ms": 3529,
+      "ms": 5332,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 97795,
+      "ms": 98200,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 33583,
+      "ms": 39476,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 2958,
+      "ms": 4519,
       "error": null,
       "warnings": null
     },
@@ -159,7 +159,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 15625,
+      "ms": 17659,
       "error": null,
       "warnings": null
     },
@@ -169,7 +169,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 2984,
+      "ms": 5107,
       "error": null,
       "warnings": null
     },
@@ -179,7 +179,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 13191,
+      "ms": 15653,
       "error": null,
       "warnings": null
     },
@@ -189,7 +189,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 5181,
+      "ms": 7438,
       "error": null,
       "warnings": null
     },
@@ -199,7 +199,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 29089,
+      "ms": 28113,
       "error": null,
       "warnings": null
     },
@@ -209,7 +209,7 @@
       "ok": true,
       "count": 66,
       "kept": 63,
-      "ms": 5298,
+      "ms": 9432,
       "error": null,
       "warnings": null
     },
@@ -219,7 +219,7 @@
       "ok": true,
       "count": 499,
       "kept": 487,
-      "ms": 167,
+      "ms": 162,
       "error": null,
       "warnings": null
     },
@@ -229,7 +229,7 @@
       "ok": false,
       "count": null,
       "kept": 90,
-      "ms": 2714,
+      "ms": 4619,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -239,7 +239,7 @@
       "ok": true,
       "count": 7,
       "kept": 7,
-      "ms": 7543,
+      "ms": 13162,
       "error": null,
       "warnings": null
     },
@@ -249,7 +249,7 @@
       "ok": true,
       "count": 31,
       "kept": 25,
-      "ms": 10699,
+      "ms": 9420,
       "error": null,
       "warnings": null
     },
@@ -259,7 +259,7 @@
       "ok": true,
       "count": 79,
       "kept": 74,
-      "ms": 19335,
+      "ms": 41657,
       "error": null,
       "warnings": null
     },
@@ -269,7 +269,7 @@
       "ok": true,
       "count": 0,
       "kept": 0,
-      "ms": 5722,
+      "ms": 7813,
       "error": null,
       "warnings": null
     },
@@ -279,7 +279,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 3891,
+      "ms": 6104,
       "error": null,
       "warnings": null
     },
@@ -289,7 +289,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 7977,
+      "ms": 13080,
       "error": null,
       "warnings": null
     },
@@ -299,11 +299,12 @@
       "ok": true,
       "count": 19,
       "kept": 19,
-      "ms": 94534,
+      "ms": 94840,
       "error": null,
       "warnings": [
-        "地政局: The operation was aborted due to timeout",
-        "動物保護處: The operation was aborted due to timeout"
+        "青年事務局: The operation was aborted due to timeout",
+        "原住民族行政局: The operation was aborted due to timeout",
+        "經濟發展局: The operation was aborted due to timeout"
       ]
     },
     {
@@ -312,7 +313,7 @@
       "ok": true,
       "count": 67,
       "kept": 67,
-      "ms": 11478,
+      "ms": 17113,
       "error": null,
       "warnings": null
     },
@@ -322,7 +323,7 @@
       "ok": true,
       "count": 803,
       "kept": 614,
-      "ms": 99153,
+      "ms": 110246,
       "error": null,
       "warnings": null
     }
