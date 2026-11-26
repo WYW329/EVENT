@@ -6,8 +6,9 @@ import { fileURLToPath } from 'node:url';
 import { culture, tourism } from './sources/national.js';
 import { travel, ccms, afmc, babycare, water } from './sources/taoyuan.js';
 import { kktix, accupass, cycc, g11, wekengo, opentix } from './sources/platforms.js';
-import { tycgNews, library } from './sources/tycgnews.js';
+import { tycgNews, taipeiNews, library } from './sources/tycgnews.js';
 import { gloria, taimall, xpark } from './sources/malls.js';
+import { travelTaipei, ntpcEvents } from './sources/taipei.js';
 import { normTitle, dateOf, toMs, todayTaipei, finalizeCategories } from './util.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -15,7 +16,9 @@ const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
 // WeKenGo 放最後：同一個活動官方來源有的話，用官方的資料
-export const SOURCES = [travel, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, opentix, kktix, accupass, tycgNews, wekengo];
+export const SOURCES = [travel, travelTaipei, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, accupass, tycgNews, taipeiNews, wekengo];
+
+export const SEED = '2000-01-01T00:00:00.000Z';
 
 const richness = (e) => ['venue', 'address', 'image', 'summary', 'url', 'regStart'].filter((k) => e[k]).length;
 
@@ -100,7 +103,11 @@ export async function runAll({ only } = {}) {
   }
 
   const nowIso = new Date().toISOString();
-  const events = keepCurrent(dedupe(all)).map((e) => ({ ...e, categories: finalizeCategories(e), firstSeen: prevById.get(e.id)?.firstSeen ?? nowIso }));
+  // 新加的來源、或第一次有某個縣市的活動時，那批活動標成「一開始就有」（SEED），不放進通知、不推播，避免一次湧進幾百則
+  const prevSources = new Set(prev.events.map((e) => e.source));
+  const prevCities = new Set(prev.events.map((e) => e.city ?? '桃園市'));
+  const firstSeenOf = (e) => prevById.get(e.id)?.firstSeen ?? (prev.events.length && (!prevSources.has(e.source) || !prevCities.has(e.city)) ? SEED : nowIso);
+  const events = keepCurrent(dedupe(all)).map((e) => ({ ...e, categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
   events.sort((a, b) => (toMs(a.start) || 0) - (toMs(b.start) || 0));
 
   const status = {

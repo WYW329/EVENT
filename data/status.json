@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T16:35:47.603Z",
-  "tookMs": 102676,
-  "total": 379,
+  "updatedAt": "2026-11-26T16:41:02.143Z",
+  "tookMs": 450216,
+  "total": 1682,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,17 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 9843,
+      "ms": 3539,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tptravel",
+      "name": "臺北旅遊網",
+      "ok": true,
+      "count": 30,
+      "kept": 30,
+      "ms": 1338,
       "error": null,
       "warnings": null
     },
@@ -17,9 +27,9 @@
       "id": "tourism",
       "name": "觀光署活動",
       "ok": true,
-      "count": 85,
-      "kept": 0,
-      "ms": 4573,
+      "count": 322,
+      "kept": 22,
+      "ms": 180,
       "error": null,
       "warnings": null
     },
@@ -29,7 +39,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 102665,
+      "ms": 92427,
       "error": null,
       "warnings": null
     },
@@ -37,9 +47,9 @@
       "id": "moc",
       "name": "文化部藝文活動",
       "ok": true,
-      "count": 57,
-      "kept": 54,
-      "ms": 4498,
+      "count": 588,
+      "kept": 564,
+      "ms": 526,
       "error": null,
       "warnings": null
     },
@@ -49,7 +59,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 18254,
+      "ms": 11637,
       "error": null,
       "warnings": null
     },
@@ -59,7 +69,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 31706,
+      "ms": 22662,
       "error": null,
       "warnings": null
     },
@@ -69,7 +79,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 21,
+      "ms": 25,
       "error": null,
       "warnings": null
     },
@@ -79,7 +89,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1908,
+      "ms": 1239,
       "error": null,
       "warnings": null
     },
@@ -89,7 +99,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 15439,
+      "ms": 12635,
       "error": null,
       "warnings": null
     },
@@ -99,7 +109,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 2093,
+      "ms": 164,
       "error": null,
       "warnings": null
     },
@@ -109,7 +119,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 12348,
+      "ms": 11988,
       "error": null,
       "warnings": null
     },
@@ -119,7 +129,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 4646,
+      "ms": 2135,
       "error": null,
       "warnings": null
     },
@@ -129,7 +139,17 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 26506,
+      "ms": 25409,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "ntpc",
+      "name": "新北市政府活動",
+      "ok": true,
+      "count": 66,
+      "kept": 63,
+      "ms": 315,
       "error": null,
       "warnings": null
     },
@@ -137,29 +157,29 @@
       "id": "opentix",
       "name": "OPENTIX",
       "ok": true,
-      "count": 23,
-      "kept": 0,
-      "ms": 44,
+      "count": 501,
+      "kept": 35,
+      "ms": 70,
       "error": null,
       "warnings": null
     },
     {
       "id": "kktix",
       "name": "KKTIX",
-      "ok": false,
-      "count": null,
-      "kept": 10,
-      "ms": 1483,
-      "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
+      "ok": true,
+      "count": 92,
+      "kept": 92,
+      "ms": 75718,
+      "error": null,
       "warnings": null
     },
     {
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 5,
-      "kept": 3,
-      "ms": 2878,
+      "count": 30,
+      "kept": 27,
+      "ms": 3839,
       "error": null,
       "warnings": null
     },
@@ -167,9 +187,23 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 20,
-      "kept": 20,
-      "ms": 90032,
+      "count": 18,
+      "kept": 18,
+      "ms": 90035,
+      "error": null,
+      "warnings": [
+        "原住民族行政局: The operation was aborted due to timeout",
+        "婦幼發展局: The operation was aborted due to timeout",
+        "動物保護處: The operation was aborted due to timeout"
+      ]
+    },
+    {
+      "id": "tpenews",
+      "name": "臺北市府局處與區公所",
+      "ok": true,
+      "count": 15,
+      "kept": 15,
+      "ms": 1956,
       "error": null,
       "warnings": [
         "青年事務局: The operation was aborted due to timeout"
@@ -179,9 +213,9 @@
       "id": "wekengo",
       "name": "WeKenGo 週末去哪玩",
       "ok": true,
-      "count": 153,
-      "kept": 114,
-      "ms": 27524,
+      "count": 792,
+      "kept": 638,
+      "ms": 450155,
       "error": null,
       "warnings": null
     }

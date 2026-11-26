@@ -117,6 +117,16 @@ const isStandalone = () => window.matchMedia('(display-mode: standalone)').match
 const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 const catsOf = (e) => (e.categories?.length ? e.categories : [e.category, ...(e.free ? ['免費'] : [])]);
 const cityOf = (e) => e.city ?? '桃園市';
+// 地區：台北市和新北市算同一區
+const REGIONS = [['桃園', ['桃園市']], ['台北・新北', ['臺北市', '新北市']]];
+// 卡片上的地區：桃園只寫區名；台北、新北前面加縣市（例如「新北板橋區」）
+const areaOf = (e) => {
+  const c = cityOf(e);
+  if (c === '桃園市') return e.district || null;
+  const short = c.replace(/^臺/, '台').replace(/市$/, '');
+  return e.district ? `${short}${e.district}` : short;
+};
+const regionOf = (e) => REGIONS.find(([, cs]) => cs.includes(cityOf(e)))?.[0] ?? cityOf(e);
 // 收藏時把提醒需要的欄位一起送到伺服器（伺服器不用每分鐘讀整份活動資料）
 const snapshotOf = (e) => ({ id: e.id, title: e.title, start: e.start, end: e.end, regStart: e.regStart, regEnd: e.regEnd, url: e.url, venue: e.venue, district: e.district });
 const starredSnapshots = () => [...S.starred].map((id) => S.byId.get(id)).filter(Boolean).map(snapshotOf);
@@ -198,7 +208,7 @@ function card(e, mode = 'time') {
   const isNew = isUnread(e);
   const cats = catsOf(e);
   const unit = unitOf(e);
-  const place = [e.venue && e.venue !== unit ? e.venue : null, e.district].filter(Boolean).join('・');
+  const place = [e.venue && e.venue !== unit ? e.venue : null, areaOf(e)].filter(Boolean).join('・');
   const seats = e.extra?.seatsLeft != null && e.extra.seatsLeft > 0 ? `<span class="tag">剩 ${e.extra.seatsLeft} 位</span>` : '';
   const thumb = e.image ? `<img class="thumb" src="${esc(e.image)}" alt="" loading="lazy" onerror="this.closest('.ev').classList.remove('has-thumb');this.remove()">` : '';
   return `
@@ -282,6 +292,42 @@ function renderInbox() {
         })
         .join('')
     : '<div class="empty"><b>🔔</b>沒有新活動<br>有新活動時會出現在這裡</div>';
+}
+
+// 通知頁往右滑：畫面跟著手指移動，滑超過四分之一就回主畫面
+function bindInboxSwipe() {
+  const el = $('#view-inbox');
+  let x0 = 0, y0 = 0, dx = 0, mode = null;
+  el.addEventListener('touchstart', (ev) => {
+    if (ev.touches.length !== 1) return;
+    x0 = ev.touches[0].clientX; y0 = ev.touches[0].clientY; dx = 0; mode = null;
+    el.classList.remove('swipe-back');
+  }, { passive: true });
+  el.addEventListener('touchmove', (ev) => {
+    const t = ev.touches[0];
+    const mx = t.clientX - x0, my = t.clientY - y0;
+    if (!mode && (Math.abs(mx) > 10 || Math.abs(my) > 10)) mode = mx > 0 && Math.abs(mx) > Math.abs(my) * 1.3 ? 'h' : 'v';
+    if (mode !== 'h') return;
+    if (ev.cancelable) ev.preventDefault();
+    dx = Math.max(0, mx);
+    el.classList.add('swiping');
+    el.style.transform = `translateX(${dx}px)`;
+    el.style.opacity = String(1 - Math.min(dx / innerWidth, 1) * 0.5);
+  }, { passive: false });
+  const end = () => {
+    if (mode !== 'h') return;
+    el.classList.remove('swiping');
+    el.classList.add('swipe-back');
+    if (dx > innerWidth * 0.25) {
+      el.style.transform = `translateX(${innerWidth}px)`; el.style.opacity = '0';
+      setTimeout(() => { el.classList.remove('swipe-back'); go('list'); }, 200);
+    } else {
+      el.style.transform = ''; el.style.opacity = '';
+    }
+    mode = null;
+  };
+  el.addEventListener('touchend', end);
+  el.addEventListener('touchcancel', end);
 }
 
 let viewBeforeInbox = 'list';
@@ -405,10 +451,17 @@ async function loadSites() {
 async function renderSites() {
   const sites = await loadSites();
   const q = $('#siteQ').value.trim().toLowerCase();
-  const list = sites.filter((s) => !q || `${s.name} ${s.category} ${s.url}`.toLowerCase().includes(q));
+  const region = $('#regionChips .chip.on')?.dataset.region ?? '';
+  const REGION_NAME = { 桃園: '桃園', 台北: '台北・新北', 全台: '全台平台' };
+  const inRegion = sites.filter((s) => !region || s.region === region);
+  const list = inRegion.filter((s) => !q || `${s.name} ${s.category} ${s.url}`.toLowerCase().includes(q));
   const groups = new Map();
-  for (const s of list) (groups.get(s.category) ?? groups.set(s.category, []).get(s.category)).push(s);
-  $('#sitesHint').textContent = `共 ${sites.length} 個桃園常辦活動的單位和平台；「自動收錄」的已經會自動抓進活動雷達。`;
+  for (const s of list) {
+    const g = region ? s.category : `${REGION_NAME[s.region] ?? s.region}・${s.category}`;
+    (groups.get(g) ?? groups.set(g, []).get(g)).push(s);
+  }
+  const autoN = inRegion.filter((s) => s.auto).length;
+  $('#sitesHint').textContent = `${region ? REGION_NAME[region] : '全部'}共 ${inRegion.length} 個常辦活動的單位和平台，其中 ${autoN} 個「自動收錄」，已經會自動抓進活動雷達。`;
   $('#siteList').innerHTML =
     [...groups]
       .map(([cat, items]) => `<div class="site-group"><h3>${esc(cat)} <small>${items.length}</small></h3><div class="site-card">${items
@@ -478,7 +531,7 @@ function filtered() {
     if (hideBaby && e.category === '親子館' && cat !== '親子館') return false;
     if (cat && !catsOf(e).includes(cat)) return false;
     if (quick.length && !quick.every((c) => catsOf(e).includes(c))) return false;
-    if (city && cityOf(e) !== city) return false;
+    if (city && regionOf(e) !== city) return false;
     if (!inWhen(e, S.when)) return false;
     if (q && !`${e.title} ${e.venue ?? ''} ${e.district ?? ''} ${cityOf(e)} ${e.sourceName} ${e.summary ?? ''}`.toLowerCase().includes(q)) return false;
     return true;
@@ -552,8 +605,9 @@ function renderSources() {
 function fillCitySelect() {
   const sel = $('#citySel');
   const cur = sel.value || store.get('filters', {})?.city || '';
-  const present = [...new Set(S.events.map(cityOf))].sort((a, b) => CITIES.indexOf(a) - CITIES.indexOf(b));
-  sel.innerHTML = '<option value="">所有縣市</option>' + present.map((c) => `<option>${c}</option>`).join('');
+  const order = REGIONS.map(([r]) => r);
+  const present = [...new Set(S.events.map(regionOf))].sort((a, b) => (order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99));
+  sel.innerHTML = '<option value="">所有地區</option>' + present.map((c) => `<option>${c}</option>`).join('');
   if (present.includes(cur)) sel.value = cur;
 }
 
@@ -568,15 +622,13 @@ function renderAll() {
 // ---------- 活動詳情 ----------
 let lockedY = 0;
 function lockScroll() {
-  lockedY = window.scrollY;
-  document.body.style.top = `-${lockedY}px`;
+  lockedY = document.body.scrollTop;
   document.body.classList.add('locked');
 }
 function unlockScroll() {
   if (!document.body.classList.contains('locked')) return;
   document.body.classList.remove('locked');
-  document.body.style.top = '';
-  window.scrollTo(0, lockedY);
+  document.body.scrollTop = lockedY;
 }
 
 function openDetail(id) {
@@ -763,7 +815,7 @@ async function disablePush() {
 const pickHtml = (name, items) => items.map(([v, t]) => `<label><input type="checkbox" name="${name}" value="${v}"><span>${t}</span></label>`).join('');
 function buildPrefsForm() {
   $('#prefCats').innerHTML = pickHtml('cat', CATEGORIES.filter((c) => c !== '親子館').map((c) => [c, c]));
-  $('#prefCities').innerHTML = pickHtml('city', CITIES.map((c) => [c, c]));
+  $('#prefCities').innerHTML = pickHtml('city', REGIONS.map(([r, cs]) => [cs.join(','), r]));
   $('#prefRemind').innerHTML = pickHtml('remind', REMIND_OPTIONS);
 }
 function fillPrefs() {
@@ -774,7 +826,7 @@ function fillPrefs() {
   f.remindEventDayBefore.checked = p.remindEventDayBefore;
   f.keywords.value = (p.keywords ?? []).join(', ');
   $$('input[name="cat"]', f).forEach((i) => (i.checked = p.categories.includes(i.value)));
-  $$('input[name="city"]', f).forEach((i) => (i.checked = (p.cities ?? []).includes(i.value)));
+  $$('input[name="city"]', f).forEach((i) => (i.checked = i.value.split(',').some((c) => (p.cities ?? []).includes(c))));
   $$('input[name="remind"]', f).forEach((i) => (i.checked = p.remindMinutes.includes(Number(i.value))));
 }
 async function savePrefs(ev) {
@@ -786,7 +838,7 @@ async function savePrefs(ev) {
     remindEventDayBefore: f.remindEventDayBefore.checked,
     keywords: f.keywords.value.split(/[,，、\s]+/).filter(Boolean),
     categories: $$('input[name="cat"]:checked', f).map((i) => i.value),
-    cities: $$('input[name="city"]:checked', f).map((i) => i.value),
+    cities: $$('input[name="city"]:checked', f).flatMap((i) => i.value.split(',')),
     remindMinutes: $$('input[name="remind"]:checked', f).map((i) => Number(i.value)),
   };
   S.prefs = prefs;
@@ -831,7 +883,8 @@ function go(view) {
   if (view === 'sites') renderSites();
   if (view === 'inbox') renderInbox();
   $('#bellBtn').classList.toggle('on', view === 'inbox');
-  window.scrollTo({ top: 0 });
+  document.body.scrollTop = 0;
+  const iv = $('#view-inbox'); iv.style.transform = iv.style.opacity = '';
 }
 
 function saveFilters() {
@@ -855,14 +908,13 @@ function bind() {
   for (const id of ['#catSel', '#citySel', '#hideBaby']) $(id).addEventListener('change', () => { saveFilters(); renderList(); });
   $('#regHideBaby').addEventListener('change', renderReg);
   $('#regFreeOnly').addEventListener('change', renderReg);
-  $('#quickChips').addEventListener('click', (ev) => {
-    const b = ev.target.closest('button[data-quick]');
+  $('#regionChips').addEventListener('click', (ev) => {
+    const b = ev.target.closest('button[data-region]');
     if (!b) return;
-    const c = b.dataset.quick;
-    S.quick.has(c) ? S.quick.delete(c) : S.quick.add(c);
-    b.classList.toggle('on', S.quick.has(c));
-    renderList();
+    $$('#regionChips .chip').forEach((x) => x.classList.toggle('on', x === b));
+    renderSites();
   });
+  bindInboxSwipe();
   $('#siteQ').addEventListener('input', () => renderSites());
   $('#siteQ').addEventListener('keydown', (ev) => { if (ev.key === 'Enter') ev.target.blur(); });
   $('#themePick').addEventListener('click', (ev) => { const b = ev.target.closest('[data-theme]'); if (b) applyTheme(b.dataset.theme); });

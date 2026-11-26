@@ -1,6 +1,6 @@
-// 桃園市府各局處、區公所的「最新消息」RSS（同一套網站系統）。從消息裡挑出民眾活動，並讀出活動日期、地點。
+// 桃園、台北市府各局處、區公所的「最新消息」RSS（同一套網站系統）。從消息裡挑出民眾活動，並讀出活動日期、地點。
 import * as cheerio from 'cheerio';
-import { fetchText, makeEvent, makeTime, cleanText, taipeiNow, todayTaipei, findDistrict } from '../util.js';
+import { fetchText, makeEvent, makeTime, cleanText, taipeiNow, todayTaipei, findDistrict, supportedCity } from '../util.js';
 
 export const TYCG_FEEDS = [
   ['桃園區公所', 'https://www.tao.tycg.gov.tw/OpenData.aspx?SN=B9FA1D8CD0C10792', '桃園區'],
@@ -33,9 +33,51 @@ export const TYCG_FEEDS = [
 // 是民眾可以參加的活動
 const EVENT_RE = /活動|講座|課程|研習|工作坊|市集|音樂會|演唱|表演|展覽|特展|展出|體驗|導覽|走讀|營隊|夏令營|冬令營|比賽|競賽|升旗|晚會|嘉年華|節|祭|電影|放映|健走|路跑|親子|說故事|讀書會|園遊會|博覽會|義診|篩檢|領養|晚會|演出|音樂|藝術|文化季|農遊|採果|小旅行|揪團|報名/;
 // 不是活動（公告、招募、行政）
-const SKIP_RE = /實施計畫|評選|表揚|媒合|營運資訊|變更|財產|創生|說明會|宣導|講習會|研討|論壇|座談|檔案展|招生|簡章|招商|攤商|學分|學程|碩士|博士|在職專班|海外|圓夢|基金|獎學金|徵件|徵稿|投稿|徵選|志工招募|徵才|招募|招考|甄選|甄試|約僱|職缺|錄取|榜單|招標|標案|決標|補助|補貼|津貼|申請|申辦|租金|停水|停電|施工|封閉|管制|交通改道|颱風|防災|地震|疫苗|稅|繳費|公告.*名單|成果|花絮|圓滿|感謝|新聞稿|記者會|會議|說明會.*(工程|都更|計畫)|服務時程|輔具|據點|開放時間異動|休館|閉館|暫停/;
+const SKIP_RE = /實施計畫|入選|遴選|徵文|提案|湧入|人次|一覽表|評選|表揚|媒合|營運資訊|變更|財產|創生|說明會|宣導|講習會|研討|論壇|座談|檔案展|招生|簡章|招商|攤商|學分|學程|碩士|博士|在職專班|海外|圓夢|基金|獎學金|徵件|徵稿|投稿|徵選|志工招募|徵才|招募|招考|甄選|甄試|約僱|職缺|錄取|榜單|招標|標案|決標|補助|補貼|津貼|申請|申辦|租金|停水|停電|施工|封閉|管制|交通改道|颱風|防災|地震|疫苗|稅|繳費|公告.*名單|成果|花絮|圓滿|感謝|新聞稿|記者會|會議|說明會.*(工程|都更|計畫)|服務時程|輔具|據點|開放時間異動|休館|閉館|暫停/;
 
 const OTHER_CITY_RE = /臺北|台北|新北|基隆|新竹|苗栗|臺中|台中|彰化|南投|雲林|嘉義|臺南|台南|高雄|屏東|宜蘭|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
+// 台北的來源：寫了雙北以外縣市、又沒提到雙北的不收
+const NOT_TAIPEI_RE = /桃園|基隆|新竹|苗栗|臺中|台中|彰化|南投|雲林|嘉義|臺南|台南|高雄|屏東|宜蘭|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
+
+// 臺北市府（gov.taipei）也是同一套系統，用「活動訊息」「基層藝文」這類 RSS
+export const TAIPEI_FEEDS = [
+  ['中正區公所', 'https://zzdo.gov.taipei/OpenData.aspx?SN=0C6B482B4DCCD6D6', '中正區'],
+  ['中正區公所', 'https://zzdo.gov.taipei/OpenData.aspx?SN=2E7D9380FB4709AF', '中正區'],
+  ['大同區公所', 'https://dtdo.gov.taipei/OpenData.aspx?SN=1FA573C4C16AA6CC', '大同區'],
+  ['中山區公所', 'https://zsdo.gov.taipei/OpenData.aspx?SN=EB80537B7C6BAD7A', '中山區'],
+  ['松山區公所', 'https://ssdo.gov.taipei/OpenData.aspx?SN=9B3858FA69505BB5', '松山區'],
+  ['大安區公所', 'https://dado.gov.taipei/OpenData.aspx?SN=02A3667FED9E6B98', '大安區'],
+  ['大安區公所', 'https://dado.gov.taipei/OpenData.aspx?SN=BB32D8ED217A2217', '大安區'],
+  ['萬華區公所', 'https://whdo.gov.taipei/OpenData.aspx?SN=C07A4E0160AC69CE', '萬華區'],
+  ['信義區公所', 'https://xydo.gov.taipei/OpenData.aspx?SN=58556754C67AC125', '信義區'],
+  ['士林區公所', 'https://sldo.gov.taipei/OpenData.aspx?SN=59F951C617E8AC72', '士林區'],
+  ['士林區公所', 'https://sldo.gov.taipei/OpenData.aspx?SN=281249C16C30814A', '士林區'],
+  ['北投區公所', 'https://btdo.gov.taipei/OpenData.aspx?SN=EBDEAEDEC639490C', '北投區'],
+  ['北投區公所', 'https://btdo.gov.taipei/OpenData.aspx?SN=4AB77FB5C324175E', '北投區'],
+  ['內湖區公所', 'https://nhdo.gov.taipei/OpenData.aspx?SN=0775D186E2307F53', '內湖區'],
+  ['內湖區公所', 'https://nhdo.gov.taipei/OpenData.aspx?SN=AE59230D67746860', '內湖區'],
+  ['南港區公所', 'https://ngdo.gov.taipei/OpenData.aspx?SN=B9FB2A800D03E15C', '南港區'],
+  ['南港區公所', 'https://ngdo.gov.taipei/OpenData.aspx?SN=0B6F0C60A143D5A5', '南港區'],
+  ['文山區公所', 'https://wsdo.gov.taipei/OpenData.aspx?SN=F1692E370E0FE900', '文山區'],
+  ['臺北市文化局', 'https://culture.gov.taipei/OpenData.aspx?SN=1B936A6D33FD42AC'],
+  ['臺北市社會局', 'https://dosw.gov.taipei/OpenData.aspx?SN=FBD1DC869C9C15A1'],
+  ['臺北市原民會', 'https://www.ipc.gov.taipei/OpenData.aspx?SN=F22F184B86B127A1'],
+  ['臺北市公園處', 'https://pkl.gov.taipei/OpenData.aspx?SN=15EF25F9BE92CC83'],
+  ['臺北市公園處', 'https://pkl.gov.taipei/OpenData.aspx?SN=4304B250A8C1501E'],
+  ['臺北市大地處', 'https://www.geo.gov.taipei/OpenData.aspx?SN=F5E9B748D65E92B1'],
+  ['臺北市體育局', 'https://sports.gov.taipei/OpenData.aspx?SN=2D58889BB41F75D7'],
+  ['臺北市民政局', 'https://ca.gov.taipei/OpenData.aspx?SN=4DA811EF46E4E6F4'],
+  ['臺北市立天文館', 'https://tam.gov.taipei/OpenData.aspx?SN=352100000A1A37FB', '士林區'],
+  ['臺北市立天文館', 'https://tam.gov.taipei/OpenData.aspx?SN=B130F13BC7E70F5F', '士林區'],
+  ['臺北市中山堂', 'https://www.zsh.gov.taipei/OpenData.aspx?SN=F4D16A14CA2E7DA0', '中正區'],
+  ['臺北市藝文推廣處', 'https://www.tapo.gov.taipei/OpenData.aspx?SN=3B770880CF2CDE7D', '中山區'],
+  ['臺北市藝文推廣處', 'https://www.tapo.gov.taipei/OpenData.aspx?SN=E2018C5392F991DF', '中山區'],
+  ['臺北市立動物園', 'https://www.zoo.gov.taipei/OpenData.aspx?SN=2859F17A6DE391A1', '文山區'],
+  ['臺北市環保局', 'https://www.dep.gov.taipei/OpenData.aspx?SN=7F569FE8F620BCE7'],
+  ['臺北市勞動局', 'https://bola.gov.taipei/OpenData.aspx?SN=B983F3296606A47B'],
+  ['臺北市產業局', 'https://www.doed.gov.taipei/OpenData.aspx?SN=6C26BB63625DACE7'],
+  ['臺北市動保處', 'https://www.tcapo.gov.taipei/OpenData.aspx?SN=AC3BB5CD01A89DDC'],
+];
 
 const pad = (n) => String(n).padStart(2, '0');
 
@@ -154,15 +196,18 @@ export const library = {
   },
 };
 
-export const tycgNews = {
-  id: 'tycgnews',
-  name: '桃園市府局處與區公所',
+/** 市府 RSS 來源：feeds 是 [單位, RSS 網址, 預設行政區]；city 是這組來源的縣市。 */
+function makeFeedSource({ id, name, feeds, city, homeRe, otherRe }) {
+  return {
+  id,
+  name,
+  city,
   async fetch() {
     const out = [];
     const errors = [];
     const today = todayTaipei();
     await Promise.all(
-      TYCG_FEEDS.map(async ([office, url, district]) => {
+      feeds.map(async ([office, url, district]) => {
         try {
           const xml = await fetchText(url, {}, { timeoutMs: 90000, retries: 2 });
           for (const it of parseFeedItems(xml)) {
@@ -176,7 +221,7 @@ export const tycgNews = {
             const venue = extractVenue(it.text);
             // 轉知外縣市的活動不收（地點寫了別的縣市、又沒提到桃園）
             const where = `${venue ?? ''} ${title}`;
-            if ((OTHER_CITY_RE.test(where) || /[鄉鎮]公所/.test(where)) && !/桃園/.test(where)) continue;
+            if ((otherRe.test(where) || /[鄉鎮]公所/.test(where)) && !homeRe.test(where)) continue;
             // 很多單位會轉貼同一則，標題和日期相同只留一則
             // 有「」框住的名稱就用它當比對依據（各單位轉貼時前後文字常不同）
             const core = title.match(/[「『《]([^」』》]{4,})[」』》]/)?.[1] ?? title;
@@ -189,13 +234,16 @@ export const tycgNews = {
             });
             if (dup) { dup.alsoIn = [...new Set([...(dup.alsoIn ?? []), office])]; continue; }
             const key = new URL(it.link).searchParams.get('s') ?? it.link;
+            // 台北的單位也常轉貼新北的活動，地點寫了哪個縣市就算哪個
+            const evCity = supportedCity(venue, title) ?? city;
             out.push(
               makeEvent({ id: this.id, name: office }, `${new URL(url).host.split('.')[0]}:${key}`, {
                 title,
                 start: dates.start,
                 end: dates.end,
                 venue,
-                district: findDistrict(venue, title, it.text) ?? district ?? null,
+                district: findDistrict({ city: evCity }, venue, title, it.text) ?? (evCity === city ? district : null) ?? null,
+                city: evCity,
                 url: it.link,
                 summary: it.text,
                 extra: { organizer: office, postedAt: new Date(pub).toISOString().slice(0, 10) },
@@ -214,3 +262,7 @@ export const tycgNews = {
     return out;
   },
 };
+}
+
+export const tycgNews = makeFeedSource({ id: 'tycgnews', name: '桃園市府局處與區公所', feeds: TYCG_FEEDS, city: '桃園市', homeRe: /桃園/, otherRe: OTHER_CITY_RE });
+export const taipeiNews = makeFeedSource({ id: 'tpenews', name: '臺北市府局處與區公所', feeds: TAIPEI_FEEDS, city: '臺北市', homeRe: /臺北|台北|新北/, otherRe: NOT_TAIPEI_RE });

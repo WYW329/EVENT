@@ -123,7 +123,8 @@ async function checkNewEvents(env) {
     writes.push(setMeta(env, 'seen', JSON.stringify(events.map((e) => e.id))));
   } else {
     const seen = new Set(JSON.parse(seenRaw));
-    fresh = events.filter((e) => !seen.has(e.id));
+    // firstSeen 是 2000 年的是新來源一開始就有的活動，不推播
+    fresh = events.filter((e) => !seen.has(e.id) && !(e.firstSeen ?? '').startsWith('2000-'));
     if (fresh.length) {
       const subs = (await env.DB.prepare('SELECT id, endpoint, p256dh, auth, prefs FROM subs').all()).results;
       for (const sub of subs) {

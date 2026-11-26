@@ -73,3 +73,16 @@ test('過濾已結束活動', () => {
   ], now);
   assert.deepEqual(list.map((e) => e.title), ['今天', '進行中']);
 });
+
+test('雙北：行政區、縣市判斷', async () => {
+  const { findDistrict, supportedCity, isTaipeiArea, cityOfDistrict } = await import('../scraper/util.js');
+  assert.equal(findDistrict('新北市板橋區文化路一段'), '板橋區');
+  assert.equal(findDistrict('臺中市大安區'), null); // 台中也有大安區
+  assert.equal(findDistrict({ city: '臺北市' }, '大安區'), '大安區');
+  assert.equal(findDistrict('桃園市中壢區'), '中壢區');
+  assert.equal(supportedCity('台北市信義區松高路'), '臺北市');
+  assert.equal(supportedCity('永和區中正路'), '新北市');
+  assert.equal(supportedCity('台中市西屯區'), null);
+  assert.equal(isTaipeiArea('桃園市中壢區'), false);
+  assert.equal(cityOfDistrict('淡水區'), '新北市');
+});

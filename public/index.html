@@ -16,7 +16,7 @@
   <meta name="apple-mobile-web-app-title" content="活動雷達" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" />
   <link rel="stylesheet" href="/style.css" />
   <script>
     // 先套用主題，避免畫面閃一下
@@ -81,18 +81,9 @@
         <button data-when="week" class="chip">7 天內</button>
         <button data-when="month" class="chip">30 天內</button>
       </div>
-      <div class="chips" id="quickChips" aria-label="快速篩選">
-        <button data-quick="免費" class="chip soft">免費</button>
-        <button data-quick="親子" class="chip soft">親子</button>
-        <button data-quick="展覽" class="chip soft">展覽</button>
-        <button data-quick="表演" class="chip soft">表演</button>
-        <button data-quick="節慶市集" class="chip soft">市集節慶</button>
-        <button data-quick="講座課程" class="chip soft">講座課程</button>
-        <button data-quick="體驗" class="chip soft">體驗</button>
-      </div>
       <div class="filters">
         <label class="sel"><select id="catSel" aria-label="類別"><option value="">所有類別</option></select></label>
-        <label class="sel"><select id="citySel" aria-label="縣市"><option value="">所有縣市</option></select></label>
+        <label class="sel"><select id="citySel" aria-label="地區"><option value="">所有地區</option></select></label>
         <label class="toggle"><input type="checkbox" id="hideBaby" checked /><span>隱藏親子館</span></label>
       </div>
       <p class="meta" id="listMeta"></p>
@@ -140,6 +131,12 @@
       <div class="intro">
         <h2>活動網站</h2>
         <p id="sitesHint">桃園常辦活動的單位和平台。標示「自動收錄」的已經會自動抓進活動雷達。</p>
+      </div>
+      <div class="chips" id="regionChips" aria-label="地區">
+        <button data-region="" class="chip on">全部</button>
+        <button data-region="桃園" class="chip">桃園</button>
+        <button data-region="台北" class="chip">台北・新北</button>
+        <button data-region="全台" class="chip">全台平台</button>
       </div>
       <div class="search-wrap inline">
         <svg class="search-ico"><use href="#i-search"/></svg>
@@ -214,7 +211,7 @@
         </fieldset>
         <label class="switch-row"><span>也通知親子館課程<small>每天很多筆</small></span><input type="checkbox" name="includeBabycare" /></label>
         <fieldset>
-          <legend>縣市（都不選＝全部）</legend>
+          <legend>地區（都不選＝全部）</legend>
           <div class="pick" id="prefCities"></div>
         </fieldset>
         <label class="field">關鍵字<small>用逗號分開，標題有這些字一定通知</small><input name="keywords" placeholder="例如：市集, 恐龍, 草地音樂" /></label>

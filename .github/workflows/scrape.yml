@@ -15,7 +15,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -26,6 +26,8 @@ jobs:
       - run: npm test
       - name: 抓取
         run: node scraper/run.js
+        env:
+          WEKENGO_DETAIL_LIMIT: 250
       - name: 有變動就存回 repo
         run: |
           git config user.name "github-actions[bot]"

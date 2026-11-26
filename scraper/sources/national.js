@@ -1,5 +1,5 @@
 // 全國開放資料：文化部藝文活動、觀光署活動。
-import { fetchJson, politeFetch, makeEvent, parseDateTime, isTaoyuan, findDistrict, cleanText } from '../util.js';
+import { fetchJson, politeFetch, makeEvent, parseDateTime, findDistrict, cleanText, supportedCity } from '../util.js';
 import { inflateRawSync } from 'node:zlib';
 
 // 文化部 iCulture 類別代碼 → 本站類別
@@ -15,8 +15,11 @@ export const culture = {
     const list = await fetchJson('https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=all', {}, { timeoutMs: 90000 });
     const out = [];
     for (const it of list) {
-      const shows = (it.showInfo ?? []).filter((s) => isTaoyuan(s.location, s.locationName) && !/臺中|台中|新北|臺北|台北|新竹|苗栗|高雄|臺南|台南/.test(s.location ?? ''));
-      if (!shows.length) continue;
+      // 只留桃園、台北、新北的場次；同一個活動在好幾個縣市巡演時，用第一個有收的縣市
+      const withCity = (it.showInfo ?? []).map((s) => ({ s, city: supportedCity(s.location, s.locationName) })).filter((x) => x.city);
+      if (!withCity.length) continue;
+      const city = withCity[0].city;
+      const shows = withCity.filter((x) => x.city === city).map((x) => x.s);
       const times = shows.map((s) => parseDateTime(s.time)).filter(Boolean).sort();
       const ends = shows.map((s) => parseDateTime(s.endTime)).filter(Boolean).sort();
       const first = shows[0];
@@ -27,7 +30,8 @@ export const culture = {
           end: ends.at(-1) ?? parseDateTime(it.endDate),
           venue: first.locationName,
           address: first.location,
-          district: findDistrict(first.location, first.locationName),
+          district: findDistrict({ city }, first.location, first.locationName),
+          city,
           category: CULTURE_CAT[it.category] ?? undefined,
           // 有寫票價就是要付費；沒寫不一定免費，交給文字判斷
           free: shows.some((s) => s.price) ? false : null,
@@ -101,7 +105,8 @@ export const tourism = {
     const out = [];
     for (const e of list) {
       const addr = e.PostalAddress ?? {};
-      if (addr.City !== '桃園市') continue;
+      const city = String(addr.City ?? '').replace(/台/g, '臺');
+      if (!['桃園市', '臺北市', '新北市'].includes(city)) continue;
       out.push(
         makeEvent(this, e.EventID, {
           title: e.EventName,
@@ -109,7 +114,8 @@ export const tourism = {
           end: parseDateTime(e.EndDateTime),
           venue: cleanText(addr.StreetAddress, 60),
           address: `${addr.City ?? ''}${addr.Town ?? ''}${addr.StreetAddress ?? ''}`,
-          district: addr.Town || findDistrict(addr.StreetAddress),
+          district: addr.Town || findDistrict({ city }, addr.StreetAddress),
+          city,
           category: '節慶市集',
           free: e.IsAccessibleForFree === 1 ? true : null,
           url: e.WebsiteURL || e.SameAsURLs?.[0] || null,

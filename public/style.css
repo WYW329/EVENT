@@ -61,6 +61,9 @@
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; }
+/* 整個 App 固定在畫面上，只讓 body 裡面捲動：iPhone 往上拉、回彈時底部選單不會跟著跑 */
+html { height: 100%; overflow: hidden; }
+body { height: 100%; overflow-y: auto; overscroll-behavior-y: none; -webkit-overflow-scrolling: touch; }
 body {
   /* 主題色的柔和光暈＋背景色 */
   background:
@@ -75,7 +78,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
-body.locked { position: fixed; left: 0; right: 0; overflow: hidden; }
+body.locked { overflow: hidden; }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
 [hidden] { display: none !important; }
@@ -94,8 +97,8 @@ svg { width: 18px; height: 18px; flex: none; }
 .brand img { border-radius: 9px; align-self: center; box-shadow: 0 2px 8px rgb(224 71 95 / 30%); }
 .top h1 { font-size: 22px; margin: 0; letter-spacing: .5px; font-weight: 800; }
 .sig {
-  font-family: "Pacifico", "Brush Script MT", cursive;
-  font-size: 12px; font-weight: 400; letter-spacing: .2px;
+  font-family: "Permanent Marker", "Brush Script MT", cursive;
+  font-size: 12px; font-weight: 400; letter-spacing: .8px;
   background: linear-gradient(90deg, var(--brand), var(--brand-2));
   -webkit-background-clip: text; background-clip: text; color: transparent;
   white-space: nowrap;
@@ -381,3 +384,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0; margin-bottom: 8px; }
 .theme-opt { position: relative; overflow: hidden; }
 .theme-opt .sw { height: 46px; border-radius: 10px; position: relative; }
 .theme-opt .sw::after { content: ""; position: absolute; left: 8px; right: 30%; bottom: 8px; height: 8px; border-radius: 4px; background: rgb(255 255 255 / 85%); }
+
+/* 通知頁往右滑回主畫面 */
+#view-inbox.swiping { transition: none; }
+#view-inbox.swipe-back { transition: transform .22s ease, opacity .22s ease; }
