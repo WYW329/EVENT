@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-26T15:35:53.406Z",
-  "tookMs": 105905,
+  "updatedAt": "2026-11-26T16:05:47.158Z",
+  "tookMs": 102599,
   "total": 380,
   "sources": [
     {
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 11170,
+      "ms": 10467,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 85,
       "kept": 0,
-      "ms": 4547,
+      "ms": 3382,
       "error": null,
       "warnings": null
     },
@@ -27,9 +27,9 @@
       "id": "afmc",
       "name": "藝文設施管理中心",
       "ok": true,
-      "count": 27,
-      "kept": 22,
-      "ms": 105895,
+      "count": 26,
+      "kept": 21,
+      "ms": 102589,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 57,
       "kept": 54,
-      "ms": 2726,
+      "ms": 2919,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 20059,
+      "ms": 18867,
       "error": null,
       "warnings": null
     },
@@ -57,9 +57,9 @@
       "id": "babycare",
       "name": "親子館報名",
       "ok": true,
-      "count": 120,
-      "kept": 120,
-      "ms": 33181,
+      "count": 121,
+      "kept": 121,
+      "ms": 32516,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 26,
+      "ms": 22,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 2201,
+      "ms": 1845,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 16185,
+      "ms": 15379,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 2554,
+      "ms": 2199,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 12679,
+      "ms": 12854,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 4678,
+      "ms": 4488,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 25832,
+      "ms": 25480,
       "error": null,
       "warnings": null
     },
@@ -139,7 +139,7 @@
       "ok": true,
       "count": 23,
       "kept": 0,
-      "ms": 100923,
+      "ms": 45,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 2038,
+      "ms": 1537,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -158,8 +158,8 @@
       "name": "Accupass 活動通",
       "ok": true,
       "count": 5,
-      "kept": 4,
-      "ms": 3343,
+      "kept": 3,
+      "ms": 2609,
       "error": null,
       "warnings": null
     },
@@ -167,23 +167,19 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 20,
-      "kept": 20,
-      "ms": 90050,
+      "count": 21,
+      "kept": 21,
+      "ms": 9222,
       "error": null,
-      "warnings": [
-        "地政局: The operation was aborted due to timeout",
-        "經濟發展局: The operation was aborted due to timeout",
-        "動物保護處: The operation was aborted due to timeout"
-      ]
+      "warnings": null
     },
     {
       "id": "wekengo",
       "name": "WeKenGo 週末去哪玩",
       "ok": true,
-      "count": 154,
+      "count": 153,
       "kept": 114,
-      "ms": 28474,
+      "ms": 28211,
       "error": null,
       "warnings": null
     }

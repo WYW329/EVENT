@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-26T15:35:53.406Z",
+ "updatedAt": "2026-11-26T16:05:47.158Z",
  "events": [
   {
    "id": "moc:6977d85026b32454e437c459",
@@ -1769,33 +1769,6 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
-   "id": "wekengo:Jx3jaE",
-   "source": "wekengo",
-   "sourceName": "WeKenGo 週末去哪玩",
-   "title": "斜槓職人市集－統領廣場十一月市集",
-   "start": "2026-11-07T11:00:00+08:00",
-   "end": "2026-11-29",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "統領廣場 Tonlin Plaza (原統領百貨) 正門口",
-   "address": "桃園市桃園區中正路61號",
-   "district": "桃園區",
-   "city": "桃園市",
-   "category": "節慶市集",
-   "free": null,
-   "url": "https://wekengo.tw/event/Jx3jaE/xie-gang-zhi-ren-shi-ji-tong-ling-guang-chang-shi-yi-yue-shi",
-   "image": "https://17847market.com.tw/wp-content/uploads/2026/09/784787569_1538589511616464_753394929957823513_n-e1789220744673.jpg",
-   "summary": "十一月週末到統領廣場逛斜槓職人市集，網羅手作甜點、文創插畫、親子DIY、陶藝植栽與皮革作品。",
-   "extra": {
-    "organizer": null,
-    "registration": null
-   },
-   "categories": [
-    "節慶市集"
-   ],
-   "firstSeen": "2026-11-26T02:05:49.562Z"
-  },
-  {
    "id": "wekengo:CczfSr",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
@@ -1815,6 +1788,33 @@
    "summary": "桃園忠烈祠暨神社文化園區11月連續四個週六推出音樂、熱舞、街頭表演、文化體驗與特色市集，邀你走進歷史場域感受青春活力。",
    "extra": {
     "organizer": "桃園市政府 最新消息（局處新聞稿）",
+    "registration": null
+   },
+   "categories": [
+    "節慶市集"
+   ],
+   "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
+   "id": "wekengo:Jx3jaE",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "斜槓職人市集－統領廣場十一月市集",
+   "start": "2026-11-07T11:00:00+08:00",
+   "end": "2026-11-29",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "統領廣場 Tonlin Plaza (原統領百貨) 正門口",
+   "address": "桃園市桃園區中正路61號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "節慶市集",
+   "free": null,
+   "url": "https://wekengo.tw/event/Jx3jaE/xie-gang-zhi-ren-shi-ji-tong-ling-guang-chang-shi-yi-yue-shi",
+   "image": "https://17847market.com.tw/wp-content/uploads/2026/09/784787569_1538589511616464_753394929957823513_n-e1789220744673.jpg",
+   "summary": "十一月週末到統領廣場逛斜槓職人市集，網羅手作甜點、文創插畫、親子DIY、陶藝植栽與皮革作品。",
+   "extra": {
+    "organizer": null,
     "registration": null
    },
    "categories": [
@@ -1948,7 +1948,7 @@
    "free": null,
    "url": "https://www.taimall.com.tw/news.php?act=view&no=468",
    "image": "https://www.taimall.com.tw/data/news/1793586027HR090_0.jpg",
-   "summary": "首頁 活動訊息 全館活動 1F挑空區 Monchhichi主題快閃店 店家活動 全館活動 share 分享 1F挑空區 Monchhichi主題快閃店 聖誕跨年慶✨年末寵愛不設限！ BACK 星願好禮甜蜜送(已兌換完畢) Related 其他人也正在瀏覽 2026.09.29 你的禮物清單 台茂買單 11/12-12/23 2026.10.30 聖誕跨年慶✨年末寵愛不設限！ 台茂線上購物 11/26(四)－1/3(日) 2026.01.20 台茂週年慶｜iloom 好眠回饋季 9/1-11/30 2026.06.03 聖誕魔法氣球屋 12/20(日)、12/25(五)~12/27(日) 14:00~17:00 B2 聖誕樹旁 2023.11.28 台茂公園與您藝起Fun週末！ 週末還在想要去哪裡玩嗎? 2026.07.01 阪前秋之奢享 款待極上帝王蟹腳 11/1 - 11/30 取消 確定",
+   "summary": "首頁 活動訊息 全館活動 1F挑空區 Monchhichi主題快閃店 店家活動 全館活動 share 分享 1F挑空區 Monchhichi主題快閃店 聖誕跨年慶✨年末寵愛不設限！ BACK 星願好禮甜蜜送(已兌換完畢) Related 其他人也正在瀏覽 2023.07.01 週四點數4倍送 每週四會員積點消費刷同身份之台茂聯名卡可享點數4倍送(以LINE Pay、全支付、街口支付等行動支付結帳恕不適用。系統於消費次日自動匯點) 2026.09.29 星願好禮甜蜜送(已兌換完畢) 11/12~送完為止 2024.04.14 直排輪場暫停開放公告 每週五~週六 19:00~21:00 2026.09.23 B2 牛仔特賣 11/26-12/9 2026.09.29 糖果繽紛聖誕 11/12~2027/1/3 2026.07.01 GOGO宜得利・年末感謝祭!! 11/20 ~ 12/28 取消 確定",
    "extra": {
     "organizer": "台茂購物中心",
     "registration": null
@@ -1975,7 +1975,7 @@
    "free": null,
    "url": "https://www.taimall.com.tw/news.php?act=view&no=570",
    "image": "https://www.taimall.com.tw/data/news/1793947895BD4HB_0.jpg",
-   "summary": "首頁 活動訊息 全館活動 糖果繽紛聖誕 全館活動 share 分享 糖果繽紛聖誕 你的禮物清單 台茂買單 BACK B2 牛仔特賣 Related 其他人也正在瀏覽 2026.04.01 聖誕交換禮物・點數加碼活動! 11/9-12/7 2026.07.01 GOGO宜得利・年末感謝祭!! 11/20 ~ 12/28 2023.07.01 兒童卡註記 凡會員育有0~12歲的小朋友，即可增加註記會員為兒童卡身，可享兒童生日禮及停車優惠。 2023.11.28 台茂公園與您藝起Fun週末！ 週末還在想要去哪裡玩嗎? 2026.04.01 6F 誠品生活 盧琴樹 10/3-12/3 2026.09.29 糖果繽紛聖誕 11/12~2027/1/3 取消 確定",
+   "summary": "首頁 活動訊息 全館活動 糖果繽紛聖誕 全館活動 share 分享 糖果繽紛聖誕 你的禮物清單 台茂買單 BACK B2 牛仔特賣 Related 其他人也正在瀏覽 2026.09.23 B2 牛仔特賣 11/26-12/9 2026.06.03 聖誕魔法氣球屋 12/20(日)、12/25(五)~12/27(日) 14:00~17:00 B2 聖誕樹旁 2023.11.28 台茂公園與您藝起Fun週末！ 週末還在想要去哪裡玩嗎? 2023.07.01 週四點數4倍送 每週四會員積點消費刷同身份之台茂聯名卡可享點數4倍送(以LINE Pay、全支付、街口支付等行動支付結帳恕不適用。系統於消費次日自動匯點) 2026.07.01 阪前秋之奢享 款待極上帝王蟹腳 11/1 - 11/30 2026.04.01 6F 誠品生活 盧琴樹 10/3-12/3 取消 確定",
    "extra": {
     "organizer": "台茂購物中心",
     "registration": null
@@ -2333,33 +2333,6 @@
    "firstSeen": "2026-11-26T14:35:53.797Z"
   },
   {
-   "id": "tycgnews:www:1967236",
-   "source": "tycgnews",
-   "sourceName": "平鎮區公所",
-   "title": "營運整備就緒！桃園南區青少年活動中心11月底升級登場",
-   "start": "2026-11-24",
-   "end": "2026-11-26",
-   "regStart": null,
-   "regEnd": null,
-   "venue": null,
-   "address": null,
-   "district": "平鎮區",
-   "city": "桃園市",
-   "category": "其他",
-   "free": null,
-   "url": "https://www.pingzhen.tycg.gov.tw/News_Content.aspx?n=5613&s=1967236",
-   "image": null,
-   "summary": "桃園市南區青少年活動中心場館使用至今已近20年，長期作為南桃園地區兒童、青少年及市民休閒運動與多元學習的核心空間。由於館舍使用年限較長，為徹底提升使用安全、優質環境及服務品質，市政府全面啟動場館整體修繕與結構改善工程，預計於今年11月24日啟動為期7天的試營運，並於11月26日正式盛大開幕，持續打造安全、友善且多元的休閒活動空間。",
-   "extra": {
-    "organizer": "平鎮區公所",
-    "postedAt": "2026-11-10"
-   },
-   "categories": [
-    "其他"
-   ],
-   "firstSeen": "2026-11-26T02:35:51.016Z"
-  },
-  {
    "id": "taimall:464",
    "source": "taimall",
    "sourceName": "台茂購物中心",
@@ -2376,7 +2349,7 @@
    "free": null,
    "url": "https://www.taimall.com.tw/news.php?act=view&no=464",
    "image": "https://www.taimall.com.tw/data/news/1795581024H3MVH_0.jpg",
-   "summary": "首頁 活動訊息 全館活動 聖誕跨年慶✨年末寵愛不設限！ 店家活動 全館活動 share 分享 聖誕跨年慶✨年末寵愛不設限！ 聖誕跨年慶✨年末寵愛不設限！ 台茂線上購物 11/26(四)－1/3(日) 聖誕跨年美妝香氛必備 單筆滿3,300現抵300（可累抵） 家電寢具換新×運動穿搭升級！ 年末犒賞自己 candy christmas tree 聖誕節特別企劃 BACK 1F挑空區 Monchhichi主題快閃店 Related 其他人也正在瀏覽 2026.07.01 GOGO宜得利・年末感謝祭!! 11/20 ~ 12/28 2024.04.14 直排輪場暫停開放公告 每週五~週六 19:00~21:00 2026.01.20 台茂週年慶｜iloom 好眠回饋季 9/1-11/30 2023.11.28 台茂公園與您藝起Fun週末！ 週末還在想要去哪裡玩嗎? 2026.09.29 糖果繽紛聖誕 11/12~2027/1/3 2026.09.29 你的禮物清單 台茂買單 11/12-12/23 取消 確定",
+   "summary": "首頁 活動訊息 全館活動 聖誕跨年慶✨年末寵愛不設限！ 店家活動 全館活動 share 分享 聖誕跨年慶✨年末寵愛不設限！ 聖誕跨年慶✨年末寵愛不設限！ 台茂線上購物 11/26(四)－1/3(日) 聖誕跨年美妝香氛必備 單筆滿3,300現抵300（可累抵） 家電寢具換新×運動穿搭升級！ 年末犒賞自己 candy christmas tree 聖誕節特別企劃 BACK 1F挑空區 Monchhichi主題快閃店 Related 其他人也正在瀏覽 2026.10.31 candy christmas tree 聖誕節特別企劃 聖誕節特別企劃 2026.07.01 GOGO宜得利・年末感謝祭!! 11/20 ~ 12/28 2026.04.01 超值手作課程 12/19(六) 2023.07.01 兒童卡註記 凡會員育有0~12歲的小朋友，即可增加註記會員為兒童卡身，可享兒童生日禮及停車優惠。 2026.09.23 B2 牛仔特賣 11/26-12/9 2026.06.03 聖誕魔法氣球屋 12/20(日)、12/25(五)~12/27(日) 14:00~17:00 B2 聖誕樹旁 取消 確定",
    "extra": {
     "organizer": "台茂購物中心",
     "registration": null
@@ -2385,412 +2358,6 @@
     "節慶市集"
    ],
    "firstSeen": "2026-11-26T09:05:50.839Z"
-  },
-  {
-   "id": "babycare:f6a070fa-0cc8-4070-a46d-1ed09a40af32",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "外展活動｜10-12月中興里（平鎮親子館）",
-   "start": "2026-11-26T10:00:00+08:00",
-   "end": "2026-11-26T11:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "平鎮親子館",
-   "address": null,
-   "district": "平鎮區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 1,
-    "seats": 5,
-    "ages": "不限年齡",
-    "zip": "324"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "展覽",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:0a3639bc-781e-437d-9a9e-6c446a35658c",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "寶寶故事(1歲以上/未滿3歲)（八德親子館）",
-   "start": "2026-11-26T10:00:00+08:00",
-   "end": "2026-11-26T10:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "八德親子館",
-   "address": null,
-   "district": "八德區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 4,
-    "seats": 5,
-    "ages": "12～35 個月",
-    "zip": "334"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:7a3dc69d-acdf-4441-98f4-74a02aa8dd6c",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "親子共讀1-2歲｜請於活動前15分鐘入館報到（中壢過嶺親子館）",
-   "start": "2026-11-26T10:00:00+08:00",
-   "end": "2026-11-26T10:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "中壢過嶺親子館",
-   "address": null,
-   "district": "中壢區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 0,
-    "seats": 4,
-    "ages": "12～35 個月",
-    "zip": "320"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:3ead7c2a-e072-4776-9ef0-822c45df216b",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "小耳朵聽故事2-4歲*上午活動請於9:50前到/下午活動請於14:50前到*（中壢內壢親子館）",
-   "start": "2026-11-26T10:00:00+08:00",
-   "end": "2026-11-26T10:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-24T12:00:00+08:00",
-   "venue": "中壢內壢親子館",
-   "address": null,
-   "district": "中壢區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 3,
-    "seats": 8,
-    "ages": "24～48 個月",
-    "zip": "320"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:dce117cf-6fc0-4a8b-92d4-731ecbf5b159",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "鑑定安置說明會（觀音草漯親子館）",
-   "start": "2026-11-26T10:00:00+08:00",
-   "end": "2026-11-26T12:00:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "觀音草漯親子館",
-   "address": null,
-   "district": "觀音區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 7,
-    "seats": 8,
-    "ages": "不限年齡",
-    "zip": "328"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:f95accb0-f435-4f93-9536-c968db5751ad",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "打造太空基地（楊梅四維親子館）",
-   "start": "2026-11-26T10:00:00+08:00",
-   "end": "2026-11-26T10:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "楊梅四維親子館",
-   "address": null,
-   "district": "楊梅區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 2,
-    "seats": 4,
-    "ages": "不限年齡",
-    "zip": "326"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:34af4732-78dc-432b-ae6a-c0d3898d01d3",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "寶寶ABC-上午場(1-2歲)（中壢龍福親子館）",
-   "start": "2026-11-26T10:30:00+08:00",
-   "end": "2026-11-26T11:00:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "中壢龍福親子館",
-   "address": null,
-   "district": "中壢區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 1,
-    "seats": 3,
-    "ages": "12～24 個月",
-    "zip": "320"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:ec2a1efc-2afb-4b5f-a2d6-674d3b6e7689",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "親子共讀2-3歲｜請於活動前15分鐘入館報到（中壢過嶺親子館）",
-   "start": "2026-11-26T10:40:00+08:00",
-   "end": "2026-11-26T11:10:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "中壢過嶺親子館",
-   "address": null,
-   "district": "中壢區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 1,
-    "seats": 5,
-    "ages": "24～47 個月",
-    "zip": "320"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:8c2644d7-679a-41f5-a1df-0a94b0f162e7",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "外展活動｜10-12月龍潭家庭服務中心（平鎮親子館）",
-   "start": "2026-11-26T14:00:00+08:00",
-   "end": "2026-11-26T14:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "平鎮親子館",
-   "address": null,
-   "district": "平鎮區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 0,
-    "seats": 6,
-    "ages": "不限年齡",
-    "zip": "324"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "展覽",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:12:58.616Z"
-  },
-  {
-   "id": "babycare:74f1548d-8693-4e87-88d7-07c02522523f",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "外展活動｜10-12月龍潭親子坊（平鎮親子館）",
-   "start": "2026-11-26T15:00:00+08:00",
-   "end": "2026-11-26T15:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "平鎮親子館",
-   "address": null,
-   "district": "平鎮區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 0,
-    "seats": 5,
-    "ages": "不限年齡",
-    "zip": "324"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "展覽",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:12:58.616Z"
-  },
-  {
-   "id": "babycare:51a3d90c-8dd1-431d-a687-e98e1fb99389",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "11月場次（中壢親子館）",
-   "start": "2026-11-26T15:00:00+08:00",
-   "end": "2026-11-26T15:30:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "中壢親子館",
-   "address": null,
-   "district": "中壢區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 2,
-    "seats": 2,
-    "ages": "0～24 個月",
-    "zip": "320"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "babycare:f1db01d0-7b7c-48da-9b86-ce632cc8555b",
-   "source": "babycare",
-   "sourceName": "親子館報名",
-   "title": "寶寶ABC-下午場(1-2歲)（中壢龍福親子館）",
-   "start": "2026-11-26T15:30:00+08:00",
-   "end": "2026-11-26T16:00:00+08:00",
-   "regStart": "2026-11-12T09:00:00+08:00",
-   "regEnd": "2026-11-25T12:00:00+08:00",
-   "venue": "中壢龍福親子館",
-   "address": null,
-   "district": "中壢區",
-   "city": "桃園市",
-   "category": "親子館",
-   "free": true,
-   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
-   "image": null,
-   "summary": null,
-   "extra": {
-    "seatsLeft": 2,
-    "seats": 3,
-    "ages": "12～24 個月",
-    "zip": "320"
-   },
-   "categories": [
-    "免費",
-    "親子館",
-    "親子"
-   ],
-   "firstSeen": "2026-11-23T09:09:40.418Z"
-  },
-  {
-   "id": "afmc:4c2bafe0646f458797147a3e786de621",
-   "source": "afmc",
-   "sourceName": "藝文設施管理中心",
-   "title": "國軍聯合樂隊音樂會",
-   "start": "2026-11-26T19:30:00+08:00",
-   "end": "2026-11-26T21:00:00+08:00",
-   "regStart": "2026-10-29",
-   "regEnd": null,
-   "venue": "中壢藝術館",
-   "address": "桃園市中壢區中美路16號",
-   "district": "中壢區",
-   "city": "桃園市",
-   "category": "表演",
-   "free": true,
-   "url": "https://www.afmc.gov.tw/Activity_detail/4c2bafe0646f458797147a3e786de621",
-   "image": "https://www.afmc.gov.tw/Upload/2026101416361926ce820.png",
-   "summary": "相關連結 https://www.facebook.com/mndsopage 演出時間 活動內容 國軍聯合樂隊將於11月26日在中壢藝術館盛大演出！精選管樂經典——《與鯨共航》、《歡慶序曲》及《榮耀讚美詩》，與影視動畫名曲——《不可能的任務》、《馴龍高手》與《超級瑪利歐》。用澎湃震撼的管樂聲響，帶領樂迷共度難忘的音樂饗宴。預計10/29開放索票連結線上索票後現場取票\"",
-   "extra": {
-    "entry": "報名或索票：入場方式 報名或索票 入場說明 1.索票進場/請掃QRcode2.相關資訊在臉書示範樂隊粉絲頁3.電話:02-27323110#625310",
-    "detailUrl": "https://www.afmc.gov.tw/Activity_detail/4c2bafe0646f458797147a3e786de621"
-   },
-   "categories": [
-    "免費",
-    "表演"
-   ],
-   "alsoIn": [
-    "WeKenGo 週末去哪玩"
-   ],
-   "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
    "id": "babycare:3de7ead7-1008-4794-a0ad-543578e37671",
@@ -3792,6 +3359,34 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
+   "id": "wekengo:cUFNua",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "【11/29】屍落人間＋映後座談",
+   "start": "2026-11-29T14:00:00+08:00",
+   "end": "2026-11-29T14:55:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中壢光影電影館",
+   "address": "台灣桃園市中壢區龍清街116巷31號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "電影",
+   "free": true,
+   "url": "https://wekengo.tw/event/cUFNua/tao-guang-man-you-1129-shi-luo-ren-jian-sprouttodeath-ying-h",
+   "image": "https://static.accupass.com/eventbanner/2610210645091535788862_P520x260.jpg",
+   "summary": "中壢光影電影館「桃光漫遊」主題影展放映臺灣奇幻愛情短片《屍落人間》，映後另有座談交流。",
+   "extra": {
+    "organizer": null,
+    "registration": "需報名"
+   },
+   "categories": [
+    "免費",
+    "電影"
+   ],
+   "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
    "id": "wekengo:MaiLny",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
@@ -3819,25 +3414,25 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
-   "id": "wekengo:cUFNua",
+   "id": "wekengo:lh0RiG",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
-   "title": "【11/29】屍落人間＋映後座談",
+   "title": "雪中真相",
    "start": "2026-11-29T14:00:00+08:00",
-   "end": "2026-11-29T14:55:00+08:00",
+   "end": "2026-11-29T15:34:00+08:00",
    "regStart": null,
    "regEnd": null,
-   "venue": "中壢光影電影館",
-   "address": "台灣桃園市中壢區龍清街116巷31號",
-   "district": "中壢區",
+   "venue": "桃園光影文化館",
+   "address": "330桃園市桃園區埔新路12號",
+   "district": "桃園區",
    "city": "桃園市",
    "category": "電影",
    "free": true,
-   "url": "https://wekengo.tw/event/cUFNua/tao-guang-man-you-1129-shi-luo-ren-jian-sprouttodeath-ying-h",
-   "image": "https://static.accupass.com/eventbanner/2610210645091535788862_P520x260.jpg",
-   "summary": "中壢光影電影館「桃光漫遊」主題影展放映臺灣奇幻愛情短片《屍落人間》，映後另有座談交流。",
+   "url": "https://wekengo.tw/event/lh0RiG/xue-zhong-zhen-xiang-tao-yuan-guang-ying-wen-hua-guan-dian-y",
+   "image": "https://www.afmc.gov.tw/Upload/202610221501593b2bd70.png",
+   "summary": "土耳其懸疑劇情片《雪中真相》描繪偏遠雪村中的失蹤事件與人心猜忌，免費索票入場。",
    "extra": {
-    "organizer": null,
+    "organizer": "桃園藝文設施管理中心",
     "registration": "需報名"
    },
    "categories": [
@@ -3870,34 +3465,6 @@
    },
    "categories": [
     "體驗"
-   ],
-   "firstSeen": "2026-11-26T02:05:49.562Z"
-  },
-  {
-   "id": "wekengo:lh0RiG",
-   "source": "wekengo",
-   "sourceName": "WeKenGo 週末去哪玩",
-   "title": "雪中真相",
-   "start": "2026-11-29T14:00:00+08:00",
-   "end": "2026-11-29T15:34:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "桃園光影文化館",
-   "address": "330桃園市桃園區埔新路12號",
-   "district": "桃園區",
-   "city": "桃園市",
-   "category": "電影",
-   "free": true,
-   "url": "https://wekengo.tw/event/lh0RiG/xue-zhong-zhen-xiang-tao-yuan-guang-ying-wen-hua-guan-dian-y",
-   "image": "https://www.afmc.gov.tw/Upload/202610221501593b2bd70.png",
-   "summary": "土耳其懸疑劇情片《雪中真相》描繪偏遠雪村中的失蹤事件與人心猜忌，免費索票入場。",
-   "extra": {
-    "organizer": "桃園藝文設施管理中心",
-    "registration": "需報名"
-   },
-   "categories": [
-    "免費",
-    "電影"
    ],
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
@@ -4053,10 +3620,10 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
-   "id": "tycgnews:www:1999081",
+   "id": "tycgnews:www:1999147",
    "source": "tycgnews",
-   "sourceName": "龍潭區公所",
-   "title": "農業部桃園區農業改良場辦理「115年農業永續經營與企業ESG合作實務工作坊」",
+   "sourceName": "大溪區公所",
+   "title": "115年農業永續經營與企業ESG合作實務工作坊。",
    "start": "2026-11-30T09:30:00+08:00",
    "end": "2026-11-30T09:30:00+08:00",
    "regStart": null,
@@ -4067,21 +3634,21 @@
    "city": "桃園市",
    "category": "講座課程",
    "free": null,
-   "url": "https://www.longtan.tycg.gov.tw/News_Content.aspx?n=5597&s=1999081",
+   "url": "https://www.daxi.tycg.gov.tw/News_Content.aspx?n=7532&s=1999147",
    "image": null,
-   "summary": "一、工作坊目的：期能協助農業經營者認識企業 ESG 永續發展需求，重新盤點自身擁有的土地、農業生產、自然生態及地方資源，了解如何透過紀錄管理、資源整合與社區合作，創造農業永續價值。並運用好事道 AI 平台，協助農夫將農業資源與永續行動轉化為對外溝通文件，提高與企業建立合作關係的機會。二、時間：115年11月30日(星期一)上午9時30分至下午5時。三、地點：農業部桃園區農業改良場農業推廣科交誼廳。四、本工作坊相關資訊如附件，一律線上報名，報名網址https://forms.gle/iKaWcZZySqgQKCmJ7，因訓練名額有限，又為避免相關資源浪費，經通知錄取者請確實參訓。115-ESG講習-計畫與課程表-1151119.pdf",
+   "summary": "時間：115年11月30日(星期一)上午9時30分至下午5時。 地點：農業部桃園區農業改良場農業推廣科交誼廳。本工作坊相關資訊如附件，一律線上報名，報名網址https://forms.gle/iKaWcZZySqgQKCmJ7，因訓練名額有限，又為避免相關資源浪費，經通知錄取者請確實參訓。115-ESG講習-計畫與課程表-1151119.pdf",
    "extra": {
-    "organizer": "龍潭區公所",
-    "postedAt": "2026-11-24"
+    "organizer": "大溪區公所",
+    "postedAt": "2026-11-25"
    },
    "categories": [
     "講座課程"
    ],
    "alsoIn": [
-    "大溪區公所",
+    "龍潭區公所",
     "復興區公所"
    ],
-   "firstSeen": "2026-11-26T15:07:12.911Z"
+   "firstSeen": "2026-11-26T16:05:47.158Z"
   },
   {
    "id": "typl:10303",
@@ -4720,7 +4287,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 2,
+    "seatsLeft": 1,
     "seats": 5,
     "ages": "12～23 個月",
     "zip": "334"
@@ -6768,7 +6335,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 1,
+    "seatsLeft": 0,
     "seats": 6,
     "ages": "不限年齡",
     "zip": "330"
@@ -6935,10 +6502,10 @@
    "alsoIn": [
     "中壢區公所",
     "平鎮區公所",
-    "蘆竹區公所",
     "新屋區公所",
-    "龍潭區公所",
+    "蘆竹區公所",
     "大溪區公所",
+    "龍潭區公所",
     "復興區公所"
    ],
    "firstSeen": "2026-11-26T15:35:53.406Z"
@@ -8440,6 +8007,413 @@
    "firstSeen": "2026-11-25T21:58:27.104Z"
   },
   {
+   "id": "babycare:25efa94f-c0df-44f4-bee7-1f907447b4ee",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "☆芬蘭探險家（大園親子館）",
+   "start": "2026-12-11T10:00:00+08:00",
+   "end": "2026-12-11T11:00:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "大園親子館",
+   "address": null,
+   "district": "大園區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 15,
+    "seats": 15,
+    "ages": "不限年齡",
+    "zip": "337"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:d7f9e213-635c-465a-bd36-e4cfb9ca4376",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "地球笑哈哈（楊梅親子館）",
+   "start": "2026-12-11T10:00:00+08:00",
+   "end": "2026-12-11T10:30:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "楊梅親子館",
+   "address": null,
+   "district": "楊梅區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 4,
+    "seats": 4,
+    "ages": "24～47 個月",
+    "zip": "326"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:9e346af0-a99f-45e1-b460-54e00fe64432",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "《身體》搖擺小企鵝｜請於活動前15分鐘入館（中壢過嶺親子館）",
+   "start": "2026-12-11T10:00:00+08:00",
+   "end": "2026-12-11T10:30:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "中壢過嶺親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 4,
+    "seats": 4,
+    "ages": "12～35 個月",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:ea4ec48d-0e95-49e4-bf0e-98c0c38d827f",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "寶寶音樂小旅行（楊梅四維親子館）",
+   "start": "2026-12-11T10:00:00+08:00",
+   "end": "2026-12-11T10:30:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "楊梅四維親子館",
+   "address": null,
+   "district": "楊梅區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 4,
+    "seats": 4,
+    "ages": "4～12 個月",
+    "zip": "326"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子",
+    "體驗"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:d0774813-7afc-4897-bbfa-826308a35a43",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "12月場次（中壢親子館）",
+   "start": "2026-12-11T10:00:00+08:00",
+   "end": "2026-12-11T10:30:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "中壢親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 2,
+    "seats": 2,
+    "ages": "0～24 個月",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:fd301878-045f-4336-a1df-d31ed9c8bdf0",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "五夠安全 0歲-學齡前（中壢五權親子館）",
+   "start": "2026-12-11T10:30:00+08:00",
+   "end": "2026-12-11T11:00:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "中壢五權親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 3,
+    "seats": 3,
+    "ages": "不限年齡",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:3d70bd93-1eec-47b3-929d-aaeb14b97193",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "五夠安全 0歲-學齡前（中壢五權親子館）",
+   "start": "2026-12-11T10:30:00+08:00",
+   "end": "2026-12-11T11:00:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "中壢五權親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 2,
+    "seats": 2,
+    "ages": "不限年齡",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:c2ed9412-525b-4a5f-9fd9-c5153c8f6e8d",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "115 慶生會（平鎮新勢親子館）",
+   "start": "2026-12-11T10:30:00+08:00",
+   "end": "2026-12-11T11:00:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "平鎮新勢親子館",
+   "address": null,
+   "district": "平鎮區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 9,
+    "seats": 9,
+    "ages": "不限年齡",
+    "zip": "324"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:6aa3951b-0421-4aec-a81e-ee47fe1047b2",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "創意親子DIY(2-3歲)（中壢龍福親子館）",
+   "start": "2026-12-11T10:30:00+08:00",
+   "end": "2026-12-11T11:00:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "中壢龍福親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 7,
+    "seats": 7,
+    "ages": "24～47 個月",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子",
+    "體驗"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:7849e7cc-19d3-4ef1-b0c1-5230c07d4a73",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "外展活動｜10-12月高原里（平鎮親子館）",
+   "start": "2026-12-11T14:00:00+08:00",
+   "end": "2026-12-11T15:30:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "平鎮親子館",
+   "address": null,
+   "district": "平鎮區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 5,
+    "seats": 5,
+    "ages": "不限年齡",
+    "zip": "324"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "展覽",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:d4e1753b-26db-4a1f-a174-8532cac5e9a7",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "手作DIY(3歲以上/學齡前)（八德親子館）",
+   "start": "2026-12-11T15:00:00+08:00",
+   "end": "2026-12-11T15:40:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "八德親子館",
+   "address": null,
+   "district": "八德區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 3,
+    "seats": 3,
+    "ages": "不限年齡",
+    "zip": "334"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子",
+    "體驗"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:734d9da6-0cbb-4b17-9a97-f7546d8f7b16",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "小耳朵聽故事2-4歲*上午活動請於9:50前到/下午活動請於14:50前到*（中壢內壢親子館）",
+   "start": "2026-12-11T15:00:00+08:00",
+   "end": "2026-12-11T15:30:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "中壢內壢親子館",
+   "address": null,
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 9,
+    "seats": 9,
+    "ages": "24～48 個月",
+    "zip": "320"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
+   "id": "babycare:839aa474-a221-4f62-95f9-3ad6e1841e49",
+   "source": "babycare",
+   "sourceName": "親子館報名",
+   "title": "大幼故事屋（大溪埔頂親子館）",
+   "start": "2026-12-11T15:30:00+08:00",
+   "end": "2026-12-11T16:00:00+08:00",
+   "regStart": "2026-11-27T09:00:00+08:00",
+   "regEnd": "2026-12-10T12:00:00+08:00",
+   "venue": "大溪埔頂親子館",
+   "address": null,
+   "district": "大溪區",
+   "city": "桃園市",
+   "category": "親子館",
+   "free": true,
+   "url": "https://babycare.tycg.gov.tw/#/parent-child-apply",
+   "image": null,
+   "summary": null,
+   "extra": {
+    "seatsLeft": 5,
+    "seats": 5,
+    "ages": "不限年齡",
+    "zip": "335"
+   },
+   "categories": [
+    "免費",
+    "親子館",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
+  },
+  {
    "id": "wekengo:98vvFq",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
@@ -8532,35 +8506,6 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
-   "id": "accupass:2611181030251489250934",
-   "source": "accupass",
-   "sourceName": "Accupass 活動通",
-   "title": "iPhone手機走到哪，拍到哪 ｜大溪｜捕捉落羽松、楓葉的浪漫色彩",
-   "start": "2026-12-12T09:00:00+08:00",
-   "end": "2026-12-12T11:15:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "桃園市",
-   "address": null,
-   "district": null,
-   "city": "桃園市",
-   "category": "其他",
-   "free": null,
-   "url": "https://www.accupass.com/event/2611181030251489250934",
-   "image": "https://static.accupass.com/eventbanner/2611181027363498913400_P520x260.jpg",
-   "summary": null,
-   "extra": {
-    "tags": [
-     "實拍教學1802",
-     "實拍教學"
-    ]
-   },
-   "categories": [
-    "其他"
-   ],
-   "firstSeen": "2026-11-26T15:35:53.406Z"
-  },
-  {
    "id": "wekengo:yPaZr3",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
@@ -8619,6 +8564,34 @@
     "節慶市集"
    ],
    "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
+   "id": "tycgnews:animal:1999011",
+   "source": "tycgnews",
+   "sourceName": "動物保護處",
+   "title": "桃園市動保處南昌動保園區教育講座115年12月份課程活動 （歡迎偕同小朋友及寵物一起參加）",
+   "start": "2026-12-12T13:30:00+08:00",
+   "end": "2026-12-13T13:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園市桃園區向善街120 -1 號「動保教育展示中心」（南昌運動公園內）中間這一棟（有跑馬燈）二、課程主題編號及日期時間",
+   "address": null,
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "講座課程",
+   "free": false,
+   "url": "https://animal.tycg.gov.tw/News_Content.aspx?n=8542&s=1999011",
+   "image": null,
+   "summary": "桃園市動保處南昌動保教育園區教育講座115年12月份課程活動 （歡迎偕同小朋友及寵物一起參加！可以與講師互動請教專業知識喔！）（適用特寵業認證時數）一、地點：桃園市桃園區向善街120 -1 號「動保教育展示中心」（南昌運動公園內）中間這一棟（有跑馬燈）二、課程主題編號及日期時間 編號（1）：115.12.12（六）13:30-16:30 主題：全齡犬貓的腸道保健與疾病照護全攻略-系列2。姚勝隆 獸醫師（隆安動物醫院院長）編號（2）：115.12.13（日）13:30-16:30 主題：貓咪不抓狂！低壓力照護的三堂必修課。張維誌 老師（台北城市科技大學專任專技助理教授)  編號（3）：115.12.20（日）13:30-16:30 主題：吃得下，才走得動——高齡犬貓的食慾管理與疼痛控制(3小時)。孫文瑛 獸醫師編號（4）：115.12.27（日）14:00-17:00 主題：年終期末測驗/課程滿意度分析/摸彩活動。(非課程)(歡迎大家參與!) 三、報名方式（請經由桃園市市民卡APP報名）於桃園市市民卡首頁下排功能選單中→選擇「市民活動」→選擇「桃園活動」→搜尋「南昌動保教育園區教育講座」。報名請填寫姓名及連絡電話（如為特寵業者請同時填寫身分證字號及許可證號）。四、鼓勵參與活動獎勵辦法: 1.凡報名參加本動保教育講座之民眾，可領取每單元課程之參加憑證1張，民眾自行保留該憑證，可於 115 年12月27日下午一時至一時五十分止自行投入講座地點之摸彩箱內，安排於同日下午二時公開摸彩。2.獎金如下: 第一獎現金伍仟元；第二獎現金參仟元 ；第三獎現金貳仟元。3.參加摸彩投入張數逾30張時，增加10份參加獎約等值200元獎品；逾50張時，增加至15份參加獎約等值200元獎品；逾100張時，增加至30份參加獎約等值 200元獎品。當場領獎至當日下午四時三十分活動結束，逾時領取者視同放棄。",
+   "extra": {
+    "organizer": "動物保護處",
+    "postedAt": "2026-11-24"
+   },
+   "categories": [
+    "講座課程",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
   },
   {
    "id": "moc:69dd21a826b3242a48a9e2ce",
@@ -9002,6 +8975,33 @@
     "其他"
    ],
    "firstSeen": "2026-11-26T14:35:53.797Z"
+  },
+  {
+   "id": "tycgnews:animal:1985813",
+   "source": "tycgnews",
+   "sourceName": "動物保護處",
+   "title": "115年12月18日桃園市政府動物保護處115年度桃樂動物友善城市志工特殊教育訓練課程",
+   "start": "2026-12-18",
+   "end": "2026-12-18T09:00:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": null,
+   "address": null,
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "講座課程",
+   "free": null,
+   "url": "https://animal.tycg.gov.tw/News_Content.aspx?n=8542&s=1985813",
+   "image": null,
+   "summary": "桃園市政府動物保護處(以下簡稱動保處)為加強推廣友善動物城市及動物保護觀念，讓民眾更了解動物保護法及相關知識，落實愛護動物，尊重生命，訂於115年12月18日（五）上午09時00分至下午16時30分假桃園市工業會-會務會館1201教室（桃園市桃園區縣府路332號12樓）辦理桃樂動物友善城市志工特殊訓練。本次訓練課程內容為「動物保護法簡介與你能做的事」、「從救援到永續:TNVR與動物救援實務分享」，歡迎有意願加入志工行列的民眾踴躍報名參加，即日起報名至115年12月11日或額滿65名截止。TNVR亟需熱情有愛心的志工貢獻時間與力量，共同努力推廣動物保護理念，創造人與動物和諧生活環境，建設友善動物美麗桃園。*為響應環保，請當日上課務必自備水壺(不提供紙杯)。特殊訓練線上報名表單：https://forms.gle/7pxmz7fY3kkCY8Jc8(報名表單)115年度志工特殊教育訓練課程表.docx115年特殊教育訓練報名表.docx115年特殊教育訓練報名表.pdf115年特殊教育訓練報名表.odt個資同意聲明書.pdf桃樂動物友善城市計畫志工招募報名表.docx桃樂動物友善城市計畫志工招募報名表.pdf桃樂動物友善城市計畫志工招募報名表.odt",
+   "extra": {
+    "organizer": "動物保護處",
+    "postedAt": "2026-11-17"
+   },
+   "categories": [
+    "講座課程"
+   ],
+   "firstSeen": "2026-11-26T16:05:47.158Z"
   },
   {
    "id": "moc:6adb94ba26b3245efc75371d",
@@ -10107,7 +10107,7 @@
    "free": false,
    "url": "https://www.taimall.com.tw/news.php?act=view&no=490",
    "image": "https://www.taimall.com.tw/data/news/1795419231RC7Z7_0.jpg",
-   "summary": "首頁 活動訊息 全館活動 candy christmas tree 聖誕節特別企劃 公園活動 報名活動 全館活動 share 分享 candy christmas tree 聖誕節特別企劃 ◆  冬夜星焰 火舞之夜   12/26(六) 19:00~19:30 冬夜點燃熱情，火焰炫出精彩！震撼火舞即將熱力登場 隨著舞動火焰交織出炫目光影！邀您一起來現場 近距離感受火舞魅力，點亮冬夜精彩時刻！ ★預約即將開放 ◆   碰碰狐&鯊魚寶寶見面會  2027/1/1(五) 15:00~15:30台茂公園 圓形廣場 碰碰狐＆鯊魚寶寶要來台茂啦！ 快帶小寶貝一起來跟著音樂Doo doo doo、fun fun電⚡ ★【合拍憑證】索取辦法： 活動當天於商售現場購買碰碰狐&鯊魚寶寶系列商品滿799元以上，即可獲得與「碰碰狐&鯊魚寶寶」的合拍憑證1張，還能享有等候合拍觀賞區(舞台前方)入席資格(1張憑證限3人入席)！(限量50張) ★點我預約近距離觀賞區 ◆   救援小英雄波力見面會  2027/1/2(六) 15:00~15:30台茂公園 圓形廣場 嗶嗶~救援小隊出動 最帥氣的救援隊長波力將帶著安寶一起出任務！ 小英雄們快來集合，一起出發去救援！ ★【合影券&觀賞區】憑證索取辦法： 台茂「MORE利兒童卡會員」於活動當日14:00起，至現場排隊領取，即可獲得 「波力、安寶」合拍憑證1張，並享有合拍憑證觀賞區入席資格。 （限量30張，1位會員限領1張/1張合拍憑證最多限3人入席） ★預約即將開放   兒童卡註記 BACK 聖誕跨年慶✨年末寵愛不設限！ Related 其他人也正在瀏覽 2023.07.01 兒童卡註記 凡會員育有0~12歲的小朋友，即可增加註記會員為兒童卡身，可享兒童生日禮及停車優惠。 2026.04.01 聖誕交換禮物・點數加碼活動! 11/9-12/7 2026.04.01 6F 誠品生活 盧琴樹 10/3-12/3 2026.09.23 B2 牛仔特賣 11/26-12/9 2026.06.03 聖誕魔法氣球屋 12/20(日)、12/25(五)~12/27(日) 14:00~17:00 B2 聖誕樹旁 2023.07.01 孕媽咪享停車優惠 孕期天天享6小時免費停車 取消 確定",
+   "summary": "首頁 活動訊息 全館活動 candy christmas tree 聖誕節特別企劃 公園活動 報名活動 全館活動 share 分享 candy christmas tree 聖誕節特別企劃 ◆  冬夜星焰 火舞之夜   12/26(六) 19:00~19:30 冬夜點燃熱情，火焰炫出精彩！震撼火舞即將熱力登場 隨著舞動火焰交織出炫目光影！邀您一起來現場 近距離感受火舞魅力，點亮冬夜精彩時刻！ ★預約即將開放 ◆   碰碰狐&鯊魚寶寶見面會  2027/1/1(五) 15:00~15:30台茂公園 圓形廣場 碰碰狐＆鯊魚寶寶要來台茂啦！ 快帶小寶貝一起來跟著音樂Doo doo doo、fun fun電⚡ ★【合拍憑證】索取辦法： 活動當天於商售現場購買碰碰狐&鯊魚寶寶系列商品滿799元以上，即可獲得與「碰碰狐&鯊魚寶寶」的合拍憑證1張，還能享有等候合拍觀賞區(舞台前方)入席資格(1張憑證限3人入席)！(限量50張) ★點我預約近距離觀賞區 ◆   救援小英雄波力見面會  2027/1/2(六) 15:00~15:30台茂公園 圓形廣場 嗶嗶~救援小隊出動 最帥氣的救援隊長波力將帶著安寶一起出任務！ 小英雄們快來集合，一起出發去救援！ ★【合影券&觀賞區】憑證索取辦法： 台茂「MORE利兒童卡會員」於活動當日14:00起，至現場排隊領取，即可獲得 「波力、安寶」合拍憑證1張，並享有合拍憑證觀賞區入席資格。 （限量30張，1位會員限領1張/1張合拍憑證最多限3人入席） ★預約即將開放   兒童卡註記 BACK 聖誕跨年慶✨年末寵愛不設限！ Related 其他人也正在瀏覽 2026.10.30 聖誕跨年慶✨年末寵愛不設限！ 台茂線上購物 11/26(四)－1/3(日) 2023.07.01 兒童卡註記 凡會員育有0~12歲的小朋友，即可增加註記會員為兒童卡身，可享兒童生日禮及停車優惠。 2026.09.29 你的禮物清單 台茂買單 11/12-12/23 2023.11.28 台茂公園與您藝起Fun週末！ 週末還在想要去哪裡玩嗎? 2026.10.31 candy christmas tree 聖誕節特別企劃 聖誕節特別企劃 2026.06.05 5F GARMIN Edge 1060 全新上市 GARMIN Edge 1060 全新上市 取消 確定",
    "extra": {
     "organizer": "台茂購物中心",
     "registration": "需報名"
@@ -10565,8 +10565,8 @@
     "親子"
    ],
    "alsoIn": [
-    "蘆竹區公所",
-    "大園區公所"
+    "大園區公所",
+    "蘆竹區公所"
    ],
    "firstSeen": "2026-11-26T02:35:51.016Z"
   },
