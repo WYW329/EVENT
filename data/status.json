@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-25T21:58:27.104Z",
-  "tookMs": 104993,
-  "total": 214,
+  "updatedAt": "2026-11-26T01:35:51.118Z",
+  "tookMs": 104048,
+  "total": 215,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 5693,
+      "ms": 5776,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 85,
       "kept": 0,
-      "ms": 5308,
+      "ms": 2428,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 104983,
+      "ms": 104040,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 33,
       "kept": 33,
-      "ms": 2716,
+      "ms": 2524,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 20229,
+      "ms": 22699,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 120,
       "kept": 120,
-      "ms": 26812,
+      "ms": 29048,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 33,
+      "ms": 44,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,17 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1808,
+      "ms": 1882,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "g11",
+      "name": "桃知道 GELEVEN PLAZA",
+      "ok": true,
+      "count": 1,
+      "kept": 1,
+      "ms": 15072,
       "error": null,
       "warnings": null
     },
@@ -89,18 +99,18 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1007,
+      "ms": 1400,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
     {
       "id": "accupass",
       "name": "Accupass 活動通",
-      "ok": true,
-      "count": 6,
+      "ok": false,
+      "count": null,
       "kept": 4,
-      "ms": 2401,
-      "error": null,
+      "ms": 30048,
+      "error": "The operation was aborted due to timeout",
       "warnings": null
     }
   ]
