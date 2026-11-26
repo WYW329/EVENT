@@ -48,6 +48,7 @@
     <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
     <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 8l8 2.5V21M3 21h18M7.5 8h1M7.5 12h1M7.5 16h1M15.5 13h1M15.5 17h1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4.5h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
 
@@ -120,6 +121,20 @@
       <div id="starList" class="list"></div>
     </section>
 
+    <!-- 通知頁（鈴鐺） -->
+    <section class="view" id="view-inbox" data-view="inbox" hidden>
+      <div class="page-head">
+        <button class="round flat" id="inboxBack" aria-label="返回"><svg><use href="#i-back"/></svg></button>
+        <h2>新活動通知</h2>
+      </div>
+      <p class="meta" id="inboxHint"></p>
+      <div class="row-btns" id="inboxTools">
+        <button class="btn ghost small" id="readAll">全部標為已讀</button>
+        <button class="btn ghost small" id="deleteAll">全部刪除</button>
+      </div>
+      <div id="inboxList" class="list"></div>
+    </section>
+
     <!-- 網站 -->
     <section class="view" id="view-sites" data-view="sites" hidden>
       <div class="intro">
@@ -150,6 +165,27 @@
           </div>
         </fieldset>
       </div>
+      <div class="card pad" id="syncCard">
+        <h2>手機和電腦同步</h2>
+        <p class="hint">用同一組配對碼，已讀、刪除的通知和收藏會在兩台裝置之間同步（永久保存）。</p>
+        <div id="syncOff">
+          <div class="row-btns"><button class="btn" id="syncCreate">產生配對碼</button></div>
+          <p class="meta" style="margin:10px 0 6px">已經有配對碼？在這裡輸入：</p>
+          <div class="sync-join">
+            <input id="syncInput" maxlength="9" placeholder="例如 AB7K 9QX2" autocomplete="off" autocapitalize="characters" />
+            <button class="btn ghost" id="syncJoin">配對</button>
+          </div>
+        </div>
+        <div id="syncOn" hidden>
+          <div class="sync-code" id="syncCode"></div>
+          <p class="meta">在另一台裝置的「設定 → 手機和電腦同步」輸入這組碼。</p>
+          <div class="row-btns">
+            <button class="btn ghost small" id="syncCopy">複製配對碼</button>
+            <button class="btn ghost small" id="syncLeave">解除配對</button>
+          </div>
+        </div>
+      </div>
+
       <div class="card pad" id="pushCard">
         <h2>通知</h2>
         <p id="pushStatus" class="hint"></p>
@@ -213,19 +249,7 @@
     <div class="sheet-scroll" id="detailBody"></div>
   </dialog>
 
-  <dialog id="inbox" class="sheet small" aria-label="新活動">
-    <div class="sheet-scroll">
-      <div class="inbox-head">
-        <h2>新活動</h2>
-        <div class="row-btns">
-          <button class="btn ghost small" id="readAll">全部已讀</button>
-          <button class="round flat" data-close-inbox aria-label="關閉"><svg><use href="#i-x"/></svg></button>
-        </div>
-      </div>
-      <p class="meta pad-x" id="inboxHint"></p>
-      <div id="inboxList" class="list pad-x"></div>
-    </div>
-  </dialog>
+
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script type="module" src="/app.js"></script>

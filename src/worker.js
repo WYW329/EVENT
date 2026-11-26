@@ -34,6 +34,21 @@ async function readBody(req) {
   return text ? JSON.parse(text) : {};
 }
 
+/**
+ * 合併兩份同步資料：opened（看過）、deleted（從通知頁刪掉）取聯集；
+ * starred（收藏）用「最後動作」決定：每個活動記 [是否收藏, 時間]，時間新的贏。
+ */
+export function mergeSync(a = {}, b = {}) {
+  const set = (x, y, k) => [...new Set([...(x[k] ?? []), ...(y[k] ?? [])])].slice(-3000);
+  const stars = { ...(a.stars ?? {}) };
+  for (const [id, v] of Object.entries(b.stars ?? {})) {
+    if (!Array.isArray(v)) continue;
+    if (!stars[id] || (v[1] ?? 0) > (stars[id][1] ?? 0)) stars[id] = [Boolean(v[0]), Number(v[1]) || 0];
+  }
+  const baselines = [a.baseline, b.baseline].filter(Boolean).sort();
+  return { opened: set(a, b, 'opened'), deleted: set(a, b, 'deleted'), stars, baseline: baselines[0] ?? null };
+}
+
 // ---------- 推播 ----------
 async function pushTo(env, sub, payload) {
   const subscription = { endpoint: sub.endpoint, keys: { p256dh: sub.p256dh, auth: sub.auth } };
@@ -264,6 +279,37 @@ async function api(req, env, ctx, url) {
     if (!sub) return json({ error: '找不到訂閱' }, 404);
     const ok = await pushTo(env, sub, { title: '測試通知 ✅', body: '收到這則就代表通知設定成功了！', url: '/', tag: 'test' });
     return json({ ok }, ok ? 200 : 502);
+  }
+
+  // ---------- 配對碼同步（已讀、刪除、收藏），永久保存 ----------
+  if (p === '/api/sync' && m === 'POST') {
+    // 產生新的配對碼，帶上這台裝置目前的狀態
+    const body = await readBody(req);
+    const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // 去掉容易看錯的 0 O 1 I
+    let code = '';
+    for (let tries = 0; tries < 5; tries++) {
+      const bytes = crypto.getRandomValues(new Uint8Array(8));
+      code = [...bytes].map((b) => alphabet[b % alphabet.length]).join('');
+      const exists = await env.DB.prepare('SELECT 1 FROM sync WHERE code = ?').bind(code).first();
+      if (!exists) break;
+    }
+    const data = mergeSync({}, body.data);
+    await env.DB.prepare('INSERT INTO sync (code, data, updated) VALUES (?, ?, ?)').bind(code, JSON.stringify(data), new Date().toISOString()).run();
+    return json({ code, data });
+  }
+  const syncMatch = p.match(/^\/api\/sync\/([A-Z0-9]{8})$/);
+  if (syncMatch) {
+    const code = syncMatch[1];
+    const row = await env.DB.prepare('SELECT data FROM sync WHERE code = ?').bind(code).first('data');
+    if (!row) return json({ error: '找不到這個配對碼' }, 404);
+    if (m === 'GET') return json({ code, data: JSON.parse(row) });
+    if (m === 'PUT') {
+      // 合併（聯集），兩台裝置同時改也不會互相蓋掉
+      const body = await readBody(req);
+      const data = mergeSync(JSON.parse(row), body.data);
+      await env.DB.prepare('UPDATE sync SET data = ?, updated = ? WHERE code = ?').bind(JSON.stringify(data), new Date().toISOString(), code).run();
+      return json({ code, data });
+    }
   }
 
   const ics = p.match(/^\/api\/ics\/(.+)\.ics$/);

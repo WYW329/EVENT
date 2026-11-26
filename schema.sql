@@ -26,3 +26,10 @@ CREATE TABLE IF NOT EXISTS meta (
   k TEXT PRIMARY KEY,
   v TEXT
 );
+
+-- 配對碼同步：同一個配對碼的手機和電腦共用已讀、刪除、收藏狀態
+CREATE TABLE IF NOT EXISTS sync (
+  code TEXT PRIMARY KEY,
+  data TEXT NOT NULL,           -- JSON：{ opened:[], deleted:[], starred:[], baseline }
+  updated TEXT NOT NULL
+);

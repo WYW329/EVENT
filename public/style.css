@@ -1,52 +1,56 @@
-/* ---------- 主題：每個主題只定義主色，其他顏色從主色和深淺模式推出來 ---------- */
+/* ---------- 主題：每個主題有自己的主色、背景色（淺色和深色各一組） ---------- */
 :root {
-  --brand: #e0475f;
-  --brand-2: #f08a5d;
-  --tint: #f7f3ef;
+  --brand: #e0475f; --brand-2: #f08a5d;
+  --tint: #fbefec; --tint-2: #f6e1dc; --night: #1b1214; --night-2: #261a1c;
 }
-:root[data-theme="ocean"] { --brand: #1f74d1; --brand-2: #22b3c9; --tint: #f1f5f9; }
-:root[data-theme="forest"] { --brand: #2f8a4c; --brand-2: #9cbf3b; --tint: #f3f5ef; }
-:root[data-theme="lavender"] { --brand: #7a55d6; --brand-2: #d26fc0; --tint: #f5f3f9; }
-:root[data-theme="sunset"] { --brand: #e8641e; --brand-2: #f2b33d; --tint: #f9f4ee; }
-:root[data-theme="mono"] { --brand: #2b2b2b; --brand-2: #6b6b6b; --tint: #f4f4f4; }
+:root[data-theme="ocean"] { --brand: #1f74d1; --brand-2: #1fb5c9; --tint: #e8f2fb; --tint-2: #d6e7f7; --night: #0c1522; --night-2: #13203a; }
+:root[data-theme="forest"] { --brand: #2f8a4c; --brand-2: #98bd36; --tint: #ecf4e8; --tint-2: #dbead3; --night: #0e1810; --night-2: #16241a; }
+:root[data-theme="lavender"] { --brand: #7a55d6; --brand-2: #d26fc0; --tint: #f2edfb; --tint-2: #e4dbf6; --night: #15111f; --night-2: #1f1830; }
+:root[data-theme="sunset"] { --brand: #e8641e; --brand-2: #f2b33d; --tint: #fdf1e4; --tint-2: #f8e1c8; --night: #1c130b; --night-2: #2a1c10; }
+:root[data-theme="mono"] { --brand: #262626; --brand-2: #6b6b6b; --tint: #f2f2f2; --tint-2: #e4e4e4; --night: #0f0f0f; --night-2: #1a1a1a; }
 
 /* 淺色 */
 :root {
   --bg: var(--tint);
-  --bg-2: color-mix(in srgb, var(--tint) 82%, #d9d2cb);
-  --card: #ffffff;
+  --bg-2: color-mix(in srgb, var(--tint-2) 75%, #fff);
+  --card: color-mix(in srgb, var(--tint) 18%, #fff);
   --text: #1f1b18;
-  --muted: #7d746c;
-  --faint: #b3aaa2;
-  --line: color-mix(in srgb, var(--tint) 70%, #d9d2cb);
-  --brand-soft: color-mix(in srgb, var(--brand) 12%, #fff);
+  --muted: color-mix(in srgb, var(--brand) 18%, #6f6862);
+  --faint: color-mix(in srgb, var(--brand) 12%, #b0a8a1);
+  --line: color-mix(in srgb, var(--tint-2) 80%, #cfc8c1);
+  --brand-soft: color-mix(in srgb, var(--brand) 13%, #fff);
   --brand-ink: var(--brand);
-  --mint: #187a6a;
-  --mint-soft: #e1f3ee;
-  --amber: #a35b00;
-  --amber-soft: #fff0da;
-  --violet: #5d49b8;
-  --violet-soft: #efeaff;
+  --mint: #187a6a; --mint-soft: #e1f3ee;
+  --amber: #a35b00; --amber-soft: #fff0da;
+  --violet: #5d49b8; --violet-soft: #efeaff;
   --star: #f2a900;
   --radius: 18px;
-  --shadow: 0 1px 2px rgb(60 40 20 / 5%), 0 6px 20px rgb(60 40 20 / 6%);
+  --shadow: 0 1px 2px color-mix(in srgb, var(--brand) 8%, transparent), 0 8px 24px color-mix(in srgb, var(--brand) 9%, transparent);
   --shadow-lg: 0 -10px 40px rgb(0 0 0 / 18%);
+  --glow-a: color-mix(in srgb, var(--brand) 22%, transparent);
+  --glow-b: color-mix(in srgb, var(--brand-2) 20%, transparent);
   color-scheme: light;
 }
-/* 深色：跟系統（沒選淺色時）或手動選深色 */
+/* 深色：背景也帶主題色 */
 @media (prefers-color-scheme: dark) {
   :root:not([data-mode="light"]) {
-    --bg: #131211; --bg-2: #1c1a18; --card: #1f1d1b; --text: #f3eee9; --muted: #a69c94; --faint: #6d655e; --line: #2f2b28;
-    --brand-soft: color-mix(in srgb, var(--brand) 22%, #1f1d1b); --brand-ink: color-mix(in srgb, var(--brand) 65%, #fff);
+    --bg: var(--night); --bg-2: var(--night-2); --card: color-mix(in srgb, var(--night-2) 80%, #2a2a2a);
+    --text: #f3eee9; --muted: color-mix(in srgb, var(--brand) 20%, #a49c95); --faint: #6d655e; --line: color-mix(in srgb, var(--night-2) 60%, #3a3a3a);
+    --brand-soft: color-mix(in srgb, var(--brand) 24%, var(--night-2)); --brand-ink: color-mix(in srgb, var(--brand) 62%, #fff);
     --mint: #5fd0bb; --mint-soft: #16302b; --amber: #ffb65e; --amber-soft: #36270f; --violet: #b3a1ff; --violet-soft: #26213b;
-    --shadow: 0 1px 2px rgb(0 0 0 / 30%); --shadow-lg: 0 -10px 40px rgb(0 0 0 / 50%); color-scheme: dark;
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%); --shadow-lg: 0 -10px 40px rgb(0 0 0 / 50%);
+    --glow-a: color-mix(in srgb, var(--brand) 26%, transparent); --glow-b: color-mix(in srgb, var(--brand-2) 18%, transparent);
+    color-scheme: dark;
   }
 }
 :root[data-mode="dark"] {
-  --bg: #131211; --bg-2: #1c1a18; --card: #1f1d1b; --text: #f3eee9; --muted: #a69c94; --faint: #6d655e; --line: #2f2b28;
-  --brand-soft: color-mix(in srgb, var(--brand) 22%, #1f1d1b); --brand-ink: color-mix(in srgb, var(--brand) 65%, #fff);
+  --bg: var(--night); --bg-2: var(--night-2); --card: color-mix(in srgb, var(--night-2) 80%, #2a2a2a);
+  --text: #f3eee9; --muted: color-mix(in srgb, var(--brand) 20%, #a49c95); --faint: #6d655e; --line: color-mix(in srgb, var(--night-2) 60%, #3a3a3a);
+  --brand-soft: color-mix(in srgb, var(--brand) 24%, var(--night-2)); --brand-ink: color-mix(in srgb, var(--brand) 62%, #fff);
   --mint: #5fd0bb; --mint-soft: #16302b; --amber: #ffb65e; --amber-soft: #36270f; --violet: #b3a1ff; --violet-soft: #26213b;
-  --shadow: 0 1px 2px rgb(0 0 0 / 30%); --shadow-lg: 0 -10px 40px rgb(0 0 0 / 50%); color-scheme: dark;
+  --shadow: 0 1px 2px rgb(0 0 0 / 30%); --shadow-lg: 0 -10px 40px rgb(0 0 0 / 50%);
+  --glow-a: color-mix(in srgb, var(--brand) 26%, transparent); --glow-b: color-mix(in srgb, var(--brand-2) 18%, transparent);
+  color-scheme: dark;
 }
 /* 黑白主題在深色時改成淺灰主色、深色字 */
 :root { --on-brand: #fff; }
@@ -58,7 +62,13 @@
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; }
 body {
-  background: var(--bg);
+  /* 主題色的柔和光暈＋背景色 */
+  background:
+    radial-gradient(900px 520px at 105% -8%, var(--glow-a), transparent 62%),
+    radial-gradient(760px 480px at -12% 108%, var(--glow-b), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  min-height: 100vh;
   color: var(--text);
   font: 15px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro TC", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   padding-bottom: calc(76px + env(safe-area-inset-bottom));
@@ -351,3 +361,23 @@ legend { font-size: 13px; color: var(--muted); padding: 0; margin-bottom: 8px; }
 .seg button.on { background: var(--card); color: var(--text); box-shadow: var(--shadow); }
 .tabs { grid-template-columns: repeat(5, 1fr); }
 .sheet.small .sheet-scroll { height: auto; max-height: 86dvh; }
+
+/* ---------- 通知頁 ---------- */
+.page-head { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.page-head h2 { margin: 0; font-size: 22px; }
+.inbox-item { position: relative; display: flex; gap: 10px; align-items: flex-start; background: var(--card); box-shadow: var(--shadow); border-radius: 16px; padding: 12px 42px 12px 14px; cursor: pointer; }
+.inbox-item .body { flex: 1; min-width: 0; }
+.inbox-item .dot { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--brand); margin-top: 7px; }
+.inbox-item.read .dot { background: transparent; border: 1.5px solid var(--faint); }
+.inbox-item.read .t { font-weight: 600; color: var(--muted); }
+.icon-btn.bell.on { background: var(--brand); color: var(--on-brand); }
+
+/* ---------- 同步 ---------- */
+.sync-join { display: flex; gap: 8px; }
+.sync-join input { flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); font-size: 17px; letter-spacing: 2px; text-transform: uppercase; }
+.sync-code { font: 800 30px/1.2 ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: 4px; text-align: center; padding: 14px; border-radius: 14px; background: var(--brand-soft); color: var(--brand-ink); }
+
+/* ---------- 主題選擇 ---------- */
+.theme-opt { position: relative; overflow: hidden; }
+.theme-opt .sw { height: 46px; border-radius: 10px; position: relative; }
+.theme-opt .sw::after { content: ""; position: absolute; left: 8px; right: 30%; bottom: 8px; height: 8px; border-radius: 4px; background: rgb(255 255 255 / 85%); }

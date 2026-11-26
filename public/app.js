@@ -39,7 +39,11 @@ const S = {
   quick: new Set(),
   // 鈴鐺：baseline 之後新增、而且還沒讀過的活動算未讀
   baseline: store.get('baseline', null),
-  read: new Set(store.get('read', [])),
+  // 舊版的「已讀＝從清單移除」轉成「刪除」
+  opened: new Set(store.get('opened', [])),
+  deleted: new Set([...store.get('deleted', []), ...store.get('read', [])]),
+  starMeta: store.get('starMeta', {}),
+  syncCode: store.get('syncCode', null),
   sites: null,
 };
 
@@ -224,18 +228,31 @@ function ensureBaseline() {
     store.set('baseline', S.baseline);
   }
 }
-const isUnread = (e) => Boolean(S.baseline && e.firstSeen && e.firstSeen > S.baseline && !S.read.has(e.id) && e.category !== '親子館');
-const unreadList = () => S.events.filter(isUnread).sort((a, b) => (b.firstSeen > a.firstSeen ? 1 : -1));
+// 通知頁：基準時間之後新增的活動都會列出來，要自己按 ✕ 刪掉才會消失；點開看過的只是變成「已讀」
+const inInbox = (e) => Boolean(S.baseline && e.firstSeen && e.firstSeen > S.baseline && !S.deleted.has(e.id) && e.category !== '親子館');
+const isUnread = (e) => inInbox(e) && !S.opened.has(e.id);
+const inboxList = () => S.events.filter(inInbox).sort((a, b) => (b.firstSeen > a.firstSeen ? 1 : -1));
+const unreadList = () => inboxList().filter((e) => !S.opened.has(e.id));
 
-function saveRead() {
+function saveInboxState() {
   // 只保留還存在的活動，避免越存越大
   const alive = new Set(S.events.map((e) => e.id));
-  S.read = new Set([...S.read].filter((id) => alive.has(id)));
-  store.set('read', [...S.read]);
+  if (alive.size) {
+    S.opened = new Set([...S.opened].filter((id) => alive.has(id)));
+    S.deleted = new Set([...S.deleted].filter((id) => alive.has(id)));
+  }
+  store.set('opened', [...S.opened]);
+  store.set('deleted', [...S.deleted]);
+  pushSync();
 }
-function markRead(ids) {
-  for (const id of ids) S.read.add(id);
-  saveRead();
+function markOpened(ids) {
+  for (const id of ids) S.opened.add(id);
+  saveInboxState();
+  renderBell();
+}
+function deleteFromInbox(ids) {
+  for (const id of ids) S.deleted.add(id);
+  saveInboxState();
   renderBell();
 }
 
@@ -244,33 +261,135 @@ function renderBell() {
   const badge = $('#bellBadge');
   badge.hidden = n === 0;
   badge.textContent = n > 99 ? '99+' : String(n);
-  $('#bellBtn').setAttribute('aria-label', n ? `${n} 個新活動` : '新活動');
-  if ($('#inbox').open) renderInbox();
+  $('#bellBtn').setAttribute('aria-label', n ? `${n} 個未讀新活動` : '新活動');
+  if (S.view === 'inbox') renderInbox();
 }
 
 function renderInbox() {
-  const list = unreadList();
-  $('#inboxHint').textContent = list.length ? `${list.length} 個還沒看過的新活動。點開會標為已讀，按 ✕ 可以直接刪掉。` : '';
+  const list = inboxList();
+  const unread = list.filter((e) => !S.opened.has(e.id)).length;
+  $('#inboxHint').textContent = list.length ? `${list.length} 個新活動，${unread} 個未讀。看過的會留著，按 ✕ 才會刪掉。` : '';
+  $('#inboxTools').hidden = !list.length;
   $('#inboxList').innerHTML = list.length
     ? list
-        .map(
-          (e) => `<div class="inbox-item" data-inbox="${esc(e.id)}">
-            <div><div class="t">${esc(e.title)}</div><div class="s">${esc(unitOf(e))}・${esc(fmtRange(e.start, e.end))}</div><div class="tags" style="margin-top:5px">${regTag(e)}${catsOf(e).slice(0, 3).map((c) => `<span class="tag ${c === '免費' ? 'free' : 'cat'}">${esc(c)}</span>`).join('')}</div></div>
-            <button class="x" data-dismiss="${esc(e.id)}" aria-label="刪除">${icon('x')}</button>
-          </div>`,
-        )
+        .map((e) => {
+          const read = S.opened.has(e.id);
+          return `<div class="inbox-item ${read ? 'read' : ''}" data-inbox="${esc(e.id)}">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="body"><div class="t">${esc(e.title)}</div><div class="s">${esc(unitOf(e))}・${esc(fmtRange(e.start, e.end))}</div><div class="tags" style="margin-top:5px">${regTag(e)}${catsOf(e).slice(0, 3).map((c) => `<span class="tag ${c === '免費' ? 'free' : 'cat'}">${esc(c)}</span>`).join('')}</div></div>
+            <button class="x" data-dismiss="${esc(e.id)}" aria-label="刪除這則">${icon('x')}</button>
+          </div>`;
+        })
         .join('')
-    : '<div class="empty"><b>🔔</b>沒有未讀的新活動</div>';
+    : '<div class="empty"><b>🔔</b>沒有新活動<br>有新活動時會出現在這裡</div>';
 }
 
+let viewBeforeInbox = 'list';
 function openInbox() {
-  renderInbox();
-  lockScroll();
-  $('#inbox').showModal();
+  if (S.view !== 'inbox') viewBeforeInbox = S.view;
+  go('inbox');
 }
 function closeInbox() {
-  if ($('#inbox').open) $('#inbox').close();
-  unlockScroll();
+  go(viewBeforeInbox || 'list');
+}
+
+// ---------- 配對碼同步：已讀、刪除、收藏在手機和電腦之間同步 ----------
+function syncPayload() {
+  return { opened: [...S.opened], deleted: [...S.deleted], stars: S.starMeta, baseline: S.baseline };
+}
+function applySync(data) {
+  if (!data) return;
+  let changed = false;
+  for (const id of data.opened ?? []) if (!S.opened.has(id)) { S.opened.add(id); changed = true; }
+  for (const id of data.deleted ?? []) if (!S.deleted.has(id)) { S.deleted.add(id); changed = true; }
+  if (data.baseline && (!S.baseline || data.baseline < S.baseline)) { S.baseline = data.baseline; store.set('baseline', S.baseline); changed = true; }
+  const starChanges = [];
+  for (const [id, v] of Object.entries(data.stars ?? {})) {
+    const mine = S.starMeta[id];
+    if (!mine || v[1] > mine[1]) {
+      S.starMeta[id] = v;
+      const on = Boolean(v[0]);
+      if (on !== S.starred.has(id)) { on ? S.starred.add(id) : S.starred.delete(id); starChanges.push([id, on]); }
+    }
+  }
+  store.set('opened', [...S.opened]);
+  store.set('deleted', [...S.deleted]);
+  store.set('starMeta', S.starMeta);
+  store.set('starred', [...S.starred]);
+  // 收藏變了，通知伺服器（提醒才會跟著改）
+  if (S.subId) for (const [id, on] of starChanges) {
+    const e = S.byId.get(id);
+    api('/api/star', { method: 'POST', body: { id: S.subId, eventId: id, on, ev: e ? snapshotOf(e) : undefined } }).catch(() => {});
+  }
+  if (changed || starChanges.length) { renderBell(); renderList(); renderStar(); if (S.view === 'reg') renderReg(); }
+}
+let syncTimer = null;
+function pushSync() {
+  if (!S.syncCode) return;
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(async () => {
+    try {
+      const r = await api(`/api/sync/${S.syncCode}`, { method: 'PUT', body: { data: syncPayload() } });
+      applySync(r.data);
+    } catch (err) {
+      if (err.status === 404) { S.syncCode = null; store.set('syncCode', null); renderSyncCard(); }
+    }
+  }, 1200);
+}
+async function pullSync() {
+  if (!S.syncCode) return;
+  try {
+    const r = await api(`/api/sync/${S.syncCode}`);
+    applySync(r.data);
+    pushSync(); // 把這台的變更也送上去
+  } catch (err) {
+    if (err.status === 404) { S.syncCode = null; store.set('syncCode', null); renderSyncCard(); toast('配對碼已失效'); }
+  }
+}
+function renderSyncCard() {
+  const on = Boolean(S.syncCode);
+  $('#syncOff').hidden = on;
+  $('#syncOn').hidden = !on;
+  if (on) $('#syncCode').textContent = `${S.syncCode.slice(0, 4)} ${S.syncCode.slice(4)}`;
+}
+async function createSyncCode() {
+  try {
+    const r = await api('/api/sync', { method: 'POST', body: { data: syncPayload() } });
+    S.syncCode = r.code;
+    store.set('syncCode', r.code);
+    renderSyncCard();
+    toast('配對碼已產生，在另一台裝置輸入這組碼');
+  } catch (err) {
+    toast(`產生失敗：${err.message}`);
+  }
+}
+async function joinSyncCode() {
+  const code = $('#syncInput').value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  if (code.length !== 8) return toast('配對碼是 8 個英數字');
+  try {
+    const r = await api(`/api/sync/${code}`);
+    S.syncCode = code;
+    store.set('syncCode', code);
+    applySync(r.data);
+    pushSync();
+    $('#syncInput').value = '';
+    renderSyncCard();
+    toast('配對成功，已讀和收藏會在兩台裝置同步');
+  } catch (err) {
+    toast(err.status === 404 ? '找不到這個配對碼' : `配對失敗：${err.message}`);
+  }
+}
+
+// ---------- 外部連結：iPhone 加入主畫面後，改用 Safari 開（不然會開在 App 裡的小視窗） ----------
+function openExternal(url) {
+  if (isIOS() && isStandalone() && /^https?:\/\//.test(url)) {
+    // iOS 17 以上支援 x-safari-https://，直接跳到 Safari；舊版沒反應時改用一般方式開
+    const t = Date.now();
+    location.href = url.replace(/^http(s?):\/\//, 'x-safari-http$1://');
+    setTimeout(() => { if (document.visibilityState === 'visible' && Date.now() - t < 1500) window.open(url, '_blank'); }, 700);
+    return;
+  }
+  window.open(url, '_blank', 'noopener');
 }
 
 // ---------- 網站頁 ----------
@@ -303,22 +422,30 @@ async function renderSites() {
 
 // ---------- 主題 ----------
 const THEMES = [
-  ['peach', '蜜桃', '#e0475f', '#f08a5d'],
-  ['ocean', '海洋', '#1f74d1', '#22b3c9'],
-  ['forest', '森林', '#2f8a4c', '#9cbf3b'],
-  ['lavender', '薰衣草', '#7a55d6', '#d26fc0'],
-  ['sunset', '夕陽', '#e8641e', '#f2b33d'],
-  ['mono', '黑白', '#2b2b2b', '#8a8a8a'],
+  // id, 名稱, 主色, 副色, 淺色背景, 深色背景
+  ['peach', '蜜桃', '#e0475f', '#f08a5d', '#fbefec', '#1b1214'],
+  ['ocean', '海洋', '#1f74d1', '#1fb5c9', '#e8f2fb', '#0c1522'],
+  ['forest', '森林', '#2f8a4c', '#98bd36', '#ecf4e8', '#0e1810'],
+  ['lavender', '薰衣草', '#7a55d6', '#d26fc0', '#f2edfb', '#15111f'],
+  ['sunset', '夕陽', '#e8641e', '#f2b33d', '#fdf1e4', '#1c130b'],
+  ['mono', '黑白', '#262626', '#8a8a8a', '#f2f2f2', '#0f0f0f'],
 ];
+const isDark = () => document.documentElement.dataset.mode === 'dark' || (document.documentElement.dataset.mode !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
 function applyTheme(theme, mode) {
   const root = document.documentElement;
   if (theme) { root.dataset.theme = theme; store.set('theme', theme); }
   if (mode) { root.dataset.mode = mode; store.set('mode', mode); }
   $$('.theme-opt').forEach((b) => b.classList.toggle('on', b.dataset.theme === root.dataset.theme));
   $$('#modePick button').forEach((b) => b.classList.toggle('on', b.dataset.mode === root.dataset.mode));
+  // 手機狀態列顏色跟著背景
+  const t = THEMES.find((x) => x[0] === root.dataset.theme) ?? THEMES[0];
+  $$('meta[name="theme-color"]').forEach((m) => m.setAttribute('content', isDark() ? t[5] : t[4]));
 }
 function buildThemePicker() {
-  $('#themePick').innerHTML = THEMES.map(([id, name, a, b]) => `<button type="button" class="theme-opt" data-theme="${id}"><span class="sw" style="background:linear-gradient(135deg,${a},${b})"></span>${name}</button>`).join('');
+  $('#themePick').innerHTML = THEMES.map(([id, name, a, b, light, dark]) => {
+    const bg = isDark() ? dark : light;
+    return `<button type="button" class="theme-opt" data-theme="${id}" style="background:${bg};color:${isDark() ? '#f3eee9' : '#1f1b18'}"><span class="sw" style="background:radial-gradient(circle at 85% 15%, ${b}, transparent 60%), linear-gradient(135deg, ${a}, ${b})"></span>${name}</button>`;
+  }).join('');
   applyTheme();
 }
 
@@ -459,7 +586,7 @@ function openDetail(id) {
   const cats = catsOf(e);
   const starred = S.starred.has(e.id);
   const priceText = e.free === true ? '免費' : e.free === false ? (e.extra?.prices?.join('、') || '需付費') : '';
-  if (isUnread(e)) markRead([e.id]);
+  if (isUnread(e)) markOpened([e.id]);
   const rows = [
     ['building', '單位', esc(unitOf(e))],
     ['clock', '時間', esc(fmtRange(e.start, e.end) + (e.extra?.note ? `（${e.extra.note}）` : ''))],
@@ -517,6 +644,9 @@ async function toggleStar(id) {
   const on = !S.starred.has(id);
   on ? S.starred.add(id) : S.starred.delete(id);
   store.set('starred', [...S.starred]);
+  S.starMeta[id] = [on, Date.now()];
+  store.set('starMeta', S.starMeta);
+  pushSync();
   $$(`[data-star="${CSS.escape(id)}"]`).forEach((b) => { b.classList.toggle('on', on); b.innerHTML = icon(on ? 'star-fill' : 'star'); });
   if ($('#detail').open) {
     const y = $('#detailBody').scrollTop;
@@ -699,6 +829,8 @@ function go(view) {
   $('#searchWrap').hidden = view !== 'list';
   if (view === 'set') renderPush();
   if (view === 'sites') renderSites();
+  if (view === 'inbox') renderInbox();
+  $('#bellBtn').classList.toggle('on', view === 'inbox');
   window.scrollTo({ top: 0 });
 }
 
@@ -734,20 +866,39 @@ function bind() {
   $('#siteQ').addEventListener('input', () => renderSites());
   $('#siteQ').addEventListener('keydown', (ev) => { if (ev.key === 'Enter') ev.target.blur(); });
   $('#themePick').addEventListener('click', (ev) => { const b = ev.target.closest('[data-theme]'); if (b) applyTheme(b.dataset.theme); });
-  $('#modePick').addEventListener('click', (ev) => { const b = ev.target.closest('[data-mode]'); if (b) applyTheme(null, b.dataset.mode); });
+  $('#modePick').addEventListener('click', (ev) => { const b = ev.target.closest('[data-mode]'); if (b) { applyTheme(null, b.dataset.mode); buildThemePicker(); } });
 
-  // 鈴鐺與新活動清單
-  $('#bellBtn').addEventListener('click', openInbox);
-  $('#readAll').addEventListener('click', () => { markRead(unreadList().map((e) => e.id)); renderInbox(); renderList(); toast('已全部標為已讀'); });
-  const inbox = $('#inbox');
-  inbox.addEventListener('click', (ev) => {
-    if (ev.target === inbox || ev.target.closest('[data-close-inbox]')) return closeInbox();
-    const x = ev.target.closest('[data-dismiss]');
-    if (x) { ev.stopPropagation(); markRead([x.dataset.dismiss]); renderInbox(); renderList(); return; }
-    const item = ev.target.closest('[data-inbox]');
-    if (item) { const id = item.dataset.inbox; closeInbox(); openDetail(id); renderList(); }
+  // 鈴鐺與通知頁
+  $('#bellBtn').addEventListener('click', () => (S.view === 'inbox' ? closeInbox() : openInbox()));
+  $('#inboxBack').addEventListener('click', closeInbox);
+  $('#readAll').addEventListener('click', () => { markOpened(inboxList().map((e) => e.id)); renderInbox(); renderList(); toast('已全部標為已讀'); });
+  $('#deleteAll').addEventListener('click', () => {
+    if (!confirm('刪除通知頁上全部的新活動？（活動本身不會刪除，只是不再出現在這裡）')) return;
+    deleteFromInbox(inboxList().map((e) => e.id)); renderInbox(); renderList(); toast('已清空');
   });
-  inbox.addEventListener('close', unlockScroll);
+  $('#inboxList').addEventListener('click', (ev) => {
+    const x = ev.target.closest('[data-dismiss]');
+    if (x) { ev.stopPropagation(); deleteFromInbox([x.dataset.dismiss]); renderInbox(); renderList(); return; }
+    const item = ev.target.closest('[data-inbox]');
+    if (item) { openDetail(item.dataset.inbox); renderInbox(); renderList(); }
+  });
+  // 配對碼同步
+  $('#syncCreate').addEventListener('click', createSyncCode);
+  $('#syncJoin').addEventListener('click', joinSyncCode);
+  $('#syncInput').addEventListener('keydown', (ev) => { if (ev.key === 'Enter') joinSyncCode(); });
+  $('#syncCopy').addEventListener('click', async () => { try { await navigator.clipboard.writeText(S.syncCode); toast('已複製'); } catch { toast(S.syncCode); } });
+  $('#syncLeave').addEventListener('click', () => {
+    if (!confirm('解除配對？這台裝置之後不會再同步（已同步的資料會保留）。')) return;
+    S.syncCode = null; store.set('syncCode', null); renderSyncCard(); toast('已解除配對');
+  });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') pullSync(); });
+  // 外部連結（網站頁、活動頁的報名連結）
+  document.addEventListener('click', (ev) => {
+    const a = ev.target.closest('a[target="_blank"]');
+    if (!a || !/^https?:/.test(a.href) || new URL(a.href).origin === location.origin) return;
+    ev.preventDefault();
+    openExternal(a.href);
+  }, true);
 
   document.addEventListener('click', (ev) => {
     const star = ev.target.closest('[data-star],[data-star-detail]');
@@ -794,7 +945,7 @@ function handleHash(hash) {
   const h = String(hash ?? '').replace(/^.*#/, '#');
   const m = h.match(/^#event=(.+)$/);
   if (m) { go('list'); openDetail(decodeURIComponent(m[1])); }
-  if (h === '#new') { go('list'); openInbox(); }
+  if (h === '#new') openInbox();
 }
 
 async function init() {
@@ -808,8 +959,13 @@ async function init() {
   registerSW().then(() => renderPush());
   await loadEvents();
   ensureBaseline();
+  // 舊的收藏沒有時間記錄，補上（同步時以「最後動作」為準）
+  for (const id of S.starred) if (!S.starMeta[id]) S.starMeta[id] = [true, 1];
   renderAll();
   if (unreadList().length) $('#bellBtn').classList.add('ring');
+  renderSyncCard();
+  pullSync();
+  setInterval(() => { if (document.visibilityState === 'visible') pullSync(); }, 60000);
   handleHash(location.hash);
   // 同步伺服器上的收藏和設定
   if (S.subId) {

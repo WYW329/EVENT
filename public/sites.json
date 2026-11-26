@@ -363,17 +363,20 @@
   {
    "category": "商場百貨",
    "name": "Xpark",
-   "url": "https://www.xpark.com.tw/news"
+   "url": "https://www.xpark.com.tw/news",
+   "auto": true
   },
   {
    "category": "商場百貨",
    "name": "華泰名品城 GLORIA OUTLETS",
-   "url": "https://www.gloriaoutlets.com/chi/news_list/"
+   "url": "https://www.gloriaoutlets.com/chi/news_list/",
+   "auto": true
   },
   {
    "category": "商場百貨",
    "name": "台茂購物中心",
-   "url": "https://www.taimall.com.tw/"
+   "url": "https://www.taimall.com.tw/",
+   "auto": true
   },
   {
    "category": "商場百貨",
