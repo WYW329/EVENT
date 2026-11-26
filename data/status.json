@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-26T13:05:52.691Z",
-  "tookMs": 106066,
+  "updatedAt": "2026-11-26T13:35:49.361Z",
+  "tookMs": 105118,
   "total": 380,
   "sources": [
     {
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 10238,
+      "ms": 10395,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 85,
       "kept": 0,
-      "ms": 5232,
+      "ms": 2411,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 106044,
+      "ms": 105105,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 57,
       "kept": 54,
-      "ms": 5917,
+      "ms": 2721,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 98335,
+      "ms": 21887,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 120,
       "kept": 120,
-      "ms": 31769,
+      "ms": 32782,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 34,
+      "ms": 23,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1177,
+      "ms": 1692,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 15291,
+      "ms": 14583,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 2152,
+      "ms": 1966,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 12684,
+      "ms": 12566,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 4384,
+      "ms": 4365,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 30056,
+      "ms": 29611,
       "error": null,
       "warnings": null
     },
@@ -139,7 +139,7 @@
       "ok": true,
       "count": 22,
       "kept": 0,
-      "ms": 65,
+      "ms": 49,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1360,
+      "ms": 1634,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -157,9 +157,9 @@
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 4,
-      "kept": 3,
-      "ms": 2622,
+      "count": 6,
+      "kept": 4,
+      "ms": 2757,
       "error": null,
       "warnings": null
     },
@@ -167,13 +167,14 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 21,
-      "kept": 21,
-      "ms": 95683,
+      "count": 20,
+      "kept": 20,
+      "ms": 94250,
       "error": null,
       "warnings": [
-        "原住民族行政局: The operation was aborted due to timeout",
-        "經濟發展局: The operation was aborted due to timeout"
+        "婦幼發展局: The operation was aborted due to timeout",
+        "經濟發展局: The operation was aborted due to timeout",
+        "動物保護處: The operation was aborted due to timeout"
       ]
     },
     {
@@ -182,7 +183,7 @@
       "ok": true,
       "count": 154,
       "kept": 114,
-      "ms": 28346,
+      "ms": 28139,
       "error": null,
       "warnings": null
     }
