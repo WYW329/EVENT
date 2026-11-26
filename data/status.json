@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-26T18:36:44.274Z",
-  "tookMs": 154930,
+  "updatedAt": "2026-11-26T19:05:53.732Z",
+  "tookMs": 109066,
   "total": 1889,
   "sources": [
     {
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 13696,
+      "ms": 15514,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 30,
       "kept": 30,
-      "ms": 1323,
+      "ms": 1583,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 40,
       "kept": 40,
-      "ms": 8059,
+      "ms": 8581,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 20,
       "kept": 20,
-      "ms": 1018,
+      "ms": 1491,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 28,
       "kept": 27,
-      "ms": 12826,
+      "ms": 15728,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 10,
       "kept": 10,
-      "ms": 10115,
+      "ms": 12007,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 2,
       "kept": 2,
-      "ms": 10184,
+      "ms": 11782,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 8361,
+      "ms": 10124,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 322,
       "kept": 22,
-      "ms": 4702,
+      "ms": 6542,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 101769,
+      "ms": 104473,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 122,
       "kept": 99,
-      "ms": 2705,
+      "ms": 5257,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 18355,
+      "ms": 23703,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 35330,
+      "ms": 37820,
       "error": null,
       "warnings": null
     },
@@ -139,7 +139,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 60,
+      "ms": 27,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 2121,
+      "ms": 3416,
       "error": null,
       "warnings": null
     },
@@ -159,7 +159,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 14960,
+      "ms": 17221,
       "error": null,
       "warnings": null
     },
@@ -169,7 +169,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 2550,
+      "ms": 3787,
       "error": null,
       "warnings": null
     },
@@ -179,7 +179,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 15673,
+      "ms": 14536,
       "error": null,
       "warnings": null
     },
@@ -189,7 +189,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 4601,
+      "ms": 6032,
       "error": null,
       "warnings": null
     },
@@ -199,7 +199,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 31064,
+      "ms": 26795,
       "error": null,
       "warnings": null
     },
@@ -209,7 +209,7 @@
       "ok": true,
       "count": 66,
       "kept": 63,
-      "ms": 4812,
+      "ms": 7649,
       "error": null,
       "warnings": null
     },
@@ -219,7 +219,7 @@
       "ok": true,
       "count": 501,
       "kept": 479,
-      "ms": 160,
+      "ms": 91,
       "error": null,
       "warnings": null
     },
@@ -229,7 +229,7 @@
       "ok": false,
       "count": null,
       "kept": 90,
-      "ms": 2142,
+      "ms": 3628,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -239,7 +239,7 @@
       "ok": true,
       "count": 7,
       "kept": 7,
-      "ms": 9511,
+      "ms": 13041,
       "error": null,
       "warnings": null
     },
@@ -247,9 +247,9 @@
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 25,
-      "kept": 22,
-      "ms": 6753,
+      "count": 27,
+      "kept": 24,
+      "ms": 8454,
       "error": null,
       "warnings": null
     },
@@ -259,7 +259,7 @@
       "ok": true,
       "count": 79,
       "kept": 74,
-      "ms": 38421,
+      "ms": 41388,
       "error": null,
       "warnings": null
     },
@@ -269,7 +269,7 @@
       "ok": true,
       "count": 0,
       "kept": 0,
-      "ms": 5323,
+      "ms": 6857,
       "error": null,
       "warnings": null
     },
@@ -277,9 +277,9 @@
       "id": "meetup",
       "name": "Meetup",
       "ok": true,
-      "count": 11,
-      "kept": 11,
-      "ms": 3326,
+      "count": 9,
+      "kept": 9,
+      "ms": 5653,
       "error": null,
       "warnings": null
     },
@@ -289,7 +289,7 @@
       "ok": true,
       "count": 8,
       "kept": 8,
-      "ms": 9753,
+      "ms": 11558,
       "error": null,
       "warnings": null
     },
@@ -299,9 +299,11 @@
       "ok": true,
       "count": 21,
       "kept": 21,
-      "ms": 94577,
+      "ms": 94792,
       "error": null,
-      "warnings": null
+      "warnings": [
+        "婦幼發展局: The operation was aborted due to timeout"
+      ]
     },
     {
       "id": "tpenews",
@@ -309,7 +311,7 @@
       "ok": true,
       "count": 67,
       "kept": 67,
-      "ms": 12646,
+      "ms": 19029,
       "error": null,
       "warnings": null
     },
@@ -319,7 +321,7 @@
       "ok": true,
       "count": 803,
       "kept": 615,
-      "ms": 154836,
+      "ms": 109011,
       "error": null,
       "warnings": null
     }
