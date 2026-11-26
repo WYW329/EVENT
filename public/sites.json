@@ -507,7 +507,8 @@
   {
    "category": "彙整網站",
    "name": "WeKenGo 週末去哪玩（桃園）",
-   "url": "https://wekengo.tw/?city=taoyuan"
+   "url": "https://wekengo.tw/?city=taoyuan",
+   "auto": true
   },
   {
    "category": "彙整網站",
