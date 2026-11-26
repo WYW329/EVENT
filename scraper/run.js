@@ -5,14 +5,15 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { culture, tourism } from './sources/national.js';
 import { travel, ccms, afmc, babycare, water } from './sources/taoyuan.js';
-import { kktix, accupass, cycc, g11 } from './sources/platforms.js';
+import { kktix, accupass, cycc, g11, wekengo } from './sources/platforms.js';
 import { normTitle, dateOf, toMs, todayTaipei, finalizeCategories } from './util.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
-export const SOURCES = [travel, tourism, afmc, culture, ccms, babycare, water, cycc, g11, kktix, accupass];
+// WeKenGo 放最後：同一個活動官方來源有的話，用官方的資料
+export const SOURCES = [travel, tourism, afmc, culture, ccms, babycare, water, cycc, g11, kktix, accupass, wekengo];
 
 const richness = (e) => ['venue', 'address', 'image', 'summary', 'url', 'regStart'].filter((k) => e[k]).length;
 
@@ -21,9 +22,19 @@ export function dedupe(events) {
   const byKey = new Map();
   const ids = new Set();
   const out = [];
+  const byTitle = new Map(); // 正規化標題 → 已收的活動（給「日期寫法不同」的重複用）
+  const overlaps = (a, b) => {
+    const as = dateOf(a.start), ae = dateOf(a.end ?? a.start) ?? as;
+    const bs = dateOf(b.start), be = dateOf(b.end ?? b.start) ?? bs;
+    return as && bs && as <= be && bs <= ae;
+  };
   for (const e of events) {
-    const key = `${normTitle(e.title)}|${dateOf(e.start) ?? ''}`;
-    const prev = byKey.get(key);
+    const nt = normTitle(e.title);
+    const key = `${nt}|${dateOf(e.start) ?? ''}`;
+    let prev = byKey.get(key);
+    // 同名而且日期區間有重疊（例如一邊寫展期、一邊寫開幕時間），也算同一個活動
+    if (!prev && nt.length >= 4) prev = (byTitle.get(nt) ?? []).find((p) => p.source !== e.source && overlaps(p, e));
+    if (!prev || prev.source !== e.source) (byTitle.get(nt) ?? byTitle.set(nt, []).get(nt)).push(e);
     if (!prev || prev.source === e.source) {
       // 同一個來源裡標題日期相同的是不同場次（例如上午場、下午場），不合併
       if (!prev) byKey.set(key, e);

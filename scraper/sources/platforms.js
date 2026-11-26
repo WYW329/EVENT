@@ -219,6 +219,145 @@ export const g11 = {
   },
 };
 
+// ---------- WeKenGo 週末去哪玩（桃園頁） ----------
+// robots.txt 允許抓取（只擋 /go/ 轉址）。列表每次都讀；活動內頁只在第一次看到時讀，結果存在 data/wekengo-cache.json。
+const WKG = 'https://wekengo.tw';
+const WKG_TAG = {
+  音樂會: '表演', 演唱會: '表演', 戲劇: '表演', 舞蹈: '表演', 派對: '表演',
+  展覽: '展覽', 市集: '節慶市集', 節慶: '節慶市集', 夜市: '節慶市集',
+  手作: '體驗', 體驗: '體驗', 戶外: '體驗', '講座・導覽': '講座課程', 講座: '講座課程',
+  電影: '電影', 運動: '運動', 親子: '親子',
+};
+
+export function parseWekengoList(html) {
+  const $ = cheerio.load(html);
+  const items = [];
+  $('a.event-card[href^="/event/"]').each((_, el) => {
+    const a = $(el);
+    const href = a.attr('href');
+    const id = href.match(/^\/event\/([A-Za-z0-9]+)\//)?.[1];
+    if (!id) return;
+    const img = a.find('.event-card__image img').attr('src');
+    items.push({
+      id,
+      url: `${WKG}${href}`,
+      title: a.find('.event-card__title').text().trim(),
+      dateText: a.find('.event-card__date').text().trim(),
+      location: a.find('.event-card__location').text().trim(),
+      registration: a.find('.event-card__registration').text().trim() || null,
+      free: a.find('.event-card__badge--free').length > 0,
+      tags: a.find('.event-card__tags .tag').map((_, t) => $(t).text().trim()).get(),
+      area: a.find('.event-card__area-pill').contents().first().text().trim(),
+      image: img ? new URL(img, WKG).href : null,
+    });
+  });
+  return items;
+}
+
+/** 「2026/11/6 (五) - 11/27 (五)」「2026/11/26 (四)」→ 日期；「每日 17:00-24:00」這種常駐的回傳 null。 */
+export function parseWekengoDates(text) {
+  const m = String(text).match(/(\d{4})\/(\d{1,2})\/(\d{1,2})(?:\s*\([^)]*\))?(?:\s*-\s*(?:(\d{4})\/)?(\d{1,2})\/(\d{1,2}))?/);
+  if (!m) return null;
+  const start = makeDate(Number(m[1]), m[2], m[3]);
+  let end = m[5] ? makeDate(Number(m[4] ?? m[1]), m[5], m[6]) : start;
+  if (end < start) end = makeDate(Number(m[1]) + 1, m[5], m[6]);
+  return { start, end };
+}
+
+/** 內頁的 schema.org Event：精確時間、地址、主辦單位、說明。 */
+export function parseWekengoDetail(html) {
+  const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  for (const b of blocks) {
+    try {
+      const d = JSON.parse(b[1]);
+      if (!d.startDate) continue;
+      const tp = (iso) => {
+        if (!iso) return null;
+        const t = new Date(Date.parse(iso) + 8 * 3600000);
+        const ymd = `${t.getUTCFullYear()}-${String(t.getUTCMonth() + 1).padStart(2, '0')}-${String(t.getUTCDate()).padStart(2, '0')}`;
+        const hm = `${String(t.getUTCHours()).padStart(2, '0')}:${String(t.getUTCMinutes()).padStart(2, '0')}`;
+        // 00:00 開始、23:59 結束代表只有日期
+        return hm === '00:00' || hm === '23:59' ? ymd : `${ymd}T${hm}:00+08:00`;
+      };
+      return {
+        start: tp(d.startDate),
+        end: tp(d.endDate),
+        venue: d.location?.name ?? null,
+        address: d.location?.address?.streetAddress ?? null,
+        organizer: d.organizer?.name ?? null,
+        summary: d.description ?? null,
+        image: typeof d.image === 'string' ? d.image : d.image?.[0] ?? null,
+        audience: d.audience?.audienceType ?? null,
+      };
+    } catch {}
+  }
+  return null;
+}
+
+/** WeKenGo 的 organizer 常是它的資料來源名稱（例如「Accupass 活動通」「桃園市立圖書館活動」），整理成真正的單位或丟掉。 */
+export function cleanOrganizer(name) {
+  if (!name) return null;
+  if (/accupass|kktix|opentix|活動通|報名資訊|售票|ibon|年代|tixcraft|beclass/i.test(name)) return null;
+  const n = name.replace(/\s*(當期展覽|熱門活動|活動訊息|最新活動|活動)$/,'').replace(/^桃園市政府$/, '').trim();
+  return n || null;
+}
+
+export const wekengo = {
+  id: 'wekengo',
+  name: 'WeKenGo 週末去哪玩',
+  async fetch() {
+    const { readFile, writeFile } = await import('node:fs/promises');
+    const cacheFile = new URL('../../data/wekengo-cache.json', import.meta.url);
+    const cache = JSON.parse(await readFile(cacheFile, 'utf8').catch(() => '{}'));
+    const items = new Map();
+    for (let page = 1; page <= 20; page++) {
+      const html = await fetchText(`${WKG}/?city=taoyuan${page > 1 ? `&page=${page}` : ''}`);
+      const list = parseWekengoList(html).filter((x) => !x.area || x.area === '桃園');
+      const before = items.size;
+      for (const it of list) if (!items.has(it.id)) items.set(it.id, it);
+      if (items.size === before) break; // 沒有新的就是最後一頁
+    }
+    const out = [];
+    const maxDetail = Number(process.env.WEKENGO_DETAIL_LIMIT ?? 400);
+    let fetched = 0;
+    for (const it of items.values()) {
+      const dates = parseWekengoDates(it.dateText);
+      if (!dates) continue; // 夜市這種每天都有的常駐活動不列
+      if (dates.end < new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10)) continue; // 已結束
+      let d = cache[it.id];
+      if (!d && fetched < maxDetail) {
+        d = await fetchText(it.url).then(parseWekengoDetail).catch(() => null);
+        fetched++;
+        if (d) cache[it.id] = { ...d, cachedAt: new Date().toISOString().slice(0, 10) };
+      }
+      const cats = it.tags.map((t) => WKG_TAG[t]).filter(Boolean);
+      if (/親子/.test(d?.audience ?? '') && !cats.includes('親子')) cats.push('親子');
+      out.push(
+        makeEvent(this, it.id, {
+          title: it.title,
+          // 內頁的精確時間要和列表日期一致才用（活動改期時以列表為準）
+          start: d?.start && d.start.slice(0, 10) === dates.start ? d.start : dates.start,
+          end: d?.end && d.end.slice(0, 10) === dates.end ? d.end : dates.end,
+          venue: d?.venue || it.location,
+          address: d?.address ?? null,
+          category: cats[0],
+          free: it.free ? true : null,
+          url: it.url,
+          image: d?.image || it.image,
+          summary: d?.summary ?? null,
+          tags: [...new Set(cats.slice(1))],
+          extra: { organizer: cleanOrganizer(d?.organizer), registration: it.registration },
+        }),
+      );
+    }
+    // 清掉 60 天沒出現的快取
+    const alive = new Set(items.keys());
+    for (const [k, v] of Object.entries(cache)) if (!alive.has(k) && Date.now() - Date.parse(v.cachedAt ?? 0) > 60 * 86400000) delete cache[k];
+    await writeFile(cacheFile, JSON.stringify(cache));
+    return out;
+  },
+};
+
 // ---------- 中原文創園區 ----------
 export function parseCyccEvents(html) {
   const $ = cheerio.load(html);

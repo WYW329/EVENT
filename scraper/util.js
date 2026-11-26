@@ -192,7 +192,7 @@ export function findCity(...texts) {
 
 /** 整理出活動的所有類別（主要類別在最前面，免費的加上「免費」）。 */
 export function finalizeCategories(e) {
-  const list = [e.category, ...guessCategories(e.title)].filter((c) => c && c !== '其他');
+  const list = [e.category, ...(e.tags ?? []), ...guessCategories(e.title)].filter((c) => c && c !== '其他');
   if (e.category === '親子館') list.push('親子');
   if (e.free === true) list.unshift('免費');
   const uniq = [...new Set(list)];
@@ -222,6 +222,7 @@ export function makeEvent(source, key, fields) {
     summary: cleanText(fields.summary, 2000) || null,
     extra: fields.extra ?? null,
   };
+  if (fields.tags?.length) e.tags = fields.tags; // 來源給的其他類別
   if (!e.end) e.end = e.start;
   e.categories = finalizeCategories(e);
   return e;
