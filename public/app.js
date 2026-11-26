@@ -461,13 +461,14 @@ async function renderSites() {
     (groups.get(g) ?? groups.set(g, []).get(g)).push(s);
   }
   const autoN = inRegion.filter((s) => s.auto).length;
-  $('#sitesHint').textContent = `${region ? REGION_NAME[region] : '全部'}共 ${inRegion.length} 個常辦活動的單位和平台，其中 ${autoN} 個「自動收錄」，已經會自動抓進活動雷達。`;
+  const viaN = inRegion.filter((s) => !s.auto && s.via).length;
+  $('#sitesHint').textContent = `${region ? REGION_NAME[region] : '全部'}共 ${inRegion.length} 個網站：${autoN} 個「自動收錄」（直接抓它的網站），${viaN} 個「間接收錄」（它的活動透過其他平台抓進來），其他 ${inRegion.length - autoN - viaN} 個要自己上網站看。`;
   $('#siteList').innerHTML =
     [...groups]
       .map(([cat, items]) => `<div class="site-group"><h3>${esc(cat)} <small>${items.length}</small></h3><div class="site-card">${items
         .map((s) => {
           const host = new URL(s.url).hostname.replace(/^www\./, '');
-          return `<a class="site" href="${esc(s.url)}" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span class="n"><b>${esc(s.name)}</b><small>${esc(host)}</small></span>${s.auto ? '<span class="tag free">自動收錄</span>' : ''}</a>`;
+          return `<a class="site" href="${esc(s.url)}" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span class="n"><b>${esc(s.name)}</b><small>${s.via && !s.auto ? `經由 ${esc(s.via.join('、'))}` : esc(host)}</small></span>${s.auto ? '<span class="tag free">自動收錄</span>' : s.via ? '<span class="tag via">間接收錄</span>' : ''}</a>`;
         })
         .join('')}</div></div>`)
       .join('') || '<div class="empty">找不到符合的網站</div>';

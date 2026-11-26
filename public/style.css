@@ -388,3 +388,6 @@ legend { font-size: 13px; color: var(--muted); padding: 0; margin-bottom: 8px; }
 /* 通知頁往右滑回主畫面 */
 #view-inbox.swiping { transition: none; }
 #view-inbox.swipe-back { transition: transform .22s ease, opacity .22s ease; }
+
+/* 網站頁：透過其他平台收錄的 */
+.tag.via { background: color-mix(in srgb, var(--brand-2) 16%, transparent); color: var(--brand-ink); }

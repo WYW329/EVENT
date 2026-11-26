@@ -9,6 +9,8 @@ import { kktix, accupass, cycc, g11, wekengo, opentix } from './sources/platform
 import { tycgNews, taipeiNews, library } from './sources/tycgnews.js';
 import { gloria, taimall, xpark } from './sources/malls.js';
 import { travelTaipei, ntpcEvents } from './sources/taipei.js';
+import { huashan, songshan, tfam, tmc, clab, artemperor, indievox, ntpcMuseums } from './sources/taipei-venues.js';
+import { eventbrite, meetup, luma } from './sources/community.js';
 import { normTitle, dateOf, toMs, todayTaipei, finalizeCategories } from './util.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -16,7 +18,7 @@ const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
 // WeKenGo 放最後：同一個活動官方來源有的話，用官方的資料
-export const SOURCES = [travel, travelTaipei, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, accupass, tycgNews, taipeiNews, wekengo];
+export const SOURCES = [travel, travelTaipei, huashan, songshan, tfam, tmc, clab, ntpcMuseums, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, indievox, accupass, artemperor, eventbrite, meetup, luma, tycgNews, taipeiNews, wekengo];
 
 export const SEED = '2000-01-01T00:00:00.000Z';
 

@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T17:07:07.964Z",
-  "tookMs": 182109,
-  "total": 1681,
+  "updatedAt": "2026-11-26T17:07:35.046Z",
+  "tookMs": 93265,
+  "total": 1910,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 13431,
+      "ms": 3820,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,67 @@
       "ok": true,
       "count": 30,
       "kept": 30,
-      "ms": 2576,
+      "ms": 762,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "huashan",
+      "name": "華山1914文化創意產業園區",
+      "ok": true,
+      "count": 40,
+      "kept": 40,
+      "ms": 6399,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "songshan",
+      "name": "松山文創園區",
+      "ok": true,
+      "count": 20,
+      "kept": 20,
+      "ms": 296,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tfam",
+      "name": "臺北市立美術館",
+      "ok": true,
+      "count": 28,
+      "kept": 27,
+      "ms": 2176,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tmc",
+      "name": "臺北流行音樂中心",
+      "ok": true,
+      "count": 10,
+      "kept": 10,
+      "ms": 700,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "clab",
+      "name": "臺灣當代文化實驗場 C-LAB",
+      "ok": true,
+      "count": 2,
+      "kept": 2,
+      "ms": 1572,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "ntpcmuseum",
+      "name": "新北市立博物館群",
+      "ok": true,
+      "count": 4,
+      "kept": 4,
+      "ms": 6440,
       "error": null,
       "warnings": null
     },
@@ -29,7 +89,7 @@
       "ok": true,
       "count": 322,
       "kept": 22,
-      "ms": 2283,
+      "ms": 209,
       "error": null,
       "warnings": null
     },
@@ -39,7 +99,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 101498,
+      "ms": 93179,
       "error": null,
       "warnings": null
     },
@@ -48,8 +108,8 @@
       "name": "文化部藝文活動",
       "ok": true,
       "count": 588,
-      "kept": 564,
-      "ms": 2317,
+      "kept": 559,
+      "ms": 584,
       "error": null,
       "warnings": null
     },
@@ -59,7 +119,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 102546,
+      "ms": 10080,
       "error": null,
       "warnings": null
     },
@@ -69,7 +129,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 34833,
+      "ms": 22985,
       "error": null,
       "warnings": null
     },
@@ -79,7 +139,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 27,
+      "ms": 28,
       "error": null,
       "warnings": null
     },
@@ -89,7 +149,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1523,
+      "ms": 1470,
       "error": null,
       "warnings": null
     },
@@ -99,7 +159,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 14162,
+      "ms": 14204,
       "error": null,
       "warnings": null
     },
@@ -109,7 +169,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 1719,
+      "ms": 254,
       "error": null,
       "warnings": null
     },
@@ -119,7 +179,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 11802,
+      "ms": 12067,
       "error": null,
       "warnings": null
     },
@@ -129,7 +189,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 3860,
+      "ms": 2130,
       "error": null,
       "warnings": null
     },
@@ -139,7 +199,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 34710,
+      "ms": 31218,
       "error": null,
       "warnings": null
     },
@@ -149,7 +209,7 @@
       "ok": true,
       "count": 66,
       "kept": 63,
-      "ms": 4062,
+      "ms": 387,
       "error": null,
       "warnings": null
     },
@@ -159,18 +219,28 @@
       "ok": true,
       "count": 501,
       "kept": 35,
-      "ms": 132,
+      "ms": 88,
       "error": null,
       "warnings": null
     },
     {
       "id": "kktix",
       "name": "KKTIX",
-      "ok": false,
-      "count": null,
-      "kept": 92,
-      "ms": 1455,
-      "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
+      "ok": true,
+      "count": 91,
+      "kept": 90,
+      "ms": 77513,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "indievox",
+      "name": "iNDIEVOX",
+      "ok": true,
+      "count": 7,
+      "kept": 7,
+      "ms": 1075,
+      "error": null,
       "warnings": null
     },
     {
@@ -179,7 +249,47 @@
       "ok": true,
       "count": 28,
       "kept": 25,
-      "ms": 5815,
+      "ms": 3641,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "artemperor",
+      "name": "非池中藝術網",
+      "ok": true,
+      "count": 79,
+      "kept": 74,
+      "ms": 17153,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "eventbrite",
+      "name": "Eventbrite",
+      "ok": true,
+      "count": 20,
+      "kept": 20,
+      "ms": 17122,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "meetup",
+      "name": "Meetup",
+      "ok": true,
+      "count": 9,
+      "kept": 9,
+      "ms": 687,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "luma",
+      "name": "Luma",
+      "ok": true,
+      "count": 8,
+      "kept": 8,
+      "ms": 1392,
       "error": null,
       "warnings": null
     },
@@ -187,24 +297,22 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 19,
-      "kept": 19,
-      "ms": 182041,
+      "count": 20,
+      "kept": 20,
+      "ms": 90042,
       "error": null,
       "warnings": [
-        "青年事務局: The operation was aborted due to timeout",
-        "婦幼發展局: The operation was aborted due to timeout",
-        "經濟發展局: The operation was aborted due to timeout",
-        "原住民族行政局: The operation was aborted due to timeout"
+        "原住民族行政局: The operation was aborted due to timeout",
+        "婦幼發展局: The operation was aborted due to timeout"
       ]
     },
     {
       "id": "tpenews",
       "name": "臺北市府局處與區公所",
       "ok": true,
-      "count": 15,
-      "kept": 15,
-      "ms": 62288,
+      "count": 67,
+      "kept": 67,
+      "ms": 4642,
       "error": null,
       "warnings": null
     },
@@ -213,8 +321,8 @@
       "name": "WeKenGo 週末去哪玩",
       "ok": true,
       "count": 792,
-      "kept": 638,
-      "ms": 102627,
+      "kept": 600,
+      "ms": 80620,
       "error": null,
       "warnings": null
     }

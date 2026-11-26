@@ -86,3 +86,20 @@ test('雙北：行政區、縣市判斷', async () => {
   assert.equal(isTaipeiArea('桃園市中壢區'), false);
   assert.equal(cityOfDistrict('淡水區'), '新北市');
 });
+
+test('台北新來源的解析', async () => {
+  const { parseArtemperor } = await import('../scraper/sources/taipei-venues.js');
+  const { cityFromEn, toTaipeiIso, districtFromEn } = await import('../scraper/sources/community.js');
+  const html = `<div class="list_box"><a href="https://artemperor.tw/tidbits/1"><div class="pic" style="background-image:url(https://x/a.jpg);"></div></a>
+    <div class="list_text"><figure class="tag"><a href="https://artemperor.tw/tidbits/1"><h3>若木藝廊</h3></a></figure>
+    <a href="https://artemperor.tw/tidbits/1"><h2>【燦燦－曾霆羽個展】</h2></a><p>日期：2026-10-17 ~ 2026-11-29｜台灣，台北市</p></div></div>`;
+  const [it] = parseArtemperor(html);
+  assert.equal(it.title, '燦燦－曾霆羽個展');
+  assert.equal(it.venue, '若木藝廊');
+  assert.deepEqual(it.dates, { start: '2026-10-17', end: '2026-11-29' });
+  assert.equal(it.place, '台北市');
+  assert.equal(cityFromEn('Banqiao District, New Taipei City'), '新北市');
+  assert.equal(cityFromEn('Taipei City'), '臺北市');
+  assert.equal(toTaipeiIso('2026-11-27T11:30:00.000Z'), '2026-11-27T19:30:00+08:00');
+  assert.equal(districtFromEn('No. 30, Leli Rd, Da’an District, Taipei City'), '大安區');
+});

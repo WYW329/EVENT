@@ -60,7 +60,11 @@
    "category": "市府機關",
    "name": "桃園市政府",
    "url": "https://www.tycg.gov.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "市府機關",
@@ -73,7 +77,11 @@
    "category": "市府機關",
    "name": "文化局",
    "url": "https://culture.tycg.gov.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "市府機關",
@@ -304,7 +312,11 @@
    "category": "藝文場館",
    "name": "大溪木藝生態博物館",
    "url": "https://wem.tycg.gov.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
@@ -323,7 +335,10 @@
    "category": "藝文場館",
    "name": "桃園市文化基金會",
    "url": "https://www.taoyuancf.org.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "文化部藝文活動"
+   ]
   },
   {
    "category": "藝文場館",
@@ -342,13 +357,20 @@
    "category": "藝文場館",
    "name": "中央大學藝文中心",
    "url": "https://art.ncu.edu.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "非池中藝術網"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "中原大學",
    "url": "https://www.cycu.edu.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "非池中藝術網",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
@@ -372,7 +394,10 @@
    "category": "藝文場館",
    "name": "國立體育大學",
    "url": "https://www.ntsu.edu.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
@@ -402,7 +427,10 @@
    "category": "藝文場館",
    "name": "桃園市立美術館（含兒童美術館、橫山書法館）",
    "url": "https://tmofa.tycg.gov.tw/ch",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "商場百貨",
@@ -462,7 +490,10 @@
    "name": "桃園國際機場",
    "url": "https://www.taoyuan-airport.com/",
    "blocked": true,
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "觀光休閒",
@@ -498,7 +529,10 @@
    "category": "農業農遊",
    "name": "桃園區農業改良場",
    "url": "https://www.tydares.gov.tw/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "復興區公所"
+   ]
   },
   {
    "category": "運動賽事",
@@ -510,7 +544,10 @@
    "category": "運動賽事",
    "name": "運動筆記（路跑報名）",
    "url": "https://running.biji.co/",
-   "region": "桃園"
+   "region": "桃園",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "運動賽事",
@@ -528,7 +565,11 @@
    "category": "市府機關",
    "name": "臺北市政府",
    "url": "https://www.gov.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "臺北市民政局"
+   ]
   },
   {
    "category": "市府機關",
@@ -562,7 +603,8 @@
    "category": "市府機關",
    "name": "臺北市客家事務委員會",
    "url": "https://hac.gov.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "市府機關",
@@ -636,7 +678,11 @@
    "category": "市府機關",
    "name": "臺北市家庭教育中心",
    "url": "https://family.gov.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "臺北市民政局",
+    "臺北市產業局"
+   ]
   },
   {
    "category": "市府機關",
@@ -649,13 +695,17 @@
    "category": "市府機關",
    "name": "新北市觀光旅遊網",
    "url": "https://newtaipei.travel/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "市府機關",
    "name": "新北市政府文化局",
    "url": "https://www.culture.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "市府機關",
@@ -829,7 +879,10 @@
    "category": "區公所",
    "name": "土城區公所",
    "url": "https://www.tucheng.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "新北市政府活動"
+   ]
   },
   {
    "category": "區公所",
@@ -871,49 +924,69 @@
    "category": "藝文場館",
    "name": "華山1914文化創意產業園區",
    "url": "https://www.huashan1914.com/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "松山文創園區",
    "url": "https://www.songshanculturalpark.org/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "臺北市立美術館",
    "url": "https://www.tfam.museum/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "臺北表演藝術中心",
    "url": "https://www.tpac-taipei.org/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "臺北流行音樂中心",
    "url": "https://tmc.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "國家兩廳院",
    "url": "https://npac-ntch.org/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "OPENTIX"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "國立故宮博物院",
    "url": "https://www.npm.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "臺北旅遊網"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "國立臺灣博物館",
    "url": "https://www.ntm.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "臺北旅遊網"
+   ]
   },
   {
    "category": "藝文場館",
@@ -925,13 +998,20 @@
    "category": "藝文場館",
    "name": "國立中正紀念堂",
    "url": "https://www.cksmh.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "臺北旅遊網"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "國立臺灣科學教育館",
    "url": "https://www.ntsec.edu.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
@@ -965,19 +1045,25 @@
    "category": "藝文場館",
    "name": "臺北市立圖書館",
    "url": "https://tpml.gov.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "臺北當代藝術館",
    "url": "https://www.mocataipei.org.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "臺北旅遊網"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "空總臺灣當代文化實驗場 C-LAB",
    "url": "https://clab.org.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
@@ -1001,19 +1087,30 @@
    "category": "藝文場館",
    "name": "紀州庵文學森林",
    "url": "https://kishuan.org.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "郵政博物館",
    "url": "https://museum.post.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "臺北旅遊網",
+    "文化部藝文活動"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "金車文藝中心",
    "url": "https://www.kingcarart.org.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "臺北旅遊網"
+   ]
   },
   {
    "category": "藝文場館",
@@ -1025,19 +1122,30 @@
    "category": "藝文場館",
    "name": "國家電影及視聽文化中心",
    "url": "https://www.tfai.org.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "國立臺北藝術大學",
    "url": "https://www.tnua.edu.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "非池中藝術網"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "國立臺灣師範大學",
    "url": "https://www.ntnu.edu.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動"
+   ]
   },
   {
    "category": "藝文場館",
@@ -1056,37 +1164,45 @@
    "category": "藝文場館",
    "name": "新北市立鶯歌陶瓷博物館",
    "url": "https://www.ceramics.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "觀光署活動"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "新北市立十三行博物館",
    "url": "https://www.sshm.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "新北市立淡水古蹟博物館",
    "url": "https://www.tshs.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "新北市立黃金博物館",
    "url": "https://www.gep.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "林本源園邸",
    "url": "https://www.linfamily.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "新北市坪林茶業博物館",
    "url": "https://www.tea.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
@@ -1098,7 +1214,11 @@
    "category": "藝文場館",
    "name": "朱銘美術館",
    "url": "https://www.juming.org.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
@@ -1110,19 +1230,29 @@
    "category": "藝文場館",
    "name": "國立臺灣藝術大學",
    "url": "https://www.ntua.edu.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "淡江大學",
    "url": "https://www.tku.edu.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "臺北市立圖書館"
+   ]
   },
   {
    "category": "藝文場館",
    "name": "輔仁大學",
    "url": "https://www.fju.edu.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動"
+   ]
   },
   {
    "category": "展覽會議",
@@ -1134,13 +1264,18 @@
    "category": "展覽會議",
    "name": "台北國際會議中心",
    "url": "https://www.ticc.com.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "觀光休閒",
    "name": "臺北市立兒童新樂園",
    "url": "https://www.tcap.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "觀光休閒",
@@ -1152,7 +1287,8 @@
    "category": "觀光休閒",
    "name": "臺北自來水園區",
    "url": "https://waterpark.water.gov.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "觀光休閒",
@@ -1182,7 +1318,10 @@
    "category": "商場百貨",
    "name": "台北101",
    "url": "https://www.taipei-101.com.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "KKTIX"
+   ]
   },
   {
    "category": "商場百貨",
@@ -1206,7 +1345,10 @@
    "category": "商場百貨",
    "name": "京站時尚廣場",
    "url": "https://www.qsquare.com.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "商場百貨",
@@ -1236,7 +1378,10 @@
    "category": "商場百貨",
    "name": "宏匯廣場",
    "url": "https://www.honhui.com.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "商場百貨",
@@ -1248,30 +1393,235 @@
    "category": "商場百貨",
    "name": "誠品生活",
    "url": "https://meet.eslite.com/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "KKTIX"
+   ]
   },
   {
    "category": "運動賽事",
    "name": "臺北大巨蛋",
    "url": "https://www.taipeidome.com.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "運動賽事",
    "name": "臺北小巨蛋",
    "url": "https://www.arena.taipei/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "KKTIX",
+    "WeKenGo 週末去哪玩"
+   ]
   },
   {
    "category": "運動賽事",
    "name": "臺北馬拉松",
    "url": "https://www.taipeicitymarathon.com/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "臺北旅遊網"
+   ]
   },
   {
    "category": "運動賽事",
    "name": "富邦悍將",
    "url": "https://www.fubonguardians.com/",
+   "region": "台北"
+  },
+  {
+   "category": "藝文平台",
+   "name": "非池中藝術網（展覽，含小畫廊）",
+   "url": "https://artemperor.tw/tidbits",
+   "region": "台北",
+   "auto": true
+  },
+  {
+   "category": "藝文平台",
+   "name": "iNDIEVOX（Live House 演出）",
+   "url": "https://www.indievox.com/activity/list",
+   "region": "台北",
+   "auto": true
+  },
+  {
+   "category": "社群活動",
+   "name": "Eventbrite 台北",
+   "url": "https://www.eventbrite.com/d/taiwan--taipei/events/",
+   "region": "台北",
+   "auto": true
+  },
+  {
+   "category": "社群活動",
+   "name": "Meetup 台北",
+   "url": "https://www.meetup.com/find/?location=tw--Taipei&source=EVENTS",
+   "region": "台北",
+   "auto": true
+  },
+  {
+   "category": "社群活動",
+   "name": "Luma 台北",
+   "url": "https://lu.ma/taipei",
+   "region": "台北",
+   "auto": true
+  },
+  {
+   "category": "Live House",
+   "name": "Legacy Taipei 音樂展演空間",
+   "url": "https://www.legacy.com.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "iNDIEVOX"
+   ]
+  },
+  {
+   "category": "Live House",
+   "name": "PIPE Live Music",
+   "url": "https://www.pipelivemusic.com/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "KKTIX"
+   ]
+  },
+  {
+   "category": "Live House",
+   "name": "河岸留言",
+   "url": "https://www.riverside.com.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "Live House",
+   "name": "SUB 臺北流行音樂中心",
+   "url": "https://www.instagram.com/sub.taipei/",
+   "region": "台北",
+   "via": [
+    "iNDIEVOX",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "Live House",
+   "name": "Clapper Studio 三創",
+   "url": "https://www.syntrend.com.tw/",
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "iNDIEVOX"
+   ]
+  },
+  {
+   "category": "Live House",
+   "name": "Zepp New Taipei",
+   "url": "https://www.zepp.co.jp/hall/newtaipei/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "KKTIX"
+   ]
+  },
+  {
+   "category": "Live House",
+   "name": "女巫店",
+   "url": "https://witchhouse.org/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "小劇場",
+   "name": "牯嶺街小劇場",
+   "url": "https://www.glt.org.tw/",
+   "region": "台北",
+   "via": [
+    "文化部藝文活動"
+   ]
+  },
+  {
+   "category": "小劇場",
+   "name": "臺北偶戲館",
+   "url": "https://www.taipeipuppet.com/",
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "獨立書店",
+   "name": "田園城市生活風格書店",
+   "url": "https://www.gardencity.com.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "獨立書店",
+   "name": "朋丁 pon ding",
+   "url": "https://pon-ding.com/",
+   "region": "台北"
+  },
+  {
+   "category": "獨立書店",
+   "name": "誠品書店（信義、敦南）",
+   "url": "https://www.eslitecorp.com/",
+   "region": "台北",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "畫廊空間",
+   "name": "國家攝影文化中心",
+   "url": "https://ncpi.ntmofa.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "畫廊空間",
+   "name": "就在藝術空間",
+   "url": "https://www.projectfulfill.com/",
+   "region": "台北"
+  },
+  {
+   "category": "畫廊空間",
+   "name": "谷公館",
+   "url": "https://www.michaelkugallery.com/",
+   "region": "台北",
+   "via": [
+    "臺北旅遊網"
+   ]
+  },
+  {
+   "category": "畫廊空間",
+   "name": "誠品畫廊",
+   "url": "https://www.eslitegallery.com/",
+   "region": "台北",
+   "via": [
+    "臺北旅遊網",
+    "非池中藝術網"
+   ]
+  },
+  {
+   "category": "畫廊空間",
+   "name": "關渡美術館",
+   "url": "https://kdmofa.tnua.edu.tw/",
+   "region": "台北",
+   "via": [
+    "非池中藝術網",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "歷史街區",
+   "name": "剝皮寮歷史街區",
+   "url": "https://www.bopiliao.taipei/",
    "region": "台北"
   },
   {
