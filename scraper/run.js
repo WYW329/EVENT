@@ -5,14 +5,14 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { culture, tourism } from './sources/national.js';
 import { travel, ccms, afmc, babycare, water } from './sources/taoyuan.js';
-import { kktix, accupass, cycc } from './sources/platforms.js';
+import { kktix, accupass, cycc, g11 } from './sources/platforms.js';
 import { normTitle, dateOf, toMs, todayTaipei, finalizeCategories } from './util.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
-export const SOURCES = [travel, tourism, afmc, culture, ccms, babycare, water, cycc, kktix, accupass];
+export const SOURCES = [travel, tourism, afmc, culture, ccms, babycare, water, cycc, g11, kktix, accupass];
 
 const richness = (e) => ['venue', 'address', 'image', 'summary', 'url', 'regStart'].filter((k) => e[k]).length;
 

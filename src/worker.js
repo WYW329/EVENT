@@ -150,8 +150,31 @@ async function sendReminders(env, now = Date.now()) {
   return { reminders: rows.length, sent };
 }
 
+/**
+ * GitHub 的免費排程在新 repo 常常延後好幾小時，所以改由這裡每 30 分鐘叫 GitHub 執行抓取。
+ * 需要 secret GH_TOKEN（只有 EVENT repo 的 Actions 讀寫權限）。
+ */
+async function triggerScrape(env, now = new Date()) {
+  if (!env.GH_TOKEN || now.getUTCMinutes() % 30 !== 3) return null;
+  const res = await fetch(`https://api.github.com/repos/${env.GH_REPO || 'WYW329/EVENT'}/actions/workflows/scrape.yml/dispatches`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: 'application/vnd.github+json', 'User-Agent': 'event-radar', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ref: 'main' }),
+  });
+  return res.status; // 204 = 成功
+}
+
 async function tick(env) {
   const out = { at: new Date().toISOString() };
+  try {
+    const s = await triggerScrape(env);
+    if (s !== null) {
+      out.scrapeTrigger = s;
+      await env.DB.prepare('INSERT INTO meta (k, v) VALUES (?, ?) ON CONFLICT(k) DO UPDATE SET v = excluded.v').bind('lastScrapeTrigger', JSON.stringify({ at: out.at, status: s })).run();
+    }
+  } catch (err) {
+    out.scrapeTriggerError = err.message;
+  }
   try {
     Object.assign(out, await checkNewEvents(env));
   } catch (err) {
@@ -180,8 +203,9 @@ async function api(req, env, ctx, url) {
   if (p === '/api/health') return json({ ok: true });
   if (p === '/api/tick') {
     const last = await getMeta(env, 'lastTick');
+    const trig = await getMeta(env, 'lastScrapeTrigger');
     const subs = await env.DB.prepare('SELECT COUNT(*) AS n FROM subs').first('n');
-    return json({ ok: true, lastTick: last ? JSON.parse(last) : null, subs, pushReady: pushReady(env) });
+    return json({ ok: true, lastTick: last ? JSON.parse(last) : null, lastScrapeTrigger: trig ? JSON.parse(trig) : null, scrapeTriggerReady: Boolean(env.GH_TOKEN), subs, pushReady: pushReady(env) });
   }
 
   if (p === '/api/subscribe' && m === 'POST') {

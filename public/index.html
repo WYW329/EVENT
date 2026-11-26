@@ -18,6 +18,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
   <link rel="stylesheet" href="/style.css" />
+  <script>
+    // 先套用主題，避免畫面閃一下
+    try {
+      document.documentElement.dataset.theme = JSON.parse(localStorage.getItem('tyev.theme') || '"peach"');
+      document.documentElement.dataset.mode = JSON.parse(localStorage.getItem('tyev.mode') || '"auto"');
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <!-- 圖示（inline SVG，用 <use> 引用） -->
@@ -37,6 +44,10 @@
     <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Zm0 0v14m6-12v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
     <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.5 0-2.6.8-2.6 2s1.1 1.6 2.6 2 2.6.8 2.6 2-1.1 2-2.6 2c-1.1 0-2.1-.5-2.6-1.3M12 6.5V8M12 16v1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15L6 16Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 8l8 2.5V21M3 21h18M7.5 8h1M7.5 12h1M7.5 16h1M15.5 13h1M15.5 17h1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4.5h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
 
@@ -47,7 +58,10 @@
         <h1>活動雷達</h1>
         <span class="sig">made by WYC</span>
       </div>
-      <button class="icon-btn" id="refreshBtn" title="重新整理" aria-label="重新整理"><svg><use href="#i-refresh"/></svg></button>
+      <div class="top-btns">
+        <button class="icon-btn" id="refreshBtn" title="重新整理" aria-label="重新整理"><svg><use href="#i-refresh"/></svg></button>
+        <button class="icon-btn bell" id="bellBtn" title="新活動" aria-label="新活動"><svg><use href="#i-bell"/></svg><span class="badge" id="bellBadge" hidden></span></button>
+      </div>
     </div>
     <div class="search-wrap" id="searchWrap">
       <svg class="search-ico"><use href="#i-search"/></svg>
@@ -65,6 +79,15 @@
         <button data-when="weekend" class="chip">這個週末</button>
         <button data-when="week" class="chip">7 天內</button>
         <button data-when="month" class="chip">30 天內</button>
+      </div>
+      <div class="chips" id="quickChips" aria-label="快速篩選">
+        <button data-quick="免費" class="chip soft">免費</button>
+        <button data-quick="親子" class="chip soft">親子</button>
+        <button data-quick="展覽" class="chip soft">展覽</button>
+        <button data-quick="表演" class="chip soft">表演</button>
+        <button data-quick="節慶市集" class="chip soft">市集節慶</button>
+        <button data-quick="講座課程" class="chip soft">講座課程</button>
+        <button data-quick="體驗" class="chip soft">體驗</button>
       </div>
       <div class="filters">
         <label class="sel"><select id="catSel" aria-label="類別"><option value="">所有類別</option></select></label>
@@ -97,8 +120,36 @@
       <div id="starList" class="list"></div>
     </section>
 
+    <!-- 網站 -->
+    <section class="view" id="view-sites" data-view="sites" hidden>
+      <div class="intro">
+        <h2>活動網站</h2>
+        <p id="sitesHint">桃園常辦活動的單位和平台。標示「自動收錄」的已經會自動抓進活動雷達。</p>
+      </div>
+      <div class="search-wrap inline">
+        <svg class="search-ico"><use href="#i-search"/></svg>
+        <input id="siteQ" type="text" inputmode="search" enterkeyhint="search" placeholder="搜尋網站…" autocomplete="off" />
+      </div>
+      <div id="siteList" class="site-list"></div>
+    </section>
+
     <!-- 設定 -->
     <section class="view" id="view-set" data-view="set" hidden>
+      <div class="card pad">
+        <h2>外觀</h2>
+        <fieldset>
+          <legend>主題</legend>
+          <div class="themes" id="themePick"></div>
+        </fieldset>
+        <fieldset>
+          <legend>深淺色</legend>
+          <div class="seg" id="modePick">
+            <button data-mode="auto">跟系統</button>
+            <button data-mode="light">淺色</button>
+            <button data-mode="dark">深色</button>
+          </div>
+        </fieldset>
+      </div>
       <div class="card pad" id="pushCard">
         <h2>通知</h2>
         <p id="pushStatus" class="hint"></p>
@@ -154,11 +205,26 @@
     <button data-go="list" class="on"><svg><use href="#i-cal"/></svg>活動</button>
     <button data-go="reg"><svg><use href="#i-alarm"/></svg>搶報名</button>
     <button data-go="star"><svg><use href="#i-star"/></svg>收藏</button>
+    <button data-go="sites"><svg><use href="#i-globe"/></svg>網站</button>
     <button data-go="set"><svg><use href="#i-gear"/></svg>設定</button>
   </nav>
 
   <dialog id="detail" class="sheet" aria-label="活動詳情">
     <div class="sheet-scroll" id="detailBody"></div>
+  </dialog>
+
+  <dialog id="inbox" class="sheet small" aria-label="新活動">
+    <div class="sheet-scroll">
+      <div class="inbox-head">
+        <h2>新活動</h2>
+        <div class="row-btns">
+          <button class="btn ghost small" id="readAll">全部已讀</button>
+          <button class="round flat" data-close-inbox aria-label="關閉"><svg><use href="#i-x"/></svg></button>
+        </div>
+      </div>
+      <p class="meta pad-x" id="inboxHint"></p>
+      <div id="inboxList" class="list pad-x"></div>
+    </div>
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

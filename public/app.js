@@ -34,9 +34,13 @@ const S = {
   starred: new Set(store.get('starred', [])),
   subId: store.get('subId', null),
   prefs: store.get('prefs', null),
-  lastVisit: store.get('lastVisit', null),
   view: 'list',
   when: 'all',
+  quick: new Set(),
+  // 鈴鐺：baseline 之後新增、而且還沒讀過的活動算未讀
+  baseline: store.get('baseline', null),
+  read: new Set(store.get('read', [])),
+  sites: null,
 };
 
 // ---------- 時間（一律以台北時間顯示） ----------
@@ -148,40 +152,57 @@ function regTag(e, mode) {
   return '';
 }
 
-/** 左邊的小方塊：mode = time（列表依日期分組時顯示時間）、date（顯示日期）、reg（顯示開放報名日期） */
-function tile(e, mode) {
-  if (mode === 'reg') {
-    const x = tp(ms(e.regStart));
-    const soon = ms(e.regStart) - Date.now() < 3 * 86400000;
-    return `<div class="tile ${soon ? 'hot' : ''}"><span class="m">${x.m}月</span><span class="d">${x.d}</span><span class="w">${hasTime(e.regStart) ? fmtTime(e.regStart) : `週${WEEK[x.w]}`}</span></div>`;
+/** 活動是哪個單位辦的（主辦、局處、場館，最後才用資料來源）。 */
+function unitOf(e) {
+  const org = e.extra?.organizer || e.extra?.office;
+  if (org && !/^(桃園市政府)$/.test(org)) return org;
+  return e.venue || org || e.sourceName;
+}
+
+/** 小小的時間狀態：今天、明天、N 天後、進行中・剩 N 天、今天結束。 */
+function whenLabel(e) {
+  const today = ms(todayKey());
+  const s = ms(dayKey(ms(e.start)));
+  const end = ms(dayKey(ms(e.end ?? e.start)));
+  const days = (a, b) => Math.round((a - b) / 86400000);
+  if (s > today) {
+    const n = days(s, today);
+    if (n === 1) return '<span class="when soon">明天</span>';
+    return `<span class="when ${n <= 3 ? 'soon' : ''}">${n} 天後</span>`;
   }
-  if (mode === 'date') {
-    const x = tp(ms(e.start));
-    return `<div class="tile"><span class="m">${x.m}月</span><span class="d">${x.d}</span><span class="w">週${WEEK[x.w]}</span></div>`;
+  if (end === today) return s === today ? '<span class="when today">今天</span>' : '<span class="when ending">今天結束</span>';
+  if (end > today && s <= today) {
+    const left = days(end, today);
+    return `<span class="when ${left <= 3 ? 'ending' : ''}">進行中・剩 ${left} 天</span>`;
   }
-  const multiDay = e.end && dayKey(ms(e.end)) !== dayKey(ms(e.start));
-  if (multiDay) {
-    const x = tp(ms(e.end));
-    return `<div class="tile"><span class="lb">展期至</span><span class="tm">${x.m}/${x.d}</span></div>`;
+  return '';
+}
+
+/** 卡片上的時間（小字）。mode=time 時已經依日期分組，只顯示幾點或展期。 */
+function timeText(e, mode) {
+  if (mode === 'reg') return `報名 ${fmtDT(e.regStart)}`;
+  const multi = e.end && dayKey(ms(e.end)) !== dayKey(ms(e.start));
+  if (mode === 'time') {
+    if (multi) return `${fmtDate(e.start)} ～ ${fmtDate(e.end)}`;
+    if (hasTime(e.start)) return `${fmtTime(e.start)}${hasTime(e.end) && e.end !== e.start ? `–${fmtTime(e.end)}` : ''}`;
+    return '全天';
   }
-  if (hasTime(e.start)) return `<div class="tile"><span class="tm">${fmtTime(e.start)}</span>${hasTime(e.end) && e.end !== e.start ? `<span class="lb">–${fmtTime(e.end)}</span>` : ''}</div>`;
-  return '<div class="tile"><span class="lb">全天</span></div>';
+  return fmtRange(e.start, e.end);
 }
 
 function card(e, mode = 'time') {
-  const isNew = S.lastVisit && e.firstSeen && e.firstSeen > S.lastVisit && e.source !== 'manual';
+  const isNew = isUnread(e);
   const cats = catsOf(e);
-  const place = [e.venue, e.district].filter(Boolean).join('・');
-  const when = mode === 'time' ? '' : fmtRange(e.start, e.end);
+  const unit = unitOf(e);
+  const place = [e.venue && e.venue !== unit ? e.venue : null, e.district].filter(Boolean).join('・');
   const seats = e.extra?.seatsLeft != null && e.extra.seatsLeft > 0 ? `<span class="tag">剩 ${e.extra.seatsLeft} 位</span>` : '';
   const thumb = e.image ? `<img class="thumb" src="${esc(e.image)}" alt="" loading="lazy" onerror="this.closest('.ev').classList.remove('has-thumb');this.remove()">` : '';
   return `
     <article class="ev ${e.image ? 'has-thumb' : ''}" data-id="${esc(e.id)}" tabindex="0">
-      ${tile(e, mode)}
       <div class="ev-body">
+        <div class="unit">${icon('building')}<span>${esc(unit)}</span></div>
         <div class="t">${esc(e.title)}</div>
-        ${when ? `<div class="sub">${icon('clock')}<span>${esc(when)}</span></div>` : ''}
-        ${place ? `<div class="sub">${icon('pin')}<span>${esc(place)}</span></div>` : ''}
+        <div class="line">${whenLabel(e)}<span>${icon('clock')}${esc(timeText(e, mode))}</span>${place ? `<span class="place">${icon('pin')}${esc(place)}</span>` : ''}</div>
         <div class="tags">
           ${isNew ? '<span class="tag new">NEW</span>' : ''}
           ${regTag(e, mode)}
@@ -193,6 +214,112 @@ function card(e, mode = 'time') {
       ${thumb}
       <button class="star-btn ${S.starred.has(e.id) ? 'on' : ''}" data-star="${esc(e.id)}" aria-label="收藏">${icon(S.starred.has(e.id) ? 'star-fill' : 'star')}</button>
     </article>`;
+}
+
+// ---------- 鈴鐺：未讀的新活動 ----------
+/** 第一次使用時，把最近 24 小時新增的活動算成未讀；之後新增的也都算。 */
+function ensureBaseline() {
+  if (!S.baseline) {
+    S.baseline = new Date(Date.now() - 86400000).toISOString();
+    store.set('baseline', S.baseline);
+  }
+}
+const isUnread = (e) => Boolean(S.baseline && e.firstSeen && e.firstSeen > S.baseline && !S.read.has(e.id) && e.category !== '親子館');
+const unreadList = () => S.events.filter(isUnread).sort((a, b) => (b.firstSeen > a.firstSeen ? 1 : -1));
+
+function saveRead() {
+  // 只保留還存在的活動，避免越存越大
+  const alive = new Set(S.events.map((e) => e.id));
+  S.read = new Set([...S.read].filter((id) => alive.has(id)));
+  store.set('read', [...S.read]);
+}
+function markRead(ids) {
+  for (const id of ids) S.read.add(id);
+  saveRead();
+  renderBell();
+}
+
+function renderBell() {
+  const n = unreadList().length;
+  const badge = $('#bellBadge');
+  badge.hidden = n === 0;
+  badge.textContent = n > 99 ? '99+' : String(n);
+  $('#bellBtn').setAttribute('aria-label', n ? `${n} 個新活動` : '新活動');
+  if ($('#inbox').open) renderInbox();
+}
+
+function renderInbox() {
+  const list = unreadList();
+  $('#inboxHint').textContent = list.length ? `${list.length} 個還沒看過的新活動。點開會標為已讀，按 ✕ 可以直接刪掉。` : '';
+  $('#inboxList').innerHTML = list.length
+    ? list
+        .map(
+          (e) => `<div class="inbox-item" data-inbox="${esc(e.id)}">
+            <div><div class="t">${esc(e.title)}</div><div class="s">${esc(unitOf(e))}・${esc(fmtRange(e.start, e.end))}</div><div class="tags" style="margin-top:5px">${regTag(e)}${catsOf(e).slice(0, 3).map((c) => `<span class="tag ${c === '免費' ? 'free' : 'cat'}">${esc(c)}</span>`).join('')}</div></div>
+            <button class="x" data-dismiss="${esc(e.id)}" aria-label="刪除">${icon('x')}</button>
+          </div>`,
+        )
+        .join('')
+    : '<div class="empty"><b>🔔</b>沒有未讀的新活動</div>';
+}
+
+function openInbox() {
+  renderInbox();
+  lockScroll();
+  $('#inbox').showModal();
+}
+function closeInbox() {
+  if ($('#inbox').open) $('#inbox').close();
+  unlockScroll();
+}
+
+// ---------- 網站頁 ----------
+async function loadSites() {
+  if (S.sites) return S.sites;
+  try {
+    S.sites = (await (await fetch('/sites.json')).json()).sites;
+  } catch {
+    S.sites = [];
+  }
+  return S.sites;
+}
+async function renderSites() {
+  const sites = await loadSites();
+  const q = $('#siteQ').value.trim().toLowerCase();
+  const list = sites.filter((s) => !q || `${s.name} ${s.category} ${s.url}`.toLowerCase().includes(q));
+  const groups = new Map();
+  for (const s of list) (groups.get(s.category) ?? groups.set(s.category, []).get(s.category)).push(s);
+  $('#sitesHint').textContent = `共 ${sites.length} 個桃園常辦活動的單位和平台；「自動收錄」的已經會自動抓進活動雷達。`;
+  $('#siteList').innerHTML =
+    [...groups]
+      .map(([cat, items]) => `<div class="site-group"><h3>${esc(cat)} <small>${items.length}</small></h3><div class="site-card">${items
+        .map((s) => {
+          const host = new URL(s.url).hostname.replace(/^www\./, '');
+          return `<a class="site" href="${esc(s.url)}" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span class="n"><b>${esc(s.name)}</b><small>${esc(host)}</small></span>${s.auto ? '<span class="tag free">自動收錄</span>' : ''}</a>`;
+        })
+        .join('')}</div></div>`)
+      .join('') || '<div class="empty">找不到符合的網站</div>';
+}
+
+// ---------- 主題 ----------
+const THEMES = [
+  ['peach', '蜜桃', '#e0475f', '#f08a5d'],
+  ['ocean', '海洋', '#1f74d1', '#22b3c9'],
+  ['forest', '森林', '#2f8a4c', '#9cbf3b'],
+  ['lavender', '薰衣草', '#7a55d6', '#d26fc0'],
+  ['sunset', '夕陽', '#e8641e', '#f2b33d'],
+  ['mono', '黑白', '#2b2b2b', '#8a8a8a'],
+];
+function applyTheme(theme, mode) {
+  const root = document.documentElement;
+  if (theme) { root.dataset.theme = theme; store.set('theme', theme); }
+  if (mode) { root.dataset.mode = mode; store.set('mode', mode); }
+  $$('.theme-opt').forEach((b) => b.classList.toggle('on', b.dataset.theme === root.dataset.theme));
+  $$('#modePick button').forEach((b) => b.classList.toggle('on', b.dataset.mode === root.dataset.mode));
+}
+function buildThemePicker() {
+  $('#themePick').innerHTML = THEMES.map(([id, name, a, b]) => `<button type="button" class="theme-opt" data-theme="${id}"><span class="sw" style="background:linear-gradient(135deg,${a},${b})"></span>${name}</button>`).join('');
+  applyTheme();
 }
 
 // ---------- 活動列表 ----------
@@ -219,9 +346,11 @@ function filtered() {
   const cat = $('#catSel').value;
   const city = $('#citySel').value;
   const hideBaby = $('#hideBaby').checked;
+  const quick = [...S.quick];
   return S.events.filter((e) => {
     if (hideBaby && e.category === '親子館' && cat !== '親子館') return false;
     if (cat && !catsOf(e).includes(cat)) return false;
+    if (quick.length && !quick.every((c) => catsOf(e).includes(c))) return false;
     if (city && cityOf(e) !== city) return false;
     if (!inWhen(e, S.when)) return false;
     if (q && !`${e.title} ${e.venue ?? ''} ${e.district ?? ''} ${cityOf(e)} ${e.sourceName} ${e.summary ?? ''}`.toLowerCase().includes(q)) return false;
@@ -250,8 +379,8 @@ function renderList() {
     html += `<div class="day-head">進行中<span class="sub">${ongoing.length} 個・依結束日排序</span></div>` + ongoing.map((e) => card(e, 'time')).join('');
   }
   $('#list').innerHTML = html || '<div class="empty"><b>🔍</b>沒有符合條件的活動</div>';
-  const newCount = S.lastVisit ? S.events.filter((e) => e.firstSeen > S.lastVisit && e.source !== 'manual').length : 0;
-  $('#listMeta').textContent = `共 ${list.length} 個活動${newCount ? `・上次來之後新增 ${newCount} 個` : ''}${S.updatedAt ? `・更新於 ${fmtDT(S.updatedAt)}` : ''}`;
+  const newCount = unreadList().length;
+  $('#listMeta').textContent = `共 ${list.length} 個活動${newCount ? `・${newCount} 個新活動未讀` : ''}${S.updatedAt ? `・更新於 ${fmtDT(S.updatedAt)}` : ''}`;
 }
 
 function renderReg() {
@@ -306,6 +435,7 @@ function renderAll() {
   renderReg();
   renderStar();
   renderSources();
+  renderBell();
 }
 
 // ---------- 活動詳情 ----------
@@ -329,7 +459,9 @@ function openDetail(id) {
   const cats = catsOf(e);
   const starred = S.starred.has(e.id);
   const priceText = e.free === true ? '免費' : e.free === false ? (e.extra?.prices?.join('、') || '需付費') : '';
+  if (isUnread(e)) markRead([e.id]);
   const rows = [
+    ['building', '單位', esc(unitOf(e))],
     ['clock', '時間', esc(fmtRange(e.start, e.end) + (e.extra?.note ? `（${e.extra.note}）` : ''))],
     e.regStart ? ['ticket', '開放報名', `${esc(fmtDT(e.regStart))}${ms(e.regStart) > Date.now() ? ` <span class="countdown">${countdown(e.regStart)}</span>` : ''}${e.regEnd ? `<br><span class="k">截止 ${esc(fmtDT(e.regEnd))}</span>` : ''}`] : null,
     e.venue || e.address ? ['pin', '地點', `${esc(e.venue ?? e.address)}${e.address && e.address !== e.venue ? `<br><span class="k">${esc(e.address)}</span>` : ''}<br><a href="https://www.google.com/maps/search/?api=1&query=${mapQ}" target="_blank" rel="noopener">在地圖上看</a>`] : null,
@@ -566,6 +698,7 @@ function go(view) {
   $$('.tabs button').forEach((b) => b.classList.toggle('on', b.dataset.go === view));
   $('#searchWrap').hidden = view !== 'list';
   if (view === 'set') renderPush();
+  if (view === 'sites') renderSites();
   window.scrollTo({ top: 0 });
 }
 
@@ -590,6 +723,31 @@ function bind() {
   for (const id of ['#catSel', '#citySel', '#hideBaby']) $(id).addEventListener('change', () => { saveFilters(); renderList(); });
   $('#regHideBaby').addEventListener('change', renderReg);
   $('#regFreeOnly').addEventListener('change', renderReg);
+  $('#quickChips').addEventListener('click', (ev) => {
+    const b = ev.target.closest('button[data-quick]');
+    if (!b) return;
+    const c = b.dataset.quick;
+    S.quick.has(c) ? S.quick.delete(c) : S.quick.add(c);
+    b.classList.toggle('on', S.quick.has(c));
+    renderList();
+  });
+  $('#siteQ').addEventListener('input', () => renderSites());
+  $('#siteQ').addEventListener('keydown', (ev) => { if (ev.key === 'Enter') ev.target.blur(); });
+  $('#themePick').addEventListener('click', (ev) => { const b = ev.target.closest('[data-theme]'); if (b) applyTheme(b.dataset.theme); });
+  $('#modePick').addEventListener('click', (ev) => { const b = ev.target.closest('[data-mode]'); if (b) applyTheme(null, b.dataset.mode); });
+
+  // 鈴鐺與新活動清單
+  $('#bellBtn').addEventListener('click', openInbox);
+  $('#readAll').addEventListener('click', () => { markRead(unreadList().map((e) => e.id)); renderInbox(); renderList(); toast('已全部標為已讀'); });
+  const inbox = $('#inbox');
+  inbox.addEventListener('click', (ev) => {
+    if (ev.target === inbox || ev.target.closest('[data-close-inbox]')) return closeInbox();
+    const x = ev.target.closest('[data-dismiss]');
+    if (x) { ev.stopPropagation(); markRead([x.dataset.dismiss]); renderInbox(); renderList(); return; }
+    const item = ev.target.closest('[data-inbox]');
+    if (item) { const id = item.dataset.inbox; closeInbox(); openDetail(id); renderList(); }
+  });
+  inbox.addEventListener('close', unlockScroll);
 
   document.addEventListener('click', (ev) => {
     const star = ev.target.closest('[data-star],[data-star-detail]');
@@ -636,7 +794,7 @@ function handleHash(hash) {
   const h = String(hash ?? '').replace(/^.*#/, '#');
   const m = h.match(/^#event=(.+)$/);
   if (m) { go('list'); openDetail(decodeURIComponent(m[1])); }
-  if (h === '#new') go('list');
+  if (h === '#new') { go('list'); openInbox(); }
 }
 
 async function init() {
@@ -644,14 +802,15 @@ async function init() {
   const f = store.get('filters', null);
   if (f) { $('#catSel').value = CATEGORIES.includes(f.cat) ? f.cat : ''; $('#hideBaby').checked = f.hideBaby ?? true; }
   buildPrefsForm();
+  buildThemePicker();
   fillPrefs();
   bind();
   registerSW().then(() => renderPush());
   await loadEvents();
+  ensureBaseline();
   renderAll();
+  if (unreadList().length) $('#bellBtn').classList.add('ring');
   handleHash(location.hash);
-  // 這次看到的時間，下次用來標「NEW」
-  setTimeout(() => store.set('lastVisit', new Date().toISOString()), 1500);
   // 同步伺服器上的收藏和設定
   if (S.subId) {
     api(`/api/me?id=${S.subId}`).then((r) => {

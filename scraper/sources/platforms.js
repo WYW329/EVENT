@@ -127,6 +127,98 @@ export const accupass = {
   },
 };
 
+// ---------- 桃知道 GELEVEN PLAZA（商場展演廳、市集、活動；網站是 Cyberbiz 部落格） ----------
+const G11_BLOGS = [
+  ['同期活動精選', '展覽'],
+  ['最新活動', null],
+  ['市集活動', '節慶市集'],
+];
+
+/** 「11/21 - 1/28 | 化石博覽會 冰河巨獸展」→ 日期區間＋標題。年份取最接近現在的。 */
+export function splitDatedTitle(raw, now = Date.now()) {
+  const t = String(raw ?? '').replace(/\s+/g, ' ').trim();
+  const m = t.match(/^(?:(\d{4})[./])?(\d{1,2})[./](\d{1,2})(?:\s*\([^)]*\))?\s*(?:[-~～至]\s*(?:(\d{4})[./])?(\d{1,2})[./](\d{1,2})(?:\s*\([^)]*\))?)?\s*[|｜]\s*(.+)$/);
+  const title = (m ? m[7] : t).replace(/^[|｜\s]+|[|｜\s]+$/g, '').replace(/\s*[|｜]\s*/g, '｜');
+  if (!m) return { title, start: null, end: null };
+  const nowY = taipeiYear(now);
+  const pick = (y, mo, d) => {
+    if (y) return makeDate(Number(y), mo, d);
+    // 沒寫年：取離現在最近的一年（跨年展期的結束日會在明年）
+    const cands = [nowY - 1, nowY, nowY + 1].map((yy) => makeDate(yy, mo, d));
+    return cands.sort((a, b) => Math.abs(Date.parse(a) - now) - Math.abs(Date.parse(b) - now))[0];
+  };
+  const start = pick(m[1], m[2], m[3]);
+  let end = m[5] ? pick(m[4], m[5], m[6]) : start;
+  if (end < start) end = makeDate(Number(end.slice(0, 4)) + 1, m[5], m[6]);
+  return { title, start, end };
+}
+const taipeiYear = (ms) => new Date(ms + 8 * 3600000).getUTCFullYear();
+const makeDate = (y, mo, d) => `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+
+export function parseG11Blog(html) {
+  const $ = cheerio.load(html);
+  const items = [];
+  $('#blog_articles .article').each((_, el) => {
+    const box = $(el);
+    const a = box.find('.article_title a').first();
+    const href = a.attr('href');
+    if (!href) return;
+    const style = box.find('.article_image a').attr('style') ?? '';
+    const img = style.match(/url\(['"]?([^'")]+)/)?.[1];
+    items.push({ href, raw: a.attr('title') || a.text(), image: img ? (img.startsWith('//') ? `https:${img}` : img) : null });
+  });
+  return items;
+}
+
+export const g11 = {
+  id: 'g11',
+  name: '桃知道 GELEVEN PLAZA',
+  async fetch() {
+    const out = [];
+    const seen = new Set();
+    for (const [blog, cat] of G11_BLOGS) {
+      const html = await fetchText(`https://www.g11.com.tw/blogs/${encodeURIComponent(blog)}`);
+      for (const it of parseG11Blog(html)) {
+        const url = new URL(encodeURI(decodeURI(it.href)), 'https://www.g11.com.tw/').href;
+        if (seen.has(url)) continue;
+        seen.add(url);
+        let { title, start, end } = splitDatedTitle(it.raw);
+        let summary = null;
+        // 標題沒寫日期的，到內文找「活動時間」
+        const page = await fetchText(url).catch(() => '');
+        if (page) {
+          const $ = cheerio.load(page);
+          const body = $('.article_content, .blog_content, article').first().text().replace(/\s+/g, ' ').trim();
+          summary = body.slice(0, 1500) || null;
+          if (!start) {
+            const d = splitDatedTitle(`${body.match(/(?:活動|展覽|市集)?(?:時間|日期|期間)\s*[:：]\s*([\d/.\s\-~～至()（）一二三四五六日]+)/)?.[1] ?? ''} | x`);
+            if (d.start) ({ start, end } = d);
+          }
+        }
+        if (!start) continue; // 沒有日期就不列（例如全館公告）
+        // 同一個活動常同時貼在「最新活動」和「展演廳」
+        if (out.some((e) => e.title === title && e.start === start)) continue;
+        out.push(
+          makeEvent(this, decodeURIComponent(url.split('/blogs/')[1]), {
+            title,
+            start,
+            end,
+            venue: blog === '同期活動精選' ? '桃知道 3F 展演廳' : '桃知道 GELEVEN PLAZA',
+            address: '桃園市桃園區南平路',
+            district: '桃園區',
+            category: cat ?? undefined,
+            url,
+            image: it.image,
+            summary,
+            extra: { organizer: '桃知道 GELEVEN PLAZA' },
+          }),
+        );
+      }
+    }
+    return out;
+  },
+};
+
 // ---------- 中原文創園區 ----------
 export function parseCyccEvents(html) {
   const $ = cheerio.load(html);

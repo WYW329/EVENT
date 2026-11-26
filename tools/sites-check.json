@@ -1,0 +1,1074 @@
+[
+ {
+  "category": "市府機關",
+  "name": "桃園市政府",
+  "url": "https://www.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府"
+ },
+ {
+  "category": "市府機關",
+  "name": "桃園觀光導覽網",
+  "url": "https://travel.tycg.gov.tw/zh-tw/event/calendar",
+  "status": 200,
+  "ok": true,
+  "title": "節慶與活動 | 桃園觀光導覽網"
+ },
+ {
+  "category": "市府機關",
+  "name": "文化局",
+  "url": "https://culture.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府文化局"
+ },
+ {
+  "category": "市府機關",
+  "name": "農業局",
+  "url": "https://agriculture.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府農業局"
+ },
+ {
+  "category": "市府機關",
+  "name": "青年事務局",
+  "url": "https://youth.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府青年事務局"
+ },
+ {
+  "category": "市府機關",
+  "name": "客家事務局",
+  "url": "https://www.hakka.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府客家事務局"
+ },
+ {
+  "category": "市府機關",
+  "name": "原住民族行政局",
+  "url": "https://ipb.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府原住民族行政局"
+ },
+ {
+  "category": "市府機關",
+  "name": "婦幼發展局",
+  "url": "https://dowcd.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府婦幼發展局"
+ },
+ {
+  "category": "市府機關",
+  "name": "地政局",
+  "url": "https://land.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府地政局"
+ },
+ {
+  "category": "市府機關",
+  "name": "社會局",
+  "url": "https://sab.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府社會局"
+ },
+ {
+  "category": "市府機關",
+  "name": "教育局",
+  "url": "https://www.tyc.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府教育局"
+ },
+ {
+  "category": "市府機關",
+  "name": "經濟發展局",
+  "url": "https://edb.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府經濟發展局"
+ },
+ {
+  "category": "市府機關",
+  "name": "水務局",
+  "url": "https://wrb.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府水務局"
+ },
+ {
+  "category": "市府機關",
+  "name": "消防局",
+  "url": "https://www.tyfd.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府消防局"
+ },
+ {
+  "category": "市府機關",
+  "name": "性別平等辦公室",
+  "url": "https://www.oge.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府性別平等辦公室"
+ },
+ {
+  "category": "市府機關",
+  "name": "新住民專區",
+  "url": "https://tynewimmigrants.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府新住民專區-首頁"
+ },
+ {
+  "category": "市府機關",
+  "name": "風景區管理處",
+  "url": "https://www.scenic.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府風景區管理處"
+ },
+ {
+  "category": "市府機關",
+  "name": "家庭教育中心",
+  "url": "https://family.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府家庭教育中心"
+ },
+ {
+  "category": "市府機關",
+  "name": "衛生局",
+  "url": "https://dph.tycg.gov.tw/",
+  "status": 428,
+  "ok": false,
+  "title": ""
+ },
+ {
+  "category": "市府機關",
+  "name": "警察局",
+  "url": "https://www.typd.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府警察局"
+ },
+ {
+  "category": "市府機關",
+  "name": "民政局",
+  "url": "https://cab.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府民政局"
+ },
+ {
+  "category": "市府機關",
+  "name": "勞動局",
+  "url": "https://dol.tycg.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "市府機關",
+  "name": "環境保護局",
+  "url": "https://www.tyepb.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "UND_ERR_CONNECT_TIMEOUT"
+ },
+ {
+  "category": "市府機關",
+  "name": "體育局",
+  "url": "https://dsa.tycg.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "市府機關",
+  "name": "交通局",
+  "url": "https://dot.tycg.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "市府機關",
+  "name": "動物保護處",
+  "url": "https://animal.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府動物保護處"
+ },
+ {
+  "category": "市府機關",
+  "name": "孔廟忠烈祠聯合管理所",
+  "url": "https://tycmcrs.tycg.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "報名預約",
+  "name": "親子館報名（桃園育兒資源網）",
+  "url": "https://babycare.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園育兒資源網"
+ },
+ {
+  "category": "報名預約",
+  "name": "水務局參訪預約",
+  "url": "https://winfo.tycg.gov.tw/R/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府水務局水利設施參訪預約與空間借用系統"
+ },
+ {
+  "category": "報名預約",
+  "name": "文化局線上報名",
+  "url": "https://culture.tycg.gov.tw/ActiveList.aspx?n=23648&sms=20299",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府文化局-線上報名"
+ },
+ {
+  "category": "報名預約",
+  "name": "農業局線上報名",
+  "url": "https://agriculture.tycg.gov.tw/ActiveList.aspx?n=10596&sms=14305",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府農業局-線上報名"
+ },
+ {
+  "category": "報名預約",
+  "name": "客家局線上報名",
+  "url": "https://www.hakka.tycg.gov.tw/ActiveList.aspx?n=26658&sms=20998",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府客家事務局-線上報名"
+ },
+ {
+  "category": "報名預約",
+  "name": "原民局線上報名",
+  "url": "https://ipb.tycg.gov.tw/ActiveList.aspx?n=26673&sms=21008",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府原住民族行政局-線上報名"
+ },
+ {
+  "category": "報名預約",
+  "name": "婦幼局線上報名",
+  "url": "https://dowcd.tycg.gov.tw/ActiveList.aspx?n=16499&sms=18176",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市政府婦幼發展局-線上報名服務"
+ },
+ {
+  "category": "報名預約",
+  "name": "台灣山林悠遊網（東眼山自然教育中心）",
+  "url": "https://recreation.forest.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "台灣山林悠遊網"
+ },
+ {
+  "category": "區公所",
+  "name": "桃園區公所",
+  "url": "https://www.tao.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市桃園區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "中壢區公所",
+  "url": "https://www.zhongli.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市中壢區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "平鎮區公所",
+  "url": "https://www.pingzhen.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市平鎮區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "八德區公所",
+  "url": "https://www.bade.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市八德區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "楊梅區公所",
+  "url": "https://www.yangmei.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市楊梅區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "蘆竹區公所",
+  "url": "https://www.luzhu.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市蘆竹區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "龜山區公所",
+  "url": "https://www.guishan.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市龜山區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "大園區公所",
+  "url": "https://www.dayuan.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市大園區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "觀音區公所",
+  "url": "https://www.guanyin.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市觀音區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "新屋區公所",
+  "url": "https://www.xinwu.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市新屋區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "龍潭區公所",
+  "url": "https://www.longtan.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市龍潭區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "大溪區公所",
+  "url": "https://www.daxi.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市大溪區公所"
+ },
+ {
+  "category": "區公所",
+  "name": "復興區公所",
+  "url": "https://www.fuxing.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市復興區公所"
+ },
+ {
+  "category": "藝文場館",
+  "name": "藝文設施管理中心（展演中心、中壢藝術館等）",
+  "url": "https://www.afmc.gov.tw/Activity",
+  "status": 200,
+  "ok": true,
+  "title": "&#26691;&#22290;&#24066;&#25919;&#24220;&#34269;&#25991;&#35"
+ },
+ {
+  "category": "藝文場館",
+  "name": "桃園市立圖書館",
+  "url": "https://www.typl.gov.tw/zh-tw/Activity",
+  "status": 200,
+  "ok": true,
+  "title": "活動消息 - 桃園市立圖書館"
+ },
+ {
+  "category": "藝文場館",
+  "name": "桃園市立美術館（含兒童美術館、橫山書法館）",
+  "url": "https://tmofa.tycg.gov.tw/ch",
+  "status": 428,
+  "ok": false,
+  "title": ""
+ },
+ {
+  "category": "藝文場館",
+  "name": "大溪木藝生態博物館",
+  "url": "https://wem.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市立大溪木藝生態博物館"
+ },
+ {
+  "category": "藝文場館",
+  "name": "大溪木博館線上報名",
+  "url": "https://wem.fonticket.com/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園市立大溪木藝生態博物館"
+ },
+ {
+  "category": "藝文場館",
+  "name": "中原文創園區",
+  "url": "https://cycc.org.tw/zh-hant/events",
+  "status": 200,
+  "ok": true,
+  "title": "中原文創園區 Chung Yuan Cultural And Creative Park"
+ },
+ {
+  "category": "藝文場館",
+  "name": "桃園市文化基金會",
+  "url": "https://www.taoyuancf.org.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "首頁"
+ },
+ {
+  "category": "藝文場館",
+  "name": "北區青少年活動中心（桃漾館）",
+  "url": "https://ntyac.cyc.org.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "北區青少年活動中心-桃漾館"
+ },
+ {
+  "category": "藝文場館",
+  "name": "桃園光影文化館（KKTIX）",
+  "url": "https://taoyuanartscinema2.kktix.cc/",
+  "status": 200,
+  "ok": true,
+  "title": "桃園光影文化館 - KKTIX"
+ },
+ {
+  "category": "藝文場館",
+  "name": "國立臺灣科學教育館",
+  "url": "https://www.ntsec.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "首頁 - 國立臺灣科學教育館"
+ },
+ {
+  "category": "藝文場館",
+  "name": "國家電影及視聽文化中心",
+  "url": "https://www.tfai.org.tw/",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "藝文場館",
+  "name": "中央大學藝文中心",
+  "url": "https://art.ncu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "Art.NCU"
+ },
+ {
+  "category": "藝文場館",
+  "name": "中原大學",
+  "url": "https://www.cycu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "首頁 - 中原大學Chung Yuan Christian University"
+ },
+ {
+  "category": "藝文場館",
+  "name": "元智大學",
+  "url": "https://www.yzu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "元智大學 Yuan Ze University - 元智大學"
+ },
+ {
+  "category": "藝文場館",
+  "name": "銘傳大學",
+  "url": "https://www.mcu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "銘傳大學 | 亞洲第一所美國認證大學"
+ },
+ {
+  "category": "藝文場館",
+  "name": "長庚大學",
+  "url": "https://www.cgu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "長庚大學"
+ },
+ {
+  "category": "藝文場館",
+  "name": "國立體育大學",
+  "url": "https://www.ntsu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "國立體育大學"
+ },
+ {
+  "category": "藝文場館",
+  "name": "開南大學",
+  "url": "https://www.knu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "藝文場館",
+  "name": "健行科技大學",
+  "url": "https://www.uch.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "健行科技大學Chien Hsin University of Science and Technology"
+ },
+ {
+  "category": "藝文場館",
+  "name": "萬能科技大學",
+  "url": "https://www.vnu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "萬能科技大學 - 智慧航空城大學"
+ },
+ {
+  "category": "藝文場館",
+  "name": "龍華科技大學",
+  "url": "https://www.lhu.edu.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "龍華科技大學 - 龍華科技大學"
+ },
+ {
+  "category": "售票平台",
+  "name": "KKTIX（桃園）",
+  "url": "https://kktix.com/events?search=%E6%A1%83%E5%9C%92",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "售票平台",
+  "name": "Accupass 活動通（桃園）",
+  "url": "https://www.accupass.com/search?l=taoyuan",
+  "status": 200,
+  "ok": true,
+  "title": "桃園活動推薦｜在地最熱門活動盡在 ACCUPASS 活動通"
+ },
+ {
+  "category": "售票平台",
+  "name": "OPENTIX 兩廳院文化生活",
+  "url": "https://www.opentix.life/",
+  "status": 200,
+  "ok": true,
+  "title": "OPENTIX兩廳院文化生活"
+ },
+ {
+  "category": "售票平台",
+  "name": "年代售票",
+  "url": "https://ticket.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "年代售票 | 首頁"
+ },
+ {
+  "category": "售票平台",
+  "name": "ibon 售票",
+  "url": "https://ticket.ibon.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "ibon售票系統"
+ },
+ {
+  "category": "售票平台",
+  "name": "拓元售票",
+  "url": "https://tixcraft.com/",
+  "status": 401,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "售票平台",
+  "name": "BeClass 線上報名",
+  "url": "https://www.beclass.com/",
+  "status": 200,
+  "ok": true,
+  "title": "BeClass 活動發佈系統＋線上報名系統"
+ },
+ {
+  "category": "售票平台",
+  "name": "Peatix",
+  "url": "https://peatix.com/",
+  "status": 200,
+  "ok": true,
+  "title": "Peatix: Tools for Communities and Events | Peatix"
+ },
+ {
+  "category": "售票平台",
+  "name": "Eventbrite（桃園）",
+  "url": "https://www.eventbrite.com/d/taiwan--taoyuan/events/",
+  "status": 200,
+  "ok": true,
+  "title": "Taoyuan District, Taiwan Events, Calendar &amp; Tickets | Ev"
+ },
+ {
+  "category": "售票平台",
+  "name": "Meetup",
+  "url": "https://www.meetup.com/",
+  "status": 200,
+  "ok": true,
+  "title": "Meetup | Find Local Groups, Events, and Activities Near You"
+ },
+ {
+  "category": "售票平台",
+  "name": "KLOOK",
+  "url": "https://www.klook.com/zh-TW/",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "售票平台",
+  "name": "KKday",
+  "url": "https://www.kkday.com/zh-tw",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "彙整網站",
+  "name": "文化部藝文活動（iCulture）",
+  "url": "https://cloud.culture.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "文化部 iCulture | 全台藝文活動、展覽、文化景點一站式查詢"
+ },
+ {
+  "category": "彙整網站",
+  "name": "觀光署台灣觀光資訊網",
+  "url": "https://www.taiwan.net.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "觀光資訊網"
+ },
+ {
+  "category": "彙整網站",
+  "name": "WeKenGo 週末去哪玩（桃園）",
+  "url": "https://wekengo.tw/?city=taoyuan",
+  "status": 200,
+  "ok": true,
+  "title": "週末活動 11/28 - 11/29 | WeKenGo 週末去哪玩"
+ },
+ {
+  "category": "彙整網站",
+  "name": "Gliserland 週末活動",
+  "url": "https://www.gliserland.com/",
+  "status": 200,
+  "ok": true,
+  "title": "GLISERLAND 生活雜誌"
+ },
+ {
+  "category": "彙整網站",
+  "name": "cpok 優惠情報",
+  "url": "https://cpok.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "CP值"
+ },
+ {
+  "category": "彙整網站",
+  "name": "食尚玩家",
+  "url": "https://supertaste.tvbs.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "食尚玩家｜台灣美食餐廳、旅遊景點、優惠券推薦"
+ },
+ {
+  "category": "彙整網站",
+  "name": "微笑台灣",
+  "url": "https://smiletaiwan.cw.com.tw/",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "彙整網站",
+  "name": "城市學",
+  "url": "https://city.gvm.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "城市學"
+ },
+ {
+  "category": "彙整網站",
+  "name": "蕃薯藤旅遊",
+  "url": "https://travel.yam.com/",
+  "status": 200,
+  "ok": true,
+  "title": "首頁 - 輕旅行"
+ },
+ {
+  "category": "彙整網站",
+  "name": "Funliday",
+  "url": "https://www.funliday.com/",
+  "status": 200,
+  "ok": true,
+  "title": "Funliday｜AI 行程規劃・日本客製化包車旅遊・景點推薦"
+ },
+ {
+  "category": "彙整網站",
+  "name": "uptogo",
+  "url": "https://uptogo.com.tw/",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "彙整網站",
+  "name": "gofunit",
+  "url": "https://gofunit.com/",
+  "status": 200,
+  "ok": true,
+  "title": "好好玩FUNIT｜台灣＆海外旅遊生活情報站"
+ },
+ {
+  "category": "商場百貨",
+  "name": "桃知道 GELEVEN PLAZA",
+  "url": "https://www.g11.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "桃知道GELEVEN PLAZA"
+ },
+ {
+  "category": "商場百貨",
+  "name": "Xpark",
+  "url": "https://www.xpark.com.tw/news",
+  "status": 200,
+  "ok": true,
+  "title": "Xpark │ 最新消息"
+ },
+ {
+  "category": "商場百貨",
+  "name": "華泰名品城 GLORIA OUTLETS",
+  "url": "https://www.gloriaoutlets.com/chi/news_list/",
+  "status": 200,
+  "ok": true,
+  "title": "活動快訊/最新消息/GLORIA OUTLETS華泰名品城"
+ },
+ {
+  "category": "商場百貨",
+  "name": "台茂購物中心",
+  "url": "https://www.taimall.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "台茂購物中心"
+ },
+ {
+  "category": "商場百貨",
+  "name": "大江國際購物中心",
+  "url": "https://www.metrowalk.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "商場百貨",
+  "name": "統領廣場",
+  "url": "https://www.tonlinplaza.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "商場百貨",
+  "name": "新光三越",
+  "url": "https://www.skm.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "新光三越 | 新光百貨首頁 | 最新優惠 | SKM官方網站"
+ },
+ {
+  "category": "商場百貨",
+  "name": "遠東百貨",
+  "url": "https://www.feds.com.tw/",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "商場百貨",
+  "name": "遠東SOGO",
+  "url": "https://www.sogo.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "TypeError"
+ },
+ {
+  "category": "商場百貨",
+  "name": "IKEA",
+  "url": "https://www.ikea.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "IKEA宜家家居線上購物-給你更多居家佈置靈感"
+ },
+ {
+  "category": "運動賽事",
+  "name": "樂天桃猿",
+  "url": "https://www.rakutenmonkeys.com/",
+  "status": 0,
+  "ok": false,
+  "error": "ECONNRESET"
+ },
+ {
+  "category": "運動賽事",
+  "name": "中華職棒",
+  "url": "https://www.cpbl.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "TypeError"
+ },
+ {
+  "category": "運動賽事",
+  "name": "台灣職業籃球大聯盟（TPBL）",
+  "url": "https://tpbl.basketball/",
+  "status": 200,
+  "ok": true,
+  "title": "TPBL | 台灣職業籃球大聯盟"
+ },
+ {
+  "category": "運動賽事",
+  "name": "運動筆記（路跑報名）",
+  "url": "https://running.biji.co/",
+  "status": 200,
+  "ok": true,
+  "title": "運動筆記"
+ },
+ {
+  "category": "運動賽事",
+  "name": "跑者廣場",
+  "url": "https://www.taipeimarathon.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "UND_ERR_CONNECT_TIMEOUT"
+ },
+ {
+  "category": "運動賽事",
+  "name": "伊貝特報名網",
+  "url": "https://bao-ming.com/",
+  "status": 200,
+  "ok": true,
+  "title": "安全驗證"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "桃園國際機場",
+  "url": "https://www.taoyuan-airport.com/",
+  "status": 403,
+  "ok": true,
+  "title": ""
+ },
+ {
+  "category": "觀光休閒",
+  "name": "小人國主題樂園",
+  "url": "https://www.woc.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "六福旅遊集團",
+  "url": "https://www.leofoo.com.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "六福旅遊集團"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "石門水庫（北區水資源分署）",
+  "url": "https://www.wranb.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "觀光工廠自在遊",
+  "url": "https://www.taiwanplace21.org.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "觀光工廠自在遊-首頁"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "大溪老茶廠",
+  "url": "https://www.daxitea.com/",
+  "status": 200,
+  "ok": true,
+  "title": "台灣農林股份有限公司 : 大溪老茶廠"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "金格卡司蒂菈樂園",
+  "url": "https://www.kingkeycastella.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "郭元益糕餅博物館",
+  "url": "https://www.kuos.com/",
+  "status": 200,
+  "ok": true,
+  "title": "郭元益 KuoYuanYe｜Since 1867"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "可口可樂博物館",
+  "url": "https://www.cocacola.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "國巨洋傘文創園區",
+  "url": "https://www.kotra-umbrella.com/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "利百代彩筆文創館",
+  "url": "https://www.liberty-pen.com/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "巧克力共和國",
+  "url": "https://www.chocolate-republic.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "雅聞魅力博覽館",
+  "url": "https://www.ywbeauty.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "手信霧隱城",
+  "url": "https://www.tsc-tw.com/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "觀光休閒",
+  "name": "埔心牧場",
+  "url": "https://www.puhsin.com.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "桃園好農",
+  "url": "https://tyagri.tycg.gov.tw/",
+  "status": 200,
+  "ok": true,
+  "title": "&#x300C;&#x6843;&#x5712;&#x597D;&#x8FB2;&#x300D;&#x5C0E;&#x8"
+ },
+ {
+  "category": "農業農遊",
+  "name": "桃園區農業改良場",
+  "url": "https://www.tydares.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "UND_ERR_CONNECT_TIMEOUT"
+ },
+ {
+  "category": "農業農遊",
+  "name": "農業部休閒農業",
+  "url": "https://ezgo.coa.gov.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "桃園市農會",
+  "url": "https://www.tyfa.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "大溪區農會",
+  "url": "https://www.dxfa.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "楊梅區農會",
+  "url": "https://www.ymfa.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "新屋區農會",
+  "url": "https://www.shinwu.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "觀音區農會",
+  "url": "https://www.gyfa.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "龍潭區農會",
+  "url": "https://www.ltfa.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ },
+ {
+  "category": "農業農遊",
+  "name": "復興區農會",
+  "url": "https://www.fxfa.org.tw/",
+  "status": 0,
+  "ok": false,
+  "error": "ENOTFOUND"
+ }
+]
