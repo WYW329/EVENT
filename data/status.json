@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T19:05:53.732Z",
-  "tookMs": 109066,
-  "total": 1889,
+  "updatedAt": "2026-11-26T19:36:00.243Z",
+  "tookMs": 114800,
+  "total": 1899,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 15514,
+      "ms": 23077,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 30,
       "kept": 30,
-      "ms": 1583,
+      "ms": 901,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 40,
       "kept": 40,
-      "ms": 8581,
+      "ms": 8983,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 20,
       "kept": 20,
-      "ms": 1491,
+      "ms": 1773,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 28,
       "kept": 27,
-      "ms": 15728,
+      "ms": 21313,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 10,
       "kept": 10,
-      "ms": 12007,
+      "ms": 19795,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 2,
       "kept": 2,
-      "ms": 11782,
+      "ms": 19777,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 10124,
+      "ms": 12004,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 322,
       "kept": 22,
-      "ms": 6542,
+      "ms": 5977,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 104473,
+      "ms": 106895,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 122,
       "kept": 99,
-      "ms": 5257,
+      "ms": 5249,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 23703,
+      "ms": 25846,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 37820,
+      "ms": 45311,
       "error": null,
       "warnings": null
     },
@@ -139,7 +139,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 27,
+      "ms": 43,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 3416,
+      "ms": 4325,
       "error": null,
       "warnings": null
     },
@@ -159,7 +159,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 17221,
+      "ms": 17480,
       "error": null,
       "warnings": null
     },
@@ -169,7 +169,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 3787,
+      "ms": 4808,
       "error": null,
       "warnings": null
     },
@@ -179,7 +179,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 14536,
+      "ms": 15203,
       "error": null,
       "warnings": null
     },
@@ -189,7 +189,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 6032,
+      "ms": 7028,
       "error": null,
       "warnings": null
     },
@@ -199,7 +199,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 26795,
+      "ms": 32623,
       "error": null,
       "warnings": null
     },
@@ -209,7 +209,7 @@
       "ok": true,
       "count": 66,
       "kept": 63,
-      "ms": 7649,
+      "ms": 9848,
       "error": null,
       "warnings": null
     },
@@ -217,9 +217,9 @@
       "id": "opentix",
       "name": "OPENTIX",
       "ok": true,
-      "count": 501,
-      "kept": 479,
-      "ms": 91,
+      "count": 499,
+      "kept": 487,
+      "ms": 114686,
       "error": null,
       "warnings": null
     },
@@ -229,7 +229,7 @@
       "ok": false,
       "count": null,
       "kept": 90,
-      "ms": 3628,
+      "ms": 4627,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -239,7 +239,7 @@
       "ok": true,
       "count": 7,
       "kept": 7,
-      "ms": 13041,
+      "ms": 18341,
       "error": null,
       "warnings": null
     },
@@ -247,9 +247,9 @@
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 27,
-      "kept": 24,
-      "ms": 8454,
+      "count": 32,
+      "kept": 27,
+      "ms": 24904,
       "error": null,
       "warnings": null
     },
@@ -259,7 +259,7 @@
       "ok": true,
       "count": 79,
       "kept": 74,
-      "ms": 41388,
+      "ms": 40512,
       "error": null,
       "warnings": null
     },
@@ -269,7 +269,7 @@
       "ok": true,
       "count": 0,
       "kept": 0,
-      "ms": 6857,
+      "ms": 7834,
       "error": null,
       "warnings": null
     },
@@ -279,7 +279,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 5653,
+      "ms": 6001,
       "error": null,
       "warnings": null
     },
@@ -289,7 +289,7 @@
       "ok": true,
       "count": 8,
       "kept": 8,
-      "ms": 11558,
+      "ms": 18688,
       "error": null,
       "warnings": null
     },
@@ -299,10 +299,10 @@
       "ok": true,
       "count": 21,
       "kept": 21,
-      "ms": 94792,
+      "ms": 102525,
       "error": null,
       "warnings": [
-        "婦幼發展局: The operation was aborted due to timeout"
+        "經濟發展局: The operation was aborted due to timeout"
       ]
     },
     {
@@ -311,7 +311,7 @@
       "ok": true,
       "count": 67,
       "kept": 67,
-      "ms": 19029,
+      "ms": 21897,
       "error": null,
       "warnings": null
     },
@@ -320,8 +320,8 @@
       "name": "WeKenGo 週末去哪玩",
       "ok": true,
       "count": 803,
-      "kept": 615,
-      "ms": 109011,
+      "kept": 614,
+      "ms": 114710,
       "error": null,
       "warnings": null
     }
