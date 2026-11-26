@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-26T08:05:49.626Z",
+ "updatedAt": "2026-11-26T08:35:52.875Z",
  "events": [
   {
    "id": "moc:6977d85026b32454e437c459",
@@ -1460,6 +1460,33 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
+   "id": "wekengo:Maz5ny",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "2026-27 PLG桃園璞園領航猿主場賽事",
+   "start": "2026-10-25T17:00:00+08:00",
+   "end": "2027-04-25T19:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園市立綜合體育館",
+   "address": "桃園市桃園區三民路一段1號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "運動",
+   "free": null,
+   "url": "https://wekengo.tw/event/Maz5ny/202627plg-tao-yuan-pu-yuan-ling-hang-yuan-zhu-chang-sai-shi",
+   "image": "https://d36fypkbmmogz6.cloudfront.net/upload/p_team/logo_2_1730454167.png",
+   "summary": "桃園璞園領航猿2026-27球季主場15戰全數在桃園市立綜合體育館開打，從10月底一路熱血戰至隔年4月。",
+   "extra": {
+    "organizer": "P. LEAGUE+ 職業籃球賽程（一隊一季）",
+    "registration": null
+   },
+   "categories": [
+    "運動"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
+  },
+  {
    "id": "cycc:280",
    "source": "cycc",
    "sourceName": "中原文創園區",
@@ -1768,6 +1795,33 @@
     "節慶市集"
    ],
    "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
+   "id": "wekengo:QMrFA4",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "2026-27 TPVL桃園獵光雲豹主場賽事",
+   "start": "2026-11-07T13:30:00+08:00",
+   "end": "2026-12-27T19:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "中原大學體育館",
+   "address": "桃園市中壢區中北路200號",
+   "district": "中壢區",
+   "city": "桃園市",
+   "category": "運動",
+   "free": null,
+   "url": "https://wekengo.tw/event/QMrFA4/202627tpvl-tao-yuan-lie-guang-yun-bao-zhu-chang-sai-shi",
+   "image": "https://keen-salmon-79456-img-cdn.b-cdn.net/league/brand/1791280741281-keyvisual-tpvl-dare-to-fly-2026-27.webp",
+   "summary": "桃園獵光雲豹於中原大學體育館迎戰臺北伊斯特、新竹可利工程師、臺中連莊與台鋼天鷹，8場主場賽事一次集結。",
+   "extra": {
+    "organizer": "TPVL 職業排球賽程（一隊一季）",
+    "registration": null
+   },
+   "categories": [
+    "運動"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
   },
   {
    "id": "wekengo:DwqIPs",
@@ -3314,6 +3368,33 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
+   "id": "wekengo:QMtfA4",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "大龍門步道小旅行Part３：大嵙崁流域學",
+   "start": "2026-11-29T09:35:00+08:00",
+   "end": "2026-11-29T16:30:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "三坑老街永福宮",
+   "address": "台灣桃園市龍潭區三坑里三坑老街66號",
+   "district": "龍潭區",
+   "city": "桃園市",
+   "category": "體驗",
+   "free": null,
+   "url": "https://wekengo.tw/event/QMtfA4/da-long-men-bu-dao-xiao-lv-xing-part-da-ke-kan-liu-yu-xue",
+   "image": "https://static.accupass.com/eventbanner/2611040739351781632089_P520x260.jpg",
+   "summary": "走進三坑、大平與十一份聚落，沿著大漢溪流域健行6公里，透過文史走讀、自然遊戲與手作體驗認識水圳、古道及石門水庫故事。",
+   "extra": {
+    "organizer": null,
+    "registration": "需報名・限 10 人"
+   },
+   "categories": [
+    "體驗"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
+  },
+  {
    "id": "babycare:4c516f8a-33f0-4550-ae7f-1551f3abd59c",
    "source": "babycare",
    "sourceName": "親子館報名",
@@ -3579,6 +3660,33 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
+   "id": "wekengo:MaiLny",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "2026桃園閱讀開箱｜恆器製酒",
+   "start": "2026-11-29T14:00:00+08:00",
+   "end": "2026-11-29T16:00:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "恆器製酒",
+   "address": "台灣桃園市蘆竹區山鼻里內新路117巷53弄26號",
+   "district": "蘆竹區",
+   "city": "桃園市",
+   "category": "講座課程",
+   "free": null,
+   "url": "https://wekengo.tw/event/MaiLny/2026-tao-yuan-yue-du-kai-xiang-tao-li-you-shu-sheng-te-bie-q",
+   "image": "https://static.accupass.com/eventbanner/2610290116523631207140_P520x260.jpg",
+   "summary": "走進桃園蘆竹的地瓜酒廠，透過導覽、品酒與手作體驗，認識臺灣風土與在地職人的釀酒故事。",
+   "extra": {
+    "organizer": null,
+    "registration": "需報名・限 20 人"
+   },
+   "categories": [
+    "講座課程"
+   ],
+   "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
    "id": "wekengo:cUFNua",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
@@ -3603,33 +3711,6 @@
    "categories": [
     "免費",
     "電影"
-   ],
-   "firstSeen": "2026-11-26T02:05:49.562Z"
-  },
-  {
-   "id": "wekengo:MaiLny",
-   "source": "wekengo",
-   "sourceName": "WeKenGo 週末去哪玩",
-   "title": "2026桃園閱讀開箱｜桃里有書聲｜恆器製酒",
-   "start": "2026-11-29T14:00:00+08:00",
-   "end": "2026-11-29T16:00:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "恆器製酒",
-   "address": "台灣桃園市蘆竹區山鼻里內新路117巷53弄26號",
-   "district": "蘆竹區",
-   "city": "桃園市",
-   "category": "講座課程",
-   "free": null,
-   "url": "https://wekengo.tw/event/MaiLny/2026-tao-yuan-yue-du-kai-xiang-tao-li-you-shu-sheng-te-bie-q",
-   "image": "https://static.accupass.com/eventbanner/2610290116523631207140_P520x260.jpg",
-   "summary": "走進桃園蘆竹的地瓜酒廠，透過導覽、品酒與手作體驗，認識臺灣風土與在地職人的釀酒故事。",
-   "extra": {
-    "organizer": null,
-    "registration": "需報名・限 20 人"
-   },
-   "categories": [
-    "講座課程"
    ],
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
@@ -3840,9 +3921,9 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
-   "id": "tycgnews:www:1999211",
+   "id": "tycgnews:www:1999081",
    "source": "tycgnews",
-   "sourceName": "復興區公所",
+   "sourceName": "龍潭區公所",
    "title": "農業部桃園區農業改良場辦理「115年農業永續經營與企業ESG合作實務工作坊」",
    "start": "2026-11-30T09:30:00+08:00",
    "end": "2026-11-30T09:30:00+08:00",
@@ -3854,21 +3935,21 @@
    "city": "桃園市",
    "category": "講座課程",
    "free": null,
-   "url": "https://www.fuxing.tycg.gov.tw/News_Content.aspx?n=5708&s=1999211",
+   "url": "https://www.longtan.tycg.gov.tw/News_Content.aspx?n=5597&s=1999081",
    "image": null,
-   "summary": "工作坊目的：期能協助農業經營者認識企業 ESG 永續發展需求，重新盤點自身擁有的土地、農業生產、自然生態及地方資源，了解如何透過紀錄管理、資源整合與社區合作，創造農業永續價值。並運用好事道 AI 平台，協助農夫將農業資源與永續行動轉化為對外溝通文件，提高與企業建立合作關係的機會。時間：115年11月30日(星期一)上午9時30分至下午5時。地點：農業部桃園區農業改良場農業推廣科交誼廳。報名網址：https://forms.gle/iKaWcZZySqgQKCmJ7 (一律線上報名)，因訓練名額有限，又為避免相關資源浪費，經通知錄取者請確實參訓。相關資訊如附件。115年農業永續經營與企業ESG合作實務工作坊2.pdf115年農業永續經營與企業ESG合作實務工作坊.pdf",
+   "summary": "一、工作坊目的：期能協助農業經營者認識企業 ESG 永續發展需求，重新盤點自身擁有的土地、農業生產、自然生態及地方資源，了解如何透過紀錄管理、資源整合與社區合作，創造農業永續價值。並運用好事道 AI 平台，協助農夫將農業資源與永續行動轉化為對外溝通文件，提高與企業建立合作關係的機會。二、時間：115年11月30日(星期一)上午9時30分至下午5時。三、地點：農業部桃園區農業改良場農業推廣科交誼廳。四、本工作坊相關資訊如附件，一律線上報名，報名網址https://forms.gle/iKaWcZZySqgQKCmJ7，因訓練名額有限，又為避免相關資源浪費，經通知錄取者請確實參訓。115-ESG講習-計畫與課程表-1151119.pdf",
    "extra": {
-    "organizer": "復興區公所",
-    "postedAt": "2026-11-25"
+    "organizer": "龍潭區公所",
+    "postedAt": "2026-11-24"
    },
    "categories": [
     "講座課程"
    ],
    "alsoIn": [
-    "龍潭區公所",
-    "大溪區公所"
+    "大溪區公所",
+    "復興區公所"
    ],
-   "firstSeen": "2026-11-26T08:05:49.626Z"
+   "firstSeen": "2026-11-26T08:35:52.875Z"
   },
   {
    "id": "typl:10303",
@@ -5409,7 +5490,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "地方創生基地73031",
+     "地方創生基地73532",
      "地方創生基地"
     ]
    },
@@ -5609,7 +5690,7 @@
    "summary": "桃園楊梅仙草花海化身佩佩豬主題紫花園，邀請大小朋友走進夢幻花田拍照、集章，還有週末限定見面會驚喜登場。",
    "extra": {
     "organizer": null,
-    "registration": null
+    "registration": "需報名"
    },
    "tags": [
     "親子"
@@ -6100,7 +6181,7 @@
    "summary": null,
    "extra": {
     "tags": [
-     "62636"
+     "63036"
     ]
    },
    "categories": [
@@ -6694,40 +6775,40 @@
    "firstSeen": "2026-11-23T09:12:58.616Z"
   },
   {
-   "id": "tycgnews:www:1998422",
+   "id": "tycgnews:www:1998411",
    "source": "tycgnews",
-   "sourceName": "桃園區公所",
-   "title": "桃園市政府文化局辦理12月「2026桃園藝術巡演」活動~",
+   "sourceName": "中壢區公所",
+   "title": "桃園市政府文化局辦理12月「2026桃園藝術巡演」活動宣傳相關事宜",
    "start": "2026-12-05T15:30:00+08:00",
    "end": "2026-12-05T15:30:00+08:00",
    "regStart": null,
    "regEnd": null,
-   "venue": "桃園市楊梅區富岡火車站前(桃園市楊梅區富岡里成功路37 號)入場方式：戶外演出",
+   "venue": "桃園市楊梅區富岡火車站前(桃園市楊梅區富岡里成功路37 號)三、入場方式：戶外演出",
    "address": null,
    "district": "楊梅區",
    "city": "桃園市",
    "category": "其他",
    "free": true,
-   "url": "https://www.tao.tycg.gov.tw/News_Content.aspx?n=5611&s=1998422",
+   "url": "https://www.zhongli.tycg.gov.tw/News_Content.aspx?n=5605&s=1998411",
    "image": null,
-   "summary": "為落實「文化平權」及「文化近用權」理念，持續辦理藝術巡演計畫，邀請優質專業表演團隊到各區演出，包含音樂、現代及傳統戲劇、舞蹈、特技等多元表演類型，吸引市民踏出家門，在鄰近住家的場域中，欣賞傳統及現代融合的表演節目，縮短文化資源差距，達到欣賞文化差異、推動藝文教育扎根、深耕文化永續發展之願景。 壹、2026桃園藝術巡演楊梅場－FOCASA馬戲團《馬戲探險家》馬戲表演(配合富岡鐵道藝術生活節)活動時間：第一場：115年12月5日(六)15:30第二場：115年12月20日(日)14:00 活動地點：桃園市楊梅區富岡火車站前(桃園市楊梅區富岡里成功路37 號)入場方式：戶外演出，自由入場團隊介紹：FOCASA馬戲團成立於2011年，為臺灣首創專業當代馬戲團隊。團隊以快樂與夢想的馬戲之家為定位，發表過二十個跨界實驗與親子劇場作品，年均演出達百場。深耕十餘年來，足跡遍及全球25國、101座城市，包含愛丁堡藝穗節等國際指標舞台。我們持續整合創作、策展與培育，健全並永續臺灣當代馬戲生態。劇目簡介：《馬戲探險家》以尋找神秘寶藏箱為故事意象，全劇以探險家為主軸，融合雜耍、平衡與堆疊特技。節目透過「輕鬆、驚喜、緊張、釋放」的節奏推進與幽默互動，引領觀眾化身探險夥伴。探險家在富岡車站展開未知行動，開啟充滿驚喜的馬戲旅程。本劇期盼創造能被記住的親子時空，讓不同世代在歡笑與驚呼中留下共同記憶貳、2026桃園藝術巡演大園場-宋坤傳藝《酬神》擊樂表演活動時間：115年12月19日（六）14時至15時50分活動地點：航空城博物館園區-05警戒區 (桃園市大園區桃航三路456巷60號)入場方式：戶外演出，自由入場團隊介紹：宋坤傳藝創立於2003年，表演融合臺灣特色文化，呈現多元創新的演出風格，在不失傳統精神主軸下，同步現代美學多次受邀參與以及兩岸三地與國際交流演出，遍及歐、亞、美、澳，更遠赴「南非」進行文化傳承之行，持續將臺灣傳統表演藝術文化推廣到世界各角落。劇目簡介：宋坤傳藝20週年大戲「酬神」，代表子民敬天敬地感謝之意，是台灣民間傳統信仰觀念的回饋。人們祈求上天的精神支柱，抱著希望目標堅持地努力奮鬥！在歡欣豐收之際不忘感恩的心，以「酬神」來回饋謝天。「宋坤傳藝」同樣抱持著感恩，將傳統技藝推陳出新精緻化演出，以台灣傳統鼓藝、龍獅技藝為主軸，跨界合作武術、舞蹈、特技以及音樂領域藝術家，並透過投影、聲、光技術來加乘演出效果，打造虛實整合的視覺響宴。更多精彩活動敬請關注桃園市政府文化局官網、「 藝遊桃園」及 「 桃演本鋪」臉書粉絲專頁！桃園市政府文化局官網：https://culture.tycg.gov.tw/FB-桃演本鋪：https://www.facebook.com/typerformanceartFB-藝遊桃園：https://www.facebook.com/tyccc.gov?locale=zh_TW",
+   "summary": "2026桃園藝術巡演12月演出活動為落實「文化平權」及「文化近用權」理念，持續辦理藝術巡演計畫，邀請優質專業表演團隊到各區演出，包含音樂、現代及傳統戲劇、舞蹈、特技等多元表演類型，吸引市民踏出家門，在鄰近住家的場域中，欣賞傳統及現代融合的表演節目，縮短文化資源差距，達到欣賞文化差異、推動藝文教育扎根、深耕文化永續發展之願景。壹、2026桃園藝術巡演楊梅場－FOCASA馬戲團《馬戲探險家》馬戲表演(配合富岡鐵道藝術生活節)一、活動時間：第一場：115年12月5日(六)15:30第二場：115年12月20日(日)14:00 二、活動地點：桃園市楊梅區富岡火車站前(桃園市楊梅區富岡里成功路37 號)三、入場方式：戶外演出，自由入場四、團隊介紹：FOCASA馬戲團成立於2011年，為臺灣首創專業當代馬戲團隊。團隊以快樂與夢想的馬戲之家為定位，發表過二十個跨界實驗與親子劇場作品，年均演出達百場。深耕十餘年來，足跡遍及全球25國、101座城市，包含愛丁堡藝穗節等國際指標舞台。我們持續整合創作、策展與培育，健全並永續臺灣當代馬戲生態。五、劇目簡介：《馬戲探險家》以尋找神秘寶藏箱為故事意象，全劇以探險家為主軸，融合雜耍、平衡與堆疊特技。節目透過「輕鬆、驚喜、緊張、釋放」的節奏推進與幽默互動，引領觀眾化身探險夥伴。探險家在富岡車站展開未知行動，開啟充滿驚喜的馬戲旅程。本劇期盼創造能被記住的親子時空，讓不同世代在歡笑與驚呼中留下共同記憶貳、2026桃園藝術巡演大園場-宋坤傳藝《酬神》擊樂表演六、活動時間：115年12月19日（六）14時至15時50分七、活動地點：航空城博物館園區-05警戒區 (桃園市大園區桃航三路456巷60號)八、入場方式：戶外演出，自由入場九、團隊介紹：宋坤傳藝創立於2003年，表演融合臺灣特色文化，呈現多元創新的演出風格，在不失傳統精神主軸下，同步現代美學多次受邀參與以及兩岸三地與國際交流演出，遍及歐、亞、美、澳，更遠赴「南非」進行文化傳承之行，持續將臺灣傳統表演藝術文化推廣到世界各角落。十、劇目簡介：宋坤傳藝20週年大戲「酬神」，代表子民敬天敬地感謝之意，是台灣民間傳統信仰觀念的回饋。人們祈求上天的精神支柱，抱著希望目標堅持地努力奮鬥！在歡欣豐收之際不忘感恩的心，以「酬神」來回饋謝天。「宋坤傳藝」同樣抱持著感恩，將傳統技藝推陳出新精緻化演出，以台灣傳統鼓藝、龍獅技藝為主軸，跨界合作武術、舞蹈、特技以及音樂領域藝術家，並透過投影、聲、光技術來加乘演出效果，打造虛實整合的視覺響宴。更多精彩活動敬請關注桃園市政府文化局官網、「 藝遊桃園」及 「 桃演本鋪」臉書粉絲專頁！桃園市政府文化局官網：https://culture.tycg.gov.tw/FB-桃演本鋪：https://www.facebook.com/typerformanceartFB-藝遊桃園：https://www.facebook.com/tyccc.gov?locale=zh_TW",
    "extra": {
-    "organizer": "桃園區公所",
+    "organizer": "中壢區公所",
     "postedAt": "2026-11-19"
    },
    "categories": [
     "免費"
    ],
    "alsoIn": [
-    "中壢區公所",
+    "桃園區公所",
     "平鎮區公所",
-    "蘆竹區公所",
     "新屋區公所",
-    "復興區公所",
     "龍潭區公所",
-    "大溪區公所"
+    "蘆竹區公所",
+    "大溪區公所",
+    "復興區公所"
    ],
-   "firstSeen": "2026-11-26T07:35:50.378Z"
+   "firstSeen": "2026-11-26T08:35:52.875Z"
   },
   {
    "id": "wekengo:QZf3A4",
@@ -6760,6 +6841,38 @@
     "親子"
    ],
    "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
+   "id": "wekengo:AnrJs1",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "2026桃園仙草嘉年華佩佩豬見面會",
+   "start": "2026-12-05T15:35:00+08:00",
+   "end": "2026-12-06T15:45:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園市楊梅區上湖派出所對面農田",
+   "address": "仙草花海",
+   "district": "楊梅區",
+   "city": "桃園市",
+   "category": "體驗",
+   "free": null,
+   "url": "https://wekengo.tw/event/AnrJs1/2026-tao-yuan-xian-cao-jia-nian-hua-pei-pei-zhu-jian-mian-hu",
+   "image": "https://assets.kktix.io/upload_images/598304/34b092399f7753dd_medium.jpg",
+   "summary": "佩佩豬來到楊梅仙草花海主舞台，邀請親子家庭報名參加近距離互動與合影，留下冬日花田回憶。",
+   "extra": {
+    "organizer": null,
+    "registration": "需報名"
+   },
+   "tags": [
+    "親子"
+   ],
+   "categories": [
+    "體驗",
+    "親子",
+    "節慶市集"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
   },
   {
    "id": "babycare:9ba6d687-83e7-44de-93ee-412dc0addfc9",
@@ -7440,7 +7553,7 @@
    "free": true,
    "url": "https://www.afmc.gov.tw/Activity_detail/d5da64bf79b648d6906fca907acba96f",
    "image": "https://www.afmc.gov.tw/Upload/202611201305787df79f0.png",
-   "summary": "每週二至日週一及國定假日休館 活動內容 傅狷夫書畫學會主辦的「鋒發韻流2026傅狷夫書畫學會會員聯展」即日起至12月27日於桃園展演中心展出。本次展覽集結100餘件各具特色作品，展現水墨藝術深厚底蘊與豐富多元的創作面貌。「傅狷夫書畫學會」成立於2016年，旨在表彰傅狷夫教授(1910~2007)在書畫創作與教育上的傑出成就，並以緬懷師恩、傳承藝術精神為宗旨。弟子們為弘揚其創意精神與誨人不倦的教育精神，致力發揚傳統文化特色，持續精進書畫創作，提升藝術表現與創作水準。",
+   "summary": "每週二至日週一及國定假日休館 活動內容 傅狷夫書畫學會主辦的「鋒發韻流2026傅狷夫書畫學會會員聯展」將於12月9日起至12月27日於桃園展演中心展出。本次展覽集結100餘件各具特色作品，展現水墨藝術深厚底蘊與豐富多元的創作面貌。「傅狷夫書畫學會」成立於2016年，旨在表彰傅狷夫教授(1910~2007)在書畫創作與教育上的傑出成就，並以緬懷師恩、傳承藝術精神為宗旨。弟子們為弘揚其創意精神與誨人不倦的教育精神，致力發揚傳統文化特色，持續精進書畫創作，提升藝術表現與創作水準。",
    "extra": {
     "entry": "自由入場：入場方式 自由入場 入場說明 每週二至日週一及國定假日休館",
     "detailUrl": "https://www.afmc.gov.tw/Activity_detail/d5da64bf79b648d6906fca907acba96f"
@@ -7932,7 +8045,7 @@
    "image": null,
    "summary": null,
    "extra": {
-    "seatsLeft": 2,
+    "seatsLeft": 1,
     "seats": 7,
     "ages": "24～47 個月",
     "zip": "320"
@@ -8284,6 +8397,35 @@
     "親子"
    ],
    "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
+   "id": "accupass:2611181030251489250934",
+   "source": "accupass",
+   "sourceName": "Accupass 活動通",
+   "title": "iPhone手機走到哪，拍到哪 ｜大溪｜捕捉落羽松、楓葉的浪漫色彩",
+   "start": "2026-12-12T09:00:00+08:00",
+   "end": "2026-12-12T11:15:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園市",
+   "address": null,
+   "district": null,
+   "city": "桃園市",
+   "category": "其他",
+   "free": null,
+   "url": "https://www.accupass.com/event/2611181030251489250934",
+   "image": "https://static.accupass.com/eventbanner/2611181027363498913400_P520x260.jpg",
+   "summary": null,
+   "extra": {
+    "tags": [
+     "實拍教學1722",
+     "實拍教學"
+    ]
+   },
+   "categories": [
+    "其他"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
   },
   {
    "id": "wekengo:yPaZr3",
@@ -8657,8 +8799,8 @@
    "regStart": "2026-11-23T09:45:00+08:00",
    "regEnd": "2026-12-13T20:00:00+08:00",
    "venue": "桃園市土地公文化館 203視聽空間",
-   "address": null,
-   "district": null,
+   "address": "桃園市桃園區三民路一段100號",
+   "district": "桃園區",
    "city": "桃園市",
    "category": "表演",
    "free": false,
@@ -8674,6 +8816,9 @@
    },
    "categories": [
     "表演"
+   ],
+   "alsoIn": [
+    "WeKenGo 週末去哪玩"
    ],
    "firstSeen": "2026-11-26T02:35:51.016Z"
   },
@@ -8900,7 +9045,8 @@
     "表演"
    ],
    "alsoIn": [
-    "觀光署活動"
+    "觀光署活動",
+    "WeKenGo 週末去哪玩"
    ],
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
@@ -9016,38 +9162,6 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
-   "id": "wekengo:ai3NtN",
-   "source": "wekengo",
-   "sourceName": "WeKenGo 週末去哪玩",
-   "title": "2026桃園藝術巡演大園場－宋坤傳藝《酬神》",
-   "start": "2026-12-19T14:00:00+08:00",
-   "end": "2026-12-19T15:50:00+08:00",
-   "regStart": null,
-   "regEnd": null,
-   "venue": "桃園市大園區航空城博物館園區-05警戒區",
-   "address": "桃園市大園區航空城博物館園區-05警戒區(桃航三路456巷60號)",
-   "district": "大園區",
-   "city": "桃園市",
-   "category": "表演",
-   "free": true,
-   "url": "https://wekengo.tw/event/ai3NtN/2026-tao-yuan-yi-shu-xun-yan-da-yuan-chang-song-kun-chuan-yi",
-   "image": "https://travel.tycg.gov.tw/content/images/articles/117320/1920x1080_articles-image-nbpno6frf0g8pcigj99vmq.jpg",
-   "summary": "宋坤傳藝帶來融合傳統鼓藝、龍獅、武術、舞蹈與聲光投影的《酬神》擊樂演出，免費戶外登場。",
-   "extra": {
-    "organizer": "桃園觀光導覽網活動行事曆",
-    "registration": "免報名"
-   },
-   "tags": [
-    "親子"
-   ],
-   "categories": [
-    "免費",
-    "表演",
-    "親子"
-   ],
-   "firstSeen": "2026-11-26T02:05:49.562Z"
-  },
-  {
    "id": "wekengo:QZPRA4",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
@@ -9108,6 +9222,38 @@
     "親子"
    ],
    "firstSeen": "2026-11-26T02:05:49.562Z"
+  },
+  {
+   "id": "wekengo:83SpR0",
+   "source": "wekengo",
+   "sourceName": "WeKenGo 週末去哪玩",
+   "title": "【總館】愛的超能力聖誕桌遊特別企畫",
+   "start": "2026-12-19T14:00:00+08:00",
+   "end": "2026-12-19T16:00:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園市立圖書館總館",
+   "address": "桃園市桃園區南平路303號",
+   "district": "桃園區",
+   "city": "桃園市",
+   "category": "體驗",
+   "free": true,
+   "url": "https://wekengo.tw/event/83SpR0/zong-guan-ai-de-chao-neng-li-sheng-dan-zhuo-you-te-bie-qi-hu",
+   "image": "https://www.typl.gov.tw/FileUploads/Activity/10333.webp",
+   "summary": "桃園市立圖書館總館邀請國小二至六年級孩子與家長，透過桌遊、卡片創作與互動挑戰，在聖誕節練習說出感謝與祝福。",
+   "extra": {
+    "organizer": "桃園市立圖書館",
+    "registration": "需報名・限 24 人"
+   },
+   "tags": [
+    "親子"
+   ],
+   "categories": [
+    "免費",
+    "體驗",
+    "親子"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
   },
   {
    "id": "afmc:dd51a4c3f83d48a18c8797dba2f92eaf",
@@ -9571,6 +9717,35 @@
    "firstSeen": "2026-11-26T02:05:49.562Z"
   },
   {
+   "id": "accupass:2610080612291333521472",
+   "source": "accupass",
+   "sourceName": "Accupass 活動通",
+   "title": "午後覺醒 | 今天下午，先不要處理人生",
+   "start": "2026-12-25T13:00:00+08:00",
+   "end": "2026-12-25T17:00:00+08:00",
+   "regStart": null,
+   "regEnd": null,
+   "venue": "桃園市",
+   "address": null,
+   "district": null,
+   "city": "桃園市",
+   "category": "其他",
+   "free": null,
+   "url": "https://www.accupass.com/event/2610080612291333521472",
+   "image": "https://static.accupass.com/eventbanner/2610080605338660744930_P520x260.jpg",
+   "summary": null,
+   "extra": {
+    "tags": [
+     "聖誕身心靈市集1791",
+     "聖誕身心靈市集"
+    ]
+   },
+   "categories": [
+    "其他"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
+  },
+  {
    "id": "wekengo:EUZHhx",
    "source": "wekengo",
    "sourceName": "WeKenGo 週末去哪玩",
@@ -9763,31 +9938,34 @@
    "firstSeen": "2026-11-23T09:09:40.418Z"
   },
   {
-   "id": "tycgnews:www:1999460",
+   "id": "tycgnews:www:1999465",
    "source": "tycgnews",
-   "sourceName": "蘆竹區公所",
-   "title": "本府文化局辦理「尋寶桃園-文化幣藏寶圖」活動",
+   "sourceName": "平鎮區公所",
+   "title": "「尋寶桃園-文化幣藏寶圖」活動",
    "start": "2027-01-01",
    "end": "2027-01-01",
    "regStart": null,
    "regEnd": null,
    "venue": null,
    "address": null,
-   "district": "蘆竹區",
+   "district": "平鎮區",
    "city": "桃園市",
    "category": "其他",
    "free": false,
-   "url": "https://www.luzhu.tycg.gov.tw/News_Content.aspx?n=5714&s=1999460",
+   "url": "https://www.pingzhen.tycg.gov.tw/News_Content.aspx?n=5613&s=1999465",
    "image": null,
-   "summary": "一、    為配合文化部成年禮金政策，自115年起發放文化幣13-22歲 每人1200點，鼓勵青少年領用文化幣參與藝文相關活動，特彙整本市可使用文化幣活動地點，以鼓勵鄰近學生踴躍參與，以拓展豐富文化體驗。二、    相關重要資訊如下：(一)    名稱：「尋寶桃園-文化幣藏寶圖」(二)    活動時間：115年12月至116年(各活動詳見附件)(三)    參與對象：13至22歲(115年使用對象：於民國93年1月1日至102年12月31日出生，具我國國籍或符合資格之外國人；116年度使用對象：符合當年度13-22歲資格者)。(四)    使用方式：(操作詳見附件DM)１、    須先下載「文化幣APP」進行註冊。２、    領取資格：13至22歲。３、    領取點數：每年發放1200點(1點1元)。４、    領取期限：每年自1月1日起至12月31日領取，符合領取資格者每年度可再次領取1次(依文化部公告為準)。５、    使用期限：當年度點數須於年底前使用完畢。６、    於各地點可使用文化幣店家，掃描QRcode 進行消費折抵。(五)    活動優惠方案：１、    馬祖新村眷村文創園區：全園區當日使用累積每滿299元可兌換鑰匙圈。２、    中原文創園區：桃印文創店單筆消費滿350元即贈送磁鐵。３、    桃園市土地公文化館：年底前於1樓文創商品區單筆消費滿500元，即贈送立體印章明信片一個。４、    青年席位優惠：凡使用文化幣購買演出票劵，部分節目可享優惠5折或300元(桃園展演中心、中壢藝術館、文化局演藝廳、桃園米倉劇場)。",
+   "summary": "為配合文化部成年禮金政策，自115年起發放文化幣13-22歲 每人1200點，鼓勵青少年領用文化幣參與藝文相關活動，特彙整本市可使用文化幣活動地點，以鼓勵鄰近學生踴躍參與，以拓展豐富文化體驗。活動名稱：「尋寶桃園-文化幣藏寶圖」活動時間：115年12月至116年(各活動詳見附件)參與對象：13至22歲(115年使用對象：於民國93年1月1日至102年12月31日出生，具我國國籍或符合資格之外國人；116年度使用對象：符合當年度13-22歲資格者)。使用方式：(操作詳見附件DM)１、須先下載「文化幣APP」進行註冊。２、領取資格：13至22歲。３、領取點數：每年發放1200點(1點1元)。４、領取期限：每年自1月1日起至12月31日領取，符合領取資格者每年度可再次領取1次(依文化部公告為準)。５、使用期限：當年度點數須於年底前使用完畢。６、於各地點可使用文化幣店家，掃描QRcode 進行消費折抵。活動優惠方案：１、馬祖新村眷村文創園區：全園區當日使用累積每滿299元可兌換鑰匙圈。２、中原文創園區：桃印文創店單筆消費滿350元即贈送磁鐵。３、桃園市土地公文化館：年底前於1樓文創商品區單筆消費滿500元，即贈送立體印章明信片一個。４、青年席位優惠：凡使用文化幣購買演出票劵，部分節目可享優惠5折或300元(桃園展演中心、中壢藝術館、文化局演藝廳、桃園米倉劇場)。",
    "extra": {
-    "organizer": "蘆竹區公所",
+    "organizer": "平鎮區公所",
     "postedAt": "2026-11-26"
    },
    "categories": [
     "其他"
    ],
-   "firstSeen": "2026-11-26T08:05:49.626Z"
+   "alsoIn": [
+    "蘆竹區公所"
+   ],
+   "firstSeen": "2026-11-26T08:35:52.875Z"
   },
   {
    "id": "wekengo:SN75Is",
@@ -10297,8 +10475,8 @@
     "親子"
    ],
    "alsoIn": [
-    "蘆竹區公所",
-    "大園區公所"
+    "大園區公所",
+    "蘆竹區公所"
    ],
    "firstSeen": "2026-11-26T02:35:51.016Z"
   },
