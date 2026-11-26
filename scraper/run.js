@@ -5,7 +5,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { culture, tourism } from './sources/national.js';
 import { travel, ccms, afmc, babycare, water } from './sources/taoyuan.js';
-import { kktix, accupass, cycc, g11, wekengo } from './sources/platforms.js';
+import { kktix, accupass, cycc, g11, wekengo, opentix } from './sources/platforms.js';
+import { tycgNews, library } from './sources/tycgnews.js';
 import { normTitle, dateOf, toMs, todayTaipei, finalizeCategories } from './util.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -13,7 +14,7 @@ const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
 // WeKenGo 放最後：同一個活動官方來源有的話，用官方的資料
-export const SOURCES = [travel, tourism, afmc, culture, ccms, babycare, water, cycc, g11, kktix, accupass, wekengo];
+export const SOURCES = [travel, tourism, afmc, culture, ccms, babycare, water, cycc, g11, library, opentix, kktix, accupass, tycgNews, wekengo];
 
 const richness = (e) => ['venue', 'address', 'image', 'summary', 'url', 'regStart'].filter((k) => e[k]).length;
 

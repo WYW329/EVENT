@@ -1,6 +1,6 @@
 // 售票和活動平台、民間場館：KKTIX、Accupass、中原文創園區。
 import * as cheerio from 'cheerio';
-import { fetchText, makeEvent, parseDateTime, findDistrict, isTaoyuan, cleanText } from '../util.js';
+import { fetchText, politeFetch, makeEvent, parseDateTime, findDistrict, isTaoyuan, cleanText } from '../util.js';
 
 // ---------- KKTIX（有官方 Atom 訂閱） ----------
 export function parseKktixAtom(xml) {
@@ -355,6 +355,66 @@ export const wekengo = {
     for (const [k, v] of Object.entries(cache)) if (!alive.has(k) && Date.now() - Date.parse(v.cachedAt ?? 0) > 60 * 86400000) delete cache[k];
     await writeFile(cacheFile, JSON.stringify(cache));
     return out;
+  },
+};
+
+// ---------- OPENTIX 兩廳院文化生活（全台節目，篩出桃園；含開賣時間、票價） ----------
+// 全部約 800 筆、每頁 15 筆，所以 3 小時才完整抓一次，中間沿用上次結果（data/opentix-cache.json）。
+export const opentix = {
+  id: 'opentix',
+  name: 'OPENTIX',
+  async fetch() {
+    const { readFile, writeFile } = await import('node:fs/promises');
+    const cacheFile = new URL('../../data/opentix-cache.json', import.meta.url);
+    const cache = JSON.parse(await readFile(cacheFile, 'utf8').catch(() => '{}'));
+    let found = cache.found;
+    if (!found || Date.now() - Date.parse(cache.at ?? 0) > 3 * 3600000) {
+      found = [];
+      for (let offset = 0, guard = 0; guard < 120; guard++) {
+        const res = await politeFetch('https://search.opentix.life/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Origin: 'https://www.opentix.life', Referer: 'https://www.opentix.life/' },
+          body: JSON.stringify({ language: 'zh-CHT', offset }),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const r = (await res.json()).result;
+        for (const f of r?.found ?? []) {
+          const s = f.source;
+          // 只留桃園的節目，丟掉商品（雜誌、周邊）
+          if (s.type === '商品' || !(s.places ?? []).some((p) => p.includes('桃園'))) continue;
+          found.push(s);
+        }
+        if (!r?.found?.length || r.nextOffset == null || r.nextOffset <= offset) break;
+        offset = r.nextOffset;
+      }
+      await writeFile(cacheFile, JSON.stringify({ at: new Date().toISOString(), found }));
+    }
+    const iso = (ms) => (ms ? new Date(ms).toISOString().replace(/\.\d{3}Z$/, 'Z') : null);
+    const toTaipei = (ms) => {
+      if (!ms) return null;
+      const t = new Date(ms + 8 * 3600000);
+      return `${t.getUTCFullYear()}-${String(t.getUTCMonth() + 1).padStart(2, '0')}-${String(t.getUTCDate()).padStart(2, '0')}T${String(t.getUTCHours()).padStart(2, '0')}:${String(t.getUTCMinutes()).padStart(2, '0')}:00+08:00`;
+    };
+    return found.map((s) => {
+      const venue = (s.eventVenues ?? []).find((v) => (v.city ?? '').includes('桃園')) ?? s.eventVenues?.[0];
+      const times = (venue?.times ?? []).filter((t) => t.start);
+      const onlineStarts = times.map((t) => t.onlineStart).filter(Boolean).sort((a, b) => a - b);
+      void iso;
+      return makeEvent(this, s.id, {
+        title: s.title,
+        start: toTaipei(times[0]?.start ?? s.startDateTime),
+        end: toTaipei(times.at(-1)?.end ?? times.at(-1)?.start ?? s.endDateTime),
+        regStart: toTaipei(onlineStarts[0] ?? s.onlineStartDateTime),
+        regEnd: toTaipei(s.onlineEndDateTime),
+        venue: venue?.name ?? null,
+        category: '表演',
+        free: s.maxPrice === 0 ? true : s.minPrice > 0 ? false : null,
+        url: `https://www.opentix.life/event/${s.id}`,
+        image: s.imageUrl ?? null,
+        summary: s.description,
+        extra: { organizer: s.organizers || null, prices: s.minPrice ? [`$${s.minPrice}${s.maxPrice > s.minPrice ? `–${s.maxPrice}` : ''}`] : null, sessions: times.length },
+      });
+    });
   },
 };
 
