@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T08:35:52.875Z",
-  "tookMs": 103011,
-  "total": 377,
+  "updatedAt": "2026-11-26T09:05:50.839Z",
+  "tookMs": 103712,
+  "total": 382,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 8763,
+      "ms": 8458,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 85,
       "kept": 0,
-      "ms": 2195,
+      "ms": 2212,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 102998,
+      "ms": 103700,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 33,
       "kept": 33,
-      "ms": 1972,
+      "ms": 2176,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 22185,
+      "ms": 20284,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 120,
       "kept": 120,
-      "ms": 30310,
+      "ms": 30429,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 35,
+      "ms": 36,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 3301,
+      "ms": 1701,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,37 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 14546,
+      "ms": 15545,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "gloria",
+      "name": "華泰名品城",
+      "ok": true,
+      "count": 2,
+      "kept": 1,
+      "ms": 1924,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "taimall",
+      "name": "台茂購物中心",
+      "ok": true,
+      "count": 5,
+      "kept": 4,
+      "ms": 11902,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "xpark",
+      "name": "Xpark",
+      "ok": true,
+      "count": 1,
+      "kept": 1,
+      "ms": 3971,
       "error": null,
       "warnings": null
     },
@@ -99,7 +129,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 32824,
+      "ms": 36681,
       "error": null,
       "warnings": null
     },
@@ -107,9 +137,9 @@
       "id": "opentix",
       "name": "OPENTIX",
       "ok": true,
-      "count": 23,
-      "kept": 20,
-      "ms": 99122,
+      "count": 22,
+      "kept": 19,
+      "ms": 79,
       "error": null,
       "warnings": null
     },
@@ -119,7 +149,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1218,
+      "ms": 1354,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -127,9 +157,9 @@
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "kept": 4,
-      "ms": 2887,
+      "ms": 2726,
       "error": null,
       "warnings": null
     },
@@ -139,9 +169,11 @@
       "ok": true,
       "count": 22,
       "kept": 22,
-      "ms": 94016,
+      "ms": 90061,
       "error": null,
-      "warnings": null
+      "warnings": [
+        "經濟發展局: The operation was aborted due to timeout"
+      ]
     },
     {
       "id": "wekengo",
@@ -149,7 +181,7 @@
       "ok": true,
       "count": 154,
       "kept": 116,
-      "ms": 36756,
+      "ms": 25694,
       "error": null,
       "warnings": null
     }
