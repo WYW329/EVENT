@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T01:35:51.118Z",
-  "tookMs": 104048,
-  "total": 215,
+  "updatedAt": "2026-11-26T02:05:49.562Z",
+  "tookMs": 105863,
+  "total": 340,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 5776,
+      "ms": 5848,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 85,
       "kept": 0,
-      "ms": 2428,
+      "ms": 3170,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 104040,
+      "ms": 105851,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 33,
       "kept": 33,
-      "ms": 2524,
+      "ms": 2556,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 22699,
+      "ms": 21926,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 120,
       "kept": 120,
-      "ms": 29048,
+      "ms": 27131,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 44,
+      "ms": 26,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1882,
+      "ms": 1305,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 15072,
+      "ms": 14867,
       "error": null,
       "warnings": null
     },
@@ -99,18 +99,28 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1400,
+      "ms": 930,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
     {
       "id": "accupass",
       "name": "Accupass 活動通",
-      "ok": false,
-      "count": null,
+      "ok": true,
+      "count": 5,
       "kept": 4,
-      "ms": 30048,
-      "error": "The operation was aborted due to timeout",
+      "ms": 6522,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "wekengo",
+      "name": "WeKenGo 週末去哪玩",
+      "ok": true,
+      "count": 148,
+      "kept": 125,
+      "ms": 24233,
+      "error": null,
       "warnings": null
     }
   ]
