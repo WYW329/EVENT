@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-26T10:05:50.429Z",
-  "tookMs": 104580,
+  "updatedAt": "2026-11-26T10:35:49.997Z",
+  "tookMs": 102908,
   "total": 381,
   "sources": [
     {
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 10728,
+      "ms": 8223,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 85,
       "kept": 0,
-      "ms": 3001,
+      "ms": 2097,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 104564,
+      "ms": 102897,
       "error": null,
       "warnings": null
     },
@@ -37,9 +37,9 @@
       "id": "moc",
       "name": "文化部藝文活動",
       "ok": true,
-      "count": 33,
-      "kept": 33,
-      "ms": 2408,
+      "count": 57,
+      "kept": 54,
+      "ms": 2075,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 19103,
+      "ms": 18054,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 120,
       "kept": 120,
-      "ms": 33025,
+      "ms": 29818,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 41,
+      "ms": 25,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1932,
+      "ms": 1267,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 15340,
+      "ms": 14403,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 2369,
+      "ms": 1317,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 12811,
+      "ms": 11969,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 4700,
+      "ms": 3581,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 26686,
+      "ms": 33605,
       "error": null,
       "warnings": null
     },
@@ -138,8 +138,8 @@
       "name": "OPENTIX",
       "ok": true,
       "count": 22,
-      "kept": 19,
-      "ms": 84,
+      "kept": 0,
+      "ms": 51,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1806,
+      "ms": 998,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -159,7 +159,7 @@
       "ok": true,
       "count": 5,
       "kept": 3,
-      "ms": 4508,
+      "ms": 2017,
       "error": null,
       "warnings": null
     },
@@ -169,17 +169,19 @@
       "ok": true,
       "count": 22,
       "kept": 22,
-      "ms": 10039,
+      "ms": 90044,
       "error": null,
-      "warnings": null
+      "warnings": [
+        "婦幼發展局: The operation was aborted due to timeout"
+      ]
     },
     {
       "id": "wekengo",
       "name": "WeKenGo 週末去哪玩",
       "ok": true,
       "count": 154,
-      "kept": 116,
-      "ms": 28593,
+      "kept": 114,
+      "ms": 25494,
       "error": null,
       "warnings": null
     }
