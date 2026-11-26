@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T22:05:57.912Z",
-  "tookMs": 113190,
-  "total": 1898,
+  "updatedAt": "2026-11-26T22:35:52.988Z",
+  "tookMs": 107384,
+  "total": 1894,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 21328,
+      "ms": 14719,
       "error": null,
       "warnings": null
     },
@@ -19,18 +19,18 @@
       "ok": true,
       "count": 30,
       "kept": 30,
-      "ms": 1438,
+      "ms": 1396,
       "error": null,
       "warnings": null
     },
     {
       "id": "huashan",
       "name": "華山1914文化創意產業園區",
-      "ok": false,
-      "count": null,
+      "ok": true,
+      "count": 40,
       "kept": 40,
-      "ms": 40469,
-      "error": "fetch failed",
+      "ms": 17867,
+      "error": null,
       "warnings": null
     },
     {
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 20,
       "kept": 20,
-      "ms": 1732,
+      "ms": 1504,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 28,
       "kept": 27,
-      "ms": 19023,
+      "ms": 17128,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 10,
       "kept": 10,
-      "ms": 17846,
+      "ms": 11159,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 2,
       "kept": 2,
-      "ms": 18026,
+      "ms": 10964,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 11509,
+      "ms": 11271,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 322,
       "kept": 22,
-      "ms": 36694,
+      "ms": 5250,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 106533,
+      "ms": 105716,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 122,
       "kept": 99,
-      "ms": 4716,
+      "ms": 4340,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 58069,
+      "ms": 26286,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 43407,
+      "ms": 36205,
       "error": null,
       "warnings": null
     },
@@ -139,7 +139,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 36,
+      "ms": 42,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 3991,
+      "ms": 3681,
       "error": null,
       "warnings": null
     },
@@ -159,7 +159,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 17360,
+      "ms": 16764,
       "error": null,
       "warnings": null
     },
@@ -169,7 +169,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 4688,
+      "ms": 4257,
       "error": null,
       "warnings": null
     },
@@ -179,7 +179,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 15255,
+      "ms": 14637,
       "error": null,
       "warnings": null
     },
@@ -189,7 +189,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 6974,
+      "ms": 6390,
       "error": null,
       "warnings": null
     },
@@ -199,7 +199,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 27946,
+      "ms": 26603,
       "error": null,
       "warnings": null
     },
@@ -209,7 +209,7 @@
       "ok": true,
       "count": 66,
       "kept": 63,
-      "ms": 8919,
+      "ms": 6596,
       "error": null,
       "warnings": null
     },
@@ -219,7 +219,7 @@
       "ok": true,
       "count": 499,
       "kept": 487,
-      "ms": 129,
+      "ms": 152,
       "error": null,
       "warnings": null
     },
@@ -229,7 +229,7 @@
       "ok": false,
       "count": null,
       "kept": 90,
-      "ms": 4491,
+      "ms": 3759,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -239,18 +239,18 @@
       "ok": true,
       "count": 7,
       "kept": 7,
-      "ms": 15796,
+      "ms": 10473,
       "error": null,
       "warnings": null
     },
     {
       "id": "accupass",
       "name": "Accupass 活動通",
-      "ok": false,
-      "count": null,
-      "kept": 26,
-      "ms": 68467,
-      "error": "The operation was aborted due to timeout",
+      "ok": true,
+      "count": 30,
+      "kept": 24,
+      "ms": 8352,
+      "error": null,
       "warnings": null
     },
     {
@@ -259,7 +259,7 @@
       "ok": true,
       "count": 79,
       "kept": 74,
-      "ms": 35583,
+      "ms": 20771,
       "error": null,
       "warnings": null
     },
@@ -269,7 +269,7 @@
       "ok": true,
       "count": 0,
       "kept": 0,
-      "ms": 7739,
+      "ms": 7093,
       "error": null,
       "warnings": null
     },
@@ -279,7 +279,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 5731,
+      "ms": 5497,
       "error": null,
       "warnings": null
     },
@@ -289,7 +289,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 17513,
+      "ms": 10715,
       "error": null,
       "warnings": null
     },
@@ -297,12 +297,15 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 20,
-      "kept": 20,
-      "ms": 94333,
+      "count": 18,
+      "kept": 18,
+      "ms": 90067,
       "error": null,
       "warnings": [
-        "原住民族行政局: The operation was aborted due to timeout"
+        "原住民族行政局: The operation was aborted due to timeout",
+        "地政局: The operation was aborted due to timeout",
+        "經濟發展局: The operation was aborted due to timeout",
+        "動物保護處: The operation was aborted due to timeout"
       ]
     },
     {
@@ -311,7 +314,7 @@
       "ok": true,
       "count": 67,
       "kept": 67,
-      "ms": 24543,
+      "ms": 16469,
       "error": null,
       "warnings": null
     },
@@ -321,7 +324,7 @@
       "ok": true,
       "count": 803,
       "kept": 614,
-      "ms": 113129,
+      "ms": 107313,
       "error": null,
       "warnings": null
     }
