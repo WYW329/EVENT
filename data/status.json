@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T14:05:51.466Z",
-  "tookMs": 105085,
-  "total": 378,
+  "updatedAt": "2026-11-26T14:35:53.797Z",
+  "tookMs": 103499,
+  "total": 381,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 9224,
+      "ms": 8766,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 85,
       "kept": 0,
-      "ms": 2913,
+      "ms": 2355,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 27,
       "kept": 22,
-      "ms": 105072,
+      "ms": 103489,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 57,
       "kept": 54,
-      "ms": 2866,
+      "ms": 2383,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 17967,
+      "ms": 18594,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 120,
       "kept": 120,
-      "ms": 30532,
+      "ms": 31094,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 37,
+      "ms": 42,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1547,
+      "ms": 1469,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 14799,
+      "ms": 14914,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 2045,
+      "ms": 1705,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 12426,
+      "ms": 11796,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 4174,
+      "ms": 3837,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 36654,
+      "ms": 32791,
       "error": null,
       "warnings": null
     },
@@ -139,7 +139,7 @@
       "ok": true,
       "count": 22,
       "kept": 0,
-      "ms": 74,
+      "ms": 71,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": false,
       "count": null,
       "kept": 10,
-      "ms": 1285,
+      "ms": 1121,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -159,7 +159,7 @@
       "ok": true,
       "count": 5,
       "kept": 3,
-      "ms": 2413,
+      "ms": 2084,
       "error": null,
       "warnings": null
     },
@@ -167,14 +167,13 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 19,
-      "kept": 19,
-      "ms": 90068,
+      "count": 22,
+      "kept": 22,
+      "ms": 90063,
       "error": null,
       "warnings": [
-        "原住民族行政局: The operation was aborted due to timeout",
         "婦幼發展局: The operation was aborted due to timeout",
-        "動物保護處: The operation was aborted due to timeout"
+        "經濟發展局: The operation was aborted due to timeout"
       ]
     },
     {
@@ -183,7 +182,7 @@
       "ok": true,
       "count": 154,
       "kept": 114,
-      "ms": 27067,
+      "ms": 26010,
       "error": null,
       "warnings": null
     }
