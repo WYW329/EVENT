@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T16:41:02.143Z",
-  "tookMs": 450216,
-  "total": 1682,
+  "updatedAt": "2026-11-26T17:07:07.964Z",
+  "tookMs": 182109,
+  "total": 1681,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 3539,
+      "ms": 13431,
       "error": null,
       "warnings": null
     },
@@ -19,7 +19,7 @@
       "ok": true,
       "count": 30,
       "kept": 30,
-      "ms": 1338,
+      "ms": 2576,
       "error": null,
       "warnings": null
     },
@@ -29,7 +29,7 @@
       "ok": true,
       "count": 322,
       "kept": 22,
-      "ms": 180,
+      "ms": 2283,
       "error": null,
       "warnings": null
     },
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 92427,
+      "ms": 101498,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 588,
       "kept": 564,
-      "ms": 526,
+      "ms": 2317,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 11637,
+      "ms": 102546,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 22662,
+      "ms": 34833,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 25,
+      "ms": 27,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 1239,
+      "ms": 1523,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 12635,
+      "ms": 14162,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 164,
+      "ms": 1719,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 11988,
+      "ms": 11802,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 2135,
+      "ms": 3860,
       "error": null,
       "warnings": null
     },
@@ -139,7 +139,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 25409,
+      "ms": 34710,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": true,
       "count": 66,
       "kept": 63,
-      "ms": 315,
+      "ms": 4062,
       "error": null,
       "warnings": null
     },
@@ -159,27 +159,27 @@
       "ok": true,
       "count": 501,
       "kept": 35,
-      "ms": 70,
+      "ms": 132,
       "error": null,
       "warnings": null
     },
     {
       "id": "kktix",
       "name": "KKTIX",
-      "ok": true,
-      "count": 92,
+      "ok": false,
+      "count": null,
       "kept": 92,
-      "ms": 75718,
-      "error": null,
+      "ms": 1455,
+      "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
     {
       "id": "accupass",
       "name": "Accupass 活動通",
       "ok": true,
-      "count": 30,
-      "kept": 27,
-      "ms": 3839,
+      "count": 28,
+      "kept": 25,
+      "ms": 5815,
       "error": null,
       "warnings": null
     },
@@ -187,14 +187,15 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 18,
-      "kept": 18,
-      "ms": 90035,
+      "count": 19,
+      "kept": 19,
+      "ms": 182041,
       "error": null,
       "warnings": [
-        "原住民族行政局: The operation was aborted due to timeout",
+        "青年事務局: The operation was aborted due to timeout",
         "婦幼發展局: The operation was aborted due to timeout",
-        "動物保護處: The operation was aborted due to timeout"
+        "經濟發展局: The operation was aborted due to timeout",
+        "原住民族行政局: The operation was aborted due to timeout"
       ]
     },
     {
@@ -203,11 +204,9 @@
       "ok": true,
       "count": 15,
       "kept": 15,
-      "ms": 1956,
+      "ms": 62288,
       "error": null,
-      "warnings": [
-        "青年事務局: The operation was aborted due to timeout"
-      ]
+      "warnings": null
     },
     {
       "id": "wekengo",
@@ -215,7 +214,7 @@
       "ok": true,
       "count": 792,
       "kept": 638,
-      "ms": 450155,
+      "ms": 102627,
       "error": null,
       "warnings": null
     }
