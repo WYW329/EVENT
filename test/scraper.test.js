@@ -103,3 +103,24 @@ test('台北新來源的解析', async () => {
   assert.equal(toTaipeiIso('2026-11-27T11:30:00.000Z'), '2026-11-27T19:30:00+08:00');
   assert.equal(districtFromEn('No. 30, Leli Rd, Da’an District, Taipei City'), '大安區');
 });
+
+test('基隆：區名不和台北搞混', async () => {
+  const { findDistrict, supportedCity } = await import('../scraper/util.js');
+  assert.equal(supportedCity('基隆市仁愛區愛三路'), '基隆市');
+  assert.equal(supportedCity('暖暖區'), '基隆市');
+  assert.equal(supportedCity('中正區'), '臺北市'); // 沒寫縣市的中正區當台北
+  assert.equal(supportedCity('臺北市信義區基隆路一段'), '臺北市'); // 基隆路在台北
+  assert.equal(findDistrict('基隆市中正區中正路'), '中正區');
+  assert.equal(findDistrict('台北市信義區基隆路一段'), '信義區');
+});
+
+test('國家場館當期活動卡片', async () => {
+  const { parseActives } = await import('../scraper/sources/taipei-venues.js');
+  const html = `<a href="https://event.culture.tw/x?actId=60487"><div class="img"><img src="/a.jpg"></div><div class="essay"><div class="caption"><span>動島嘉年華</span></div>
+    <div class="p"><p>說明</p></div><div class="label"><p class="activity-time">日期：2026-11-28 ~ 2026-11-29</p><p class="activity-season">地點：中軸廣場</p></div></div></a>`;
+  const [it] = parseActives(html, 'https://www.yatsen.gov.tw/');
+  assert.equal(it.title, '動島嘉年華');
+  assert.equal(it.start, '2026-11-28');
+  assert.equal(it.end, '2026-11-29');
+  assert.equal(it.place, '中軸廣場');
+});

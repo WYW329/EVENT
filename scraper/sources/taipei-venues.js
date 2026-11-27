@@ -471,3 +471,73 @@ export const moca = {
     return [...out.values()].filter((e) => !ended(e.end));
   },
 };
+
+// ---------- 國家場館的「當期活動／展覽資訊」頁（同一套網站系統，卡片上有日期、地點） ----------
+const ACTIVES_PAGES = [
+  ['國立國父紀念館', 'https://www.yatsen.gov.tw/News_actives.aspx?n=6682&sms=13411', '臺北市信義區仁愛路四段505號', '信義區'],
+  ['國立國父紀念館', 'https://www.yatsen.gov.tw/News_actives.aspx?n=7339&sms=13411', '臺北市信義區仁愛路四段505號', '信義區'],
+  ['國立國父紀念館', 'https://www.yatsen.gov.tw/News_actives.aspx?n=7343&sms=13411', '臺北市信義區仁愛路四段505號', '信義區'],
+  ['國立國父紀念館', 'https://www.yatsen.gov.tw/News_actives.aspx?n=7344&sms=13411', '臺北市信義區仁愛路四段505號', '信義區'],
+  ['國立國父紀念館', 'https://www.yatsen.gov.tw/News_actives.aspx?n=7346&sms=13411', '臺北市信義區仁愛路四段505號', '信義區'],
+  ['國立臺灣博物館', 'https://www.ntm.gov.tw/News_actives.aspx?n=5472&sms=13389', '臺北市中正區襄陽路2號', '中正區'],
+  ['國立臺灣博物館', 'https://www.ntm.gov.tw/News_actives.aspx?n=5473&sms=13389', '臺北市中正區襄陽路25號', '中正區'],
+  ['國立臺灣博物館', 'https://www.ntm.gov.tw/News_actives.aspx?n=5474&sms=13389', '臺北市中正區南昌路一段1號', '中正區'],
+];
+
+export function parseActives(html, base) {
+  const $ = cheerio.load(html.replace(/\u0000/g, ''));
+  const out = [];
+  $('a').has('.essay').each((_, el) => {
+    const a = $(el);
+    const title = a.find('.caption').first().text().trim();
+    const r = range(a.find('.activity-time').first().text());
+    if (!title || !r) return;
+    const img = a.find('img').attr('src');
+    out.push({
+      title,
+      ...r,
+      place: a.find('.activity-season').first().text().replace(/^地點：/, '').trim() || null,
+      url: new URL(a.attr('href'), base).href,
+      image: img ? new URL(img, base).href : null,
+      summary: cleanText(a.find('.p').text(), 600),
+    });
+  });
+  return out;
+}
+
+export const nationalVenues = {
+  id: 'natvenue',
+  name: '國父紀念館・臺灣博物館',
+  city: '臺北市',
+  async fetch() {
+    const out = new Map();
+    const errors = [];
+    for (const [org, url, address, district] of ACTIVES_PAGES) {
+      try {
+        for (const it of parseActives(await fetchText(url), url)) {
+          const key = `${org}:${it.title}:${it.start}`;
+          if (out.has(key) || ended(it.end)) continue;
+          out.set(key, makeEvent({ id: this.id, name: org, city: '臺北市' }, it.url.match(/[?&]s=(\d+)/)?.[1] ?? it.url.split('actId=')[1] ?? key, {
+            title: it.title,
+            start: it.start,
+            end: it.end,
+            venue: it.place ? `${org} ${it.place}`.slice(0, 80) : org,
+            address,
+            district,
+            city: '臺北市',
+            url: it.url,
+            image: it.image,
+            summary: it.summary,
+            extra: { organizer: org },
+          }));
+        }
+      } catch (err) {
+        errors.push(`${org}: ${err.message}`);
+      }
+    }
+    const list = [...out.values()];
+    if (errors.length && !list.length) throw new Error(errors.join('; '));
+    if (errors.length) list.warnings = errors;
+    return list;
+  },
+};

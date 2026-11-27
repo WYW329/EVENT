@@ -10,7 +10,7 @@ import { tycgNews, taipeiNews, keelungNews, library } from './sources/tycgnews.j
 import { klctb } from './sources/keelung.js';
 import { gloria, taimall, xpark } from './sources/malls.js';
 import { travelTaipei, ntpcEvents } from './sources/taipei.js';
-import { huashan, songshan, tfam, tmc, clab, artemperor, indievox, ntpcMuseums, twtc, moca } from './sources/taipei-venues.js';
+import { huashan, songshan, tfam, tmc, clab, artemperor, indievox, ntpcMuseums, twtc, moca, nationalVenues } from './sources/taipei-venues.js';
 import { eventbrite, meetup, luma } from './sources/community.js';
 import { normTitle, dateOf, toMs, todayTaipei, finalizeCategories } from './util.js';
 
@@ -19,7 +19,7 @@ const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
 // WeKenGo 放最後：同一個活動官方來源有的話，用官方的資料
-export const SOURCES = [travel, travelTaipei, huashan, songshan, tfam, tmc, clab, moca, twtc, ntpcMuseums, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, indievox, accupass, artemperor, eventbrite, meetup, luma, tycgNews, taipeiNews, keelungNews, klctb, wekengo];
+export const SOURCES = [travel, travelTaipei, huashan, songshan, tfam, tmc, clab, moca, twtc, nationalVenues, ntpcMuseums, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, indievox, accupass, artemperor, eventbrite, meetup, luma, tycgNews, taipeiNews, keelungNews, klctb, wekengo];
 
 export const SEED = '2000-01-01T00:00:00.000Z';
 
@@ -121,21 +121,8 @@ export async function runAll({ only } = {}) {
   const events = merged.map((e) => ({ ...e, summary: clip(e.summary), categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
   events.sort((a, b) => (toMs(a.start) || 0) - (toMs(b.start) || 0));
 
-  // 診斷：會擋雲端主機的網站，記下回應狀態（寫進 status.json，方便看是被擋還是別的問題）
-  const diag = {};
-  for (const [k, u] of [['kktix', 'https://kktix.com/events.atom?search=%E5%8F%B0%E5%8C%97'], ['eventbrite', 'https://www.eventbrite.com/d/taiwan--taipei/events/']]) {
-    try {
-      const r = await fetch(u, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36', Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'zh-TW,zh;q=0.9' }, signal: AbortSignal.timeout(20000) });
-      const body = await r.text();
-      diag[k] = { status: r.status, server: r.headers.get('server'), mitigated: r.headers.get('cf-mitigated'), title: body.match(/<title[^>]*>([^<]{0,80})/)?.[1] ?? null, len: body.length };
-    } catch (err) {
-      diag[k] = { error: String(err.cause?.code ?? err.message) };
-    }
-  }
-
   const status = {
     updatedAt: nowIso,
-    diag,
     tookMs: Date.now() - started,
     total: events.length,
     sources: results.map((r) => ({

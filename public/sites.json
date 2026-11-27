@@ -984,16 +984,14 @@
    "name": "國立臺灣博物館",
    "url": "https://www.ntm.gov.tw/",
    "region": "台北",
-   "via": [
-    "WeKenGo 週末去哪玩",
-    "臺北旅遊網"
-   ]
+   "auto": true
   },
   {
    "category": "藝文場館",
    "name": "國立國父紀念館",
    "url": "https://www.yatsen.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "藝文場館",
