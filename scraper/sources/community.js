@@ -7,6 +7,7 @@ export function cityFromEn(...texts) {
   const s = texts.filter(Boolean).join(' ');
   if (/New Taipei|新北/i.test(s)) return '新北市';
   if (/Taoyuan|桃園/i.test(s)) return '桃園市';
+  if (/Keelung|基隆(?!路)/i.test(s)) return '基隆市';
   if (/Taipei|臺北|台北/i.test(s)) return '臺北市';
   return supportedCity(s);
 }
@@ -57,7 +58,7 @@ export const eventbrite = {
   async fetch() {
     const out = new Map();
     const errors = [];
-    for (const slug of ['taiwan--taipei', 'taiwan--new-taipei-city', 'taiwan--taoyuan-city']) {
+    for (const slug of ['taiwan--taipei', 'taiwan--new-taipei-city', 'taiwan--taoyuan-city', 'taiwan--keelung-city']) {
       for (let page = 1; page <= 4; page++) {
         const html = await fetchText(`https://www.eventbrite.com/d/${slug}/events/${page > 1 ? `?page=${page}` : ''}`).catch((err) => { errors.push(`${slug}: ${err.message}`); return ''; });
         const list = ldEvents(html);

@@ -532,7 +532,7 @@
    "url": "https://www.tydares.gov.tw/",
    "region": "桃園",
    "via": [
-    "復興區公所"
+    "龍潭區公所"
    ]
   },
   {
@@ -1500,7 +1500,7 @@
    "region": "台北",
    "via": [
     "iNDIEVOX",
-    "KKTIX"
+    "WeKenGo 週末去哪玩"
    ]
   },
   {
@@ -1622,6 +1622,315 @@
    "name": "剝皮寮歷史街區",
    "url": "https://www.bopiliao.taipei/",
    "region": "台北"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市政府（活動訊息）",
+   "url": "https://www.klcg.gov.tw/tw/klcg1/3169.html",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市文化觀光局",
+   "url": "https://klctb.klcg.gov.tw/Default.aspx",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆旅遊網",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市政府兒童及少年事務處",
+   "url": "https://www.klcg.gov.tw/tw/klcg1/3169.html",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市立體育場",
+   "url": "https://www.stadium.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市環保局",
+   "url": "https://www.klepb.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市動物保護防疫所",
+   "url": "https://www.klaphio.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市消防局",
+   "url": "https://www.klfd.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆家庭教育中心",
+   "url": "https://kl.familyedu.moe.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "區公所",
+   "name": "中正區公所（基隆）",
+   "url": "https://www.klzz.klcg.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "區公所",
+   "name": "信義區公所（基隆）",
+   "url": "https://www.klsy.klcg.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "區公所",
+   "name": "仁愛區公所",
+   "url": "https://www.klra.klcg.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "區公所",
+   "name": "中山區公所（基隆）",
+   "url": "https://www.kljs.klcg.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "區公所",
+   "name": "安樂區公所",
+   "url": "https://www.klal.klcg.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "區公所",
+   "name": "暖暖區公所",
+   "url": "https://www.klnn.klcg.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "區公所",
+   "name": "七堵區公所",
+   "url": "https://www.klct.klcg.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "藝文場館",
+   "name": "國立海洋科技博物館",
+   "url": "https://www.nmmst.gov.tw/",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "藝文場館",
+   "name": "潮境智能海洋館",
+   "url": "https://www.nmmst.gov.tw/",
+   "region": "基隆",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "國立海洋科技博物館"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "基隆美術館",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=8969&sms=12510",
+   "region": "基隆",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "基隆市文化中心",
+   "url": "https://klctb.klcg.gov.tw/Default.aspx",
+   "region": "基隆",
+   "via": [
+    "文化部藝文活動"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "陽明海洋文化藝術館",
+   "url": "https://www.ymmfoundation.org/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "基隆要塞司令官邸",
+   "url": "https://klctb.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "國立臺灣海洋大學",
+   "url": "https://www.ntou.edu.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "崇右影藝科技大學",
+   "url": "https://www.cufa.edu.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "和平島地質公園",
+   "url": "https://www.hpipark.org/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "正濱漁港",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "基隆廟口夜市",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "八斗子・望幽谷",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "基隆港（臺灣港務公司）",
+   "url": "https://kl.twport.com.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "基隆嶼",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "大武崙砲台・情人湖",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "東北角暨宜蘭海岸國家風景區",
+   "url": "https://www.necoast-nsa.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "雞籠中元祭",
+   "url": "https://klctb.klcg.gov.tw/Default.aspx",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "基隆國際海洋老鷹嘉年華",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=7656&sms=12510",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "基隆潮藝術",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=7641&sms=12510",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "基隆年終晚會",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=7642&sms=12510",
+   "region": "基隆",
+   "via": [
+    "中正區公所",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "節慶活動",
+   "name": "基隆仲夏樂集",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=7650&sms=12510",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "基隆好物市集",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=7655&sms=12510",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "基隆眷村文化節",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=7645&sms=12510",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "基隆城市劇場行動",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=7649&sms=12510",
+   "region": "基隆"
+  },
+  {
+   "category": "節慶活動",
+   "name": "淡蘭百年山徑",
+   "url": "https://klctb.klcg.gov.tw/News3.aspx?n=8988&sms=12510",
+   "region": "基隆",
+   "via": [
+    "基隆市文化觀光局"
+   ]
+  },
+  {
+   "category": "商場百貨",
+   "name": "基隆 Global Mall（環球購物中心）",
+   "url": "https://www.twglobalmall.com/",
+   "region": "基隆"
+  },
+  {
+   "category": "商場百貨",
+   "name": "東岸廣場",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "平台",
+   "name": "WeKenGo 週末去哪玩（基隆）",
+   "url": "https://wekengo.tw/?city=keelung",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "平台",
+   "name": "Accupass 活動通（基隆）",
+   "url": "https://www.accupass.com/search?l=keelung",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "平台",
+   "name": "Eventbrite 基隆",
+   "url": "https://www.eventbrite.com/d/taiwan--keelung-city/events/",
+   "region": "基隆",
+   "auto": true
   },
   {
    "category": "售票平台",

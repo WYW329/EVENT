@@ -102,19 +102,23 @@ export function dateOf(value) {
 export const CITY_DISTRICTS = {
   桃園市: ['桃園', '中壢', '平鎮', '八德', '楊梅', '蘆竹', '龜山', '大園', '觀音', '新屋', '龍潭', '大溪', '復興'],
   臺北市: ['中正', '大同', '中山', '松山', '大安', '萬華', '信義', '士林', '北投', '內湖', '南港', '文山'],
+  // 基隆的中正、信義、中山區和台北同名，只有指定 city 時才找基隆
+  基隆市: ['中正', '信義', '仁愛', '中山', '安樂', '暖暖', '七堵'],
   新北市: ['板橋', '三重', '中和', '永和', '新莊', '新店', '樹林', '鶯歌', '三峽', '淡水', '汐止', '瑞芳', '土城', '蘆洲', '五股', '泰山', '林口', '深坑', '石碇', '坪林', '三芝', '石門', '八里', '平溪', '雙溪', '貢寮', '金山', '萬里', '烏來'],
 };
 const DISTRICTS = CITY_DISTRICTS['桃園市'];
 export const DISTRICT_LIST = DISTRICTS.map((d) => `${d}區`);
 // 台北、新北的區名在別的縣市也有（基隆中正區、台中大安區…），所以要看文字裡有沒有寫別的縣市
-const AMBIGUOUS = { 中正: /基隆/, 中山: /基隆/, 信義: /基隆/, 大安: /臺中|台中/, 大同: /宜蘭/ };
+const AMBIGUOUS = { 中正: /基隆(?!路)/, 中山: /基隆(?!路)/, 信義: /基隆(?!路)/, 大安: /臺中|台中/, 大同: /宜蘭/ };
 
 /** 從文字找行政區，city 有給就只找那個縣市的。 */
 export function findDistrict(...texts) {
   let city = null;
   if (texts[0] && typeof texts[0] === 'object') city = texts.shift().city;
   const s = texts.filter(Boolean).join(' ').replace(/桃園市/g, '');
-  const cities = city ? [city] : ['桃園市', '臺北市', '新北市'];
+  const keelung = /基隆(?!路)/.test(s) && !/臺北市|台北市|新北市|桃園市/.test(s);
+  if (keelung && !city) city = '基隆市';
+  const cities = city ? [city] : ['桃園市', '臺北市', '新北市', '基隆市'];
   for (const c of cities) {
     for (const d of CITY_DISTRICTS[c] ?? []) {
       if (!s.includes(`${d}區`)) continue;
@@ -129,7 +133,8 @@ export function findDistrict(...texts) {
 export function cityOfDistrict(d) {
   if (!d) return null;
   const n = String(d).replace(/區$/, '');
-  return Object.keys(CITY_DISTRICTS).find((c) => CITY_DISTRICTS[c].includes(n)) ?? null;
+  // 基隆的區名（中正、信義、中山）和台北重複，沒寫縣市時不推成基隆
+  return Object.keys(CITY_DISTRICTS).filter((c) => c !== '基隆市').find((c) => CITY_DISTRICTS[c].includes(n)) ?? (['仁愛', '安樂', '暖暖', '七堵'].includes(n) ? '基隆市' : null);
 }
 
 export function isTaoyuan(...texts) {
@@ -142,15 +147,19 @@ export function isTaoyuan(...texts) {
 export function isTaipeiArea(...texts) {
   const s = texts.filter(Boolean).join(' ').replace(/台/g, '臺');
   if (/臺北市|新北市|臺北縣/.test(s)) return true;
-  if (/桃園|基隆|宜蘭|新竹|臺中|高雄|臺南/.test(s)) return false;
+  if (/桃園|基隆(?!路)|宜蘭|新竹|臺中|高雄|臺南/.test(s)) return false;
   return [...CITY_DISTRICTS['臺北市'], ...CITY_DISTRICTS['新北市']].some((d) => s.includes(`${d}區`) && !AMBIGUOUS[d]);
 }
 
-/** 本站有收的縣市：桃園市、臺北市、新北市。找不到回傳 null。 */
+/** 本站有收的縣市。 */
+export const SUPPORTED_CITIES = ['桃園市', '臺北市', '新北市', '基隆市'];
+
+/** 本站有收的縣市（看地址裡的縣市，沒寫縣市就看雙北、桃園的區名）。找不到回傳 null。 */
 export function supportedCity(...texts) {
   const s = texts.filter(Boolean).join(' ').replace(/台/g, '臺');
   const c = findCity(s);
-  if (c) return ['桃園市', '臺北市', '新北市'].includes(c) ? c : null;
+  if (c) return SUPPORTED_CITIES.includes(c) ? c : null;
+  if (/基隆(?!路)/.test(s)) return '基隆市';
   return cityOfDistrict(findDistrict(s));
 }
 

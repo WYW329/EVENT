@@ -19,23 +19,30 @@ const TAIPEI_AUTO = new Set([
   '非池中藝術網（展覽，含小畫廊）', 'iNDIEVOX（Live House 演出）', 'Eventbrite 台北', 'Meetup 台北', 'Luma 台北',
 ]);
 
-const readTsv = async (file) => (await readFile(file, 'utf8')).split(/\r?\n/).filter((l) => l.trim() && !l.startsWith('#')).map((l) => {
+const KEELUNG_AUTO = new Set([
+  '基隆市政府（活動訊息）', '基隆市文化觀光局', '中正區公所（基隆）', '信義區公所（基隆）', '仁愛區公所', '中山區公所（基隆）', '安樂區公所', '暖暖區公所', '七堵區公所',
+  '國立海洋科技博物館', 'WeKenGo 週末去哪玩（基隆）', 'Accupass 活動通（基隆）', 'Eventbrite 基隆',
+]);
+
+const readTsv = async (file, region = '台北', auto = TAIPEI_AUTO) => (await readFile(file, 'utf8')).split(/\r?\n/).filter((l) => l.trim() && !l.startsWith('#')).map((l) => {
   const [category, name, url, match] = l.split('\t');
-  return { category, name, url, region: '台北', ...(match ? { match } : {}), ...(TAIPEI_AUTO.has(name) ? { auto: true } : {}) };
+  return { category, name, url, region, ...(match ? { match } : {}), ...(auto.has(name) ? { auto: true } : {}) };
 });
 const taipeiRows = [];
 for (const r of [...(await readTsv('tools/sites-taipei.tsv')), ...(await readTsv('tools/sites-taipei-more.tsv'))]) {
   if (!taipeiRows.some((x) => x.url === r.url || x.name === r.name)) taipeiRows.push(r);
 }
+const keelungRows = [];
+for (const r of await readTsv('tools/sites-keelung.tsv', '基隆', KEELUNG_AUTO)) if (!keelungRows.some((x) => x.name === r.name)) keelungRows.push(r);
 const taipeiUrls = new Set(taipeiRows.map((s) => s.url));
 const taipeiNames = new Set(taipeiRows.map((s) => s.name));
 
 const base = cur.sites
-  .filter((s) => s.region !== '台北')
+  .filter((s) => s.region !== '台北' && s.region !== '基隆')
   .filter((s) => !taipeiUrls.has(s.url) && !taipeiNames.has(s.name))
   .map(({ via, ...s }) => ({ ...s, region: NATIONAL.has(s.category) ? '全台' : '桃園' }));
 
-const sites = [...base.filter((s) => s.region === '桃園'), ...taipeiRows, ...base.filter((s) => s.region === '全台')];
+const sites = [...base.filter((s) => s.region === '桃園'), ...taipeiRows, ...keelungRows, ...base.filter((s) => s.region === '全台')];
 
 // 沒有專門爬蟲的網站：活動的場地、主辦、標題裡有它的名字（或指定的關鍵字），就記下是透過哪個來源收進來的
 const hay = events.map((e) => ({ text: `${e.venue ?? ''} ${e.extra?.organizer ?? ''} ${e.title}`.replace(/臺/g, '台'), src: e.sourceName, city: e.city }));
@@ -43,8 +50,8 @@ for (const s of sites) {
   if (s.auto || s.region === '全台') continue;
   const key = (s.match ?? s.name.replace(/[（(].*$/, '').trim()).replace(/臺/g, '台');
   if (key.length < 2) continue;
-  const city = s.region === '桃園' ? '桃園市' : null;
-  const hits = hay.filter((h) => h.text.includes(key) && (!city || h.city === city) && (city || h.city !== '桃園市'));
+  const city = { 桃園: ['桃園市'], 台北: ['臺北市', '新北市'], 基隆: ['基隆市'] }[s.region];
+  const hits = hay.filter((h) => h.text.includes(key) && (!city || city.includes(h.city)));
   if (!hits.length) continue;
   const count = new Map();
   for (const h of hits) count.set(h.src, (count.get(h.src) ?? 0) + 1);
@@ -54,5 +61,5 @@ for (const s of sites) delete s.match;
 
 await writeFile('public/sites.json', JSON.stringify({ updatedAt: new Date().toISOString().slice(0, 10), sites }, null, 1));
 const by = (r) => sites.filter((s) => s.region === r);
-for (const r of ['桃園', '台北', '全台']) console.log(r, by(r).length, '個，專門爬蟲', by(r).filter((s) => s.auto).length, '，透過其他來源', by(r).filter((s) => s.via).length);
+for (const r of ['桃園', '台北', '基隆', '全台']) console.log(r, by(r).length, '個，專門爬蟲', by(r).filter((s) => s.auto).length, '，透過其他來源', by(r).filter((s) => s.via).length);
 console.log('合計', sites.length);

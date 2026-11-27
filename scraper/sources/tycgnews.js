@@ -1,6 +1,6 @@
 // 桃園、台北市府各局處、區公所的「最新消息」RSS（同一套網站系統）。從消息裡挑出民眾活動，並讀出活動日期、地點。
 import * as cheerio from 'cheerio';
-import { fetchText, makeEvent, makeTime, cleanText, taipeiNow, todayTaipei, findDistrict, supportedCity } from '../util.js';
+import { fetchText, makeEvent, makeTime, cleanText, taipeiNow, todayTaipei, findDistrict, supportedCity, findCity, SUPPORTED_CITIES } from '../util.js';
 
 export const TYCG_FEEDS = [
   ['桃園區公所', 'https://www.tao.tycg.gov.tw/OpenData.aspx?SN=B9FA1D8CD0C10792', '桃園區'],
@@ -203,7 +203,7 @@ export const library = {
 };
 
 /** 市府 RSS 來源：feeds 是 [單位, RSS 網址, 預設行政區]；city 是這組來源的縣市。 */
-function makeFeedSource({ id, name, feeds, city, homeRe, otherRe }) {
+function makeFeedSource({ id, name, feeds, city, homeRe, otherRe, inferCity = true }) {
   return {
   id,
   name,
@@ -241,7 +241,9 @@ function makeFeedSource({ id, name, feeds, city, homeRe, otherRe }) {
             if (dup) { dup.alsoIn = [...new Set([...(dup.alsoIn ?? []), office])]; continue; }
             const key = new URL(it.link).searchParams.get('s') ?? it.link;
             // 台北的單位也常轉貼新北的活動，地點寫了哪個縣市就算哪個
-            const evCity = supportedCity(venue, title) ?? city;
+            // inferCity=false（基隆）：區名和台北重複，只認文字裡明寫的縣市
+            const named = findCity(venue, title);
+            const evCity = named && SUPPORTED_CITIES.includes(named) ? named : inferCity ? supportedCity(venue, title) ?? city : city;
             out.push(
               makeEvent({ id: this.id, name: office }, `${new URL(url).host.split('.')[0]}:${key}`, {
                 title,
@@ -270,5 +272,23 @@ function makeFeedSource({ id, name, feeds, city, homeRe, otherRe }) {
 };
 }
 
+// 基隆市政府「活動訊息」、各區公所「區政活動／最新消息」、海科館「活動訊息」
+export const KEELUNG_FEEDS = [
+  ['基隆市政府', 'https://www.klcg.gov.tw/tw/klcg1/3169-RSS.html'],
+  ['中正區公所', 'https://www.klzz.klcg.gov.tw/tw/klzz/956-RSS.html', '中正區'],
+  ['信義區公所', 'https://www.klsy.klcg.gov.tw/tw/klsy/1220-RSS.html', '信義區'],
+  ['仁愛區公所', 'https://www.klra.klcg.gov.tw/tw/klra/902-RSS.html', '仁愛區'],
+  ['中山區公所', 'https://www.kljs.klcg.gov.tw/tw/kljs/737-RSS.html', '中山區'],
+  ['中山區公所', 'https://www.kljs.klcg.gov.tw/tw/kljs/733-RSS.html', '中山區'],
+  ['安樂區公所', 'https://www.klal.klcg.gov.tw/tw/klal/1016-RSS.html', '安樂區'],
+  ['安樂區公所', 'https://www.klal.klcg.gov.tw/tw/klal/1012-RSS.html', '安樂區'],
+  ['暖暖區公所', 'https://www.klnn.klcg.gov.tw/tw/klnn/852-RSS.html', '暖暖區'],
+  ['暖暖區公所', 'https://www.klnn.klcg.gov.tw/tw/klnn/849-RSS.html', '暖暖區'],
+  ['七堵區公所', 'https://www.klct.klcg.gov.tw/tw/klct/794-RSS.html', '七堵區'],
+  ['國立海洋科技博物館', 'https://www.nmmst.gov.tw/chhtml/rss2', '中正區'],
+];
+const NOT_KEELUNG_RE = /臺北|台北|新北|桃園|新竹|苗栗|臺中|台中|彰化|南投|雲林|嘉義|臺南|台南|高雄|屏東|宜蘭|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
+
 export const tycgNews = makeFeedSource({ id: 'tycgnews', name: '桃園市府局處與區公所', feeds: TYCG_FEEDS, city: '桃園市', homeRe: /桃園/, otherRe: OTHER_CITY_RE });
 export const taipeiNews = makeFeedSource({ id: 'tpenews', name: '臺北市府局處與區公所', feeds: TAIPEI_FEEDS, city: '臺北市', homeRe: /臺北|台北|新北/, otherRe: NOT_TAIPEI_RE });
+export const keelungNews = makeFeedSource({ id: 'klnews', name: '基隆市府與區公所', feeds: KEELUNG_FEEDS, city: '基隆市', homeRe: /基隆/, otherRe: NOT_KEELUNG_RE, inferCity: false });

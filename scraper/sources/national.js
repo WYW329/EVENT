@@ -106,7 +106,7 @@ export const tourism = {
     for (const e of list) {
       const addr = e.PostalAddress ?? {};
       const city = String(addr.City ?? '').replace(/台/g, '臺');
-      if (!['桃園市', '臺北市', '新北市'].includes(city)) continue;
+      if (!['桃園市', '臺北市', '新北市', '基隆市'].includes(city)) continue;
       out.push(
         makeEvent(this, e.EventID, {
           title: e.EventName,

@@ -6,7 +6,8 @@ import { fileURLToPath } from 'node:url';
 import { culture, tourism } from './sources/national.js';
 import { travel, ccms, afmc, babycare, water } from './sources/taoyuan.js';
 import { kktix, accupass, cycc, g11, wekengo, opentix } from './sources/platforms.js';
-import { tycgNews, taipeiNews, library } from './sources/tycgnews.js';
+import { tycgNews, taipeiNews, keelungNews, library } from './sources/tycgnews.js';
+import { klctb } from './sources/keelung.js';
 import { gloria, taimall, xpark } from './sources/malls.js';
 import { travelTaipei, ntpcEvents } from './sources/taipei.js';
 import { huashan, songshan, tfam, tmc, clab, artemperor, indievox, ntpcMuseums, twtc, moca } from './sources/taipei-venues.js';
@@ -18,7 +19,7 @@ const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
 // WeKenGo 放最後：同一個活動官方來源有的話，用官方的資料
-export const SOURCES = [travel, travelTaipei, huashan, songshan, tfam, tmc, clab, moca, twtc, ntpcMuseums, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, indievox, accupass, artemperor, eventbrite, meetup, luma, tycgNews, taipeiNews, wekengo];
+export const SOURCES = [travel, travelTaipei, huashan, songshan, tfam, tmc, clab, moca, twtc, ntpcMuseums, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, indievox, accupass, artemperor, eventbrite, meetup, luma, tycgNews, taipeiNews, keelungNews, klctb, wekengo];
 
 export const SEED = '2000-01-01T00:00:00.000Z';
 
@@ -96,6 +97,8 @@ export async function runAll({ only } = {}) {
 
   const prev = await readJson(join(DATA, 'events.json'), { events: [] });
   const prevById = new Map(prev.events.map((e) => [e.id, e]));
+  // 看過的活動記 45 天：來源暫時少抓一批、之後又出現時，沿用第一次看到的時間，不會再被當成新活動
+  const seenCache = await readJson(join(DATA, 'seen-cache.json'), {});
 
   // 來源這次失敗的話，沿用上次的資料，避免活動突然消失又被當成新活動
   const all = [];
@@ -111,8 +114,8 @@ export async function runAll({ only } = {}) {
   const merged = keepCurrent(dedupe(all));
   // 同一個來源一次冒出超過 60 個新活動，多半是來源改版或篩選條件變了（例如 OPENTIX 一次多了 400 個雙北節目），不是真的新活動，也不推播
   const burst = new Map();
-  for (const e of merged) if (!prevById.has(e.id)) burst.set(e.source, (burst.get(e.source) ?? 0) + 1);
-  const firstSeenOf = (e) => prevById.get(e.id)?.firstSeen ?? (prev.events.length && (!prevSources.has(e.source) || !prevCities.has(e.city) || burst.get(e.source) > 60) ? SEED : nowIso);
+  for (const e of merged) if (!prevById.has(e.id) && !seenCache[e.id]) burst.set(e.source, (burst.get(e.source) ?? 0) + 1);
+  const firstSeenOf = (e) => prevById.get(e.id)?.firstSeen ?? seenCache[e.id] ?? (prev.events.length && (!prevSources.has(e.source) || !prevCities.has(e.city) || burst.get(e.source) > 60) ? SEED : nowIso);
   // 說明文字最多留 700 字（詳細內容看原網站），整份資料小很多，手機開 App 比較快
   const clip = (t) => (t && t.length > 700 ? `${t.slice(0, 700)}…` : t);
   const events = merged.map((e) => ({ ...e, summary: clip(e.summary), categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
@@ -146,12 +149,19 @@ export async function runAll({ only } = {}) {
       warnings: r.warnings ?? null,
     })),
   };
-  return { events, status };
+  const cutoff = new Date(Date.now() - 45 * 86400000).toISOString();
+  const nextSeen = {};
+  for (const [id, t] of Object.entries(seenCache)) if (t >= cutoff) nextSeen[id] = t;
+  for (const e of events) nextSeen[e.id] = e.firstSeen;
+  // 太舊的（超過 45 天、而且已經不在清單上的）丟掉
+  const alive = new Set(events.map((e) => e.id));
+  for (const [id, t] of Object.entries(nextSeen)) if (t < cutoff && !alive.has(id)) delete nextSeen[id];
+  return { events, status, seen: nextSeen };
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const only = process.argv.slice(2);
-  const { events, status } = await runAll({ only: only.length ? only : undefined });
+  const { events, status, seen } = await runAll({ only: only.length ? only : undefined });
   await mkdir(DATA, { recursive: true });
   if (!only.length) {
     // 不排版（檔案小一半以上，手機下載快、Worker 解析快）
@@ -161,6 +171,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     const lite = events.map((e) => Object.fromEntries(NOTIFY_KEYS.filter((k) => e[k] != null).map((k) => [k, e[k]])));
     await writeFile(join(DATA, 'notify.json'), JSON.stringify({ updatedAt: status.updatedAt, events: lite }));
     await writeFile(join(DATA, 'status.json'), JSON.stringify(status, null, 2));
+    await writeFile(join(DATA, 'seen-cache.json'), JSON.stringify(seen));
   }
   for (const s of status.sources) {
     console.log(`${s.ok ? '✓' : '✗'} ${s.name.padEnd(10)} 抓到 ${String(s.count ?? '-').padStart(4)}，保留 ${String(s.kept).padStart(4)}，${(s.ms / 1000).toFixed(1)}s${s.error ? `  錯誤：${s.error}` : ''}${s.warnings ? `  警告：${s.warnings.join('; ')}` : ''}`);

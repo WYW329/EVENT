@@ -127,7 +127,9 @@ async function checkNewEvents(env) {
   } else {
     const seen = new Set(JSON.parse(seenRaw));
     // firstSeen 是 2000 年的是新來源一開始就有的活動，不推播
-    fresh = events.filter((e) => !seen.has(e.id) && !(e.firstSeen ?? '').startsWith('2000-'));
+    // 只推 6 小時內第一次出現的（來源暫時消失又出現的舊活動不再推）
+    const recent = new Date(Date.now() - 6 * 3600000).toISOString();
+    fresh = events.filter((e) => !seen.has(e.id) && !(e.firstSeen ?? '').startsWith('2000-') && (e.firstSeen ?? '') >= recent);
     if (fresh.length) {
       const subs = (await env.DB.prepare('SELECT id, endpoint, p256dh, auth, prefs FROM subs').all()).results;
       for (const sub of subs) {
