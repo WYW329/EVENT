@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T23:35:56.129Z",
-  "tookMs": 111960,
-  "total": 1900,
+  "updatedAt": "2026-11-27T00:07:17.073Z",
+  "tookMs": 193413,
+  "total": 1898,
   "sources": [
     {
       "id": "tytravel",
@@ -9,7 +9,7 @@
       "ok": true,
       "count": 83,
       "kept": 12,
-      "ms": 19721,
+      "ms": 13830,
       "error": null,
       "warnings": null
     },
@@ -19,18 +19,18 @@
       "ok": true,
       "count": 30,
       "kept": 30,
-      "ms": 1893,
+      "ms": 5503,
       "error": null,
       "warnings": null
     },
     {
       "id": "huashan",
       "name": "華山1914文化創意產業園區",
-      "ok": false,
-      "count": null,
+      "ok": true,
+      "count": 40,
       "kept": 40,
-      "ms": 39976,
-      "error": "fetch failed",
+      "ms": 16435,
+      "error": null,
       "warnings": null
     },
     {
@@ -39,7 +39,7 @@
       "ok": true,
       "count": 20,
       "kept": 20,
-      "ms": 1803,
+      "ms": 1323,
       "error": null,
       "warnings": null
     },
@@ -49,7 +49,7 @@
       "ok": true,
       "count": 28,
       "kept": 27,
-      "ms": 18318,
+      "ms": 12268,
       "error": null,
       "warnings": null
     },
@@ -59,7 +59,7 @@
       "ok": true,
       "count": 10,
       "kept": 10,
-      "ms": 16082,
+      "ms": 10028,
       "error": null,
       "warnings": null
     },
@@ -69,7 +69,7 @@
       "ok": true,
       "count": 2,
       "kept": 2,
-      "ms": 15782,
+      "ms": 10183,
       "error": null,
       "warnings": null
     },
@@ -79,7 +79,7 @@
       "ok": true,
       "count": 4,
       "kept": 4,
-      "ms": 11447,
+      "ms": 11177,
       "error": null,
       "warnings": null
     },
@@ -89,7 +89,7 @@
       "ok": true,
       "count": 322,
       "kept": 22,
-      "ms": 8359,
+      "ms": 4773,
       "error": null,
       "warnings": null
     },
@@ -99,7 +99,7 @@
       "ok": true,
       "count": 26,
       "kept": 21,
-      "ms": 107261,
+      "ms": 104981,
       "error": null,
       "warnings": null
     },
@@ -109,7 +109,7 @@
       "ok": true,
       "count": 122,
       "kept": 99,
-      "ms": 6550,
+      "ms": 3983,
       "error": null,
       "warnings": null
     },
@@ -119,7 +119,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 22801,
+      "ms": 193364,
       "error": null,
       "warnings": null
     },
@@ -129,7 +129,7 @@
       "ok": true,
       "count": 121,
       "kept": 121,
-      "ms": 42125,
+      "ms": 36119,
       "error": null,
       "warnings": null
     },
@@ -149,7 +149,7 @@
       "ok": true,
       "count": 4,
       "kept": 3,
-      "ms": 4302,
+      "ms": 3549,
       "error": null,
       "warnings": null
     },
@@ -159,7 +159,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 17449,
+      "ms": 16672,
       "error": null,
       "warnings": null
     },
@@ -169,7 +169,7 @@
       "ok": true,
       "count": 2,
       "kept": 1,
-      "ms": 4934,
+      "ms": 3931,
       "error": null,
       "warnings": null
     },
@@ -179,7 +179,7 @@
       "ok": true,
       "count": 5,
       "kept": 4,
-      "ms": 15292,
+      "ms": 15125,
       "error": null,
       "warnings": null
     },
@@ -189,7 +189,7 @@
       "ok": true,
       "count": 1,
       "kept": 1,
-      "ms": 7131,
+      "ms": 6169,
       "error": null,
       "warnings": null
     },
@@ -199,7 +199,7 @@
       "ok": true,
       "count": 12,
       "kept": 4,
-      "ms": 47762,
+      "ms": 46085,
       "error": null,
       "warnings": null
     },
@@ -209,7 +209,7 @@
       "ok": true,
       "count": 66,
       "kept": 63,
-      "ms": 9389,
+      "ms": 7614,
       "error": null,
       "warnings": null
     },
@@ -219,7 +219,7 @@
       "ok": true,
       "count": 499,
       "kept": 491,
-      "ms": 92,
+      "ms": 96,
       "error": null,
       "warnings": null
     },
@@ -229,7 +229,7 @@
       "ok": false,
       "count": null,
       "kept": 90,
-      "ms": 4477,
+      "ms": 3563,
       "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
       "warnings": null
     },
@@ -239,7 +239,7 @@
       "ok": true,
       "count": 7,
       "kept": 7,
-      "ms": 14506,
+      "ms": 9348,
       "error": null,
       "warnings": null
     },
@@ -248,8 +248,8 @@
       "name": "Accupass 活動通",
       "ok": true,
       "count": 31,
-      "kept": 25,
-      "ms": 9201,
+      "kept": 24,
+      "ms": 26828,
       "error": null,
       "warnings": null
     },
@@ -259,7 +259,7 @@
       "ok": true,
       "count": 79,
       "kept": 74,
-      "ms": 34501,
+      "ms": 39570,
       "error": null,
       "warnings": null
     },
@@ -269,7 +269,7 @@
       "ok": true,
       "count": 0,
       "kept": 0,
-      "ms": 7752,
+      "ms": 6715,
       "error": null,
       "warnings": null
     },
@@ -279,7 +279,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 5683,
+      "ms": 4778,
       "error": null,
       "warnings": null
     },
@@ -289,7 +289,7 @@
       "ok": true,
       "count": 9,
       "kept": 9,
-      "ms": 14704,
+      "ms": 9611,
       "error": null,
       "warnings": null
     },
@@ -297,12 +297,12 @@
       "id": "tycgnews",
       "name": "桃園市府局處與區公所",
       "ok": true,
-      "count": 20,
-      "kept": 20,
-      "ms": 90032,
+      "count": 19,
+      "kept": 19,
+      "ms": 188853,
       "error": null,
       "warnings": [
-        "青年事務局: The operation was aborted due to timeout"
+        "動物保護處: The operation was aborted due to timeout"
       ]
     },
     {
@@ -311,7 +311,7 @@
       "ok": true,
       "count": 67,
       "kept": 67,
-      "ms": 18375,
+      "ms": 15613,
       "error": null,
       "warnings": null
     },
@@ -321,7 +321,7 @@
       "ok": true,
       "count": 803,
       "kept": 613,
-      "ms": 111916,
+      "ms": 104517,
       "error": null,
       "warnings": null
     }
