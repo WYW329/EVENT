@@ -14,6 +14,8 @@ async function subIdOf(endpoint) {
 const vapidOf = (env) => ({ publicKey: env.VAPID_PUBLIC_KEY, privateKey: env.VAPID_PRIVATE_KEY, subject: env.VAPID_SUBJECT });
 const pushReady = (env) => Boolean(env.VAPID_PUBLIC_KEY && env.VAPID_PRIVATE_KEY);
 const statusUrl = (env) => env.STATUS_URL || env.EVENTS_URL.replace(/events\.json$/, 'status.json');
+// 推播判斷用的精簡版活動資料（只有標題、時間、地區這些欄位）
+const notifyUrl = (env) => env.EVENTS_URL.replace(/events\.json$/, 'notify.json');
 
 /** 從 GitHub 讀資料，用 Cloudflare 快取 2 分鐘，不解析 JSON（省運算時間）。 */
 async function cachedText(url, ctx, ttl = 120) {
@@ -108,7 +110,8 @@ const setMeta = (env, k, v) => env.DB.prepare('INSERT INTO meta (k, v) VALUES (?
 /** 活動資料有更新時：找出新活動發通知，並更新收藏的活動快照。 */
 async function checkNewEvents(env) {
   const etag = await getMeta(env, 'etag');
-  const res = await fetch(env.EVENTS_URL, { headers: etag ? { 'If-None-Match': etag } : {}, cf: { cacheTtl: 0 } });
+  let res = await fetch(notifyUrl(env), { headers: etag ? { 'If-None-Match': etag } : {}, cf: { cacheTtl: 0 } });
+  if (res.status === 404) res = await fetch(env.EVENTS_URL, { headers: etag ? { 'If-None-Match': etag } : {}, cf: { cacheTtl: 0 } });
   if (res.status === 304) return { changed: false };
   if (!res.ok) throw new Error(`讀取活動失敗：HTTP ${res.status}`);
   const data = await res.json();

@@ -109,7 +109,9 @@ export async function runAll({ only } = {}) {
   const prevSources = new Set(prev.events.map((e) => e.source));
   const prevCities = new Set(prev.events.map((e) => e.city ?? '桃園市'));
   const firstSeenOf = (e) => prevById.get(e.id)?.firstSeen ?? (prev.events.length && (!prevSources.has(e.source) || !prevCities.has(e.city)) ? SEED : nowIso);
-  const events = keepCurrent(dedupe(all)).map((e) => ({ ...e, categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
+  // 說明文字最多留 700 字（詳細內容看原網站），整份資料小很多，手機開 App 比較快
+  const clip = (t) => (t && t.length > 700 ? `${t.slice(0, 700)}…` : t);
+  const events = keepCurrent(dedupe(all)).map((e) => ({ ...e, summary: clip(e.summary), categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
   events.sort((a, b) => (toMs(a.start) || 0) - (toMs(b.start) || 0));
 
   const status = {
@@ -135,7 +137,12 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const { events, status } = await runAll({ only: only.length ? only : undefined });
   await mkdir(DATA, { recursive: true });
   if (!only.length) {
-    await writeFile(join(DATA, 'events.json'), JSON.stringify({ updatedAt: status.updatedAt, events }, null, 1));
+    // 不排版（檔案小一半以上，手機下載快、Worker 解析快）
+    await writeFile(join(DATA, 'events.json'), JSON.stringify({ updatedAt: status.updatedAt, events }));
+    // 推播用的精簡版：Worker 每次有新資料都要整份解析，只留判斷通知需要的欄位
+    const NOTIFY_KEYS = ['id', 'title', 'city', 'category', 'categories', 'free', 'start', 'end', 'regStart', 'regEnd', 'url', 'venue', 'district', 'firstSeen'];
+    const lite = events.map((e) => Object.fromEntries(NOTIFY_KEYS.filter((k) => e[k] != null).map((k) => [k, e[k]])));
+    await writeFile(join(DATA, 'notify.json'), JSON.stringify({ updatedAt: status.updatedAt, events: lite }));
     await writeFile(join(DATA, 'status.json'), JSON.stringify(status, null, 2));
   }
   for (const s of status.sources) {

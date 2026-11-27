@@ -3,3 +3,5 @@ data-local/
 .env*
 .dev.vars
 .wrangler/
+# 活動資料和快取放在 data 分支，main 不放
+data/*.json
