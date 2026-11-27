@@ -56,9 +56,10 @@ export const eventbrite = {
   name: 'Eventbrite',
   async fetch() {
     const out = new Map();
+    const errors = [];
     for (const slug of ['taiwan--taipei', 'taiwan--new-taipei-city', 'taiwan--taoyuan-city']) {
       for (let page = 1; page <= 4; page++) {
-        const html = await fetchText(`https://www.eventbrite.com/d/${slug}/events/${page > 1 ? `?page=${page}` : ''}`).catch(() => '');
+        const html = await fetchText(`https://www.eventbrite.com/d/${slug}/events/${page > 1 ? `?page=${page}` : ''}`).catch((err) => { errors.push(`${slug}: ${err.message}`); return ''; });
         const list = ldEvents(html);
         if (!list.length) break;
         let added = 0;
@@ -86,6 +87,7 @@ export const eventbrite = {
         if (!added) break;
       }
     }
+    if (!out.size && errors.length) throw new Error(errors.join('; '));
     return [...out.values()];
   },
 };

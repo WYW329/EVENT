@@ -118,8 +118,21 @@ export async function runAll({ only } = {}) {
   const events = merged.map((e) => ({ ...e, summary: clip(e.summary), categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
   events.sort((a, b) => (toMs(a.start) || 0) - (toMs(b.start) || 0));
 
+  // 診斷：會擋雲端主機的網站，記下回應狀態（寫進 status.json，方便看是被擋還是別的問題）
+  const diag = {};
+  for (const [k, u] of [['kktix', 'https://kktix.com/events.atom?search=%E5%8F%B0%E5%8C%97'], ['eventbrite', 'https://www.eventbrite.com/d/taiwan--taipei/events/']]) {
+    try {
+      const r = await fetch(u, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36', Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'zh-TW,zh;q=0.9' }, signal: AbortSignal.timeout(20000) });
+      const body = await r.text();
+      diag[k] = { status: r.status, server: r.headers.get('server'), mitigated: r.headers.get('cf-mitigated'), title: body.match(/<title[^>]*>([^<]{0,80})/)?.[1] ?? null, len: body.length };
+    } catch (err) {
+      diag[k] = { error: String(err.cause?.code ?? err.message) };
+    }
+  }
+
   const status = {
     updatedAt: nowIso,
+    diag,
     tookMs: Date.now() - started,
     total: events.length,
     sources: results.map((r) => ({
