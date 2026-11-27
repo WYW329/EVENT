@@ -202,7 +202,7 @@ export const library = {
   },
 };
 
-/** 市府 RSS 來源：feeds 是 [單位, RSS 網址, 預設行政區]；city 是這組來源的縣市。 */
+/** 市府 RSS 來源：feeds 是 [單位, RSS 網址, 預設行政區, 這個單位的縣市（沒寫就用 city）]；city 是這組來源的縣市。 */
 function makeFeedSource({ id, name, feeds, city, homeRe, otherRe, inferCity = true }) {
   return {
   id,
@@ -213,7 +213,7 @@ function makeFeedSource({ id, name, feeds, city, homeRe, otherRe, inferCity = tr
     const errors = [];
     const today = todayTaipei();
     await Promise.all(
-      feeds.map(async ([office, url, district]) => {
+      feeds.map(async ([office, url, district, feedCity = city]) => {
         try {
           const xml = await fetchText(url, {}, { timeoutMs: 90000, retries: 2 });
           for (const it of parseFeedItems(xml)) {
@@ -243,14 +243,14 @@ function makeFeedSource({ id, name, feeds, city, homeRe, otherRe, inferCity = tr
             // 台北的單位也常轉貼新北的活動，地點寫了哪個縣市就算哪個
             // inferCity=false（基隆）：區名和台北重複，只認文字裡明寫的縣市
             const named = findCity(venue, title);
-            const evCity = named && SUPPORTED_CITIES.includes(named) ? named : inferCity ? supportedCity(venue, title) ?? city : city;
+            const evCity = named && SUPPORTED_CITIES.includes(named) ? named : inferCity ? supportedCity(venue, title) ?? feedCity : feedCity;
             out.push(
               makeEvent({ id: this.id, name: office }, `${new URL(url).host.split('.')[0]}:${key}`, {
                 title,
                 start: dates.start,
                 end: dates.end,
                 venue,
-                district: findDistrict({ city: evCity }, venue, title, it.text) ?? (evCity === city ? district : null) ?? null,
+                district: findDistrict({ city: evCity }, venue, title, it.text) ?? (evCity === feedCity ? district : null) ?? null,
                 city: evCity,
                 url: it.link,
                 summary: it.text,
@@ -289,6 +289,14 @@ export const KEELUNG_FEEDS = [
 ];
 const NOT_KEELUNG_RE = /臺北|台北|新北|桃園|新竹|苗栗|臺中|台中|彰化|南投|雲林|嘉義|臺南|台南|高雄|屏東|宜蘭|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
 
+// 新竹縣政府「活動訊息」、新竹市政府新聞
+export const HSINCHU_FEEDS = [
+  ['新竹縣政府', 'https://www.hsinchu.gov.tw/OpenData.aspx?SN=3E00E932A813B364', '竹北市', '新竹縣'],
+  ['新竹市政府', 'https://www.hccg.gov.tw/hccg/app/rss/News', '東區', '新竹市'],
+];
+const NOT_HSINCHU_RE = /臺北|台北|新北|桃園|基隆|苗栗|臺中|台中|彰化|南投|雲林|嘉義|臺南|台南|高雄|屏東|宜蘭|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
+
 export const tycgNews = makeFeedSource({ id: 'tycgnews', name: '桃園市府局處與區公所', feeds: TYCG_FEEDS, city: '桃園市', homeRe: /桃園/, otherRe: OTHER_CITY_RE });
 export const taipeiNews = makeFeedSource({ id: 'tpenews', name: '臺北市府局處與區公所', feeds: TAIPEI_FEEDS, city: '臺北市', homeRe: /臺北|台北|新北/, otherRe: NOT_TAIPEI_RE });
+export const hsinchuNews = makeFeedSource({ id: 'hcnews', name: '新竹縣市政府', feeds: HSINCHU_FEEDS, city: '新竹市', homeRe: /新竹|竹北|竹東/, otherRe: NOT_HSINCHU_RE });
 export const keelungNews = makeFeedSource({ id: 'klnews', name: '基隆市府與區公所', feeds: KEELUNG_FEEDS, city: '基隆市', homeRe: /基隆/, otherRe: NOT_KEELUNG_RE, inferCity: false });

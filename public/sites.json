@@ -80,7 +80,7 @@
    "region": "桃園",
    "via": [
     "文化部藝文活動",
-    "WeKenGo 週末去哪玩"
+    "OPENTIX"
    ]
   },
   {
@@ -532,7 +532,7 @@
    "url": "https://www.tydares.gov.tw/",
    "region": "桃園",
    "via": [
-    "龍潭區公所"
+    "復興區公所"
    ]
   },
   {
@@ -856,7 +856,10 @@
    "category": "區公所",
    "name": "新莊區公所",
    "url": "https://www.xinzhuang.ntpc.gov.tw/",
-   "region": "台北"
+   "region": "台北",
+   "via": [
+    "新北市政府活動"
+   ]
   },
   {
    "category": "區公所",
@@ -1377,7 +1380,8 @@
    "url": "https://www.honhui.com.tw/",
    "region": "台北",
    "via": [
-    "WeKenGo 週末去哪玩"
+    "WeKenGo 週末去哪玩",
+    "新北市政府活動"
    ]
   },
   {
@@ -1445,6 +1449,16 @@
    "auto": true
   },
   {
+   "category": "藝文平台",
+   "name": "誠品 meet eslite 藝文",
+   "url": "https://meet.eslite.com/",
+   "region": "台北",
+   "via": [
+    "OPENTIX",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
    "category": "社群活動",
    "name": "Eventbrite 台北",
    "url": "https://www.eventbrite.com/d/taiwan--taipei/events/",
@@ -1498,7 +1512,7 @@
    "region": "台北",
    "via": [
     "iNDIEVOX",
-    "WeKenGo 週末去哪玩"
+    "KKTIX"
    ]
   },
   {
@@ -1541,12 +1555,41 @@
   },
   {
    "category": "小劇場",
+   "name": "水源劇場",
+   "url": "https://www.tpac-taipei.org/",
+   "region": "台北",
+   "via": [
+    "OPENTIX",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "小劇場",
    "name": "臺北偶戲館",
    "url": "https://www.taipeipuppet.com/",
    "region": "台北",
    "via": [
     "OPENTIX",
     "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "小劇場",
+   "name": "大稻埕戲苑",
+   "url": "https://www.tapo.gov.taipei/",
+   "region": "台北",
+   "via": [
+    "OPENTIX",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "小劇場",
+   "name": "城市舞台",
+   "url": "https://www.tapo.gov.taipei/",
+   "region": "台北",
+   "via": [
+    "OPENTIX"
    ]
   },
   {
@@ -1569,6 +1612,16 @@
    "via": [
     "OPENTIX",
     "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "畫廊空間",
+   "name": "台北當代藝術館",
+   "url": "https://www.mocataipei.org.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "臺北旅遊網"
    ]
   },
   {
@@ -1616,9 +1669,320 @@
    ]
   },
   {
+   "category": "畫廊空間",
+   "name": "台北國際藝術村",
+   "url": "https://www.artistvillage.org/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
    "category": "歷史街區",
    "name": "剝皮寮歷史街區",
    "url": "https://www.bopiliao.taipei/",
+   "region": "台北"
+  },
+  {
+   "category": "市集",
+   "name": "華山市集",
+   "url": "https://www.huashan1914.com/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "觀光署活動"
+   ]
+  },
+  {
+   "category": "運動",
+   "name": "臺北市運動中心",
+   "url": "https://sports.gov.taipei/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "新北市觀光旅遊網（活動行事曆）",
+   "url": "https://newtaipei.travel/zh-tw/calendar/list",
+   "region": "台北",
+   "auto": true
+  },
+  {
+   "category": "觀光休閒",
+   "name": "東北角管理處（活動專區）",
+   "url": "https://www.necoast-nsa.gov.tw/Articles.aspx?a=7&l=1",
+   "region": "台北",
+   "auto": true
+  },
+  {
+   "category": "區公所",
+   "name": "貢寮區公所",
+   "url": "https://www.gongliao.ntpc.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "區公所",
+   "name": "雙溪區公所",
+   "url": "https://www.shuangxi.ntpc.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "區公所",
+   "name": "平溪區公所",
+   "url": "https://www.pingxi.ntpc.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "區公所",
+   "name": "萬里區公所",
+   "url": "https://www.wanli.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "新北市觀光旅遊網"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "金山區公所",
+   "url": "https://www.jinshan.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "新北市政府活動"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "石門區公所",
+   "url": "https://www.shimen.ntpc.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "區公所",
+   "name": "三芝區公所",
+   "url": "https://www.sanzhi.ntpc.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "區公所",
+   "name": "八里區公所",
+   "url": "https://www.bali.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "深坑區公所",
+   "url": "https://www.shenkeng.ntpc.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "區公所",
+   "name": "石碇區公所",
+   "url": "https://www.shiding.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "坪林區公所",
+   "url": "https://www.pinglin.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "觀光署活動"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "烏來區公所",
+   "url": "https://www.wulai.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "五股區公所",
+   "url": "https://www.wugu.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "文化部藝文活動"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "泰山區公所",
+   "url": "https://www.taishan.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "OPENTIX",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "東北角",
+   "name": "九份老街",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "金瓜石・水湳洞",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "猴硐貓村",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "平溪天燈節",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "十分老街・菁桐",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "福隆國際沙雕藝術季",
+   "url": "https://www.necoast-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "草嶺古道芒花季",
+   "url": "https://www.necoast-nsa.gov.tw/",
+   "region": "台北",
+   "via": [
+    "觀光署活動",
+    "東北角管理處"
+   ]
+  },
+  {
+   "category": "東北角",
+   "name": "貢寮國際海洋音樂祭",
+   "url": "https://www.necoast-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "鼻頭角・龍洞",
+   "url": "https://www.necoast-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "貢寮水梯田（和禾）",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "三貂角燈塔",
+   "url": "https://www.necoast-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "東北角",
+   "name": "雙溪 牡丹老街",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "金山老街・磺港蹦火仔",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "法鼓山世界佛教教育園區",
+   "url": "https://www.ddm.org.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "野柳海洋世界",
+   "url": "https://www.oceanworld.com.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "富貴角燈塔・老梅綠石槽",
+   "url": "https://www.northguan-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "白沙灣・淺水灣",
+   "url": "https://www.northguan-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "三芝櫻花季",
+   "url": "https://www.northguan-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "北海岸國際風箏節",
+   "url": "https://www.northguan-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "北海岸",
+   "name": "八里左岸",
+   "url": "https://www.northguan-nsa.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "山區",
+   "name": "烏來泰雅民族博物館",
+   "url": "https://www.atayal.ntpc.gov.tw/",
+   "region": "台北"
+  },
+  {
+   "category": "山區",
+   "name": "深坑老街",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "山區",
+   "name": "石碇老街・千島湖",
+   "url": "https://newtaipei.travel/",
+   "region": "台北"
+  },
+  {
+   "category": "山區",
+   "name": "新北市客家文化園區",
+   "url": "https://www.hakka.ntpc.gov.tw/",
+   "region": "台北",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "山區",
+   "name": "三峽老街・祖師廟",
+   "url": "https://newtaipei.travel/",
    "region": "台北"
   },
   {
@@ -1928,6 +2292,636 @@
    "name": "Eventbrite 基隆",
    "url": "https://www.eventbrite.com/d/taiwan--keelung-city/events/",
    "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市政府社會處",
+   "url": "https://www.klcg.gov.tw/tw/social/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市政府產業發展處",
+   "url": "https://www.klcg.gov.tw/tw/industry/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市政府教育處",
+   "url": "https://www.kl.edu.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市政府客家事務",
+   "url": "https://www.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市原住民族事務",
+   "url": "https://www.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "基隆市親子館",
+   "url": "https://www.klcg.gov.tw/",
+   "region": "基隆",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "基隆文化中心演藝廳",
+   "url": "https://klctb.klcg.gov.tw/",
+   "region": "基隆",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "OPENTIX"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "阿根納造船廠遺構",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "基隆港西岸旅運中心",
+   "url": "https://kl.twport.com.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "基隆海洋廣場",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "國門廣場",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆",
+   "via": [
+    "中正區公所",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "中正公園・主普壇",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "獅球嶺砲台",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "白米甕砲台",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "二沙灣砲台（海門天險）",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "仙洞巖",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "藝文場館",
+   "name": "委託行街・崁仔頂魚市",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "潮境公園",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "外木山海岸",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "碧砂漁港",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "暖暖親水公園",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "七堵 瑪陵・泰安瀑布",
+   "url": "https://travel.klcg.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "學校社團",
+   "name": "基隆市家庭教育中心",
+   "url": "https://kl.familyedu.moe.gov.tw/",
+   "region": "基隆"
+  },
+  {
+   "category": "平台",
+   "name": "KKTIX 基隆",
+   "url": "https://kktix.com/events?search=%E5%9F%BA%E9%9A%86",
+   "region": "基隆",
+   "auto": true
+  },
+  {
+   "category": "平台",
+   "name": "OPENTIX 基隆",
+   "url": "https://www.opentix.life/",
+   "region": "基隆"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市政府",
+   "url": "https://www.hccg.gov.tw/",
+   "region": "新竹",
+   "auto": true
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市文化局",
+   "url": "https://culture.hccg.gov.tw/ch/home.jsp?id=9&parentpath=0,1",
+   "region": "新竹",
+   "auto": true
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市觀光旅遊網",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市立動物園",
+   "url": "https://zoo.hccg.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市公共圖書館",
+   "url": "https://library.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "新竹縣政府文化局"
+   ]
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市政府社會處",
+   "url": "https://www.hccg.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市環保局",
+   "url": "https://www.hcepb.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市客家事務",
+   "url": "https://www.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "文化部藝文活動",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹市家庭教育中心",
+   "url": "https://hcc.familyedu.moe.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹縣政府",
+   "url": "https://www.hsinchu.gov.tw/News.aspx?n=155&sms=8605",
+   "region": "新竹",
+   "auto": true
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹縣政府文化局",
+   "url": "https://www.hchcc.gov.tw/",
+   "region": "新竹",
+   "auto": true
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹縣藝文活動資訊網",
+   "url": "https://event.hchcc.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹縣旅遊網",
+   "url": "https://travel.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹縣政府客家事務處",
+   "url": "https://www.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹縣家庭教育中心",
+   "url": "https://hcc.familyedu.moe.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "市府機關",
+   "name": "新竹縣體育場",
+   "url": "https://www.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "區公所",
+   "name": "湖口鄉公所",
+   "url": "https://www.hukou.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "區公所",
+   "name": "北埔鄉公所",
+   "url": "https://www.beipu.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹市美術館",
+   "url": "https://culture.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "新竹縣政府文化局",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹市影像博物館",
+   "url": "https://culture.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "KKTIX"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹市眷村博物館",
+   "url": "https://culture.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "新竹市文化局"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹市文化局演藝廳",
+   "url": "https://culture.hccg.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹市文化藝廊・241 藝術空間",
+   "url": "https://culture.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "新竹市文化局"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹鐵道藝術村",
+   "url": "https://culture.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "新竹市文化局"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "黑蝙蝠中隊文物陳列館",
+   "url": "https://culture.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "新竹市文化局"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹縣美術館",
+   "url": "https://www.hchcc.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹縣演藝廳",
+   "url": "https://www.hchcc.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "OPENTIX",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新瓦屋客家文化保存區",
+   "url": "https://www.hchcc.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "文化部藝文活動",
+    "新竹縣政府文化局"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹縣縣史館",
+   "url": "https://www.hchcc.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "新竹縣政府文化局",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "國立清華大學藝術中心",
+   "url": "https://arts.nthu.edu.tw/",
+   "region": "新竹",
+   "via": [
+    "OPENTIX",
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "國立陽明交通大學藝文中心",
+   "url": "https://arts.nycu.edu.tw/",
+   "region": "新竹",
+   "via": [
+    "KKTIX",
+    "文化部藝文活動"
+   ]
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹科學園區（竹科）",
+   "url": "https://www.sipa.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "藝文場館",
+   "name": "工業技術研究院",
+   "url": "https://www.itri.org.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "藝文場館",
+   "name": "新竹市立棒球場",
+   "url": "https://www.hccg.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "新竹公園・湖畔",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "南寮漁港・17 公里海岸線",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "新竹都城隍廟",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "東門城・護城河",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "青草湖",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "香山濕地",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "六福村主題遊樂園",
+   "url": "https://www.leofoo.com.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩"
+   ]
+  },
+  {
+   "category": "觀光休閒",
+   "name": "綠世界生態農場",
+   "url": "https://www.green-world.com.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "內灣老街",
+   "url": "https://travel.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "北埔老街",
+   "url": "https://travel.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "新埔義民廟",
+   "url": "https://travel.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "司馬庫斯",
+   "url": "https://travel.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "雪霸國家公園（觀霧）",
+   "url": "https://www.spnp.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "參山國家風景區（獅頭山）",
+   "url": "https://www.trimt-nsa.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "觀光休閒",
+   "name": "新竹漁港・新豐紅樹林",
+   "url": "https://travel.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "商場百貨",
+   "name": "遠東巨城購物中心",
+   "url": "https://www.bigcity.com.tw/",
+   "region": "新竹",
+   "via": [
+    "WeKenGo 週末去哪玩",
+    "KKTIX"
+   ]
+  },
+  {
+   "category": "商場百貨",
+   "name": "新竹遠東 SOGO",
+   "url": "https://www.sogo.com.tw/",
+   "region": "新竹",
+   "via": [
+    "OPENTIX",
+    "KKTIX"
+   ]
+  },
+  {
+   "category": "商場百貨",
+   "name": "新竹大遠百",
+   "url": "https://www.feds.com.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "節慶活動",
+   "name": "新竹市燈會",
+   "url": "https://tourism.hccg.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "節慶活動",
+   "name": "新竹縣客家義民祭",
+   "url": "https://travel.hsinchu.gov.tw/",
+   "region": "新竹"
+  },
+  {
+   "category": "節慶活動",
+   "name": "新竹縣新響藝術季",
+   "url": "https://www.hchcc.gov.tw/",
+   "region": "新竹",
+   "via": [
+    "新竹縣政府文化局",
+    "OPENTIX"
+   ]
+  },
+  {
+   "category": "節慶活動",
+   "name": "新竹縣星夜季",
+   "url": "https://travel.hsinchu.gov.tw/Event/2026starrynightfestival",
+   "region": "新竹"
+  },
+  {
+   "category": "平台",
+   "name": "Accupass 活動通（新竹）",
+   "url": "https://www.accupass.com/search?l=hsinchu",
+   "region": "新竹",
+   "auto": true
+  },
+  {
+   "category": "平台",
+   "name": "WeKenGo 週末去哪玩（新竹）",
+   "url": "https://wekengo.tw/?city=hsinchu",
+   "region": "新竹",
+   "auto": true
+  },
+  {
+   "category": "平台",
+   "name": "KKTIX 新竹",
+   "url": "https://kktix.com/events?search=%E6%96%B0%E7%AB%B9",
+   "region": "新竹",
+   "auto": true
+  },
+  {
+   "category": "平台",
+   "name": "Eventbrite 新竹",
+   "url": "https://www.eventbrite.com/d/taiwan--hsinchu/events/",
+   "region": "新竹",
    "auto": true
   },
   {

@@ -6,7 +6,9 @@ import { fileURLToPath } from 'node:url';
 import { culture, tourism } from './sources/national.js';
 import { travel, ccms, afmc, babycare, water } from './sources/taoyuan.js';
 import { kktix, accupass, cycc, g11, wekengo, opentix } from './sources/platforms.js';
-import { tycgNews, taipeiNews, keelungNews, library } from './sources/tycgnews.js';
+import { tycgNews, taipeiNews, keelungNews, hsinchuNews, library } from './sources/tycgnews.js';
+import { hchcc, hccgCulture } from './sources/hsinchu.js';
+import { ntpcTravel, necoast } from './sources/ntpc-coast.js';
 import { klctb } from './sources/keelung.js';
 import { gloria, taimall, xpark } from './sources/malls.js';
 import { travelTaipei, ntpcEvents } from './sources/taipei.js';
@@ -19,7 +21,7 @@ const DATA = join(ROOT, 'data');
 
 // 排在前面的來源資料比較完整，重複時保留前面的
 // WeKenGo 放最後：同一個活動官方來源有的話，用官方的資料
-export const SOURCES = [travel, travelTaipei, huashan, songshan, tfam, tmc, clab, moca, twtc, nationalVenues, ntpcMuseums, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, opentix, kktix, indievox, accupass, artemperor, eventbrite, meetup, luma, tycgNews, taipeiNews, keelungNews, klctb, wekengo];
+export const SOURCES = [travel, travelTaipei, huashan, songshan, tfam, tmc, clab, moca, twtc, nationalVenues, ntpcMuseums, hchcc, hccgCulture, necoast, tourism, afmc, culture, ccms, babycare, water, cycc, g11, gloria, taimall, xpark, library, ntpcEvents, ntpcTravel, opentix, kktix, indievox, accupass, artemperor, eventbrite, meetup, luma, tycgNews, taipeiNews, keelungNews, hsinchuNews, klctb, wekengo];
 
 export const SEED = '2000-01-01T00:00:00.000Z';
 

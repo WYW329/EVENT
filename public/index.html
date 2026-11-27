@@ -137,6 +137,7 @@
         <button data-region="桃園" class="chip">桃園</button>
         <button data-region="台北" class="chip">台北・新北</button>
         <button data-region="基隆" class="chip">基隆</button>
+        <button data-region="新竹" class="chip">新竹</button>
         <button data-region="全台" class="chip">全台平台</button>
       </div>
       <div class="search-wrap inline">
@@ -222,6 +223,9 @@
           <div class="pick" id="prefRemind"></div>
         </fieldset>
         <label class="switch-row"><span>活動前一天早上 9 點提醒</span><input type="checkbox" name="remindEventDayBefore" checked /></label>
+        <h2 class="mt">通知方式</h2>
+        <label class="switch-row"><span>通知時震動、響鈴<small>關掉後通知會安靜地出現</small></span><input type="checkbox" name="vibrate" checked /></label>
+        <p class="meta" id="vibrateHelp" hidden>iPhone 若關掉後還是會震動：到「設定 → 通知 → 活動雷達」把「聲音」關掉；或「設定 → 聲音與觸覺」關掉「靜音模式時播放觸覺回饋」（這個會影響所有 App）。</p>
         <div class="row-btns"><button class="btn" type="submit">儲存設定</button></div>
         <p class="meta" id="prefsMsg"></p>
       </form>

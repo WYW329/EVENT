@@ -124,3 +124,33 @@ test('國家場館當期活動卡片', async () => {
   assert.equal(it.end, '2026-11-29');
   assert.equal(it.place, '中軸廣場');
 });
+
+test('新竹：縣市、鄉鎮判斷', async () => {
+  const { supportedCity, findDistrict: fd, cityOfDistrict } = await import('../scraper/util.js');
+  assert.equal(supportedCity('新竹市東區東大路一段'), '新竹市');
+  assert.equal(supportedCity('新竹縣竹北市光明六路'), '新竹縣');
+  assert.equal(supportedCity('竹北市文化中心'), '新竹縣');
+  assert.equal(supportedCity('新竹巨城'), '新竹市');
+  // 別縣市的東區、北區不算新竹
+  assert.equal(supportedCity('台南市東區'), null);
+  assert.equal(fd('台中市北區'), null);
+  assert.equal(fd('新竹市北區'), '北區');
+  assert.equal(fd('新竹縣關西鎮六福村'), '關西鎮');
+  assert.equal(cityOfDistrict('竹東鎮'), '新竹縣');
+  assert.equal(cityOfDistrict('東區'), null);
+  assert.equal(cityOfDistrict('香山區'), '新竹市');
+  // 原本的判斷不受影響
+  assert.equal(supportedCity('臺北市中山區'), '臺北市');
+  assert.equal(supportedCity('基隆市中正區'), '基隆市');
+});
+
+test('東北角年度活動頁拆成多個活動', async () => {
+  const { parseNecoastBlocks } = await import('../scraper/sources/ntpc-coast.js');
+  const text = '搜尋 關閉 2026草嶺古道芒花季 活動日期：順延2026/11/14~2026/12/13 活動地點：草嶺古道 活動資訊：主題網站 活動簡介： 自2002年開始舉辦。 2026福隆國際沙雕藝術季 活動日期：2026/05/29~2026/10/26(已結束) 活動地點：福隆海水浴場（新北市貢寮區福隆街42號） 活動簡介： 每年夏季舉辦。';
+  const b = parseNecoastBlocks(text);
+  assert.equal(b.length, 1);
+  assert.equal(b[0].title, '2026草嶺古道芒花季');
+  assert.equal(b[0].start, '2026-11-14');
+  assert.equal(b[0].end, '2026-12-13');
+  assert.equal(b[0].place, '草嶺古道');
+});

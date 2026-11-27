@@ -54,6 +54,10 @@ export function mergeSync(a = {}, b = {}) {
 // ---------- 推播 ----------
 async function pushTo(env, sub, payload) {
   const subscription = { endpoint: sub.endpoint, keys: { p256dh: sub.p256dh, auth: sub.auth } };
+  // 設定關掉「震動、響鈴」時，用靜音通知送出
+  try {
+    if (sub.prefs && JSON.parse(sub.prefs).vibrate === false) payload = { ...payload, silent: true };
+  } catch {}
   try {
     const status = await sendPush(subscription, payload, vapidOf(env));
     if (status === 404 || status === 410) {
@@ -161,7 +165,7 @@ async function sendReminders(env, now = Date.now()) {
       const done = await env.DB.prepare('SELECT 1 FROM sent WHERE key = ?').bind(key).first();
       if (done) continue;
       await env.DB.prepare('INSERT OR IGNORE INTO sent (key, at) VALUES (?, ?)').bind(key, now).run();
-      if (await pushTo(env, { id: r.sub_id, endpoint: r.endpoint, p256dh: r.p256dh, auth: r.auth }, job.payload)) sent++;
+      if (await pushTo(env, { id: r.sub_id, endpoint: r.endpoint, p256dh: r.p256dh, auth: r.auth, prefs: r.prefs }, job.payload)) sent++;
     }
   }
   // 每天清一次舊紀錄

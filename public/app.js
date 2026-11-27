@@ -118,7 +118,7 @@ const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.
 const catsOf = (e) => (e.categories?.length ? e.categories : [e.category, ...(e.free ? ['免費'] : [])]);
 const cityOf = (e) => e.city ?? '桃園市';
 // 地區：台北市和新北市算同一區
-const REGIONS = [['桃園', ['桃園市']], ['台北・新北', ['臺北市', '新北市']], ['基隆', ['基隆市']]];
+const REGIONS = [['桃園', ['桃園市']], ['台北・新北', ['臺北市', '新北市']], ['基隆', ['基隆市']], ['新竹', ['新竹市', '新竹縣']]];
 // 卡片上的地區：桃園只寫區名；台北、新北前面加縣市（例如「新北板橋區」）
 const areaOf = (e) => {
   const c = cityOf(e);
@@ -463,7 +463,7 @@ async function renderSites() {
   const sites = await loadSites();
   const q = $('#siteQ').value.trim().toLowerCase();
   const region = $('#regionChips .chip.on')?.dataset.region ?? '';
-  const REGION_NAME = { 桃園: '桃園', 台北: '台北・新北', 基隆: '基隆', 全台: '全台平台' };
+  const REGION_NAME = { 桃園: '桃園', 台北: '台北・新北', 基隆: '基隆', 新竹: '新竹', 全台: '全台平台' };
   const inRegion = sites.filter((s) => !region || s.region === region);
   const list = inRegion.filter((s) => !q || `${s.name} ${s.category} ${s.url}`.toLowerCase().includes(q));
   const groups = new Map();
@@ -750,7 +750,7 @@ function urlB64ToUint8(b64) {
 }
 function currentPrefs() {
   const p = S.prefs ?? {};
-  return { notifyNew: true, categories: [], cities: [], keywords: [], includeBabycare: false, remindMinutes: [1440, 30, 5], remindEventDayBefore: true, ...p };
+  return { notifyNew: true, categories: [], cities: [], keywords: [], includeBabycare: false, remindMinutes: [1440, 30, 5], remindEventDayBefore: true, vibrate: true, ...p };
 }
 
 async function renderPush() {
@@ -836,6 +836,8 @@ function fillPrefs() {
   f.notifyNew.checked = p.notifyNew;
   f.includeBabycare.checked = p.includeBabycare;
   f.remindEventDayBefore.checked = p.remindEventDayBefore;
+  f.vibrate.checked = p.vibrate !== false;
+  $('#vibrateHelp').hidden = !isIOS();
   f.keywords.value = (p.keywords ?? []).join(', ');
   $$('input[name="cat"]', f).forEach((i) => (i.checked = p.categories.includes(i.value)));
   $$('input[name="city"]', f).forEach((i) => (i.checked = i.value.split(',').some((c) => (p.cities ?? []).includes(c))));
@@ -848,6 +850,7 @@ async function savePrefs(ev) {
     notifyNew: f.notifyNew.checked,
     includeBabycare: f.includeBabycare.checked,
     remindEventDayBefore: f.remindEventDayBefore.checked,
+    vibrate: f.vibrate.checked,
     keywords: f.keywords.value.split(/[,，、\s]+/).filter(Boolean),
     categories: $$('input[name="cat"]:checked', f).map((i) => i.value),
     cities: $$('input[name="city"]:checked', f).flatMap((i) => i.value.split(',')),

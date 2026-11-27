@@ -1,5 +1,5 @@
 // Service worker：離線可開、接收推播、點通知打開對應活動。
-const CACHE = 'tyev-v10';
+const CACHE = 'tyev-v11';
 const SHELL = ['/', '/index.html', '/style.css', '/app.js', '/manifest.webmanifest', '/icons/icon-192.png'];
 
 self.addEventListener('install', (ev) => {
@@ -42,6 +42,8 @@ self.addEventListener('push', (ev) => {
       tag: data.tag,
       renotify: Boolean(data.tag),
       requireInteraction: Boolean(data.requireInteraction),
+      silent: Boolean(data.silent),
+      ...(data.silent ? { vibrate: [] } : {}),
       data: { url: data.url || '/' },
     }),
   );

@@ -8,11 +8,12 @@ export const DEFAULT_PREFS = {
   includeBabycare: false,
   remindMinutes: [1440, 30, 5],
   remindEventDayBefore: true,
+  vibrate: true, // false = 靜音通知
 };
 
 export function cleanPrefs(p = {}) {
   const out = { ...DEFAULT_PREFS };
-  for (const k of ['notifyNew', 'includeBabycare', 'remindEventDayBefore']) if (typeof p[k] === 'boolean') out[k] = p[k];
+  for (const k of ['notifyNew', 'includeBabycare', 'remindEventDayBefore', 'vibrate']) if (typeof p[k] === 'boolean') out[k] = p[k];
   for (const k of ['categories', 'cities', 'keywords']) if (Array.isArray(p[k])) out[k] = p[k].map(String).map((s) => s.trim()).filter(Boolean).slice(0, 30);
   if (Array.isArray(p.remindMinutes)) out.remindMinutes = [...new Set(p.remindMinutes.map(Number).filter((n) => n > 0 && n <= 10080))].slice(0, 6);
   return out;

@@ -1,6 +1,6 @@
 // 售票和活動平台、民間場館：KKTIX、Accupass、中原文創園區。
 import * as cheerio from 'cheerio';
-import { fetchText, politeFetch, makeEvent, parseDateTime, findDistrict, isTaoyuan, isTaipeiArea, cleanText, supportedCity } from '../util.js';
+import { fetchText, politeFetch, makeEvent, parseDateTime, findDistrict, isTaoyuan, isTaipeiArea, cleanText, supportedCity, isHsinchu } from '../util.js';
 
 // ---------- KKTIX（有官方 Atom 訂閱） ----------
 export function parseKktixAtom(xml) {
@@ -49,9 +49,9 @@ export const kktix = {
   async fetch() {
     const out = [];
     const items = new Map();
-    for (const q of ['桃園', '台北', '新北', '基隆']) {
+    for (const q of ['桃園', '台北', '新北', '基隆', '新竹']) {
       const xml = await fetchText(`https://kktix.com/events.atom?search=${encodeURIComponent(q)}`);
-      for (const it of parseKktixAtom(xml)) if (!items.has(it.id) && (isTaoyuan(it.venue, it.address, it.title) || isTaipeiArea(it.venue, it.address) || /基隆(?!路)/.test(`${it.venue} ${it.address}`))) items.set(it.id, it);
+      for (const it of parseKktixAtom(xml)) if (!items.has(it.id) && (isTaoyuan(it.venue, it.address, it.title) || isTaipeiArea(it.venue, it.address) || /基隆(?!路)/.test(`${it.venue} ${it.address}`) || isHsinchu(it.venue, it.address))) items.set(it.id, it);
     }
     for (const it of items.values()) {
       // 活動頁有開賣時間和票價；被擋就只用 Atom 的資料
@@ -113,9 +113,9 @@ export const accupass = {
   name: 'Accupass 活動通',
   async fetch() {
     const out = [];
-    for (const [l, city] of [['taoyuan', '桃園市'], ['taipei', '臺北市'], ['new-taipei', '新北市'], ['keelung', '基隆市']]) {
+    for (const [l, city] of [['taoyuan', '桃園市'], ['taipei', '臺北市'], ['new-taipei', '新北市'], ['keelung', '基隆市'], ['hsinchu', '新竹市']]) {
       const html = await fetchText(`https://www.accupass.com/search?l=${l}`);
-      out.push(...parseAccupassSearch(html).map((it) => ({ ...it, city })));
+      out.push(...parseAccupassSearch(html).map((it) => ({ ...it, city: city === '新竹市' && /County|新竹縣/.test(it.place ?? '') ? '新竹縣' : city })));
     }
     return out
       // 地區篩選會混進線上活動，去掉
@@ -125,7 +125,7 @@ export const accupass = {
           title: it.title,
           start: it.start,
           end: it.end,
-          venue: it.place && !/City$|^(台北市|臺北市|新北市|桃園市|基隆市)$/.test(it.place) ? it.place : null,
+          venue: it.place && !/City$|County$|^(台北市|臺北市|新北市|桃園市|基隆市|新竹市|新竹縣)$/.test(it.place) ? it.place : null,
           city: supportedCity(it.place) ?? it.city,
           district: findDistrict({ city: supportedCity(it.place) ?? it.city }, it.title),
           url: `https://www.accupass.com/event/${it.id}`,
@@ -319,7 +319,7 @@ export const wekengo = {
     const cacheFile = new URL('../../data/wekengo-cache.json', import.meta.url);
     const cache = JSON.parse(await readFile(cacheFile, 'utf8').catch(() => '{}'));
     const items = new Map();
-    const WKG_CITY = { taoyuan: ['桃園', '桃園市'], taipei: ['台北', '臺北市'], newtaipei: ['新北', '新北市'], keelung: ['基隆', '基隆市'] };
+    const WKG_CITY = { taoyuan: ['桃園', '桃園市'], taipei: ['台北', '臺北市'], newtaipei: ['新北', '新北市'], keelung: ['基隆', '基隆市'], hsinchu: ['新竹', '新竹市'] };
     for (const [slug, [area, city]] of Object.entries(WKG_CITY)) {
       for (let page = 1; page <= 20; page++) {
         const html = await fetchText(`${WKG}/?city=${slug}${page > 1 ? `&page=${page}` : ''}`);
@@ -382,7 +382,7 @@ export const opentix = {
     const cache = JSON.parse(await readFile(cacheFile, 'utf8').catch(() => '{}'));
     let found = cache.found;
     // regions 不同（例如新加了台北）就重新抓
-    if (!found || cache.regions !== 'ty+tpe+kl' || Date.now() - Date.parse(cache.at ?? 0) > 3 * 3600000) {
+    if (!found || cache.regions !== 'ty+tpe+kl+hc' || Date.now() - Date.parse(cache.at ?? 0) > 3 * 3600000) {
       found = [];
       for (let offset = 0, guard = 0; guard < 120; guard++) {
         const res = await politeFetch('https://search.opentix.life/search', {
@@ -395,13 +395,13 @@ export const opentix = {
         for (const f of r?.found ?? []) {
           const s = f.source;
           // 只留桃園的節目，丟掉商品（雜誌、周邊）
-          if (s.type === '商品' || !(s.places ?? []).some((p) => /桃園|臺北|台北|新北|基隆/.test(p))) continue;
+          if (s.type === '商品' || !(s.places ?? []).some((p) => /桃園|臺北|台北|新北|基隆|新竹/.test(p))) continue;
           found.push(s);
         }
         if (!r?.found?.length || r.nextOffset == null || r.nextOffset <= offset) break;
         offset = r.nextOffset;
       }
-      await writeFile(cacheFile, JSON.stringify({ at: new Date().toISOString(), regions: 'ty+tpe+kl', found }));
+      await writeFile(cacheFile, JSON.stringify({ at: new Date().toISOString(), regions: 'ty+tpe+kl+hc', found }));
     }
     const iso = (ms) => (ms ? new Date(ms).toISOString().replace(/\.\d{3}Z$/, 'Z') : null);
     const toTaipei = (ms) => {
@@ -410,9 +410,9 @@ export const opentix = {
       return `${t.getUTCFullYear()}-${String(t.getUTCMonth() + 1).padStart(2, '0')}-${String(t.getUTCDate()).padStart(2, '0')}T${String(t.getUTCHours()).padStart(2, '0')}:${String(t.getUTCMinutes()).padStart(2, '0')}:00+08:00`;
     };
     return found.map((s) => {
-      const venue = (s.eventVenues ?? []).find((v) => /桃園|臺北|台北|新北|基隆/.test(v.city ?? '')) ?? s.eventVenues?.[0];
+      const venue = (s.eventVenues ?? []).find((v) => /桃園|臺北|台北|新北|基隆|新竹/.test(v.city ?? '')) ?? s.eventVenues?.[0];
       const c = venue?.city ?? '';
-      const city = /桃園/.test(c) ? '桃園市' : /基隆/.test(c) ? '基隆市' : /新北/.test(c) ? '新北市' : /[臺台]北/.test(c) ? '臺北市' : supportedCity(venue?.name) ?? '臺北市';
+      const city = /桃園/.test(c) ? '桃園市' : /基隆/.test(c) ? '基隆市' : /新竹/.test(c) ? (/縣/.test(c) ? '新竹縣' : supportedCity(c, venue?.name) ?? '新竹市') : /新北/.test(c) ? '新北市' : /[臺台]北/.test(c) ? '臺北市' : supportedCity(venue?.name) ?? '臺北市';
       const times = (venue?.times ?? []).filter((t) => t.start);
       const onlineStarts = times.map((t) => t.onlineStart).filter(Boolean).sort((a, b) => a - b);
       void iso;
