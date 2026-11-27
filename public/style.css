@@ -336,8 +336,8 @@ legend { font-size: 13px; color: var(--muted); padding: 0; margin-bottom: 8px; }
 .inbox-item { position: relative; display: flex; gap: 10px; align-items: flex-start; background: var(--bg); border-radius: 14px; padding: 10px 40px 10px 12px; cursor: pointer; }
 .inbox-item .t { font-weight: 700; font-size: 14.5px; line-height: 1.35; }
 .inbox-item .s { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
-.inbox-item .x { position: absolute; top: 6px; right: 6px; width: 30px; height: 30px; border: 0; border-radius: 50%; background: transparent; color: var(--faint); display: grid; place-items: center; }
-.inbox-item .x svg { width: 15px; height: 15px; }
+.inbox-item .x { position: absolute; top: 4px; right: 4px; width: 42px; height: 42px; border: 0; border-radius: 50%; background: transparent; color: var(--faint); display: grid; place-items: center; }
+.inbox-item .x svg { width: 21px; height: 21px; stroke-width: 2.4; }
 .round.flat { box-shadow: none; background: var(--bg-2); color: var(--text); width: 34px; height: 34px; }
 
 /* ---------- 網站頁 ---------- */
@@ -368,7 +368,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0; margin-bottom: 8px; }
 /* ---------- 通知頁 ---------- */
 .page-head { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
 .page-head h2 { margin: 0; font-size: 22px; }
-.inbox-item { position: relative; display: flex; gap: 10px; align-items: flex-start; background: var(--card); box-shadow: var(--shadow); border-radius: 16px; padding: 12px 42px 12px 14px; cursor: pointer; }
+.inbox-item { position: relative; display: flex; gap: 10px; align-items: flex-start; background: var(--card); box-shadow: var(--shadow); border-radius: 16px; padding: 12px 50px 12px 14px; cursor: pointer; }
 .inbox-item .body { flex: 1; min-width: 0; }
 .inbox-item .dot { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--brand); margin-top: 7px; }
 .inbox-item.read .dot { background: transparent; border: 1.5px solid var(--faint); }
@@ -391,3 +391,19 @@ legend { font-size: 13px; color: var(--muted); padding: 0; margin-bottom: 8px; }
 
 /* 網站頁：透過其他平台收錄的 */
 .tag.via { background: color-mix(in srgb, var(--brand-2) 16%, transparent); color: var(--brand-ink); }
+
+/* 通知頁：縣市標籤 */
+.tag.city { display: inline-flex; align-items: center; gap: 3px; background: var(--text); color: var(--card); font-weight: 700; }
+.tag.city svg { width: 12px; height: 12px; }
+/* 回到最上面 */
+.to-top {
+  position: fixed; right: 16px; bottom: calc(86px + env(safe-area-inset-bottom)); z-index: 11;
+  width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--card) 92%, transparent); color: var(--brand-ink);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgb(40 20 10 / 18%); display: grid; place-items: center;
+  opacity: 0; transform: translateY(12px) scale(.9); pointer-events: none; transition: opacity .2s, transform .2s;
+}
+.to-top svg { width: 22px; height: 22px; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+@media (min-width: 760px) { .to-top { right: calc(50% - 360px); } }

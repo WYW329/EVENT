@@ -108,10 +108,14 @@ export async function runAll({ only } = {}) {
   // 新加的來源、或第一次有某個縣市的活動時，那批活動標成「一開始就有」（SEED），不放進通知、不推播，避免一次湧進幾百則
   const prevSources = new Set(prev.events.map((e) => e.source));
   const prevCities = new Set(prev.events.map((e) => e.city ?? '桃園市'));
-  const firstSeenOf = (e) => prevById.get(e.id)?.firstSeen ?? (prev.events.length && (!prevSources.has(e.source) || !prevCities.has(e.city)) ? SEED : nowIso);
+  const merged = keepCurrent(dedupe(all));
+  // 同一個來源一次冒出超過 60 個新活動，多半是來源改版或篩選條件變了（例如 OPENTIX 一次多了 400 個雙北節目），不是真的新活動，也不推播
+  const burst = new Map();
+  for (const e of merged) if (!prevById.has(e.id)) burst.set(e.source, (burst.get(e.source) ?? 0) + 1);
+  const firstSeenOf = (e) => prevById.get(e.id)?.firstSeen ?? (prev.events.length && (!prevSources.has(e.source) || !prevCities.has(e.city) || burst.get(e.source) > 60) ? SEED : nowIso);
   // 說明文字最多留 700 字（詳細內容看原網站），整份資料小很多，手機開 App 比較快
   const clip = (t) => (t && t.length > 700 ? `${t.slice(0, 700)}…` : t);
-  const events = keepCurrent(dedupe(all)).map((e) => ({ ...e, summary: clip(e.summary), categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
+  const events = merged.map((e) => ({ ...e, summary: clip(e.summary), categories: finalizeCategories(e), firstSeen: firstSeenOf(e) }));
   events.sort((a, b) => (toMs(a.start) || 0) - (toMs(b.start) || 0));
 
   const status = {

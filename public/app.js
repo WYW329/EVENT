@@ -275,6 +275,9 @@ function renderBell() {
   if (S.view === 'inbox') renderInbox();
 }
 
+/** 通知頁標示的縣市（加上行政區）：「台北市・大安區」 */
+const cityLabel = (e) => [cityOf(e).replace(/^臺/, '台'), e.district].filter(Boolean).join('・');
+
 function renderInbox() {
   const list = inboxList();
   const unread = list.filter((e) => !S.opened.has(e.id)).length;
@@ -286,7 +289,7 @@ function renderInbox() {
           const read = S.opened.has(e.id);
           return `<div class="inbox-item ${read ? 'read' : ''}" data-inbox="${esc(e.id)}">
             <span class="dot" aria-hidden="true"></span>
-            <div class="body"><div class="t">${esc(e.title)}</div><div class="s">${esc(unitOf(e))}・${esc(fmtRange(e.start, e.end))}</div><div class="tags" style="margin-top:5px">${regTag(e)}${catsOf(e).slice(0, 3).map((c) => `<span class="tag ${c === '免費' ? 'free' : 'cat'}">${esc(c)}</span>`).join('')}</div></div>
+            <div class="body"><div class="t">${esc(e.title)}</div><div class="s">${esc(unitOf(e))}・${esc(fmtRange(e.start, e.end))}</div><div class="tags" style="margin-top:5px"><span class="tag city">${icon('pin')}${esc(cityLabel(e))}</span>${regTag(e)}${catsOf(e).slice(0, 3).map((c) => `<span class="tag ${c === '免費' ? 'free' : 'cat'}">${esc(c)}</span>`).join('')}</div></div>
             <button class="x" data-dismiss="${esc(e.id)}" aria-label="刪除這則">${icon('x')}</button>
           </div>`;
         })
@@ -893,6 +896,7 @@ function go(view) {
   if (view === 'inbox') renderInbox();
   $('#bellBtn').classList.toggle('on', view === 'inbox');
   document.body.scrollTop = 0;
+  $('#toTop').classList.remove('show');
   const iv = $('#view-inbox'); iv.style.transform = iv.style.opacity = '';
 }
 
@@ -924,6 +928,11 @@ function bind() {
     renderSites();
   });
   bindInboxSwipe();
+  // 往下滑超過一個畫面高就出現「回到最上面」按鈕
+  const toTop = $('#toTop');
+  const onScroll = () => toTop.classList.toggle('show', document.body.scrollTop > innerHeight * 0.8);
+  document.body.addEventListener('scroll', onScroll, { passive: true });
+  toTop.addEventListener('click', () => document.body.scrollTo({ top: 0, behavior: 'smooth' }));
   $('#siteQ').addEventListener('input', () => renderSites());
   $('#siteQ').addEventListener('keydown', (ev) => { if (ev.key === 'Enter') ev.target.blur(); });
   $('#themePick').addEventListener('click', (ev) => { const b = ev.target.closest('[data-theme]'); if (b) applyTheme(b.dataset.theme); });
