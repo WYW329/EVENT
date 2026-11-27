@@ -430,9 +430,17 @@ async function joinSyncCode() {
 function openExternal(url) {
   if (isIOS() && isStandalone() && /^https?:\/\//.test(url)) {
     // iOS 17 以上支援 x-safari-https://，直接跳到 Safari；舊版沒反應時改用一般方式開
-    const t = Date.now();
+    // 跳到 Safari 時 App 會被切到背景；只要發生過一次，就記住這台手機可以直接跳，之後不再用備援方式開（避免 App 裡也跳出網頁）
+    let left = false;
+    const t0 = Date.now();
+    const mark = () => { if (left || Date.now() - t0 > 2400) return; left = true; store.set('safariJumpOK', true); };
+    window.addEventListener('blur', mark, { once: true });
+    window.addEventListener('pagehide', mark, { once: true });
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') mark(); }, { once: true });
     location.href = url.replace(/^http(s?):\/\//, 'x-safari-http$1://');
-    setTimeout(() => { if (document.visibilityState === 'visible' && Date.now() - t < 1500) window.open(url, '_blank'); }, 700);
+    if (store.get('safariJumpOK', false)) return;
+    // 第一次、而且 2.5 秒內 App 都沒有被切走，才當作這支手機不支援，改用一般方式開
+    setTimeout(() => { if (!left && document.visibilityState === 'visible') window.open(url, '_blank'); }, 2500);
     return;
   }
   window.open(url, '_blank', 'noopener');
