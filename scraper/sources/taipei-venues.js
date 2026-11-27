@@ -402,3 +402,72 @@ export const ntpcMuseums = {
     return out;
   },
 };
+
+// ---------- 台北世貿中心、南港展覽館：展覽日程表（各種商展、動漫展、旅展、書展） ----------
+export const twtc = {
+  id: 'twtc',
+  name: '台北世貿・南港展覽館',
+  city: '臺北市',
+  async fetch() {
+    const { parseShortRange } = await import('./malls.js');
+    const $ = cheerio.load(await fetchText('https://www.twtc.com.tw/exhibition?p=home'));
+    const out = new Map();
+    $('tr').each((_, tr) => {
+      const td = $(tr).find('td');
+      if (td.length < 5) return;
+      const r = parseShortRange(td.eq(0).text());
+      const cell = td.eq(1);
+      const more = cell.find('a[href*="exhibition_more"]').attr('href');
+      const id = more?.match(/id=(\d+)/)?.[1];
+      const title = cell.clone().find('a[href*="exhibition_more"]').remove().end().text().replace(/\s+/g, ' ').trim();
+      if (!r || !id || !title || out.has(id) || ended(r.end)) return;
+      const hall = td.eq(4).text().trim();
+      const nangang = /南港/.test(hall);
+      out.set(id, makeEvent(this, id, {
+        title,
+        start: r.start,
+        end: r.end,
+        venue: hall || '台北世貿中心',
+        address: nangang ? '臺北市南港區經貿二路1號' : '臺北市信義區信義路五段5號',
+        district: nangang ? '南港區' : '信義區',
+        category: '展覽',
+        url: cell.find('a').not('[href*="exhibition_more"]').attr('href')?.trim() || `https://www.twtc.com.tw/${more}`,
+        extra: { organizer: td.eq(2).text().replace(/\s+/g, ' ').trim() || null, page: `https://www.twtc.com.tw/${more}` },
+      }));
+    });
+    return [...out.values()];
+  },
+};
+
+// ---------- 台北當代藝術館 ----------
+export const moca = {
+  id: 'moca',
+  name: '台北當代藝術館',
+  city: '臺北市',
+  async fetch() {
+    const $ = cheerio.load(await fetchText('https://www.mocataipei.org.tw/tw/ExhibitionAndEvent'));
+    const out = new Map();
+    $('a.textFrame').each((_, el) => {
+      const a = $(el);
+      const href = a.attr('href');
+      const dates = a.find('.date').map((_, d) => {
+        const y = $(d).find('.year').text().trim();
+        const md = $(d).find('.day').text().match(/(\d{1,2})\s*\/\s*(\d{1,2})/);
+        return y && md ? `${y}-${md[1].padStart(2, '0')}-${md[2].padStart(2, '0')}` : null;
+      }).get().filter(Boolean);
+      const title = a.find('.imgTitle').text().trim();
+      if (!href || !title || !dates.length || out.has(href)) return;
+      out.set(href, makeEvent(this, decodeURIComponent(href.split('/').pop()).slice(0, 60), {
+        title,
+        start: dates[0],
+        end: dates.at(-1),
+        venue: '台北當代藝術館',
+        address: '臺北市大同區長安西路39號',
+        district: '大同區',
+        url: href,
+        extra: { organizer: '台北當代藝術館' },
+      }));
+    });
+    return [...out.values()].filter((e) => !ended(e.end));
+  },
+};

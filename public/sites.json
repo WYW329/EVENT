@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-26",
+ "updatedAt": "2026-11-27",
  "sites": [
   {
    "category": "報名預約",
@@ -337,7 +337,8 @@
    "url": "https://www.taoyuancf.org.tw/",
    "region": "桃園",
    "via": [
-    "文化部藝文活動"
+    "文化部藝文活動",
+    "OPENTIX"
    ]
   },
   {
@@ -947,7 +948,7 @@
    "url": "https://www.tpac-taipei.org/",
    "region": "台北",
    "via": [
-    "文化部藝文活動",
+    "OPENTIX",
     "WeKenGo 週末去哪玩"
    ]
   },
@@ -964,8 +965,8 @@
    "url": "https://npac-ntch.org/",
    "region": "台北",
    "via": [
-    "文化部藝文活動",
-    "OPENTIX"
+    "OPENTIX",
+    "WeKenGo 週末去哪玩"
    ]
   },
   {
@@ -1053,10 +1054,7 @@
    "name": "臺北當代藝術館",
    "url": "https://www.mocataipei.org.tw/",
    "region": "台北",
-   "via": [
-    "WeKenGo 週末去哪玩",
-    "臺北旅遊網"
-   ]
+   "auto": true
   },
   {
    "category": "藝文場館",
@@ -1124,7 +1122,7 @@
    "url": "https://www.tfai.org.tw/",
    "region": "台北",
    "via": [
-    "文化部藝文活動",
+    "OPENTIX",
     "WeKenGo 週末去哪玩"
    ]
   },
@@ -1134,7 +1132,7 @@
    "url": "https://www.tnua.edu.tw/",
    "region": "台北",
    "via": [
-    "文化部藝文活動",
+    "OPENTIX",
     "非池中藝術網"
    ]
   },
@@ -1144,7 +1142,7 @@
    "url": "https://www.ntnu.edu.tw/",
    "region": "台北",
    "via": [
-    "文化部藝文活動"
+    "OPENTIX"
    ]
   },
   {
@@ -1232,7 +1230,7 @@
    "url": "https://www.ntua.edu.tw/",
    "region": "台北",
    "via": [
-    "文化部藝文活動",
+    "OPENTIX",
     "WeKenGo 週末去哪玩"
    ]
   },
@@ -1251,14 +1249,15 @@
    "url": "https://www.fju.edu.tw/",
    "region": "台北",
    "via": [
-    "文化部藝文活動"
+    "OPENTIX"
    ]
   },
   {
    "category": "展覽會議",
    "name": "台北世貿中心・南港展覽館",
    "url": "https://www.twtc.com.tw/",
-   "region": "台北"
+   "region": "台北",
+   "auto": true
   },
   {
    "category": "展覽會議",
@@ -1501,7 +1500,7 @@
    "region": "台北",
    "via": [
     "iNDIEVOX",
-    "WeKenGo 週末去哪玩"
+    "KKTIX"
    ]
   },
   {
@@ -1539,7 +1538,7 @@
    "url": "https://www.glt.org.tw/",
    "region": "台北",
    "via": [
-    "文化部藝文活動"
+    "OPENTIX"
    ]
   },
   {
@@ -1548,7 +1547,7 @@
    "url": "https://www.taipeipuppet.com/",
    "region": "台北",
    "via": [
-    "文化部藝文活動",
+    "OPENTIX",
     "WeKenGo 週末去哪玩"
    ]
   },
@@ -1570,7 +1569,7 @@
    "url": "https://www.eslitecorp.com/",
    "region": "台北",
    "via": [
-    "文化部藝文活動",
+    "OPENTIX",
     "WeKenGo 週末去哪玩"
    ]
   },
