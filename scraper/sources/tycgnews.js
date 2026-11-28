@@ -31,9 +31,9 @@ export const TYCG_FEEDS = [
 ];
 
 // 是民眾可以參加的活動
-export const EVENT_RE = /活動|講座|課程|研習|工作坊|市集|音樂會|演唱|表演|展覽|特展|展出|體驗|導覽|走讀|營隊|夏令營|冬令營|比賽|競賽|升旗|晚會|嘉年華|節|祭|電影|放映|健走|路跑|親子|說故事|讀書會|園遊會|博覽會|義診|篩檢|領養|晚會|演出|音樂|藝術|文化季|農遊|採果|小旅行|揪團|報名/;
+export const EVENT_RE = /活動|講座|課程|研習|工作坊|市集|音樂會|演唱|表演|展覽|特展|展出|體驗|導覽|走讀|營隊|夏令營|冬令營|比賽|競賽|升旗|晚會|嘉年華|節|祭|電影|放映|健走|路跑|親子|說故事|讀書會|園遊會|博覽會|義診|篩檢|領養|晚會|演出|音樂|藝術|文化季|農遊|採果|小旅行|揪團|報名|燈會|燈季|燈節|藝術季|音樂季|花季|畫展|個展|聯展|書展|攝影展|演唱會/;
 // 不是活動（公告、招募、行政）
-export const SKIP_RE = /實施計畫|入選|遴選|徵文|提案|湧入|人次|一覽表|評選|表揚|媒合|營運資訊|變更|財產|創生|說明會|宣導|講習會|研討|論壇|座談|檔案展|招生|簡章|招商|攤商|學分|學程|碩士|博士|在職專班|海外|圓夢|基金|獎學金|徵件|徵稿|投稿|徵選|志工招募|徵才|招募|招考|甄選|甄試|約僱|職缺|錄取|榜單|招標|標案|決標|補助|補貼|津貼|申請|申辦|租金|停水|停電|施工|封閉|管制|交通改道|颱風|防災|地震|疫苗|稅|繳費|公告.*名單|成果|花絮|圓滿|感謝|新聞稿|記者會|會議|說明會.*(工程|都更|計畫)|服務時程|輔具|據點|開放時間異動|休館|閉館|暫停/;
+export const SKIP_RE = /實施計畫|入選|遴選|徵文|提案|湧入|人次|一覽表|評選|表揚|媒合|營運資訊|變更|財產|創生|說明會|宣導|講習會|研討|論壇|座談|檔案展|招生|簡章|招商|攤商|學分|學程|碩士|博士|在職專班|海外|圓夢|基金|獎學金|徵件|徵稿|投稿|徵選|志工招募|徵才|招募|招考|甄選|甄試|約僱|職缺|錄取|榜單|招標|標案|決標|補助|補貼|津貼|申請|申辦|租金|停水|停電|施工|封閉|管制|交通改道|颱風|防災|地震|疫苗|稅|繳費|公告.*名單|成果|花絮|名單公告|圓滿|感謝|新聞稿|記者會|會議|說明會.*(工程|都更|計畫)|服務時程|輔具|據點|開放時間異動|休館|閉館|暫停/;
 
 const OTHER_CITY_RE = /臺北|台北|新北|基隆|新竹|苗栗|臺中|台中|彰化|南投|雲林|嘉義|臺南|台南|高雄|屏東|宜蘭|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
 // 台北的來源：寫了雙北以外縣市、又沒提到雙北的不收
@@ -203,7 +203,7 @@ export const library = {
 };
 
 /** 市府 RSS 來源：feeds 是 [單位, RSS 網址, 預設行政區, 這個單位的縣市（沒寫就用 city）]；city 是這組來源的縣市。 */
-function makeFeedSource({ id, name, feeds, city, homeRe, otherRe, inferCity = true }) {
+function makeFeedSource({ id, name, feeds, city, homeRe, otherRe, inferCity = true, townOk = false }) {
   return {
   id,
   name,
@@ -227,7 +227,7 @@ function makeFeedSource({ id, name, feeds, city, homeRe, otherRe, inferCity = tr
             const venue = extractVenue(it.text);
             // 轉知外縣市的活動不收（地點寫了別的縣市、又沒提到桃園）
             const where = `${venue ?? ''} ${title}`;
-            if ((otherRe.test(where) || /[鄉鎮]公所/.test(where)) && !homeRe.test(where)) continue;
+            if ((otherRe.test(where) || (!townOk && /[鄉鎮]公所/.test(where))) && !homeRe.test(where)) continue;
             // 很多單位會轉貼同一則，標題和日期相同只留一則
             // 有「」框住的名稱就用它當比對依據（各單位轉貼時前後文字常不同）
             const core = title.match(/[「『《]([^」』》]{4,})[」』》]/)?.[1] ?? title;
@@ -296,7 +296,18 @@ export const HSINCHU_FEEDS = [
 ];
 const NOT_HSINCHU_RE = /臺北|台北|新北|桃園|基隆|苗栗|臺中|台中|彰化|南投|雲林|嘉義|臺南|台南|高雄|屏東|宜蘭|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
 
+// 中部、宜蘭：縣府「最新活動／活動訊息／活動快訊」、科博館、國美館
+export const MID_FEEDS = [
+  ['宜蘭縣政府', 'https://www.e-land.gov.tw/OpenData.aspx?SN=BEC00A6A11D67445', '宜蘭市', '宜蘭縣'],
+  ['苗栗縣政府', 'https://www.miaoli.gov.tw/OpenData.aspx?SN=44B824438FC4FB28', '苗栗市', '苗栗縣'],
+  ['彰化縣政府', 'https://www.chcg.gov.tw/ch2/rssnews4.aspx', '彰化市', '彰化縣'],
+  ['國立自然科學博物館', 'https://www.nmns.edu.tw/ch/api/newsRss.xml', '北區', '臺中市'],
+  ['國立臺灣美術館', 'https://www.ntmofa.gov.tw/OpenData.aspx?SN=2AA80C540D9DCB78', '西區', '臺中市'],
+];
+const NOT_MID_RE = /臺北|台北|新北|桃園|基隆|新竹|嘉義|臺南|台南|高雄|屏東|花蓮|臺東|台東|澎湖|金門|連江|馬祖/;
+
 export const tycgNews = makeFeedSource({ id: 'tycgnews', name: '桃園市府局處與區公所', feeds: TYCG_FEEDS, city: '桃園市', homeRe: /桃園/, otherRe: OTHER_CITY_RE });
 export const taipeiNews = makeFeedSource({ id: 'tpenews', name: '臺北市府局處與區公所', feeds: TAIPEI_FEEDS, city: '臺北市', homeRe: /臺北|台北|新北/, otherRe: NOT_TAIPEI_RE });
 export const hsinchuNews = makeFeedSource({ id: 'hcnews', name: '新竹縣市政府', feeds: HSINCHU_FEEDS, city: '新竹市', homeRe: /新竹|竹北|竹東/, otherRe: NOT_HSINCHU_RE });
+export const midNews = makeFeedSource({ id: 'midnews', name: '中部與宜蘭縣府、館所', feeds: MID_FEEDS, city: '臺中市', homeRe: /宜蘭|苗栗|臺中|台中|彰化|南投|雲林/, otherRe: NOT_MID_RE, townOk: true });
 export const keelungNews = makeFeedSource({ id: 'klnews', name: '基隆市府與區公所', feeds: KEELUNG_FEEDS, city: '基隆市', homeRe: /基隆/, otherRe: NOT_KEELUNG_RE, inferCity: false });

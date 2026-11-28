@@ -77,12 +77,14 @@ test('過濾已結束活動', () => {
 test('雙北：行政區、縣市判斷', async () => {
   const { findDistrict, supportedCity, isTaipeiArea, cityOfDistrict } = await import('../scraper/util.js');
   assert.equal(findDistrict('新北市板橋區文化路一段'), '板橋區');
-  assert.equal(findDistrict('臺中市大安區'), null); // 台中也有大安區
+  assert.equal(findDistrict('臺中市大安區'), '大安區'); // 台中也有大安區（現在台中也收）
+  assert.equal((await import('../scraper/util.js')).supportedCity('臺中市大安區'), '臺中市');
   assert.equal(findDistrict({ city: '臺北市' }, '大安區'), '大安區');
   assert.equal(findDistrict('桃園市中壢區'), '中壢區');
   assert.equal(supportedCity('台北市信義區松高路'), '臺北市');
   assert.equal(supportedCity('永和區中正路'), '新北市');
-  assert.equal(supportedCity('台中市西屯區'), null);
+  assert.equal(supportedCity('台中市西屯區'), '臺中市');
+  assert.equal(supportedCity('高雄市前鎮區'), null);
   assert.equal(isTaipeiArea('桃園市中壢區'), false);
   assert.equal(cityOfDistrict('淡水區'), '新北市');
 });
@@ -133,7 +135,8 @@ test('新竹：縣市、鄉鎮判斷', async () => {
   assert.equal(supportedCity('新竹巨城'), '新竹市');
   // 別縣市的東區、北區不算新竹
   assert.equal(supportedCity('台南市東區'), null);
-  assert.equal(fd('台中市北區'), null);
+  assert.equal(fd('台南市北區'), null);
+  assert.equal(fd('台中市北區'), '北區');
   assert.equal(fd('新竹市北區'), '北區');
   assert.equal(fd('新竹縣關西鎮六福村'), '關西鎮');
   assert.equal(cityOfDistrict('竹東鎮'), '新竹縣');
@@ -153,4 +156,33 @@ test('東北角年度活動頁拆成多個活動', async () => {
   assert.equal(b[0].start, '2026-11-14');
   assert.equal(b[0].end, '2026-12-13');
   assert.equal(b[0].place, '草嶺古道');
+});
+
+test('中部、宜蘭：縣市、鄉鎮判斷', async () => {
+  const { supportedCity, findDistrict: fd, cityOfDistrict } = await import('../scraper/util.js');
+  assert.equal(supportedCity('臺中市西屯區台灣大道三段'), '臺中市');
+  assert.equal(supportedCity('臺中國家歌劇院'), '臺中市');
+  assert.equal(fd('台中北屯區崇德路'), '北屯區');
+  assert.equal(supportedCity('宜蘭縣礁溪鄉'), '宜蘭縣');
+  assert.equal(supportedCity('羅東鎮中正路'), '宜蘭縣');
+  assert.equal(supportedCity('鹿港鎮天后宮'), '彰化縣');
+  assert.equal(supportedCity('日月潭 魚池鄉'), '南投縣');
+  assert.equal(supportedCity('西螺鎮'), '雲林縣');
+  assert.equal(supportedCity('頭份市'), '苗栗縣');
+  // 南投信義鄉不是台北信義區，高雄信義區不收
+  assert.equal(supportedCity('南投信義鄉'), '南投縣');
+  assert.equal(supportedCity('高雄市信義區'), null);
+  assert.equal(supportedCity('台中路'), null);
+  assert.equal(cityOfDistrict('北屯區'), '臺中市');
+  assert.equal(cityOfDistrict('中正區'), '臺北市');
+  assert.equal(cityOfDistrict('東區'), null);
+  assert.equal(cityOfDistrict('礁溪鄉'), '宜蘭縣');
+});
+
+test('平台的英文縣市名', async () => {
+  const { cityFromEn } = await import('../scraper/sources/community.js');
+  assert.equal(cityFromEn('Taichung City'), '臺中市');
+  assert.equal(cityFromEn('Yunlin County'), '雲林縣');
+  assert.equal(cityFromEn('New Taipei City'), '新北市');
+  assert.equal(cityFromEn('Kaohsiung City'), null);
 });

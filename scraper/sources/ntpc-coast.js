@@ -1,59 +1,80 @@
-// 新北：新北市觀光旅遊網的活動行事曆（全市，含東北角、北海岸）、東北角管理處的活動專區。
+// 新北、台中觀光旅遊網的活動行事曆；東北角管理處的活動專區（新北東北角＋宜蘭）。
 import * as cheerio from 'cheerio';
 import { fetchText, politeFetch, makeEvent, makeTime, cleanText, findDistrict, supportedCity, todayTaipei } from '../util.js';
 import { extractEventDates } from './tycgnews.js';
 
-// ---------- 新北市觀光旅遊網（觀旅局）活動行事曆 ----------
-const NTC = 'https://newtaipei.travel';
+// ---------- 縣市觀光旅遊網的活動行事曆（新北、台中是同一家廠商做的，資料格式一樣） ----------
+/** base：網站網址；referer：活動列表頁（要帶 Referer 才給資料）；city：沒有地址時算哪個縣市。 */
+function makeTravelSource({ id, name, base, referer, city, organizer, skip = /^$/ }) {
+  return {
+    id,
+    name,
+    city,
+    async fetch() {
+      const today = todayTaipei();
+      const year = Number(today.slice(0, 4));
+      const items = new Map();
+      for (const y of [year, year + 1]) {
+        // 網站自己的活動列表用的資料
+        const res = await politeFetch(`${base}/zh-tw/opendata/activities`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest', Referer: referer(y) },
+          body: JSON.stringify({ year: y }),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const j = await res.json();
+        if (!j.success) continue;
+        for (const it of j.data ?? []) if (!items.has(it.id)) items.set(it.id, it);
+      }
+      if (!items.size) throw new Error('沒有資料');
+      const out = [];
+      for (const it of items.values()) {
+        const end = it.date_end?.slice(0, 10);
+        if (!it.name || !it.date_begin || (end ?? '') < today || skip.test(it.name)) continue;
+        const address = it.hide_address ? null : (it.address ?? '').replace(/^\d{3,6}\s*/, '') || null;
+        const evCity = supportedCity(address) ?? (address ? null : city);
+        if (!evCity) continue; // 外縣市的（例如合作宣傳的別縣市活動）
+        const venue = address?.match(/\d+號\s*(.+)$/)?.[1] ?? null;
+        out.push(makeEvent(this, it.id, {
+          title: it.name,
+          start: it.date_begin.slice(0, 10),
+          end: end ?? null,
+          address,
+          venue: venue && venue.length <= 30 ? venue : null,
+          city: evCity,
+          district: findDistrict({ city: evCity }, address, it.name),
+          url: it.url ?? null,
+          image: it.thumb ?? null,
+          extra: { organizer },
+        }));
+      }
+      return out;
+    },
+  };
+}
 
-export const ntpcTravel = {
+export const ntpcTravel = makeTravelSource({
   id: 'ntpctravel',
   name: '新北市觀光旅遊網',
+  base: 'https://newtaipei.travel',
+  referer: (y) => `https://newtaipei.travel/zh-tw/calendar/list?year=${y}`,
   city: '新北市',
-  async fetch() {
-    const today = todayTaipei();
-    const year = Number(today.slice(0, 4));
-    const items = new Map();
-    for (const y of [year, year + 1]) {
-      // 網站自己的活動列表用的資料（要帶 Referer 才給）
-      const res = await politeFetch(`${NTC}/zh-tw/opendata/activities`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest', Referer: `${NTC}/zh-tw/calendar/list?year=${y}` },
-        body: JSON.stringify({ year: y }),
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const j = await res.json();
-      if (!j.success) continue;
-      for (const it of j.data ?? []) if (!items.has(it.id)) items.set(it.id, it);
-    }
-    if (!items.size) throw new Error('沒有資料');
-    const out = [];
-    for (const it of items.values()) {
-      const end = it.date_end?.slice(0, 10);
-      if (!it.name || !it.date_begin || (end ?? '') < today) continue;
-      const address = it.hide_address ? null : (it.address ?? '').replace(/^\d{3,6}\s*/, '') || null;
-      const city = supportedCity(address) ?? (address ? null : '新北市');
-      if (!city) continue; // 外縣市的（例如合作宣傳的別縣市活動）
-      const venue = address?.match(/\d+號\s*(.+)$/)?.[1] ?? null;
-      out.push(makeEvent(this, it.id, {
-        title: it.name,
-        start: it.date_begin.slice(0, 10),
-        end: end ?? null,
-        address,
-        venue: venue && venue.length <= 30 ? venue : null,
-        city,
-        district: findDistrict({ city }, address, it.name),
-        url: it.url ?? `${NTC}/zh-tw/calendar/detail/${it.id}`,
-        image: it.thumb ?? null,
-        extra: { organizer: '新北市政府觀光旅遊局' },
-      }));
-    }
-    return out;
-  },
-};
+  organizer: '新北市政府觀光旅遊局',
+});
+
+export const taichungTravel = makeTravelSource({
+  id: 'tctravel',
+  name: '臺中觀光旅遊網',
+  base: 'https://taichung.travel',
+  referer: () => 'https://taichung.travel/zh-tw/event/touristcalendar',
+  city: '臺中市',
+  organizer: '臺中市政府觀光旅遊局',
+  // 航空公司、住宿的優惠方案不是活動
+  skip: /優惠|獎勵|方案|登機證|憑.*享|住宿|住台中|折扣|補助|加碼|抽好禮/,
+});
 
 // ---------- 東北角及宜蘭海岸國家風景區管理處：活動專區 ----------
-// 管轄範圍跨新北（瑞芳、貢寮）和宜蘭，只收新北、基隆的。
+// 管轄範圍跨新北（瑞芳、貢寮）和宜蘭。
 const NEC = 'https://www.necoast-nsa.gov.tw/';
 const NTPC_COAST = /福隆|貢寮|鼻頭|龍洞|草嶺|金瓜石|九份|瑞芳|深澳|南雅|澳底|和美|卯澳|馬崗|三貂角|猴硐|雙溪|水湳洞|陰陽海|舊草嶺|龍門|鹽寮/;
 const YILAN = /宜蘭|頭城|壯圍|外澳|烏石|蘇澳|南方澳|礁溪|大里|大溪漁港|蜜月灣|龜山島|五結|冬山|羅東/;
@@ -65,8 +86,9 @@ const nd = (s, y) => {
 function coastCity(place, title) {
   const s = `${place ?? ''} ${title}`;
   const c = supportedCity(place);
-  if (c) return c === '新北市' || c === '基隆市' ? c : null;
+  if (c) return ['新北市', '基隆市', '宜蘭縣'].includes(c) ? c : null;
   if (NTPC_COAST.test(s) && !YILAN.test(place ?? '')) return '新北市';
+  if (YILAN.test(s)) return '宜蘭縣';
   return null;
 }
 
@@ -111,7 +133,7 @@ export const necoast = {
         const d = extractEventDates(`${pageTitle} ${body.slice(0, 1500)}`);
         // 新聞稿的日期常只寫月日，推出來的期間太長（跨年）就當只有一天
         if (d && d.end && Date.parse(d.end) - Date.parse(d.start) > 60 * 86400000) d.end = d.start;
-        if (d && !YILAN.test(pageTitle)) blocks.push({ title: pageTitle, start: d.start, end: d.end, place: body.match(/活動地點\s*[:：]\s*([^\s，。]{2,30})/)?.[1] ?? null, summary: body.slice(0, 1200) });
+        if (d) blocks.push({ title: pageTitle, start: d.start, end: d.end, place: body.match(/活動地點\s*[:：]\s*([^\s，。]{2,30})/)?.[1] ?? null, summary: body.slice(0, 1200) });
       }
       blocks.forEach((b, i) => {
         if (!b.start || (b.end ?? b.start).slice(0, 10) < today) return;
@@ -124,7 +146,7 @@ export const necoast = {
           venue: b.place?.replace(/[（(].*$/, '') ?? null,
           address: b.place?.match(/[（(]([^）)]*[路街號][^）)]*)[）)]/)?.[1] ?? null,
           city,
-          district: findDistrict({ city }, b.place, b.title) ?? (/福隆|貢寮|草嶺|澳底|鹽寮|龍門|卯澳|馬崗|三貂角|和美/.test(`${b.place} ${b.title}`) ? '貢寮區' : /九份|金瓜石|瑞芳|猴硐|鼻頭|龍洞|深澳|南雅|水湳洞/.test(`${b.place} ${b.title}`) ? '瑞芳區' : null),
+          district: findDistrict({ city }, b.place, b.title) ?? (city !== '新北市' ? null : /福隆|貢寮|草嶺|澳底|鹽寮|龍門|卯澳|馬崗|三貂角|和美/.test(`${b.place} ${b.title}`) ? '貢寮區' : /九份|金瓜石|瑞芳|猴硐|鼻頭|龍洞|深澳|南雅|水湳洞/.test(`${b.place} ${b.title}`) ? '瑞芳區' : null),
           url,
           summary: cleanText(b.summary ?? body.slice(body.indexOf(b.title), body.indexOf(b.title) + 800), 700),
           extra: { organizer: '交通部觀光署東北角及宜蘭海岸國家風景區管理處' },

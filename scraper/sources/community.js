@@ -9,6 +9,12 @@ export function cityFromEn(...texts) {
   if (/Taoyuan|桃園/i.test(s)) return '桃園市';
   if (/Keelung|基隆(?!路)/i.test(s)) return '基隆市';
   if (/Hsinchu County|新竹縣|Zhubei|竹北/i.test(s)) return '新竹縣';
+  if (/Taichung/i.test(s)) return '臺中市';
+  if (/Yilan|I-?lan/i.test(s)) return '宜蘭縣';
+  if (/Miaoli/i.test(s)) return '苗栗縣';
+  if (/Changhua/i.test(s)) return '彰化縣';
+  if (/Nantou/i.test(s)) return '南投縣';
+  if (/Yunlin/i.test(s)) return '雲林縣';
   if (/Hsinchu|新竹/i.test(s)) return '新竹市';
   if (/Taipei|臺北|台北/i.test(s)) return '臺北市';
   return supportedCity(s);
@@ -60,7 +66,7 @@ export const eventbrite = {
   async fetch() {
     const out = new Map();
     const errors = [];
-    for (const slug of ['taiwan--taipei', 'taiwan--new-taipei-city', 'taiwan--taoyuan-city', 'taiwan--keelung-city', 'taiwan--hsinchu']) {
+    for (const slug of ['taiwan--taipei', 'taiwan--new-taipei-city', 'taiwan--taoyuan-city', 'taiwan--keelung-city', 'taiwan--hsinchu', 'taiwan--taichung', 'taiwan--changhua', 'taiwan--yilan']) {
       for (let page = 1; page <= 4; page++) {
         const html = await fetchText(`https://www.eventbrite.com/d/${slug}/events/${page > 1 ? `?page=${page}` : ''}`).catch((err) => { errors.push(`${slug}: ${err.message}`); return ''; });
         const list = ldEvents(html);

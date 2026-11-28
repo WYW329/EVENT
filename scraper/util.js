@@ -98,55 +98,89 @@ export function dateOf(value) {
 
 // ---------- 地點 ----------
 
-// 各縣市的行政區（三個縣市的區名沒有重複）
+// 各縣市的行政區：「區」的只寫名字（例如 中壢 → 中壢區），縣的鄉鎮市寫全名（例如 竹北市、礁溪鄉）
 export const CITY_DISTRICTS = {
   桃園市: ['桃園', '中壢', '平鎮', '八德', '楊梅', '蘆竹', '龜山', '大園', '觀音', '新屋', '龍潭', '大溪', '復興'],
   臺北市: ['中正', '大同', '中山', '松山', '大安', '萬華', '信義', '士林', '北投', '內湖', '南港', '文山'],
-  // 基隆的中正、信義、中山區和台北同名，只有指定 city 時才找基隆
-  基隆市: ['中正', '信義', '仁愛', '中山', '安樂', '暖暖', '七堵'],
-  // 新竹市的東區、北區在台南、台中、嘉義也有，只有文字寫了新竹才算
-  新竹市: ['東', '北', '香山'],
-  // 新竹縣的鄉鎮是「市、鎮、鄉」，所以直接寫全名
-  新竹縣: ['竹北市', '竹東鎮', '新埔鎮', '關西鎮', '湖口鄉', '新豐鄉', '芎林鄉', '橫山鄉', '北埔鄉', '寶山鄉', '峨眉鄉', '尖石鄉', '五峰鄉'],
   新北市: ['板橋', '三重', '中和', '永和', '新莊', '新店', '樹林', '鶯歌', '三峽', '淡水', '汐止', '瑞芳', '土城', '蘆洲', '五股', '泰山', '林口', '深坑', '石碇', '坪林', '三芝', '石門', '八里', '平溪', '雙溪', '貢寮', '金山', '萬里', '烏來'],
+  基隆市: ['中正', '信義', '仁愛', '中山', '安樂', '暖暖', '七堵'],
+  新竹市: ['東', '北', '香山'],
+  新竹縣: ['竹北市', '竹東鎮', '新埔鎮', '關西鎮', '湖口鄉', '新豐鄉', '芎林鄉', '橫山鄉', '北埔鄉', '寶山鄉', '峨眉鄉', '尖石鄉', '五峰鄉'],
+  宜蘭縣: ['宜蘭市', '羅東鎮', '蘇澳鎮', '頭城鎮', '礁溪鄉', '壯圍鄉', '員山鄉', '冬山鄉', '五結鄉', '三星鄉', '大同鄉', '南澳鄉'],
+  苗栗縣: ['苗栗市', '頭份市', '竹南鎮', '後龍鎮', '通霄鎮', '苑裡鎮', '卓蘭鎮', '造橋鄉', '西湖鄉', '頭屋鄉', '公館鄉', '銅鑼鄉', '三義鄉', '大湖鄉', '獅潭鄉', '三灣鄉', '南庄鄉', '泰安鄉'],
+  臺中市: ['中', '東', '南', '西', '北', '北屯', '西屯', '南屯', '太平', '大里', '霧峰', '烏日', '豐原', '后里', '石岡', '東勢', '和平', '新社', '潭子', '大雅', '神岡', '大肚', '沙鹿', '龍井', '梧棲', '清水', '大甲', '外埔', '大安'],
+  彰化縣: ['彰化市', '員林市', '和美鎮', '鹿港鎮', '溪湖鎮', '二林鎮', '田中鎮', '北斗鎮', '花壇鄉', '芬園鄉', '大村鄉', '永靖鄉', '伸港鄉', '線西鄉', '福興鄉', '秀水鄉', '埔心鄉', '埔鹽鄉', '大城鄉', '芳苑鄉', '竹塘鄉', '社頭鄉', '二水鄉', '田尾鄉', '埤頭鄉', '溪州鄉'],
+  南投縣: ['南投市', '埔里鎮', '草屯鎮', '竹山鎮', '集集鎮', '名間鄉', '鹿谷鄉', '中寮鄉', '魚池鄉', '國姓鄉', '水里鄉', '信義鄉', '仁愛鄉'],
+  雲林縣: ['斗六市', '斗南鎮', '虎尾鎮', '西螺鎮', '土庫鎮', '北港鎮', '莿桐鄉', '林內鄉', '古坑鄉', '大埤鄉', '崙背鄉', '二崙鄉', '麥寮鄉', '臺西鄉', '東勢鄉', '褒忠鄉', '四湖鄉', '口湖鄉', '水林鄉', '元長鄉'],
 };
 const DISTRICTS = CITY_DISTRICTS['桃園市'];
 export const DISTRICT_LIST = DISTRICTS.map((d) => `${d}區`);
-// 台北、新北的區名在別的縣市也有（基隆中正區、台中大安區…），所以要看文字裡有沒有寫別的縣市
+// 台北、新北的區名在別的縣市也有（基隆中正區、台中大安區…），所以要看文字裡有沒有寫別的縣市（給 isTaipeiArea 用）
 const AMBIGUOUS = { 中正: /基隆(?!路)/, 中山: /基隆(?!路)/, 信義: /基隆(?!路)/, 大安: /臺中|台中/, 大同: /宜蘭/ };
-const HSINCHU_RE = /新竹|竹市|竹縣/;
-/** 行政區的全名（新竹縣的已經是全名，其他加「區」）。 */
+/** 行政區的全名（縣的鄉鎮市已經是全名，其他加「區」）。 */
 const fullDistrict = (d) => (/[市鎮鄉]$/.test(d) ? d : `${d}區`);
+
+/** 本站有收的縣市（北部、中部）。順序＝沒寫縣市時找行政區的順序。 */
+export const SUPPORTED_CITIES = ['桃園市', '臺北市', '新北市', '基隆市', '新竹市', '新竹縣', '宜蘭縣', '苗栗縣', '臺中市', '彰化縣', '南投縣', '雲林縣'];
+
+// 文字裡提到縣市的簡稱（沒寫「市」「縣」也算），用來決定同名的區算哪裡
+const CITY_HINT = {
+  桃園市: /桃園/,
+  臺北市: /臺北市|北市[^民府]/,
+  新北市: /新北/,
+  基隆市: /基隆(?!路)/,
+  新竹市: /新竹(?!縣)|竹市/,
+  新竹縣: /新竹縣|竹縣/,
+  宜蘭縣: /宜蘭(?![路街])/,
+  苗栗縣: /苗栗/,
+  臺中市: /臺中(?![路街])|中市/,
+  彰化縣: /彰化(?![路街銀])/,
+  南投縣: /南投(?![路街])/,
+  雲林縣: /雲林(?![路街])/,
+};
+// 沒提到縣市時不要猜的區名：東區、北區這種很多縣市都有；中正、中山、信義、大安預設算台北
+const NEED_HINT = { 臺中市: ['中', '東', '南', '西', '北', '大安'], 新竹市: ['東', '北'], 基隆市: ['中正', '信義', '中山'] };
+const DISTRICT_CITIES = new Map();
+for (const [c, ds] of Object.entries(CITY_DISTRICTS)) for (const d of ds) DISTRICT_CITIES.set(fullDistrict(d), [...(DISTRICT_CITIES.get(fullDistrict(d)) ?? []), c]);
+
+const norm = (texts) => texts.filter(Boolean).join(' ').replace(/台/g, '臺');
+
+/** 找行政區和它的縣市：city 有給就只找那個縣市；文字提到的縣市先找；其他縣市跳過容易搞混的區名。 */
+function locate(s, city) {
+  if (city) {
+    for (const d of CITY_DISTRICTS[city] ?? []) if (s.includes(fullDistrict(d))) return { city, district: fullDistrict(d) };
+    return { city, district: null };
+  }
+  const named = findCity(s);
+  const hinted = SUPPORTED_CITIES.filter((c) => c !== named && CITY_HINT[c].test(s));
+  const first = [...(SUPPORTED_CITIES.includes(named) ? [named] : []), ...hinted];
+  for (const c of first) for (const d of CITY_DISTRICTS[c]) if (s.includes(fullDistrict(d))) return { city: c, district: fullDistrict(d) };
+  // 地址明寫了外縣市（例如臺南市東區）就不再猜
+  if (named && !SUPPORTED_CITIES.includes(named)) return { city: null, district: null };
+  for (const c of SUPPORTED_CITIES) {
+    if (first.includes(c)) continue;
+    for (const d of CITY_DISTRICTS[c]) {
+      if (NEED_HINT[c]?.includes(d)) continue;
+      if (s.includes(fullDistrict(d))) return { city: c, district: fullDistrict(d) };
+    }
+  }
+  return { city: null, district: null };
+}
 
 /** 從文字找行政區，city 有給就只找那個縣市的。 */
 export function findDistrict(...texts) {
   let city = null;
   if (texts[0] && typeof texts[0] === 'object') city = texts.shift().city;
-  const s = texts.filter(Boolean).join(' ').replace(/桃園市/g, '');
-  const keelung = /基隆(?!路)/.test(s) && !/臺北市|台北市|新北市|桃園市/.test(s);
-  if (keelung && !city) city = '基隆市';
-  const hsinchu = !city && HSINCHU_RE.test(s) && !/臺北市|台北市|新北市|桃園市|基隆市/.test(s);
-  // 寫了新竹就先找新竹縣市；新竹市的東區、北區只有寫了新竹才找
-  const cities = city ? [city] : hsinchu ? ['新竹縣', '新竹市', '桃園市', '臺北市', '新北市'] : ['桃園市', '臺北市', '新北市', '基隆市', '新竹縣'];
-  for (const c of cities) {
-    for (const d of CITY_DISTRICTS[c] ?? []) {
-      const full = fullDistrict(d);
-      if (!s.includes(full)) continue;
-      if (!city && AMBIGUOUS[d]?.test(s)) continue;
-      return full;
-    }
-  }
-  return null;
+  return locate(norm(texts), city).district;
 }
 
-/** 行政區屬於哪個縣市。 */
+/** 行政區屬於哪個縣市（同名的：中正、中山、信義、大安算台北；東區、北區這種不猜）。 */
 export function cityOfDistrict(d) {
   if (!d) return null;
-  if (CITY_DISTRICTS['新竹縣'].includes(String(d))) return '新竹縣';
-  const n = String(d).replace(/區$/, '');
-  // 基隆的區名（中正、信義、中山）和台北重複、新竹市的東區北區別縣市也有，沒寫縣市時不推成基隆、新竹市（香山區只有新竹有）
-  if (n === '香山') return '新竹市';
-  return ['桃園市', '臺北市', '新北市'].find((c) => CITY_DISTRICTS[c].includes(n)) ?? (['仁愛', '安樂', '暖暖', '七堵'].includes(n) ? '基隆市' : null);
+  const full = fullDistrict(String(d).replace(/區$/, '').replace(/台/g, '臺'));
+  const cs = DISTRICT_CITIES.get(full) ?? DISTRICT_CITIES.get(String(d)) ?? [];
+  if (cs.length === 1) return NEED_HINT[cs[0]]?.includes(full.replace(/區$/, '')) ? null : cs[0];
+  return cs.includes('臺北市') ? '臺北市' : null;
 }
 
 export function isTaoyuan(...texts) {
@@ -159,25 +193,28 @@ export function isTaoyuan(...texts) {
 export function isTaipeiArea(...texts) {
   const s = texts.filter(Boolean).join(' ').replace(/台/g, '臺');
   if (/臺北市|新北市|臺北縣/.test(s)) return true;
-  if (/桃園|基隆(?!路)|宜蘭|新竹|臺中|高雄|臺南/.test(s)) return false;
+  if (/桃園|基隆(?!路)|宜蘭|新竹|苗栗|臺中|彰化|南投|雲林|嘉義|高雄|臺南/.test(s)) return false;
   return [...CITY_DISTRICTS['臺北市'], ...CITY_DISTRICTS['新北市']].some((d) => s.includes(`${d}區`) && !AMBIGUOUS[d]);
 }
 
-/** 本站有收的縣市。 */
-export const SUPPORTED_CITIES = ['桃園市', '臺北市', '新北市', '基隆市', '新竹市', '新竹縣'];
-
-/** 本站有收的縣市（看地址裡的縣市，沒寫縣市就看雙北、桃園的區名）。找不到回傳 null。 */
+/** 本站有收的縣市（看地址裡的縣市、行政區、縣市簡稱）。找不到回傳 null。 */
 export function supportedCity(...texts) {
-  const s = texts.filter(Boolean).join(' ').replace(/台/g, '臺');
+  const s = norm(texts);
   const c = findCity(s);
   if (c) return SUPPORTED_CITIES.includes(c) ? c : null;
-  if (/基隆(?!路)/.test(s)) return '基隆市';
-  const byDistrict = cityOfDistrict(findDistrict(s));
-  if (byDistrict) return byDistrict;
+  const loc = locate(s, null);
+  if (loc.city) return loc.city;
   // 只寫「新竹」：寫了縣的鄉鎮名就是新竹縣，不然當作新竹市
   if (/竹縣|竹北|竹東|湖口|新豐|關西|新埔|芎林|橫山|北埔|寶山|峨眉|尖石|五峰|六福村/.test(s) && /新竹|竹縣|竹北|竹東/.test(s)) return '新竹縣';
-  if (HSINCHU_RE.test(s)) return '新竹市';
+  for (const city of ['基隆市', '新竹市', '宜蘭縣', '苗栗縣', '臺中市', '彰化縣', '南投縣', '雲林縣', '新北市', '桃園市']) if (CITY_HINT[city].test(s)) return city;
+  if (/臺北(?![路街])/.test(s)) return '臺北市';
   return null;
+}
+
+/** 新竹地區（新竹市或新竹縣）。 */
+export function isHsinchu(...texts) {
+  const c = supportedCity(...texts);
+  return c === '新竹市' || c === '新竹縣';
 }
 
 // ---------- 文字 ----------
@@ -255,11 +292,6 @@ export function findCity(...texts) {
   return CITIES.find((c) => s.includes(c)) ?? (s.includes('桃園縣') ? '桃園市' : null);
 }
 
-/** 新竹地區（新竹市或新竹縣）。 */
-export function isHsinchu(...texts) {
-  const c = supportedCity(...texts);
-  return c === '新竹市' || c === '新竹縣';
-}
 
 /** 整理出活動的所有類別（主要類別在最前面，免費的加上「免費」）。 */
 export function finalizeCategories(e) {

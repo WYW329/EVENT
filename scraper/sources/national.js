@@ -1,5 +1,5 @@
 // 全國開放資料：文化部藝文活動、觀光署活動。
-import { fetchJson, politeFetch, makeEvent, parseDateTime, findDistrict, cleanText, supportedCity } from '../util.js';
+import { fetchJson, politeFetch, makeEvent, parseDateTime, findDistrict, cleanText, supportedCity, SUPPORTED_CITIES } from '../util.js';
 import { inflateRawSync } from 'node:zlib';
 
 // 文化部 iCulture 類別代碼 → 本站類別
@@ -106,7 +106,7 @@ export const tourism = {
     for (const e of list) {
       const addr = e.PostalAddress ?? {};
       const city = String(addr.City ?? '').replace(/台/g, '臺');
-      if (!['桃園市', '臺北市', '新北市', '基隆市', '新竹市', '新竹縣'].includes(city)) continue;
+      if (!SUPPORTED_CITIES.includes(city)) continue;
       out.push(
         makeEvent(this, e.EventID, {
           title: e.EventName,

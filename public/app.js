@@ -118,7 +118,7 @@ const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.
 const catsOf = (e) => (e.categories?.length ? e.categories : [e.category, ...(e.free ? ['免費'] : [])]);
 const cityOf = (e) => e.city ?? '桃園市';
 // 地區：台北市和新北市算同一區
-const REGIONS = [['桃園', ['桃園市']], ['台北・新北', ['臺北市', '新北市']], ['基隆', ['基隆市']], ['新竹', ['新竹市', '新竹縣']]];
+const REGIONS = [['桃園', ['桃園市']], ['台北・新北', ['臺北市', '新北市']], ['基隆', ['基隆市']], ['新竹', ['新竹市', '新竹縣']], ['宜蘭', ['宜蘭縣']], ['苗栗', ['苗栗縣']], ['台中', ['臺中市']], ['彰化', ['彰化縣']], ['南投', ['南投縣']], ['雲林', ['雲林縣']]];
 // 卡片上的地區：桃園只寫區名；台北、新北前面加縣市（例如「新北板橋區」）
 const areaOf = (e) => {
   const c = cityOf(e);
@@ -463,7 +463,7 @@ async function renderSites() {
   const sites = await loadSites();
   const q = $('#siteQ').value.trim().toLowerCase();
   const region = $('#regionChips .chip.on')?.dataset.region ?? '';
-  const REGION_NAME = { 桃園: '桃園', 台北: '台北・新北', 基隆: '基隆', 新竹: '新竹', 全台: '全台平台' };
+  const REGION_NAME = { 桃園: '桃園', 台北: '台北・新北', 基隆: '基隆', 新竹: '新竹', 宜蘭: '宜蘭', 苗栗: '苗栗', 台中: '台中', 彰化: '彰化', 南投: '南投', 雲林: '雲林', 全台: '全台平台' };
   const inRegion = sites.filter((s) => !region || s.region === region);
   const list = inRegion.filter((s) => !q || `${s.name} ${s.category} ${s.url}`.toLowerCase().includes(q));
   const groups = new Map();

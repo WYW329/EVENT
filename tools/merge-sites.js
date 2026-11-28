@@ -29,6 +29,17 @@ const HSINCHU_AUTO = new Set([
   'Accupass 活動通（新竹）', 'WeKenGo 週末去哪玩（新竹）', 'KKTIX 新竹', 'Eventbrite 新竹',
 ]);
 KEELUNG_AUTO.add('KKTIX 基隆');
+// 中部、宜蘭：有專門爬蟲的（全國平台 Accupass、WeKenGo、KKTIX、Eventbrite 也算）
+const platformAuto = (r) => new Set([`Accupass 活動通（${r}）`, `WeKenGo 週末去哪玩（${r}）`, `KKTIX ${r}`, `Eventbrite ${r}`]);
+const MID = [
+  ['宜蘭', ['宜蘭縣政府（最新活動）', '宜蘭縣政府文化局', '外澳・東北角宜蘭段'], ['宜蘭縣']],
+  ['苗栗', ['苗栗縣政府（活動訊息）'], ['苗栗縣']],
+  ['台中', ['臺中市政府（活動訊息）', '臺中觀光旅遊網', '國立臺灣美術館', '國立自然科學博物館'], ['臺中市']],
+  ['彰化', ['彰化縣政府（活動快訊）', '彰化縣文化局'], ['彰化縣']],
+  ['南投', ['南投縣政府文化局'], ['南投縣']],
+  ['雲林', [], ['雲林縣']],
+];
+const FILE_OF = { 宜蘭: 'yilan', 苗栗: 'miaoli', 台中: 'taichung', 彰化: 'changhua', 南投: 'nantou', 雲林: 'yunlin' };
 
 const readTsv = async (file, region = '台北', auto = TAIPEI_AUTO) => (await readFile(file, 'utf8')).split(/\r?\n/).filter((l) => l.trim() && !l.startsWith('#')).map((l) => {
   const [category, name, url, match] = l.split('\t');
@@ -42,15 +53,20 @@ const keelungRows = [];
 for (const r of [...(await readTsv('tools/sites-keelung.tsv', '基隆', KEELUNG_AUTO)), ...(await readTsv('tools/sites-keelung-more.tsv', '基隆', KEELUNG_AUTO))]) if (!keelungRows.some((x) => x.name === r.name)) keelungRows.push(r);
 const hsinchuRows = [];
 for (const r of await readTsv('tools/sites-hsinchu.tsv', '新竹', HSINCHU_AUTO)) if (!hsinchuRows.some((x) => x.name === r.name)) hsinchuRows.push(r);
+const midRows = [];
+for (const [r, autos] of MID) {
+  const auto = new Set([...autos, ...platformAuto(r)]);
+  for (const row of await readTsv(`tools/sites-${FILE_OF[r]}.tsv`, r, auto)) if (!midRows.some((x) => x.region === r && x.name === row.name)) midRows.push(row);
+}
 const taipeiUrls = new Set(taipeiRows.map((s) => s.url));
 const taipeiNames = new Set(taipeiRows.map((s) => s.name));
 
 const base = cur.sites
-  .filter((s) => !['台北', '基隆', '新竹'].includes(s.region))
+  .filter((s) => !['台北', '基隆', '新竹', ...MID.map(([r]) => r)].includes(s.region))
   .filter((s) => !taipeiUrls.has(s.url) && !taipeiNames.has(s.name))
   .map(({ via, ...s }) => ({ ...s, region: NATIONAL.has(s.category) ? '全台' : '桃園' }));
 
-const sites = [...base.filter((s) => s.region === '桃園'), ...taipeiRows, ...keelungRows, ...hsinchuRows, ...base.filter((s) => s.region === '全台')];
+const sites = [...base.filter((s) => s.region === '桃園'), ...taipeiRows, ...keelungRows, ...hsinchuRows, ...midRows, ...base.filter((s) => s.region === '全台')];
 
 // 沒有專門爬蟲的網站：活動的場地、主辦、標題裡有它的名字（或指定的關鍵字），就記下是透過哪個來源收進來的
 const hay = events.map((e) => ({ text: `${e.venue ?? ''} ${e.extra?.organizer ?? ''} ${e.title}`.replace(/臺/g, '台'), src: e.sourceName, city: e.city }));
@@ -58,7 +74,7 @@ for (const s of sites) {
   if (s.auto || s.region === '全台') continue;
   const key = (s.match ?? s.name.replace(/[（(].*$/, '').trim()).replace(/臺/g, '台');
   if (key.length < 2) continue;
-  const city = { 桃園: ['桃園市'], 台北: ['臺北市', '新北市'], 基隆: ['基隆市'], 新竹: ['新竹市', '新竹縣'] }[s.region];
+  const city = { 桃園: ['桃園市'], 台北: ['臺北市', '新北市'], 基隆: ['基隆市'], 新竹: ['新竹市', '新竹縣'], ...Object.fromEntries(MID.map(([r, , cs]) => [r, cs])) }[s.region];
   const hits = hay.filter((h) => h.text.includes(key) && (!city || city.includes(h.city)));
   if (!hits.length) continue;
   const count = new Map();
@@ -69,5 +85,5 @@ for (const s of sites) delete s.match;
 
 await writeFile('public/sites.json', JSON.stringify({ updatedAt: new Date().toISOString().slice(0, 10), sites }, null, 1));
 const by = (r) => sites.filter((s) => s.region === r);
-for (const r of ['桃園', '台北', '基隆', '新竹', '全台']) console.log(r, by(r).length, '個，專門爬蟲', by(r).filter((s) => s.auto).length, '，透過其他來源', by(r).filter((s) => s.via).length);
+for (const r of ['桃園', '台北', '基隆', '新竹', ...MID.map(([r]) => r), '全台']) console.log(r, by(r).length, '個，專門爬蟲', by(r).filter((s) => s.auto).length, '，透過其他來源', by(r).filter((s) => s.via).length);
 console.log('合計', sites.length);
