@@ -1,0 +1,492 @@
+{
+  "updatedAt": "2026-11-28T20:07:56.505Z",
+  "tookMs": 227680,
+  "total": 3016,
+  "sources": [
+    {
+      "id": "tytravel",
+      "name": "桃園觀光導覽網",
+      "ok": true,
+      "count": 84,
+      "kept": 13,
+      "ms": 27811,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tptravel",
+      "name": "臺北旅遊網",
+      "ok": true,
+      "count": 29,
+      "kept": 29,
+      "ms": 2537,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "huashan",
+      "name": "華山1914文化創意產業園區",
+      "ok": true,
+      "count": 41,
+      "kept": 41,
+      "ms": 43772,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "songshan",
+      "name": "松山文創園區",
+      "ok": true,
+      "count": 20,
+      "kept": 20,
+      "ms": 1422,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tfam",
+      "name": "臺北市立美術館",
+      "ok": true,
+      "count": 28,
+      "kept": 27,
+      "ms": 25126,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tmc",
+      "name": "臺北流行音樂中心",
+      "ok": true,
+      "count": 10,
+      "kept": 10,
+      "ms": 24640,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "clab",
+      "name": "臺灣當代文化實驗場 C-LAB",
+      "ok": true,
+      "count": 2,
+      "kept": 2,
+      "ms": 24256,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "moca",
+      "name": "台北當代藝術館",
+      "ok": true,
+      "count": 3,
+      "kept": 2,
+      "ms": 2321,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "twtc",
+      "name": "台北世貿・南港展覽館",
+      "ok": true,
+      "count": 9,
+      "kept": 9,
+      "ms": 21512,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "natvenue",
+      "name": "國父紀念館・臺灣博物館",
+      "ok": true,
+      "count": 8,
+      "kept": 8,
+      "ms": 25362,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "ntpcmuseum",
+      "name": "新北市立博物館群",
+      "ok": true,
+      "count": 5,
+      "kept": 5,
+      "ms": 12484,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "hchcc",
+      "name": "新竹縣政府文化局",
+      "ok": true,
+      "count": 17,
+      "kept": 17,
+      "ms": 55593,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "hccgculture",
+      "name": "新竹市文化局",
+      "ok": false,
+      "count": null,
+      "kept": 0,
+      "ms": 3770,
+      "error": "HTTP 403 https://culture.hccg.gov.tw/ch/home.jsp?id=9&parentpath=0,1",
+      "warnings": null
+    },
+    {
+      "id": "nthcc",
+      "name": "南投縣政府文化局",
+      "ok": false,
+      "count": null,
+      "kept": 0,
+      "ms": 37488,
+      "error": "fetch failed",
+      "warnings": null
+    },
+    {
+      "id": "necoast",
+      "name": "東北角管理處",
+      "ok": true,
+      "count": 1,
+      "kept": 1,
+      "ms": 40271,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tourism",
+      "name": "觀光署活動",
+      "ok": true,
+      "count": 511,
+      "kept": 41,
+      "ms": 6720,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "afmc",
+      "name": "藝文設施管理中心",
+      "ok": true,
+      "count": 25,
+      "kept": 19,
+      "ms": 104193,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "moc",
+      "name": "文化部藝文活動",
+      "ok": true,
+      "count": 275,
+      "kept": 250,
+      "ms": 6071,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tycg",
+      "name": "桃園市府線上報名",
+      "ok": true,
+      "count": 9,
+      "kept": 9,
+      "ms": 26934,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "babycare",
+      "name": "親子館報名",
+      "ok": true,
+      "count": 134,
+      "kept": 134,
+      "ms": 46601,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "water",
+      "name": "水務局參訪預約",
+      "ok": true,
+      "count": 1,
+      "kept": 1,
+      "ms": 53,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "cycc",
+      "name": "中原文創園區",
+      "ok": true,
+      "count": 4,
+      "kept": 3,
+      "ms": 5604,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "g11",
+      "name": "桃知道 GELEVEN PLAZA",
+      "ok": true,
+      "count": 1,
+      "kept": 1,
+      "ms": 19076,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "gloria",
+      "name": "華泰名品城",
+      "ok": true,
+      "count": 2,
+      "kept": 1,
+      "ms": 5845,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "taimall",
+      "name": "台茂購物中心",
+      "ok": true,
+      "count": 5,
+      "kept": 3,
+      "ms": 16139,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "xpark",
+      "name": "Xpark",
+      "ok": true,
+      "count": 1,
+      "kept": 1,
+      "ms": 8231,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "typl",
+      "name": "桃園市立圖書館",
+      "ok": true,
+      "count": 12,
+      "kept": 4,
+      "ms": 30382,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "ntpc",
+      "name": "新北市政府活動",
+      "ok": true,
+      "count": 73,
+      "kept": 67,
+      "ms": 7860,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "ntpctravel",
+      "name": "新北市觀光旅遊網",
+      "ok": true,
+      "count": 22,
+      "kept": 2,
+      "ms": 23481,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tcgov",
+      "name": "臺中市政府",
+      "ok": true,
+      "count": 5,
+      "kept": 5,
+      "ms": 7297,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tctravel",
+      "name": "臺中觀光旅遊網",
+      "ok": true,
+      "count": 4,
+      "kept": 2,
+      "ms": 23061,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "opentix",
+      "name": "OPENTIX",
+      "ok": true,
+      "count": 582,
+      "kept": 567,
+      "ms": 173,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "kktix",
+      "name": "KKTIX",
+      "ok": false,
+      "count": null,
+      "kept": 80,
+      "ms": 5604,
+      "error": "HTTP 403 https://kktix.com/events.atom?search=%E6%A1%83%E5%9C%92",
+      "warnings": null
+    },
+    {
+      "id": "indievox",
+      "name": "iNDIEVOX",
+      "ok": true,
+      "count": 8,
+      "kept": 8,
+      "ms": 20463,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "accupass",
+      "name": "Accupass 活動通",
+      "ok": true,
+      "count": 34,
+      "kept": 30,
+      "ms": 25471,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "artemperor",
+      "name": "非池中藝術網",
+      "ok": true,
+      "count": 105,
+      "kept": 100,
+      "ms": 41633,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "eventbrite",
+      "name": "Eventbrite",
+      "ok": false,
+      "count": null,
+      "kept": 19,
+      "ms": 16462,
+      "error": "taiwan--taipei: HTTP 405 https://www.eventbrite.com/d/taiwan--taipei/events/; taiwan--new-taipei-city: HTTP 405 https://www.eventbrite.com/d/taiwan--new-taipei-city/events/; taiwan--taoyuan-city: HTTP 405 https://www.eventbrite.com/d/taiwan--taoyuan-city/events/; taiwan--keelung-city: HTTP 405 https://www.eventbrite.com/d/taiwan--keelung-city/events/; taiwan--hsinchu: HTTP 405 https://www.eventbrite.com/d/taiwan--hsinchu/events/; taiwan--taichung: HTTP 405 https://www.eventbrite.com/d/taiwan--taichung/events/; taiwan--changhua: HTTP 405 https://www.eventbrite.com/d/taiwan--changhua/events/; taiwan--yilan: HTTP 405 https://www.eventbrite.com/d/taiwan--yilan/events/",
+      "warnings": null
+    },
+    {
+      "id": "meetup",
+      "name": "Meetup",
+      "ok": true,
+      "count": 8,
+      "kept": 8,
+      "ms": 6639,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "luma",
+      "name": "Luma",
+      "ok": true,
+      "count": 6,
+      "kept": 6,
+      "ms": 23644,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "tycgnews",
+      "name": "桃園市府局處與區公所",
+      "ok": true,
+      "count": 18,
+      "kept": 18,
+      "ms": 188500,
+      "error": null,
+      "warnings": [
+        "青年事務局: The operation was aborted due to timeout",
+        "動物保護處: The operation was aborted due to timeout"
+      ]
+    },
+    {
+      "id": "tpenews",
+      "name": "臺北市府局處與區公所",
+      "ok": true,
+      "count": 86,
+      "kept": 86,
+      "ms": 24767,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "klnews",
+      "name": "基隆市府與區公所",
+      "ok": true,
+      "count": 5,
+      "kept": 4,
+      "ms": 28804,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "hcnews",
+      "name": "新竹縣市政府",
+      "ok": false,
+      "count": null,
+      "kept": 0,
+      "ms": 24920,
+      "error": "新竹市政府: HTTP 403 https://www.hccg.gov.tw/hccg/app/rss/News; 新竹縣政府: fetch failed",
+      "warnings": null
+    },
+    {
+      "id": "midnews",
+      "name": "中部與宜蘭縣府、館所",
+      "ok": true,
+      "count": 3,
+      "kept": 3,
+      "ms": 35462,
+      "error": null,
+      "warnings": [
+        "苗栗縣政府: fetch failed"
+      ]
+    },
+    {
+      "id": "klctb",
+      "name": "基隆市文化觀光局",
+      "ok": true,
+      "count": 3,
+      "kept": 3,
+      "ms": 49871,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "bocach",
+      "name": "彰化縣文化局",
+      "ok": true,
+      "count": 26,
+      "kept": 26,
+      "ms": 85146,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "ilccb",
+      "name": "宜蘭縣文化局",
+      "ok": true,
+      "count": 0,
+      "kept": 0,
+      "ms": 29579,
+      "error": null,
+      "warnings": null
+    },
+    {
+      "id": "wekengo",
+      "name": "WeKenGo 週末去哪玩",
+      "ok": true,
+      "count": 1637,
+      "kept": 1331,
+      "ms": 227591,
+      "error": null,
+      "warnings": null
+    }
+  ]
+}
